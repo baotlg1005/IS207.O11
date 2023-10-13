@@ -67,36 +67,65 @@ body {
 .header-container {
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 2.16667rem;
+  padding-top: 0.5rem;
 }
-.header-container .top-content {
+.header-container .header__top-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-container .top-content .top-content__brand-container {
+.header-container .header__top-content .top-content__brand-container {
   display: flex;
   align-items: flex-start;
 }
-.header-container .top-content__account-btn-group {
+.header-container .header__top-content .top-content__account-btn-group {
   display: flex;
   align-items: flex-start;
   gap: 1.66667rem;
 }
-.header-container .top-content__account-btn-group .account-btn-group__login-btn {
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
   color: #FFF;
 }
-.header-container .top-content__account-btn-group .account-btn-group__sign-up-btn {
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
   border-radius: 0.66667rem;
   background: rgba(35, 110, 255, 0.8);
 }
-.header-container .top-content__account-btn-group .account-btn-group__sign-up-btn p, .header-container .top-content__account-btn-group .account-btn-group__sign-up-btn div {
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn p, .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn div {
   color: #FFF;
   font-weight: 700;
+}
+.header-container .header__navbar {
+  display: flex;
+  /* width: 96rem; */
+  align-items: center;
+  gap: 1rem;
+}
+.header-container .header__navbar .navbar__item {
+  display: flex;
+  width: 14rem;
+  height: 4.33333rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  flex-shrink: 0;
+  border-radius: 0.66667rem;
+}
+.header-container .header__navbar .navbar__item div, .header-container .header__navbar .navbar__item p {
+  flex: 1 0 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.33333rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .brand-container__brand-logo {
@@ -126,6 +155,81 @@ body {
   font-style: italic;
   font-weight: 700;
   line-height: normal;
+}
+
+.slogan-container {
+  display: flex;
+  /* width: 96rem; */
+  padding: 2.08333rem 0rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rem;
+}
+.slogan-container p, .slogan-container div {
+  color: #FFF;
+  text-align: center;
+  font-size: 2.66667rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.feature-container {
+  display: flex;
+  height: 50rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.66667rem;
+}
+.feature-container .feature-container__navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.feature-container .feature-container__navbar .navbar__item {
+  display: flex;
+  width: 19rem;
+  height: 5.5rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.83333rem;
+  flex-shrink: 0;
+}
+.feature-container .feature-container__navbar .navbar__item p, .feature-container .feature-container__navbar .navbar__item div {
+  height: 1.66667rem;
+  flex: 1 0 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.33333rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.feature-container .feature-container__navbar .navbar__item .item__icon--default {
+  display: flex;
+  width: 3.33333rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+.feature-container .feature-container__navbar .navbar__item .item__icon--selected {
+  display: none;
+  width: 3.33333rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+.feature-container .feature-container__navbar .navbar__item.selected {
+  border-radius: 0.66667rem;
+  background: #FFF;
+}
+.feature-container .feature-container__navbar .navbar__item.selected p, .feature-container .feature-container__navbar .navbar__item.selected div {
+  color: black;
+}
+.feature-container .feature-container__navbar .navbar__item.selected .item__icon--default {
+  display: none;
+}
+.feature-container .feature-container__navbar .navbar__item.selected .item__icon--selected {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

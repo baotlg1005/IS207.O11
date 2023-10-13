@@ -14,29 +14,29 @@ body{
 }
 
 .container-fluid{
-    width: 100%;
+    width: 100%; // sau này phải đổi lại
 }
 .container{
-    width: 80%;
+    width: 80%; // sau này phải đổi lại
     padding: auto;
     margin: auto;
 }
 .btn-default{
     display: flex;
-    width: 12.5rem;
-    height: 4.25rem;
-    padding: 1.33333rem 1rem;
+    width: 12.5rem; // 150px
+    height: 4.25rem; // 51px
+    padding: 1.33333rem 1rem; // 16px 12px
     align-items: center;
     justify-content: center;
     gap: 0.83333rem;
     flex-shrink: 0;
 
-    border-radius: 0.66667rem;
+    border-radius: 0.66667rem; // 8px
     border: 1px solid #FFF;
 
     p,div{
         text-align: right;
-        font-size: 1.33333rem;
+        font-size: 1.33333rem; // 16px
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -44,8 +44,8 @@ body{
 }
 
 .brand-logo{
-    width: 15.33333rem;
-    height: 5rem;
+    width: 15.33333rem; // 184px
+    height: 5rem; // 60px
     background: url("/assets/img/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -58,23 +58,27 @@ body{
     left: 0;
     z-index: -100;
     width: 100%;
-    height: 75rem;
+    height: 75rem; // 900px
     border-radius: 0rem 0rem 2rem 2rem;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .header-container{
-    position: fixed; // chua on lam
+    position: fixed; // chua on lam lam lai khi dung js
     top: 0;
+    right: 0;
+    left: 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 2.16667rem;
+    gap: 2.16667rem; // 26px
 
-    .top-content{
+    padding-top: 0.5rem; // 6px
+
+    .header__top-content{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -83,23 +87,52 @@ body{
             display: flex;
             align-items: flex-start;
         }
+        .top-content__account-btn-group{
+            display: flex;
+            align-items: flex-start;
+            gap: 1.66667rem; // 20px
+    
+            .account-btn-group__login-btn{
+                color: #FFF;
+            }
+            .account-btn-group__sign-up-btn{
+                border-radius: 0.66667rem;
+                background: rgba(35, 110, 255, 0.80);
+    
+                p,div{
+                    color: #FFF;
+                    font-weight: 700; 
+                }
+            }
+        }
     }
 
-    .top-content__account-btn-group{
+    .header__navbar{
         display: flex;
-        align-items: flex-start;
-        gap: 1.66667rem;
+        align-items: center;
+        gap: 1rem; // 12px
 
-        .account-btn-group__login-btn{
-            color: #FFF;
-        }
-        .account-btn-group__sign-up-btn{
-            border-radius: 0.66667rem;
-            background: rgba(35, 110, 255, 0.80);
+        .navbar__item{
+            display: flex;
+            width: 14rem; // 168px
+            height: 4.33333rem; // 52px
+            padding: 1.33333rem 1.66667rem; // 16px 20px
+            justify-content: center;
+            align-items: center;
+            gap: 0.83333rem; // 10px
+            flex-shrink: 0;
+        
+            border-radius: 0.66667rem; // 8px
 
-            p,div{
+            div,p{
+                flex: 1 0 0; // cái này hoạt động như nào ???
+            
                 color: #FFF;
-                font-weight: 700; 
+                text-align: center;
+                font-size: 1.33333rem; // 16px
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
             }
         }
     }
@@ -107,10 +140,10 @@ body{
 
 .brand-container__brand-logo{
     display: flex;
-    width: 13rem;
+    width: 13rem; // 156px
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.83333rem;
+    gap: 0.83333rem; // 10px
     background: rgba(165, 165, 165, 0.00);
 
     img{
@@ -120,17 +153,99 @@ body{
 }
 .brand-container__brand-name{
     display: flex;
-    width: 12.5rem;
-    height: 5rem;
-    padding: 0.83333rem;
+    width: 12.5rem; // 150px
+    height: 5rem; // 60px
+    padding: 0.83333rem; // 10px
     align-items: center;
-    gap: 0.83333rem;
+    gap: 0.83333rem; // 10px
 
     p{
         color: #FFF;
-        font-size: 2rem;
+        font-size: 2rem; // 24px
         font-style: italic;
         font-weight: 700;
         line-height: normal;    
+    }
+}
+.slogan-container{
+    display: flex;
+    padding: 2.08333rem 0rem; // 25px 0px
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 15rem; // 180px
+
+    p,div{
+        color: #FFF;
+        text-align: center;
+        font-size: 2.66667rem; // 32px
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+    }
+}
+
+.feature-container{
+    display: flex;
+    height: 50rem; // 600px
+    flex-direction: column;
+    align-items: center;
+    gap: 1.66667rem; // 20px
+
+    .feature-container__navbar{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; // 6px
+
+        .navbar__item{
+            display: flex;
+            width: 19rem; // 228px
+            height: 5.5rem; // 66px
+            padding: 1.33333rem 1.66667rem; // 16px 20px
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.83333rem; // 10px
+            flex-shrink: 0;
+
+            p,div{
+                flex: 1 0 0;
+
+                height: 1.66667rem; // 20px
+                color: #FFF;
+                text-align: center;
+                font-size: 1.33333rem; // 16px
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .item__icon--default{
+                display: flex;
+                width: 3.33333rem; // 40px
+                height: 3rem; // 36px
+                flex-shrink: 0;
+            }
+            .item__icon--selected{
+                display: none;
+                width: 3.33333rem; // 40px
+                height: 3rem; // 36px
+                flex-shrink: 0;
+            }
+        }
+        .navbar__item.selected{
+            border-radius: 0.66667rem; // 8px
+            background: #FFF;
+            
+            p,div{
+                color: black;
+            }
+
+            .item__icon--default{
+                display: none;
+            }
+            .item__icon--selected{
+                display: flex;
+            }
+        }
     }
 }
