@@ -455,4 +455,91 @@ body {
   line-height: normal;
 }
 
+.main-content {
+  background-color: #FFF;
+  border-radius: 5rem 5rem 0 0;
+  padding-top: 10rem;
+}
+.main-content .main-content__container {
+  margin-bottom: 10rem;
+}
+
+.location-ad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.location-ad-container .location-ad-container__title-container {
+  display: flex;
+  width: 65.16667rem;
+  height: 5.16667rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.83333rem;
+}
+.location-ad-container .location-ad-container__title-container .text {
+  color: #373D41;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.location-ad-container .location-ad-container__item-container {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item {
+  position: relative;
+  width: 30.66667rem;
+  height: 19.16667rem;
+  flex-shrink: 0;
+  border-radius: 0.66667rem;
+  background: #D5D5D5;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item .item__information {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item .item__information .information__name {
+  display: flex;
+  padding: 1.66667rem 1.66667rem 0.83333rem 1.66667rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.83333rem;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item .item__information .information__name .text {
+  color: #FFF;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item .item__information .information__description {
+  display: flex;
+  padding: 0.83333rem 1.66667rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.83333rem;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item .item__information .information__description .text {
+  color: #FFF;
+  font-size: 1.33333rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.location-ad-container .location-ad-container__item-container .item-container__item .item__image-background {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  border-radius: 0.66667rem;
+}
+
 /*# sourceMappingURL=style.css.map */
