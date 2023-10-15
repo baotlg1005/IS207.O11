@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <img class="top-background" src="assets/img/top-background.jpg" alt="">
@@ -19,78 +21,161 @@
                     <img src="assets/img/logo.png" alt="" sizes="" srcset="">
                 </div>
                 <div class="brand-container__brand-name">
-                    <p>travelowkey</p>
+                    <p class="text">travelowkey</p>
                 </div>
             </div>
             <div class="top-content__account-btn-group">
                 <div class="btn-default account-btn-group__login-btn">
                     <img class="login-btn__icon" src="assets/svg/user-icon.svg" alt="" srcset="">
-                    <div>Đăng nhập</div>
+                    <div class="text">Đăng nhập</div>
                 </div>
                 <div class="btn-default btn account-btn-group__sign-up-btn">
-                    <div>Đăng ký</div>
+                    <div class="text">Đăng ký</div>
                 </div>
             </div>
         </div>
         <nav class="container header__navbar">
             <div class="navbar__item">
-                <div>
+                <div class="text">
                     Vé máy bay
                 </div>
             </div>
             <div class="navbar__item">
-                <div>
+                <div class="text">
                     Vé xe khách
                 </div>
             </div>
             <div class="navbar__item">
-                <div>
+                <div class="text">
                     Đưa đón sân bay
                 </div>
             </div>
             <div class="navbar__item">
-                <div>
+                <div class="text">
                     Khách sạn
                 </div>
             </div>
         </nav>
     </div>
     <div class="container slogan-container">
-        <div>
+        <div class="text">
             You Took My Heart, Held It And Ripped It Apart
         </div>
     </div>
     <div class="container feature-container">
         <div class="container-fluid feature-container__navbar">
             <div class="navbar__item selected">
-                <img class="item__icon--default" src="assets/svg/plane.svg" alt="">
-                <img class="item__icon--selected" src="assets/svg/plane-selected.svg" alt="">
-                <div>
+                <img class="icon item__icon--default" src="assets/svg/plane.svg" alt="">
+                <img class="icon item__icon--selected" src="assets/svg/plane-selected.svg" alt="">
+                <div class="text">
                     Vé máy bay
                 </div>
             </div>
             <div class="navbar__item">
-                <img class="item__icon--default" src="assets/svg/bus.svg" alt="">
-                <img class="item__icon--selected" src="assets/svg/bus-selected.svg" alt="">
-                <div>
+                <img class="icon item__icon--default" src="assets/svg/bus.svg" alt="">
+                <img class="icon item__icon--selected" src="assets/svg/bus-selected.svg" alt="">
+                <div class="text">
                     Vé xe khách
                 </div>
             </div>
             <div class="navbar__item">
-                <img class="item__icon--default" src="assets/svg/taxi.svg" alt="">
-                <img class="item__icon--selected" src="assets/svg/taxi-selected.svg" alt="">
-                <div>
+                <img class="icon item__icon--default" src="assets/svg/taxi.svg" alt="">
+                <img class="icon item__icon--selected" src="assets/svg/taxi-selected.svg" alt="">
+                <div class="text">
                     Đưa đón sân bay
                 </div>
             </div>
             <div class="navbar__item">
-                <img class="item__icon--default" src="assets/svg/hotel.svg" alt="">
-                <img class="item__icon--selected" src="assets/svg/hotel-selected.svg" alt="">
-                <div>
+                <img class="icon item__icon--default" src="assets/svg/hotel.svg" alt="">
+                <img class="icon item__icon--selected" src="assets/svg/hotel-selected.svg" alt="">
+                <div class="text">
                     Khách sạn
+                </div>
+            </div>
+        </div>
+        <svg class="container-fluid divine-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 2" fill="none">
+            <path d="M0 1H1152" stroke="white" stroke-width="2"/>
+          </svg>
+        <div class="container-fluid feature-container__plane">
+            <div class="container-fluid plane__filter-container">
+                <div class="filter-container__toggle-btn-group">
+                    <div class="btn-toggle on">
+                        <div class="text">Khứ hồi / Một chiều</div>
+                    </div>
+                    <div class="btn-toggle">
+                        <div class="text">Nhiều thành phố</div>
+                    </div>
+                </div>
+                <div class="filter-container__dropdown-btn-group">
+                    <div class="btn-dropdown">
+                        <div class="icon"></div>
+                        <div class="text">
+                            1 Người lớn, 0 Trẻ em, 0 Em bé
+                        </div>
+                    </div>
+                    <div class="btn-dropdown">
+                        <div class="icon"></div>
+                        <div class="text">
+                            Phổ thông
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid plane__detail-container">
+                <div class="detail-container__location-select-container">
+                    <div class="location-select-container__location-start">
+                        <div class="title-text">
+                            Từ
+                        </div>
+                        <div class="select-dropdown location-start__select-dropdown">
+                            <div class="icon"></div>
+                            <div class="text">
+                                TP HCM (SGN)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-select-container__location-end">
+                        <div class="title-text">
+                            Đến
+                        </div>
+                        <div class="select-dropdown location-end__select-dropdown">
+                            <div class="icon"></div>
+                            <div class="text">
+                                TOKYO (TYOA)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-container__time-select-container">
+                    <div class="location-select-container__time">
+                        <div class="title-text">
+                            Ngày đi
+                        </div>
+                        <div class="select-dropdown time__select-dropdown">
+                            <div class="icon"></div>
+                            <div class="text">
+                                7 thng 10, 2023
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid detail-container__footer-btn-group">
+                <div class="footer-btn-group__add-more-btn">
+                    <div class="icon"></div>
+                    <div class="text">
+                        Thêm chuyến bay khác
+                    </div>
+                </div>
+                <div class="btn-default footer-btn-group__find-btn">
+                    <div class="icon"></div>
+                    <div class="text">
+                        Tìm chuyến bay
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
