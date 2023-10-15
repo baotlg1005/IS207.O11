@@ -501,32 +501,36 @@ body{
     padding-top: 10rem;
     .main-content__container{
         margin-bottom: 10rem;
+
+        .title-container{
+            display: flex;
+            width: 65.16667rem;
+            height: 5.16667rem;
+            padding: 1.33333rem 1.66667rem;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.83333rem;
+    
+            .text{
+                color: #373D41;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
     }
 }
 
-.location-ad-container{
+.location-ad-card-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    .location-ad-container__title-container{
-        display: flex;
-        width: 65.16667rem;
-        height: 5.16667rem;
-        padding: 1.33333rem 1.66667rem;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 0.83333rem;
+    .location-ad-card-container__title-container{
 
-        .text{
-            color: #373D41;
-            font-size: 2rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
     }
-    .location-ad-container__item-container{
+    .location-ad-card-container__item-container{
         display: flex;
         // width: 96rem;
         align-items: flex-start;
@@ -585,6 +589,83 @@ body{
                 top: 0;
                 border-radius: 0.66667rem;
             }       
+        }
+    }
+}
+
+.location-ad-slider-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .location-ad-slider-container__title-container{}
+    .location-ad-slider-container__slider-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .slider-container__slider{
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+
+            .slider__item{
+                position: relative;
+                width: 22.5rem;
+                height: 25rem;
+                flex-shrink: 0;
+                border-radius: 0.66667rem;
+                background: #D5D5D5;
+                .item__information{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 1;
+                    .information__name{
+                        display: flex;
+                        padding: 1.66667rem 1.66667rem 0.83333rem 1.66667rem;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 0.83333rem;
+        
+                        .text{
+                            color: #FFF;
+                            font-size: 2rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+                    .information__description{
+                        display: flex;
+                        padding: 0.83333rem 1.66667rem;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.83333rem;
+        
+                        .text{
+                            color: #FFF;
+                            font-size: 1.33333rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+                }
+                .item__image-background{
+                    position: absolute;
+                    z-index: 0;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    border-radius: 0.66667rem;
+                }   
+            }
+        }
+        .slider-container__nav{
+
+            .nav__left{}
+            .nav__right{}
         }
     }
 }
