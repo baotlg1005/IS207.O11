@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+html{
+    font-size: 12px;
+}
+
+body{
+    position: relative;
+}
+
+.container-fluid{
+    width: 100%; // sau này phải đổi lại
+}
+
+.container{
+    width: 80%; // sau này phải đổi lại
+    padding: auto;
+    margin: auto;
+}
