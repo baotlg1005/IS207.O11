@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <img class="top-background" src="assets/img/top-background.jpg" alt="">
     </div>
-    <div class="container-fluid header-container">
+    <div id="header" class="container-fluid header-container">
         <div class="container header__top-content">
             <div class="top-content__brand-container">
                 <div class="brand-container__brand-logo">
@@ -26,7 +26,8 @@
             </div>
             <div class="top-content__account-btn-group">
                 <div class="btn-default account-btn-group__login-btn">
-                    <img class="login-btn__icon" src="assets/svg/user-icon.svg" alt="" srcset="">
+                    <img class="login-btn__icon--default" src="assets/svg/user-icon.svg" alt="" srcset="">
+                    <img class="login-btn__icon--on-scroll" src="assets/svg/user-icon-blue.svg" alt="" srcset="">
                     <div class="text">Đăng nhập</div>
                 </div>
                 <div class="btn-default btn account-btn-group__sign-up-btn">
@@ -108,13 +109,17 @@
                 </div>
                 <div class="filter-container__dropdown-btn-group">
                     <div class="btn-dropdown">
-                        <div class="icon"></div>
+                        <div class="icon">
+                            <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                        </div>
                         <div class="text">
                             1 Người lớn, 0 Trẻ em, 0 Em bé
                         </div>
                     </div>
                     <div class="btn-dropdown">
-                        <div class="icon"></div>
+                        <div class="icon">
+                            <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                        </div>
                         <div class="text">
                             Phổ thông
                         </div>
@@ -128,7 +133,9 @@
                             Từ
                         </div>
                         <div class="select-dropdown location-start__select-dropdown">
-                            <div class="icon"></div>
+                            <div class="icon">
+                                <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                            </div>
                             <div class="text">
                                 TP HCM (SGN)
                             </div>
@@ -139,7 +146,9 @@
                             Đến
                         </div>
                         <div class="select-dropdown location-end__select-dropdown">
-                            <div class="icon"></div>
+                            <div class="icon">
+                                <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                            </div>
                             <div class="text">
                                 TOKYO (TYOA)
                             </div>
@@ -152,7 +161,9 @@
                             Ngày đi
                         </div>
                         <div class="select-dropdown time__select-dropdown">
-                            <div class="icon"></div>
+                            <div class="icon">
+                                <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                            </div>
                             <div class="text">
                                 7 thng 10, 2023
                             </div>
@@ -162,13 +173,17 @@
             </div>
             <div class="container-fluid detail-container__footer-btn-group">
                 <div class="footer-btn-group__add-more-btn">
-                    <div class="icon"></div>
+                    <div class="icon">
+                        <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                    </div>
                     <div class="text">
                         Thêm chuyến bay khác
                     </div>
                 </div>
                 <div class="btn-default footer-btn-group__find-btn">
-                    <div class="icon"></div>
+                    <div class="icon">
+                        <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                    </div>
                     <div class="text">
                         Tìm chuyến bay
                     </div>
@@ -179,7 +194,9 @@
     <div class="container-fluid main-content">
         <div class="container main-content__container location-ad-card-container">
             <div class="title-container location-ad-card-container__title-container">
-                <div class="icon"></div>
+                <div class="icon">
+                    <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                </div>
                 <div class="text">
                     Tái khám phá bản thân tại khắp nơi trên đất nước Việt Nam
                 </div>
@@ -204,6 +221,9 @@
         </div>
         <div class="container main-content__container location-ad-slider-container">
             <div class="title-container location-ad-slider-container__title-container">
+                <div class="icon">
+                    <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                </div>
                 <div class="text">
                     Sống thoải mái ở những thành phố được yêu thích nhất
                 </div>
@@ -262,6 +282,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="/index.js"></script>
 </body>
 
 </html>

@@ -136,6 +136,8 @@ body {
   align-items: flex-start;
   gap: 2.16667rem;
   padding-top: 0.5rem;
+  transition: 0.3s;
+  z-index: 1000;
 }
 .header-container .header__top-content {
   display: flex;
@@ -146,6 +148,33 @@ body {
   display: flex;
   align-items: flex-start;
 }
+.header-container .header__top-content .top-content__brand-container .brand-container__brand-logo {
+  display: flex;
+  width: 13rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.83333rem;
+  background: rgba(165, 165, 165, 0);
+}
+.header-container .header__top-content .top-content__brand-container .brand-container__brand-logo img {
+  width: 100%;
+  height: auto;
+}
+.header-container .header__top-content .top-content__brand-container .brand-container__brand-name {
+  display: flex;
+  width: 12.5rem;
+  height: 5rem;
+  padding: 0.83333rem;
+  align-items: center;
+  gap: 0.83333rem;
+}
+.header-container .header__top-content .top-content__brand-container .brand-container__brand-name .text {
+  color: #FFF;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
 .header-container .header__top-content .top-content__account-btn-group {
   display: flex;
   align-items: flex-start;
@@ -153,6 +182,12 @@ body {
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
   color: #FFF;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--default {
+  display: flex;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--on-scroll {
+  display: none;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
   border-radius: 0.66667rem;
@@ -188,33 +223,27 @@ body {
   line-height: normal;
 }
 
-.brand-container__brand-logo {
+.header-container.on-scroll {
+  background-color: #fff;
+}
+.header-container.on-scroll .header__top-content .top-content__brand-container .brand-container__brand-name .text {
+  color: #000;
+}
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
+  border-radius: 0.66667rem;
+  border: 1px solid #236EFF;
+}
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .text {
+  color: #000;
+}
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--default {
+  display: none;
+}
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--on-scroll {
   display: flex;
-  width: 13rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.83333rem;
-  background: rgba(165, 165, 165, 0);
 }
-.brand-container__brand-logo img {
-  width: 100%;
-  height: auto;
-}
-
-.brand-container__brand-name {
-  display: flex;
-  width: 12.5rem;
-  height: 5rem;
-  padding: 0.83333rem;
-  align-items: center;
-  gap: 0.83333rem;
-}
-.brand-container__brand-name .text {
-  color: #FFF;
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: 700;
-  line-height: normal;
+.header-container.on-scroll .header__navbar .navbar__item .text {
+  color: #687176;
 }
 
 .slogan-container {
@@ -460,7 +489,8 @@ body {
   width: 65.16667rem;
   height: 5.16667rem;
   padding: 1.33333rem 1.66667rem;
-  justify-content: flex-end;
+  padding-left: 0;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.83333rem;
 }
@@ -562,6 +592,7 @@ body {
   bottom: 0;
   right: 0;
   z-index: 1;
+  padding-bottom: 1rem;
 }
 .location-ad-slider-container .location-ad-slider-container__slider-container .slider-container__slider .slider__item .item__information .information__name {
   display: flex;
@@ -622,31 +653,34 @@ footer {
 }
 .footer-container .footer__top-content .top-content__brand-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 }
-.footer-container .footer__top-content .top-content__brand-container .brand-container__logo {
+.footer-container .footer__top-content .top-content__brand-container .brand-container__brand-logo {
   display: flex;
   width: 13rem;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.83333rem;
+  background: rgba(165, 165, 165, 0);
+}
+.footer-container .footer__top-content .top-content__brand-container .brand-container__brand-logo img {
+  width: 100%;
+  height: auto;
 }
 .footer-container .footer__top-content .top-content__brand-container .brand-container__brand-name {
   display: flex;
-  width: 30.66667rem;
+  width: 12.5rem;
   height: 5rem;
   padding: 0.83333rem;
+  align-items: center;
   gap: 0.83333rem;
 }
 .footer-container .footer__top-content .top-content__brand-container .brand-container__brand-name .text {
   color: #FFF;
-  text-align: center;
-  font-family: Inter;
-  font-size: 2.66667rem;
+  font-size: 2rem;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
-  text-transform: lowercase;
 }
 .footer-container .footer__top-content .top-content__media-container {
   display: flex;

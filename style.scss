@@ -150,6 +150,10 @@ body{
 
     padding-top: 0.5rem; // 6px
 
+    transition:0.3s;
+
+    z-index: 1000;
+
     .header__top-content{
         display: flex;
         justify-content: space-between;
@@ -158,6 +162,35 @@ body{
         .top-content__brand-container{
             display: flex;
             align-items: flex-start;
+            .brand-container__brand-logo{
+                display: flex;
+                width: 13rem; // 156px
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.83333rem; // 10px
+                background: rgba(165, 165, 165, 0.00);
+            
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .brand-container__brand-name{
+                display: flex;
+                width: 12.5rem; // 150px
+                height: 5rem; // 60px
+                padding: 0.83333rem; // 10px
+                align-items: center;
+                gap: 0.83333rem; // 10px
+            
+                .text{
+                    color: #FFF;
+                    font-size: 2rem; // 24px
+                    font-style: italic;
+                    font-weight: 700;
+                    line-height: normal;    
+                }
+            }
         }
         .top-content__account-btn-group{
             display: flex;
@@ -166,6 +199,12 @@ body{
     
             .account-btn-group__login-btn{
                 color: #FFF;
+                .login-btn__icon--default{
+                    display: flex;
+                }
+                .login-btn__icon--on-scroll{
+                    display: none;
+                }
             }
             .account-btn-group__sign-up-btn{
                 border-radius: 0.66667rem;
@@ -178,7 +217,6 @@ body{
             }
         }
     }
-
     .header__navbar{
         display: flex;
         align-items: center;
@@ -210,35 +248,46 @@ body{
     }
 }
 
-.brand-container__brand-logo{
-    display: flex;
-    width: 13rem; // 156px
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.83333rem; // 10px
-    background: rgba(165, 165, 165, 0.00);
+.header-container.on-scroll{
+    background-color: #fff;
+    .header__top-content{
+        .top-content__brand-container{
+            .brand-container__brand-name{
+                .text{
+                    color: #000;
+                }
+            }
+        }
+        .top-content__account-btn-group{
+    
+            .account-btn-group__login-btn{
+                border-radius: 0.66667rem;
+                border: 1px solid #236EFF;
+                .text{
+                    color: #000;
+                }
+                .login-btn__icon--default{
+                    display: none;
+                }
+                .login-btn__icon--on-scroll{
+                    display: flex;
+                }
+            }
+        }
+    }
+    .header__navbar{
 
-    img{
-        width: 100%;
-        height: auto;
+        .navbar__item{
+
+            .text{
+                color: #687176;
+            }
+        }
     }
 }
-.brand-container__brand-name{
-    display: flex;
-    width: 12.5rem; // 150px
-    height: 5rem; // 60px
-    padding: 0.83333rem; // 10px
-    align-items: center;
-    gap: 0.83333rem; // 10px
 
-    .text{
-        color: #FFF;
-        font-size: 2rem; // 24px
-        font-style: italic;
-        font-weight: 700;
-        line-height: normal;    
-    }
-}
+
+
 .slogan-container{
     display: flex;
     padding: 2.08333rem 0rem; // 25px 0px
@@ -507,7 +556,8 @@ body{
             width: 65.16667rem;
             height: 5.16667rem;
             padding: 1.33333rem 1.66667rem;
-            justify-content: flex-end;
+            padding-left: 0;
+            justify-content: flex-start;
             align-items: center;
             gap: 0.83333rem;
     
@@ -621,6 +671,7 @@ body{
                     bottom: 0;
                     right: 0;
                     z-index: 1;
+                    padding-bottom: 1rem;
                     .information__name{
                         display: flex;
                         padding: 1.66667rem 1.66667rem 0.83333rem 1.66667rem;
@@ -692,31 +743,34 @@ footer{
 
         .top-content__brand-container{
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-            .brand-container__logo{
+            align-items: flex-start;
+            .brand-container__brand-logo{
                 display: flex;
-                width: 13rem;
+                width: 13rem; // 156px
                 flex-direction: column;
-                gap: 0.83333rem;
+                align-items: flex-start;
+                gap: 0.83333rem; // 10px
+                background: rgba(165, 165, 165, 0.00);
+            
+                img{
+                    width: 100%;
+                    height: auto;
+                }
             }
             .brand-container__brand-name{
                 display: flex;
-                width: 30.66667rem;
-                height: 5rem;
-                padding: 0.83333rem;
-                gap: 0.83333rem;
-
+                width: 12.5rem; // 150px
+                height: 5rem; // 60px
+                padding: 0.83333rem; // 10px
+                align-items: center;
+                gap: 0.83333rem; // 10px
+            
                 .text{
                     color: #FFF;
-                    text-align: center;
-                    font-family: Inter;
-                    font-size: 2.66667rem;
+                    font-size: 2rem; // 24px
                     font-style: italic;
                     font-weight: 700;
-                    line-height: normal;
-                    text-transform: lowercase;
+                    line-height: normal;    
                 }
             }
         }
