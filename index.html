@@ -7,18 +7,18 @@
     <title>Travelowkey</title>
 
     <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources\css\style.css">
 </head>
 
 <body>
     <div class="container-fluid">
-        <img class="top-background" src="assets/img/top-background.jpg" alt="">
+        <img class="top-background" src="resources/images/top-background.jpg" alt="">
     </div>
     <div id="header" class="container-fluid header-container">
         <div class="container header__top-content">
             <div class="top-content__brand-container">
                 <div class="brand-container__brand-logo">
-                    <img src="assets/img/logo.png" alt="" sizes="" srcset="">
+                    <img src="resources\images\logo.png" alt="" sizes="" srcset="">
                 </div>
                 <div class="brand-container__brand-name">
                     <p class="text">travelowkey</p>
@@ -26,8 +26,8 @@
             </div>
             <div class="top-content__account-btn-group">
                 <div class="btn-default account-btn-group__login-btn">
-                    <img class="login-btn__icon--default" src="assets/svg/user-icon.svg" alt="" srcset="">
-                    <img class="login-btn__icon--on-scroll" src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                    <img class="login-btn__icon--default" src="resources/images/svg/user-icon.svg" alt="" srcset="">
+                    <img class="login-btn__icon--on-scroll" src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                     <div class="text">Đăng nhập</div>
                 </div>
                 <div class="btn-default btn account-btn-group__sign-up-btn">
@@ -66,29 +66,29 @@
     <div class="container feature-container">
         <div class="container-fluid feature-container__navbar">
             <div class="navbar__item selected">
-                <img class="icon item__icon--default" src="assets/svg/plane.svg" alt="">
-                <img class="icon item__icon--selected" src="assets/svg/plane-selected.svg" alt="">
+                <img class="icon item__icon--default" src="resources/images/svg/plane.svg" alt="">
+                <img class="icon item__icon--selected" src="resources/images/svg/plane-selected.svg" alt="">
                 <div class="text">
                     Vé máy bay
                 </div>
             </div>
             <div class="navbar__item">
-                <img class="icon item__icon--default" src="assets/svg/bus.svg" alt="">
-                <img class="icon item__icon--selected" src="assets/svg/bus-selected.svg" alt="">
+                <img class="icon item__icon--default" src="resources/images/svg/bus.svg" alt="">
+                <img class="icon item__icon--selected" src="resources/images/svg/bus-selected.svg" alt="">
                 <div class="text">
                     Vé xe khách
                 </div>
             </div>
             <div class="navbar__item">
-                <img class="icon item__icon--default" src="assets/svg/taxi.svg" alt="">
-                <img class="icon item__icon--selected" src="assets/svg/taxi-selected.svg" alt="">
+                <img class="icon item__icon--default" src="resources/images/svg/taxi.svg" alt="">
+                <img class="icon item__icon--selected" src="resources/images/svg/taxi-selected.svg" alt="">
                 <div class="text">
                     Đưa đón sân bay
                 </div>
             </div>
             <div class="navbar__item">
-                <img class="icon item__icon--default" src="assets/svg/hotel.svg" alt="">
-                <img class="icon item__icon--selected" src="assets/svg/hotel-selected.svg" alt="">
+                <img class="icon item__icon--default" src="resources/images/svg/hotel.svg" alt="">
+                <img class="icon item__icon--selected" src="resources/images/svg/hotel-selected.svg" alt="">
                 <div class="text">
                     Khách sạn
                 </div>
@@ -110,7 +110,7 @@
                 <div class="filter-container__dropdown-btn-group">
                     <div class="btn-dropdown">
                         <div class="icon">
-                            <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                            <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                         </div>
                         <div class="text">
                             1 Người lớn, 0 Trẻ em, 0 Em bé
@@ -118,7 +118,7 @@
                     </div>
                     <div class="btn-dropdown">
                         <div class="icon">
-                            <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                            <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                         </div>
                         <div class="text">
                             Phổ thông
@@ -127,54 +127,57 @@
                 </div>
             </div>
             <div class="container-fluid plane__detail-container">
-                <div class="detail-container__location-select-container">
-                    <div class="location-select-container__location-start">
-                        <div class="title-text">
-                            Từ
-                        </div>
-                        <div class="select-dropdown location-start__select-dropdown">
-                            <div class="icon">
-                                <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                <div class="detail-container__information-container">
+                    <div class="detail-container__location-select-container">
+                        <div class="location-select-container__location-start">
+                            <div class="title-text">
+                                Từ
                             </div>
-                            <div class="text">
-                                TP HCM (SGN)
+                            <div class="select-dropdown location-start__select-dropdown">
+                                <div class="icon">
+                                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                                </div>
+                                <div class="text">
+                                    TP HCM (SGN)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-select-container__location-end">
+                            <div class="title-text">
+                                Đến
+                            </div>
+                            <div class="select-dropdown location-end__select-dropdown">
+                                <div class="icon">
+                                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                                </div>
+                                <div class="text">
+                                    TOKYO (TYOA)
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="location-select-container__location-end">
-                        <div class="title-text">
-                            Đến
-                        </div>
-                        <div class="select-dropdown location-end__select-dropdown">
-                            <div class="icon">
-                                <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                    <div class="detail-container__time-select-container">
+                        <div class="location-select-container__time">
+                            <div class="title-text">
+                                Ngày đi
                             </div>
-                            <div class="text">
-                                TOKYO (TYOA)
+                            <div class="select-dropdown time__select-dropdown">
+                                <div class="icon">
+                                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                                </div>
+                                <div class="text">
+                                    7 thng 10, 2023
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="detail-container__time-select-container">
-                    <div class="location-select-container__time">
-                        <div class="title-text">
-                            Ngày đi
-                        </div>
-                        <div class="select-dropdown time__select-dropdown">
-                            <div class="icon">
-                                <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
-                            </div>
-                            <div class="text">
-                                7 thng 10, 2023
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="container-fluid detail-container__footer-btn-group">
                 <div class="footer-btn-group__add-more-btn">
                     <div class="icon">
-                        <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                        <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                     </div>
                     <div class="text">
                         Thêm chuyến bay khác
@@ -182,7 +185,7 @@
                 </div>
                 <div class="btn-default footer-btn-group__find-btn">
                     <div class="icon">
-                        <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                        <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                     </div>
                     <div class="text">
                         Tìm chuyến bay
@@ -195,7 +198,7 @@
         <div class="container main-content__container location-ad-card-container">
             <div class="title-container location-ad-card-container__title-container">
                 <div class="icon">
-                    <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                 </div>
                 <div class="text">
                     Tái khám phá bản thân tại khắp nơi trên đất nước Việt Nam
@@ -203,7 +206,7 @@
             </div>
             <div class="location-ad-card-container__item-container">
                 <div class="item-container__item">
-                    <img class="item__image-background" src="assets/img/top-background.jpg" alt="" srcset="">
+                    <img class="item__image-background" src="resources/images/top-background.jpg" alt="" srcset="">
                     <div class="item__information">
                         <div class="information__name">
                             <div class="text">
@@ -222,7 +225,7 @@
         <div class="container main-content__container location-ad-slider-container">
             <div class="title-container location-ad-slider-container__title-container">
                 <div class="icon">
-                    <img src="assets/svg/user-icon-blue.svg" alt="" srcset="">
+                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                 </div>
                 <div class="text">
                     Sống thoải mái ở những thành phố được yêu thích nhất
@@ -231,7 +234,7 @@
             <div class="location-ad-slider-container__slider-container">
                 <div class="slider-container__slider">
                     <div class="slider__item">
-                        <img class="item__image-background" src="assets/img/top-background.jpg" alt="">
+                        <img class="item__image-background" src="resources/images/top-background.jpg" alt="">
                         <div class="item__information">
                             <div class="information__description">
                                 <div class="text">
@@ -258,7 +261,7 @@
             <div class="footer__top-content">
                 <div class="top-content__brand-container">
                     <div class="brand-container__brand-logo">
-                        <img src="assets/img/logo.png" alt="" sizes="" srcset="">
+                        <img src="resources/images/logo.png" alt="" sizes="" srcset="">
                     </div>
                     <div class="brand-container__brand-name">
                         <p class="text">travelowkey</p>
@@ -266,10 +269,10 @@
                 </div>
                 <div class="top-content__media-container">
                     <a href="#">
-                        <img src="assets/svg/facebook-icon.svg" alt="" class="media-icon">
+                        <img src="resources/images/svg/facebook-icon.svg" alt="" class="media-icon">
                     </a>
                     <a href="#">
-                        <img src="assets/svg/youtube-icon.svg" alt="" class="media-icon">
+                        <img src="resources/images/svg/youtube-icon.svg" alt="" class="media-icon">
                     </a>
                 </div>
             </div>
@@ -283,7 +286,7 @@
         </div>
     </footer>
 
-    <script src="/index.js"></script>
+    <script src="resources/js/index.js"></script>
 </body>
 
 </html>

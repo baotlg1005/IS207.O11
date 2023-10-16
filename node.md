@@ -1,1 +1,1 @@
-run scss: sass --watch input.scss output.css
+run scss: sass --watch resources\sass\style.scss resources\css\style.css
