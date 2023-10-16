@@ -149,6 +149,13 @@
                     width: 100%;
                     height: auto;
                 }
+
+                .brand-logo--default{
+                    display: flex;
+                }
+                .brand-logo--on-scroll{
+                    display: none;
+                }
             }
             .brand-container__brand-name{
                 display: flex;
@@ -227,6 +234,14 @@
     background-color: #fff;
     .header__top-content{
         .top-content__brand-container{
+            .brand-container__brand-logo{
+                .brand-logo--default{
+                    display: none;
+                }
+                .brand-logo--on-scroll{
+                    display: flex;
+                }
+            }
             .brand-container__brand-name{
                 .text{
                     color: #000;

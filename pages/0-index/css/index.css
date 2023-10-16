@@ -134,6 +134,12 @@
   width: 100%;
   height: auto;
 }
+.header-container .header__top-content .top-content__brand-container .brand-container__brand-logo .brand-logo--default {
+  display: flex;
+}
+.header-container .header__top-content .top-content__brand-container .brand-container__brand-logo .brand-logo--on-scroll {
+  display: none;
+}
 .header-container .header__top-content .top-content__brand-container .brand-container__brand-name {
   display: flex;
   width: 12.5rem;
@@ -199,6 +205,12 @@
 
 .header-container.on-scroll {
   background-color: #fff;
+}
+.header-container.on-scroll .header__top-content .top-content__brand-container .brand-container__brand-logo .brand-logo--default {
+  display: none;
+}
+.header-container.on-scroll .header__top-content .top-content__brand-container .brand-container__brand-logo .brand-logo--on-scroll {
+  display: flex;
 }
 .header-container.on-scroll .header__top-content .top-content__brand-container .brand-container__brand-name .text {
   color: #000;
