@@ -318,6 +318,7 @@
             gap: 0.83333rem; // 10px
             flex-shrink: 0;
 
+            cursor: pointer;
             .text{
                 flex: 1 0 0;
 
@@ -360,8 +361,13 @@
         }
     }
 
-    .feature-container__plane{
+    .feature-container__item{
+        display: none;
+    }
+    .feature-container__item.active{
         display: flex;
+    }
+    .feature-container__plane{
         height: 33rem; // 396px
         align-items: flex-start;
         align-content: flex-start;

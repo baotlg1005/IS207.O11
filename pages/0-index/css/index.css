@@ -269,6 +269,7 @@
   align-items: center;
   gap: 0.83333rem;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .feature-container .feature-container__navbar .navbar__item .text {
   flex: 1 0 0;
@@ -305,8 +306,13 @@
 .feature-container .feature-container__navbar .navbar__item.selected .item__icon--selected {
   display: flex;
 }
-.feature-container .feature-container__plane {
+.feature-container .feature-container__item {
+  display: none;
+}
+.feature-container .feature-container__item.active {
   display: flex;
+}
+.feature-container .feature-container__plane {
   height: 33rem;
   align-items: flex-start;
   align-content: flex-start;

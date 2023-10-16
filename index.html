@@ -14,7 +14,7 @@
 
 <body>
     <div class="container-fluid">
-        <img class="top-background" src="resources/images/top-background.jpg" alt="">
+        <img class="top-background" src="pages/0-index/image/top-background.jpg" alt="">
     </div>
     <div id="header" class="container-fluid header-container">
         <div class="container header__top-content">
@@ -68,28 +68,28 @@
     </div>
     <div class="container feature-container">
         <div class="container-fluid feature-container__navbar">
-            <div class="navbar__item selected">
+            <div class="navbar__item selected" data-feature-type="plane">
                 <img class="icon item__icon--default" src="resources/images/svg/plane.svg" alt="">
                 <img class="icon item__icon--selected" src="resources/images/svg/plane-selected.svg" alt="">
                 <div class="text">
                     Vé máy bay
                 </div>
             </div>
-            <div class="navbar__item">
+            <div class="navbar__item" data-feature-type="bus">
                 <img class="icon item__icon--default" src="resources/images/svg/bus.svg" alt="">
                 <img class="icon item__icon--selected" src="resources/images/svg/bus-selected.svg" alt="">
                 <div class="text">
                     Vé xe khách
                 </div>
             </div>
-            <div class="navbar__item">
+            <div class="navbar__item" data-feature-type="taxi">
                 <img class="icon item__icon--default" src="resources/images/svg/taxi.svg" alt="">
                 <img class="icon item__icon--selected" src="resources/images/svg/taxi-selected.svg" alt="">
                 <div class="text">
                     Đưa đón sân bay
                 </div>
             </div>
-            <div class="navbar__item">
+            <div class="navbar__item" data-feature-type="hotel">
                 <img class="icon item__icon--default" src="resources/images/svg/hotel.svg" alt="">
                 <img class="icon item__icon--selected" src="resources/images/svg/hotel-selected.svg" alt="">
                 <div class="text">
@@ -100,7 +100,7 @@
         <svg class="container-fluid divine-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 2" fill="none">
             <path d="M0 1H1152" stroke="white" stroke-width="2"/>
           </svg>
-        <div class="container-fluid feature-container__plane">
+        <div class="container-fluid feature-container__item feature-container__plane active" data-feature-type="plane">
             <div class="container-fluid plane__filter-container">
                 <div class="filter-container__toggle-btn-group">
                     <div class="btn-toggle on">
@@ -196,6 +196,15 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid feature-container__item feature-container__bus" data-feature-type="bus">
+
+        </div>
+        <div class="container-fluid feature-container__item feature-container__taxi" data-feature-type="taxi">
+            
+        </div>
+        <div class="container-fluid feature-container__item feature-container__hotel" data-feature-type="hotel">
+            
+        </div>
     </div>
     <div class="container-fluid main-content">
         <div class="container main-content__container location-ad-card-container">
@@ -209,7 +218,7 @@
             </div>
             <div class="location-ad-card-container__item-container">
                 <div class="item-container__item">
-                    <img class="item__image-background" src="resources/images/top-background.jpg" alt="" srcset="">
+                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
                     <div class="item__information">
                         <div class="information__name">
                             <div class="text">
@@ -237,7 +246,7 @@
             <div class="location-ad-slider-container__slider-container">
                 <div class="slider-container__slider">
                     <div class="slider__item">
-                        <img class="item__image-background" src="resources/images/top-background.jpg" alt="">
+                        <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="">
                         <div class="item__information">
                             <div class="information__description">
                                 <div class="text">
