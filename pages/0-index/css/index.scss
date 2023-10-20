@@ -1,4 +1,4 @@
-.btn-default{
+.btn-default {
     display: flex;
     width: 12.5rem; // 150px
     height: 4.25rem; // 51px
@@ -11,9 +11,9 @@
     cursor: pointer;
 
     border-radius: 0.66667rem; // 8px
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
 
-    .text{
+    .text {
         text-align: right;
         font-size: 1.33333rem; // 16px
         font-style: normal;
@@ -21,33 +21,36 @@
         line-height: normal;
     }
 }
-.btn-toggle{
+
+.btn-toggle {
     display: inline-flex;
     padding: 1.33333rem 1.66667rem; // 16px 20px
     justify-content: center;
     align-items: center;
     gap: 0.83333rem; // 10px
     border-radius: 2rem; // 24px
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.5);
 
     cursor: pointer;
 
-    .text{
+    .text {
         height: 1.66667rem; // 20px
 
-        color: #FFF;
+        color: #fff;
         text-align: center;
         font-family: Inter;
         font-size: 1.33333rem; // 16px
         font-style: normal;
         font-weight: 700;
-        line-height: normal;   
+        line-height: normal;
     }
 }
-.btn-toggle.on{
-    background: #236EFF;
+
+.btn-toggle.on {
+    background: #236eff;
 }
-.btn-dropdown{
+
+.btn-dropdown {
     display: flex;
     // width: 15.5rem; // 186px
     height: 4.5rem; // 54px
@@ -59,39 +62,38 @@
     justify-content: space-between;
 
     border-radius: 0.66667rem; // 8px
-    border: 1px solid #FFF;
-    background: rgba(244, 241, 241, 0.50);
+    border: 1px solid #fff;
+    background: rgba(244, 241, 241, 0.5);
 
-    p,div{
-        color: #FFF;
+    cursor: pointer;
+
+    .text {
+        color: #fff;
         text-align: center;
         font-size: 1.33333rem; // 16px
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
-    img{
-        stroke-width: 2px;
-        stroke: #FFF;
-    }
 }
-.select-dropdown{
+
+.select-dropdown {
     display: flex;
     // width: 23.5rem;
-    height: 4.66667rem;
-    padding: 1.33333rem 1.66667rem;
+    // height: 4.66667rem;
+    padding: 1.33333rem 1.66667rem; // 16px 20px
     align-items: center;
     gap: 0.83333rem;
     border-radius: 1.33333rem 1.33333rem 1.33333rem 1.33333rem;
-    border-top: 4px solid #C7C7C7;
-    border-right: 4px solid #C7C7C7;
-    border-bottom: 4px solid #C7C7C7;
-    border-left: 4px solid #C7C7C7;
-    background: #FFF;
+    border-top: 4px solid #c7c7c7;
+    border-right: 4px solid #c7c7c7;
+    border-bottom: 4px solid #c7c7c7;
+    border-left: 4px solid #c7c7c7;
+    background: #fff;
 
     cursor: pointer;
 
-    .text{
+    .text {
         color: #000;
         text-align: flex-start;
         font-size: 1.33333rem;
@@ -99,13 +101,13 @@
         font-weight: 400;
         line-height: normal;
 
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 }
 
-.top-background{
+.top-background {
     position: absolute;
     top: 0;
     right: 0;
@@ -116,7 +118,8 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-.header-container{
+
+.header-container {
     position: fixed; // chua on lam lam lai khi dung js
     top: 0;
     right: 0;
@@ -130,86 +133,94 @@
 
     padding-top: 0.5rem; // 6px
 
-    transition:0.3s;
+    transition: 0.3s;
 
     z-index: 1000;
 
-    .header__top-content{
+    .header__top-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    
-        .top-content__brand-container{
+
+        .top-content__brand-container {
             display: flex;
             align-items: flex-start;
-            .brand-container__brand-logo{
+
+            .brand-container__brand-logo {
                 display: flex;
                 width: 13rem; // 156px
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.83333rem; // 10px
-                background: rgba(165, 165, 165, 0.00);
-            
-                img{
+                background: rgba(165, 165, 165, 0);
+
+                img {
                     width: 100%;
                     height: auto;
                 }
 
-                .brand-logo--default{
+                .brand-logo--default {
                     display: flex;
                 }
-                .brand-logo--on-scroll{
+
+                .brand-logo--on-scroll {
                     display: none;
                 }
             }
-            .brand-container__brand-name{
+
+            .brand-container__brand-name {
                 display: flex;
                 width: 12.5rem; // 150px
                 height: 5rem; // 60px
                 padding: 0.83333rem; // 10px
                 align-items: center;
                 gap: 0.83333rem; // 10px
-            
-                .text{
-                    color: #FFF;
+
+                .text {
+                    color: #fff;
                     font-size: 2.66667rem;
                     font-style: italic;
                     font-weight: 700;
-                    line-height: normal;    
+                    line-height: normal;
                 }
             }
         }
-        .top-content__account-btn-group{
+
+        .top-content__account-btn-group {
             display: flex;
             align-items: flex-start;
             gap: 1.66667rem; // 20px
-    
-            .account-btn-group__login-btn{
-                color: #FFF;
-                .login-btn__icon--default{
+
+            .account-btn-group__login-btn {
+                color: #fff;
+
+                .login-btn__icon--default {
                     display: flex;
                 }
-                .login-btn__icon--on-scroll{
+
+                .login-btn__icon--on-scroll {
                     display: none;
                 }
             }
-            .account-btn-group__sign-up-btn{
+
+            .account-btn-group__sign-up-btn {
                 border-radius: 0.66667rem;
-                background: rgba(35, 110, 255, 0.80);
-    
-                .text{
-                    color: #FFF;
-                    font-weight: 700; 
+                background: rgba(35, 110, 255, 0.8);
+
+                .text {
+                    color: #fff;
+                    font-weight: 700;
                 }
             }
         }
     }
-    .header__navbar{
+
+    .header__navbar {
         display: flex;
         align-items: center;
         gap: 1rem; // 12px
 
-        .navbar__item{
+        .navbar__item {
             display: flex;
             width: 14rem; // 168px
             height: 4.33333rem; // 52px
@@ -218,15 +229,15 @@
             align-items: center;
             gap: 0.83333rem; // 10px
             flex-shrink: 0;
-        
+
             border-radius: 0.66667rem; // 8px
 
             cursor: pointer;
 
-            .text{
+            .text {
                 flex: 1 0 0; // cái này hoạt động như nào ???
-            
-                color: #FFF;
+
+                color: #fff;
                 text-align: center;
                 font-size: 1.33333rem; // 16px
                 font-style: normal;
@@ -236,52 +247,59 @@
         }
     }
 }
-.header-container.on-scroll{
+
+.header-container.on-scroll {
     background-color: #fff;
-    .header__top-content{
-        .top-content__brand-container{
-            .brand-container__brand-logo{
-                .brand-logo--default{
+
+    .header__top-content {
+        .top-content__brand-container {
+            .brand-container__brand-logo {
+                .brand-logo--default {
                     display: none;
                 }
-                .brand-logo--on-scroll{
+
+                .brand-logo--on-scroll {
                     display: flex;
                 }
             }
-            .brand-container__brand-name{
-                .text{
+
+            .brand-container__brand-name {
+                .text {
                     color: #000;
                 }
             }
         }
-        .top-content__account-btn-group{
-    
-            .account-btn-group__login-btn{
+
+        .top-content__account-btn-group {
+            .account-btn-group__login-btn {
                 border-radius: 0.66667rem;
-                border: 1px solid #236EFF;
-                .text{
+                border: 1px solid #236eff;
+
+                .text {
                     color: #000;
                 }
-                .login-btn__icon--default{
+
+                .login-btn__icon--default {
                     display: none;
                 }
-                .login-btn__icon--on-scroll{
+
+                .login-btn__icon--on-scroll {
                     display: flex;
                 }
             }
         }
     }
-    .header__navbar{
 
-        .navbar__item{
-
-            .text{
+    .header__navbar {
+        .navbar__item {
+            .text {
                 color: #687176;
             }
         }
     }
 }
-.slogan-container{
+
+.slogan-container {
     display: flex;
     padding: 2.08333rem 0rem; // 25px 0px
     justify-content: center;
@@ -289,8 +307,8 @@
 
     padding-top: 15rem; // 180px
 
-    .text{
-        color: #FFF;
+    .text {
+        color: #fff;
         text-align: center;
         font-size: 2.66667rem; // 32px
         font-style: normal;
@@ -298,19 +316,20 @@
         line-height: normal;
     }
 }
-.feature-container{
+
+.feature-container {
     display: flex;
     height: 50rem; // 600px
     flex-direction: column;
     align-items: center;
     gap: 1.66667rem; // 20px
 
-    .feature-container__navbar{
+    .feature-container__navbar {
         display: flex;
         align-items: center;
         gap: 0.5rem; // 6px
 
-        .navbar__item{
+        .navbar__item {
             display: flex;
             width: 19rem; // 228px
             height: 5.5rem; // 66px
@@ -321,11 +340,12 @@
             flex-shrink: 0;
 
             cursor: pointer;
-            .text{
+
+            .text {
                 flex: 1 0 0;
 
                 height: 1.66667rem; // 20px
-                color: #FFF;
+                color: #fff;
                 text-align: center;
                 font-size: 1.33333rem; // 16px
                 font-style: normal;
@@ -333,171 +353,243 @@
                 line-height: normal;
             }
 
-            .item__icon--default{
+            .item__icon--default {
                 display: flex;
                 width: 3.33333rem; // 40px
                 height: 3rem; // 36px
                 flex-shrink: 0;
             }
-            .item__icon--selected{
+
+            .item__icon--selected {
                 display: none;
                 width: 3.33333rem; // 40px
                 height: 3rem; // 36px
                 flex-shrink: 0;
             }
         }
-        .navbar__item.selected{
+
+        .navbar__item.selected {
             border-radius: 0.66667rem; // 8px
-            background: #FFF;
-            
-            .text{
+            background: #fff;
+
+            .text {
                 color: black;
             }
 
-            .item__icon--default{
+            .item__icon--default {
                 display: none;
             }
-            .item__icon--selected{
+
+            .item__icon--selected {
                 display: flex;
             }
         }
     }
 
-    // .feature-container__item{}
-    .feature-container__plane{
+    .feature-container__flight {
         display: flex;
         flex-direction: column;
         gap: 0.83333rem 2.33333rem;
 
-        .row{
+        .row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
             width: 100%;
         }
-        .row-item{
+
+        .row-item {
             display: flex;
             flex-direction: row;
             gap: 2rem;
         }
-        //row - 1
-        // .plane__trip-type-toggle{
 
-        //     .text{}
-        //     .trip-type-toggle__one-trip{}
-        //     .trip-type-toggle__many-trip{}
-        // }
-        // .plane__select-passenger-btn{}
-        // .plane__filter-seat-btn{}
-
-        //row - 2
-        .plane__choice-trip-info{
+        .flight-info-container {
+            display: flex;
             flex-direction: column;
-            .title-text{
-                color: #FFF;
+            gap: 2rem;
+
+            .title-text {
+                color: #fff;
+                text-align: flex-start;
                 font-size: 1.33333rem;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
                 padding: 1rem;
             }
-            .choice-trip-info--one-trip{
+
+            .flight-info-container__flight-info-item {
                 display: flex;
                 flex-direction: row;
-                flex-basis: 100%;
-                justify-content: space-between;
+                gap: 2rem;
 
-                gap: 5rem;
-
-                .choice-trip-info__choice-dep-n-des{
+                .flight-info-item__location-info {
                     display: flex;
-                    flex-direction: row;
-                    flex-grow: 1;
-                    .choice-dep-n-des__departure{
-                        flex-grow: 1;
-                        .departure__select{
+                    flex: 10;
+
+                    .location-info__departure-info {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+
+                        .departure-info__select-dropdown {
                             border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-                            border-right: 1px solid #C7C7C7;
+                            border-right: 1px solid #c7c7c7;
                         }
                     }
-                    .choice-dep-n-des__destination{
-                        flex-grow: 1;
-                        .destination__select{
+
+                    .location-info__arrival-info {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+
+                        .arrival-info__select-dropdown {
                             border-radius: 0rem 1.33333rem 1.33333rem 0rem;
-                            border-left: 1px solid #C7C7C7;
+                            border-left: 1px solid #c7c7c7;
                         }
                     }
                 }
-                .choice-trip-info__choice-date{
+
+                .flight-info-item__date-info {
                     display: flex;
-                    flex-grow: 1;
+                    flex: 10;
+                }
+            }
+
+            .flight-info-item--one-flight {
+                .return-date__checkbox {
+                    display: flex;
                     flex-direction: row;
-                    .choice-date__departure-date{
-                        flex-grow: 5;
+                    padding-left: 1rem;
+                }
 
-                        .departure-date__select{
-                            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-                            border-right: 1px solid #C7C7C7;
+                .date-info__departure-date {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    .departure-date__select-dropdown {
+                        border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+                        border-right: 1px solid #c7c7c7;
+                    }
+                }
+
+                .date-info__return-date {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    .return-date__select-dropdown {
+                        border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+                        border-left: 1px solid #c7c7c7;
+                    }
+                    .return-date__select-dropdown.disable{
+                        pointer-events: none;
+                        background-color: #f2f3f3;
+                        .text{
+
+                            color: #858d91;
                         }
                     }
-                    .choice-date__destination-date{
-                        flex-grow: 5;
-                        .destination-date__checkbox{
-                            padding: 1rem;
-                            .text{
-                                display: flex;
-                                align-items: center;
+                }
 
-                                color: #FFF;
-                                font-size: 1.33333rem;
-                                font-style: normal;
-                                font-weight: 700;
-                                line-height: normal;
+                .flight-info-item__search-btn {
+                    display: flex;
+                    width: 5.66666rem;
+                    height: 5.66666rem;
 
-                                input[type="checkbox"]{
-                                    margin-right: 1rem;
-                                }
-                            }
-                        }
-                        .destination-date__select{
-                            border-radius: 0;
-                            border-left: 1px solid #C7C7C7;
-                        }
-                    }
-                    ._plane__search-btn{
-                        .title-text{
-                            opacity: 0;
-                        }
-                        .plane__search-btn{
-                            border-radius: 0rem 2rem 2rem 0rem;
-                            border-top: 4px solid #C7C7C7;
-                            border-right: 4px solid #C7C7C7;
-                            border-bottom: 4px solid #C7C7C7;
-                            border-left: 1px solid #C7C7C7;
-                            background: #FF7A50;
-                            .text{
-                                opacity: 0;                                color: #000;
-                            }
-                        }
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 2rem;
+                    background: #ff5a25;
+
+                    border: 1px solid #ff5a25;
+
+                    align-self: flex-end;
+                }
+            }
+
+            .flight-info-item--many-flight {
+                .date-info__departure-date {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    .departure-date__select-dropdown {
+                        border-radius: 1.33333rem;
+                        border: 4px solid #c7c7c7;
                     }
                 }
             }
-            .choice-trip-info--many-trip{}
+        }
+
+        .flight__many-flight-btn-group {
+            margin-top: 3rem;
+            .flight__add-more-flight {
+                display: flex;
+                width: 47rem;
+                height: 6rem;
+                padding: 1.33333rem 1.66667rem;
+                justify-content: center;
+                align-items: center;
+                gap: 4.16667rem;
+                border-radius: 1.33333rem;
+                border: 4px dashed #FFF;
+
+                .text {
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 2.66667rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+
+            .flight__search-btn {
+                display: flex;
+                width: 22.5rem;
+                height: 6rem;
+                padding: 1.33333rem 1.66667rem;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 0.83333rem;
+                border-radius: 2rem;
+                border: 4px solid #c7c7c7;
+                background: #ff7a50;
+
+                .text {
+                    display: flex;
+                    flex: 1 0 0;
+
+                    height: 1.66667rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: #fff;
+                    text-align: right;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
         }
     }
-    
 }
 
-.main-content{
-    background-color: #FFF;
+.main-content {
+    background-color: #fff;
     border-radius: 5rem 5rem 0 0;
 
     padding-top: 10rem;
-    .main-content__container{
+
+    .main-content__container {
         margin-bottom: 10rem;
 
-        .title-container{
+        .title-container {
             display: flex;
             width: 65.16667rem;
             height: 5.16667rem;
@@ -506,9 +598,9 @@
             justify-content: flex-start;
             align-items: center;
             gap: 0.83333rem;
-    
-            .text{
-                color: #373D41;
+
+            .text {
+                color: #373d41;
                 font-size: 2rem;
                 font-style: normal;
                 font-weight: 700;
@@ -517,12 +609,13 @@
         }
     }
 }
-.location-ad-card-container{
+
+.location-ad-card-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    .location-ad-card-container__item-container{
+    .location-ad-card-container__item-container {
         display: flex;
         // width: 96rem;
         align-items: flex-start;
@@ -530,42 +623,44 @@
         gap: 2rem;
         flex-wrap: wrap;
 
-        .item-container__item{
+        .item-container__item {
             position: relative;
             width: 30.66667rem;
             height: 19.16667rem;
             flex-shrink: 0;
             border-radius: 0.66667rem;
-            background: #D5D5D5;
+            background: #d5d5d5;
 
-            .item__information{
+            .item__information {
                 position: absolute;
                 top: 0;
                 z-index: 1;
-                .information__name{
+
+                .information__name {
                     display: flex;
                     padding: 1.66667rem 1.66667rem 0.83333rem 1.66667rem;
                     justify-content: flex-start;
                     align-items: center;
                     gap: 0.83333rem;
-    
-                    .text{
-                        color: #FFF;
+
+                    .text {
+                        color: #fff;
                         font-size: 2rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
                     }
                 }
-                .information__description{
+
+                .information__description {
                     display: flex;
                     padding: 0.83333rem 1.66667rem;
                     justify-content: flex-start;
                     align-items: center;
                     gap: 0.83333rem;
-    
-                    .text{
-                        color: #FFF;
+
+                    .text {
+                        color: #fff;
                         font-size: 1.33333rem;
                         font-style: normal;
                         font-weight: 700;
@@ -573,69 +668,74 @@
                     }
                 }
             }
-            .item__image-background{
+
+            .item__image-background {
                 position: absolute;
                 z-index: 0;
                 height: 100%;
                 width: 100%;
                 top: 0;
                 border-radius: 0.66667rem;
-            }       
+            }
         }
     }
 }
-.location-ad-slider-container{
+
+.location-ad-slider-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    .location-ad-slider-container__slider-container{
+    .location-ad-slider-container__slider-container {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
 
-        .slider-container__slider{
+        .slider-container__slider {
             display: flex;
             align-items: flex-start;
             gap: 2rem;
 
-            .slider__item{
+            .slider__item {
                 position: relative;
                 width: 22.5rem;
                 height: 25rem;
                 flex-shrink: 0;
                 border-radius: 0.66667rem;
-                background: #D5D5D5;
-                .item__information{
+                background: #d5d5d5;
+
+                .item__information {
                     position: absolute;
                     bottom: 0;
                     right: 0;
                     z-index: 1;
                     padding-bottom: 1rem;
-                    .information__name{
+
+                    .information__name {
                         display: flex;
                         padding: 1.66667rem 1.66667rem 0.83333rem 1.66667rem;
                         justify-content: flex-end;
                         align-items: center;
                         gap: 0.83333rem;
-        
-                        .text{
-                            color: #FFF;
+
+                        .text {
+                            color: #fff;
                             font-size: 2rem;
                             font-style: normal;
                             font-weight: 700;
                             line-height: normal;
                         }
                     }
-                    .information__description{
+
+                    .information__description {
                         display: flex;
                         padding: 0.83333rem 1.66667rem;
                         justify-content: flex-start;
                         align-items: center;
                         gap: 0.83333rem;
-        
-                        .text{
-                            color: #FFF;
+
+                        .text {
+                            color: #fff;
                             font-size: 1.33333rem;
                             font-style: normal;
                             font-weight: 700;
@@ -643,85 +743,90 @@
                         }
                     }
                 }
-                .item__image-background{
+
+                .item__image-background {
                     position: absolute;
                     z-index: 0;
                     height: 100%;
                     width: 100%;
                     top: 0;
                     border-radius: 0.66667rem;
-                }   
+                }
             }
         }
-
     }
 }
 
-footer{
+footer {
     display: flex;
     padding: 1rem 0rem;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: #4A4A4B;
+    background: #4a4a4b;
 }
-.footer-container{
+
+.footer-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2.41667rem;
 
-    .footer__top-content{
+    .footer__top-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
 
-        .top-content__brand-container{
+        .top-content__brand-container {
             display: flex;
             align-items: flex-start;
-            .brand-container__brand-logo{
+
+            .brand-container__brand-logo {
                 display: flex;
                 width: 13rem; // 156px
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.83333rem; // 10px
-                background: rgba(165, 165, 165, 0.00);
-            
-                img{
+                background: rgba(165, 165, 165, 0);
+
+                img {
                     width: 100%;
                     height: auto;
                 }
             }
-            .brand-container__brand-name{
+
+            .brand-container__brand-name {
                 display: flex;
                 width: 12.5rem; // 150px
                 height: 5rem; // 60px
                 padding: 0.83333rem; // 10px
                 align-items: center;
                 gap: 0.83333rem; // 10px
-            
-                .text{
-                    color: #FFF;
+
+                .text {
+                    color: #fff;
                     font-size: 2rem; // 24px
                     font-style: italic;
                     font-weight: 700;
-                    line-height: normal;    
+                    line-height: normal;
                 }
             }
         }
-        .top-content__media-container{
+
+        .top-content__media-container {
             display: flex;
             gap: 1.25rem;
         }
     }
-    .footer__information-content{
+
+    .footer__information-content {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
         align-self: stretch;
-    
+
         color: white;
         font-size: 1.5rem;
         font-style: normal;

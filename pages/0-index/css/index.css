@@ -9,7 +9,7 @@
   flex-shrink: 0;
   cursor: pointer;
   border-radius: 0.66667rem;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
 }
 .btn-default .text {
   text-align: right;
@@ -31,7 +31,7 @@
 }
 .btn-toggle .text {
   height: 1.66667rem;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Inter;
   font-size: 1.33333rem;
@@ -41,7 +41,7 @@
 }
 
 .btn-toggle.on {
-  background: #236EFF;
+  background: #236eff;
 }
 
 .btn-dropdown {
@@ -53,34 +53,30 @@
   flex-shrink: 0;
   justify-content: space-between;
   border-radius: 0.66667rem;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   background: rgba(244, 241, 241, 0.5);
+  cursor: pointer;
 }
-.btn-dropdown p, .btn-dropdown div {
-  color: #FFF;
+.btn-dropdown .text {
+  color: #fff;
   text-align: center;
   font-size: 1.33333rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.btn-dropdown img {
-  stroke-width: 2px;
-  stroke: #FFF;
-}
 
 .select-dropdown {
   display: flex;
-  height: 4.66667rem;
   padding: 1.33333rem 1.66667rem;
   align-items: center;
   gap: 0.83333rem;
   border-radius: 1.33333rem 1.33333rem 1.33333rem 1.33333rem;
-  border-top: 4px solid #C7C7C7;
-  border-right: 4px solid #C7C7C7;
-  border-bottom: 4px solid #C7C7C7;
-  border-left: 4px solid #C7C7C7;
-  background: #FFF;
+  border-top: 4px solid #c7c7c7;
+  border-right: 4px solid #c7c7c7;
+  border-bottom: 4px solid #c7c7c7;
+  border-left: 4px solid #c7c7c7;
+  background: #fff;
   cursor: pointer;
 }
 .select-dropdown .text {
@@ -157,7 +153,7 @@
   gap: 0.83333rem;
 }
 .header-container .header__top-content .top-content__brand-container .brand-container__brand-name .text {
-  color: #FFF;
+  color: #fff;
   font-size: 2.66667rem;
   font-style: italic;
   font-weight: 700;
@@ -169,7 +165,7 @@
   gap: 1.66667rem;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
-  color: #FFF;
+  color: #fff;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--default {
   display: flex;
@@ -182,7 +178,7 @@
   background: rgba(35, 110, 255, 0.8);
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn .text {
-  color: #FFF;
+  color: #fff;
   font-weight: 700;
 }
 .header-container .header__navbar {
@@ -204,7 +200,7 @@
 }
 .header-container .header__navbar .navbar__item .text {
   flex: 1 0 0;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 1.33333rem;
   font-style: normal;
@@ -226,7 +222,7 @@
 }
 .header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
   border-radius: 0.66667rem;
-  border: 1px solid #236EFF;
+  border: 1px solid #236eff;
 }
 .header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .text {
   color: #000;
@@ -249,7 +245,7 @@
   padding-top: 15rem;
 }
 .slogan-container .text {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 2.66667rem;
   font-style: normal;
@@ -283,7 +279,7 @@
 .feature-container .feature-container__navbar .navbar__item .text {
   flex: 1 0 0;
   height: 1.66667rem;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 1.33333rem;
   font-style: normal;
@@ -304,7 +300,7 @@
 }
 .feature-container .feature-container__navbar .navbar__item.selected {
   border-radius: 0.66667rem;
-  background: #FFF;
+  background: #fff;
 }
 .feature-container .feature-container__navbar .navbar__item.selected .text {
   color: black;
@@ -315,110 +311,167 @@
 .feature-container .feature-container__navbar .navbar__item.selected .item__icon--selected {
   display: flex;
 }
-.feature-container .feature-container__plane {
+.feature-container .feature-container__flight {
   display: flex;
   flex-direction: column;
   gap: 0.83333rem 2.33333rem;
 }
-.feature-container .feature-container__plane .row {
+.feature-container .feature-container__flight .row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-.feature-container .feature-container__plane .row-item {
+.feature-container .feature-container__flight .row-item {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info {
+.feature-container .feature-container__flight .flight-info-container {
+  display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .title-text {
-  color: #FFF;
+.feature-container .feature-container__flight .flight-info-container .title-text {
+  color: #fff;
+  text-align: flex-start;
   font-size: 1.33333rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   padding: 1rem;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip {
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item {
   display: flex;
   flex-direction: row;
-  flex-basis: 100%;
-  justify-content: space-between;
-  gap: 5rem;
+  gap: 2rem;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-dep-n-des {
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item .flight-info-item__location-info {
   display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+  flex: 10;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-dep-n-des .choice-dep-n-des__departure {
-  flex-grow: 1;
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item .flight-info-item__location-info .location-info__departure-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-dep-n-des .choice-dep-n-des__departure .departure__select {
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item .flight-info-item__location-info .location-info__departure-info .departure-info__select-dropdown {
   border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-  border-right: 1px solid #C7C7C7;
+  border-right: 1px solid #c7c7c7;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-dep-n-des .choice-dep-n-des__destination {
-  flex-grow: 1;
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item .flight-info-item__location-info .location-info__arrival-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-dep-n-des .choice-dep-n-des__destination .destination__select {
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item .flight-info-item__location-info .location-info__arrival-info .arrival-info__select-dropdown {
   border-radius: 0rem 1.33333rem 1.33333rem 0rem;
-  border-left: 1px solid #C7C7C7;
+  border-left: 1px solid #c7c7c7;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date {
+.feature-container .feature-container__flight .flight-info-container .flight-info-container__flight-info-item .flight-info-item__date-info {
   display: flex;
-  flex-grow: 1;
+  flex: 10;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .return-date__checkbox {
+  display: flex;
   flex-direction: row;
+  padding-left: 1rem;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__departure-date {
-  flex-grow: 5;
-}
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__departure-date .departure-date__select {
-  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-  border-right: 1px solid #C7C7C7;
-}
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__destination-date {
-  flex-grow: 5;
-}
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__destination-date .destination-date__checkbox {
-  padding: 1rem;
-}
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__destination-date .destination-date__checkbox .text {
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .date-info__departure-date {
   display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .date-info__departure-date .departure-date__select-dropdown {
+  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+  border-right: 1px solid #c7c7c7;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .date-info__return-date {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .date-info__return-date .return-date__select-dropdown {
+  border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+  border-left: 1px solid #c7c7c7;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .date-info__return-date .return-date__select-dropdown.disable {
+  pointer-events: none;
+  background-color: #f2f3f3;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .date-info__return-date .return-date__select-dropdown.disable .text {
+  color: #858d91;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--one-flight .flight-info-item__search-btn {
+  display: flex;
+  width: 5.66666rem;
+  height: 5.66666rem;
+  justify-content: center;
   align-items: center;
+  border-radius: 2rem;
+  background: #ff5a25;
+  border: 1px solid #ff5a25;
+  align-self: flex-end;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--many-flight .date-info__departure-date {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.feature-container .feature-container__flight .flight-info-container .flight-info-item--many-flight .date-info__departure-date .departure-date__select-dropdown {
+  border-radius: 1.33333rem;
+  border: 4px solid #c7c7c7;
+}
+.feature-container .feature-container__flight .flight__many-flight-btn-group {
+  margin-top: 3rem;
+}
+.feature-container .feature-container__flight .flight__many-flight-btn-group .flight__add-more-flight {
+  display: flex;
+  width: 47rem;
+  height: 6rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: center;
+  align-items: center;
+  gap: 4.16667rem;
+  border-radius: 1.33333rem;
+  border: 4px dashed #FFF;
+}
+.feature-container .feature-container__flight .flight__many-flight-btn-group .flight__add-more-flight .text {
   color: #FFF;
-  font-size: 1.33333rem;
+  text-align: center;
+  font-size: 2.66667rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__destination-date .destination-date__checkbox .text input[type=checkbox] {
-  margin-right: 1rem;
+.feature-container .feature-container__flight .flight__many-flight-btn-group .flight__search-btn {
+  display: flex;
+  width: 22.5rem;
+  height: 6rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.83333rem;
+  border-radius: 2rem;
+  border: 4px solid #c7c7c7;
+  background: #ff7a50;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date .choice-date__destination-date .destination-date__select {
-  border-radius: 0;
-  border-left: 1px solid #C7C7C7;
+.feature-container .feature-container__flight .flight__many-flight-btn-group .flight__search-btn .text {
+  display: flex;
+  flex: 1 0 0;
+  height: 1.66667rem;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: right;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date ._plane__search-btn .title-text {
-  opacity: 0;
-}
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date ._plane__search-btn .plane__search-btn {
-  border-radius: 0rem 2rem 2rem 0rem;
-  border-top: 4px solid #C7C7C7;
-  border-right: 4px solid #C7C7C7;
-  border-bottom: 4px solid #C7C7C7;
-  border-left: 1px solid #C7C7C7;
-  background: #FF7A50;
-}
-.feature-container .feature-container__plane .plane__choice-trip-info .choice-trip-info--one-trip .choice-trip-info__choice-date ._plane__search-btn .plane__search-btn .text {
-  opacity: 0;
-  color: #000;
-}
+
 .main-content {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 5rem 5rem 0 0;
   padding-top: 10rem;
 }
@@ -436,7 +489,7 @@
   gap: 0.83333rem;
 }
 .main-content .main-content__container .title-container .text {
-  color: #373D41;
+  color: #373d41;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -461,7 +514,7 @@
   height: 19.16667rem;
   flex-shrink: 0;
   border-radius: 0.66667rem;
-  background: #D5D5D5;
+  background: #d5d5d5;
 }
 .location-ad-card-container .location-ad-card-container__item-container .item-container__item .item__information {
   position: absolute;
@@ -476,7 +529,7 @@
   gap: 0.83333rem;
 }
 .location-ad-card-container .location-ad-card-container__item-container .item-container__item .item__information .information__name .text {
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -490,7 +543,7 @@
   gap: 0.83333rem;
 }
 .location-ad-card-container .location-ad-card-container__item-container .item-container__item .item__information .information__description .text {
-  color: #FFF;
+  color: #fff;
   font-size: 1.33333rem;
   font-style: normal;
   font-weight: 700;
@@ -526,7 +579,7 @@
   height: 25rem;
   flex-shrink: 0;
   border-radius: 0.66667rem;
-  background: #D5D5D5;
+  background: #d5d5d5;
 }
 .location-ad-slider-container .location-ad-slider-container__slider-container .slider-container__slider .slider__item .item__information {
   position: absolute;
@@ -543,7 +596,7 @@
   gap: 0.83333rem;
 }
 .location-ad-slider-container .location-ad-slider-container__slider-container .slider-container__slider .slider__item .item__information .information__name .text {
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -557,7 +610,7 @@
   gap: 0.83333rem;
 }
 .location-ad-slider-container .location-ad-slider-container__slider-container .slider-container__slider .slider__item .item__information .information__description .text {
-  color: #FFF;
+  color: #fff;
   font-size: 1.33333rem;
   font-style: normal;
   font-weight: 700;
@@ -578,7 +631,7 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background: #4A4A4B;
+  background: #4a4a4b;
 }
 
 .footer-container {
@@ -618,7 +671,7 @@ footer {
   gap: 0.83333rem;
 }
 .footer-container .footer__top-content .top-content__brand-container .brand-container__brand-name .text {
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
   font-style: italic;
   font-weight: 700;
