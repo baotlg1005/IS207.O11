@@ -22,3 +22,11 @@ body{
     padding: auto;
     margin: auto;
 }
+
+.show{
+    //important
+    display: flex !important;
+}
+.hide{
+    display: none !important; 
+}

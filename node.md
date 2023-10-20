@@ -1,1 +1,4 @@
-run scss: sass --watch resources\sass\style.scss resources\css\style.css
+việc chưa làm:
+    event:
+        đăng nhập/ đăng ký btn
+        header nav

@@ -8,6 +8,8 @@
     gap: 0.83333rem;
     flex-shrink: 0;
 
+    cursor: pointer;
+
     border-radius: 0.66667rem; // 8px
     border: 1px solid #FFF;
 
@@ -19,7 +21,6 @@
         line-height: normal;
     }
 }
-
 .btn-toggle{
     display: inline-flex;
     padding: 1.33333rem 1.66667rem; // 16px 20px
@@ -28,6 +29,8 @@
     gap: 0.83333rem; // 10px
     border-radius: 2rem; // 24px
     background: rgba(0, 0, 0, 0.50);
+
+    cursor: pointer;
 
     .text{
         height: 1.66667rem; // 20px
@@ -44,7 +47,6 @@
 .btn-toggle.on{
     background: #236EFF;
 }
-
 .btn-dropdown{
     display: flex;
     // width: 15.5rem; // 186px
@@ -53,6 +55,8 @@
     align-items: center;
     gap: 0.83333rem; // 10px
     flex-shrink: 0;
+
+    justify-content: space-between;
 
     border-radius: 0.66667rem; // 8px
     border: 1px solid #FFF;
@@ -71,13 +75,10 @@
         stroke: #FFF;
     }
 }
-
-.divine-line{
-}
-
 .select-dropdown{
     display: flex;
     // width: 23.5rem;
+    height: 4.66667rem;
     padding: 1.33333rem 1.66667rem;
     align-items: center;
     gap: 0.83333rem;
@@ -88,13 +89,19 @@
     border-left: 4px solid #C7C7C7;
     background: #FFF;
 
+    cursor: pointer;
+
     .text{
         color: #000;
-        text-align: center;
+        text-align: flex-start;
         font-size: 1.33333rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
@@ -106,11 +113,9 @@
     z-index: -100;
     width: 100%;
     height: 75rem; // 900px
-    // border-radius: 0rem 0rem 2rem 2rem;
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 .header-container{
     position: fixed; // chua on lam lam lai khi dung js
     top: 0;
@@ -167,7 +172,7 @@
             
                 .text{
                     color: #FFF;
-                    font-size: 2rem; // 24px
+                    font-size: 2.66667rem;
                     font-style: italic;
                     font-weight: 700;
                     line-height: normal;    
@@ -216,6 +221,8 @@
         
             border-radius: 0.66667rem; // 8px
 
+            cursor: pointer;
+
             .text{
                 flex: 1 0 0; // cái này hoạt động như nào ???
             
@@ -229,7 +236,6 @@
         }
     }
 }
-
 .header-container.on-scroll{
     background-color: #fff;
     .header__top-content{
@@ -275,9 +281,6 @@
         }
     }
 }
-
-
-
 .slogan-container{
     display: flex;
     padding: 2.08333rem 0rem; // 25px 0px
@@ -295,7 +298,6 @@
         line-height: normal;
     }
 }
-
 .feature-container{
     display: flex;
     height: 50rem; // 600px
@@ -361,185 +363,130 @@
         }
     }
 
-    .feature-container__item{
-        display: none;
-    }
-    .feature-container__item.active{
-        display: flex;
-    }
+    // .feature-container__item{}
     .feature-container__plane{
-        height: 33rem; // 396px
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: 0.83333rem 2.33333rem; // 10px 28px
-        flex-shrink: 0;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        gap: 0.83333rem 2.33333rem;
 
-        .plane__filter-container{
+        .row{
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
-            align-items: flex-start;
 
-            .filter-container__toggle-btn-group{
-                display: flex;
-                align-items: flex-start;
-                gap: 2rem; // 24px
-            }
-            .filter-container__dropdown-btn-group{
-                display: flex;
-                align-items: flex-start;
-                gap: 2rem; // 24px
-            }
+            width: 100%;
         }
-
-        .plane__detail-container{
+        .row-item{
             display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+        //row - 1
+        // .plane__trip-type-toggle{
+
+        //     .text{}
+        //     .trip-type-toggle__one-trip{}
+        //     .trip-type-toggle__many-trip{}
+        // }
+        // .plane__select-passenger-btn{}
+        // .plane__filter-seat-btn{}
+
+        //row - 2
+        .plane__choice-trip-info{
             flex-direction: column;
-            .detail-container__information-container{
+            .title-text{
+                color: #FFF;
+                font-size: 1.33333rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                padding: 1rem;
+            }
+            .choice-trip-info--one-trip{
                 display: flex;
+                flex-direction: row;
                 flex-basis: 100%;
-                gap: 0.83333rem 2.33333rem; // 10px 28px
-                .detail-container__location-select-container{
+                justify-content: space-between;
+
+                gap: 5rem;
+
+                .choice-trip-info__choice-dep-n-des{
                     display: flex;
                     flex-direction: row;
-                    padding: 1rem;
-                    padding-left: 0;
-                    flex-basis: 50%;
-                    
-                    .location-select-container__location-start{
+                    flex-grow: 1;
+                    .choice-dep-n-des__departure{
                         flex-grow: 1;
-                        .title-text{
-                            display: flex;
-                            color: #FFF;
-                            font-size: 1.33333rem;
-                            font-style: normal;
-                            font-weight: 700;
-                            line-height: normal;
-    
-                            padding-left: 1rem;
-                            padding-bottom: 1rem;
-                        }
-                        .location-start__select-dropdown{
+                        .departure__select{
                             border-radius: 1.33333rem 0rem 0rem 1.33333rem;
                             border-right: 1px solid #C7C7C7;
                         }
                     }
-                    .location-select-container__location-end{
+                    .choice-dep-n-des__destination{
                         flex-grow: 1;
-                        .title-text{
-                            display: flex;
-                            color: #FFF;
-                            font-size: 1.33333rem;
-                            font-style: normal;
-                            font-weight: 700;
-                            line-height: normal;
-    
-                            padding-left: 1rem;
-                            padding-bottom: 1rem;
-                        }
-                        .location-end__select-dropdown{
+                        .destination__select{
                             border-radius: 0rem 1.33333rem 1.33333rem 0rem;
                             border-left: 1px solid #C7C7C7;
                         }
                     }
-                    
                 }
-    
-                .detail-container__time-select-container{
+                .choice-trip-info__choice-date{
                     display: flex;
+                    flex-grow: 1;
                     flex-direction: row;
-                    padding: 1rem;
-                    padding-right: 0;
-                    flex-basis: 50%;
-    
-                    .location-select-container__time{
-                        flex-grow: 1;
-                        .title-text{
-                            display: flex;
-                            color: #FFF;
-                            font-size: 1.33333rem;
-                            font-style: normal;
-                            font-weight: 700;
-                            line-height: normal;
-    
-                            padding-left: 1rem;
-                            padding-bottom: 1rem;
+                    .choice-date__departure-date{
+                        flex-grow: 5;
+
+                        .departure-date__select{
+                            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+                            border-right: 1px solid #C7C7C7;
                         }
-                        .time__select-dropdown{
-                            display: flex;
-                            padding: 1.33333rem 1.66667rem;
-                            align-items: center;
-                            gap: 0.83333rem;
-                            border-radius: 1.33333rem;
-                            border: 4px solid #C7C7C7;
-                            background: #FFF;
-                            
+                    }
+                    .choice-date__destination-date{
+                        flex-grow: 5;
+                        .destination-date__checkbox{
+                            padding: 1rem;
                             .text{
-                                color: #000;
-                                text-align: center;
+                                display: flex;
+                                align-items: center;
+
+                                color: #FFF;
                                 font-size: 1.33333rem;
                                 font-style: normal;
-                                font-weight: 400;
+                                font-weight: 700;
                                 line-height: normal;
+
+                                input[type="checkbox"]{
+                                    margin-right: 1rem;
+                                }
+                            }
+                        }
+                        .destination-date__select{
+                            border-radius: 0;
+                            border-left: 1px solid #C7C7C7;
+                        }
+                    }
+                    ._plane__search-btn{
+                        .title-text{
+                            opacity: 0;
+                        }
+                        .plane__search-btn{
+                            border-radius: 0rem 2rem 2rem 0rem;
+                            border-top: 4px solid #C7C7C7;
+                            border-right: 4px solid #C7C7C7;
+                            border-bottom: 4px solid #C7C7C7;
+                            border-left: 1px solid #C7C7C7;
+                            background: #FF7A50;
+                            .text{
+                                opacity: 0;                                color: #000;
                             }
                         }
                     }
                 }
             }
-        }
-        .detail-container__footer-btn-group{
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            justify-content: space-between;
-
-            margin-top: 5rem;
-            .footer-btn-group__add-more-btn{
-                display: flex;
-                width: 47rem;
-                height: 6rem;
-                padding: 1.33333rem 1.66667rem;
-                justify-content: center;
-                align-items: center;
-                gap: 4.16667rem;
-                border-radius: 1.33333rem;
-                border: 4px dashed #FFF;
-
-                .text{
-                    color: #FFF;
-                    text-align: center;
-                    font-size: 2.66667rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    text-transform: uppercase;
-                }
-            }
-            .footer-btn-group__find-btn{
-                width: 22.5rem;
-                height: 6rem;
-                padding: 1.33333rem 1.66667rem;
-                justify-content: flex-end;
-                border-radius: 2rem;
-                border: 4px solid #C7C7C7;
-                background: #FF7A50;
-                
-                .text{
-                    display: flex;
-                    height: 1.66667rem;
-                    flex-direction: column;
-                    justify-content: center;
-                    flex: 1 0 0;
-                    color: #FFF;
-                    text-align: right;
-                    font-size: 2rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                }
-            }
+            .choice-trip-info--many-trip{}
         }
     }
+    
 }
 
 .main-content{
@@ -570,15 +517,11 @@
         }
     }
 }
-
 .location-ad-card-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    .location-ad-card-container__title-container{
-
-    }
     .location-ad-card-container__item-container{
         display: flex;
         // width: 96rem;
@@ -641,13 +584,11 @@
         }
     }
 }
-
 .location-ad-slider-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    .location-ad-slider-container__title-container{}
     .location-ad-slider-container__slider-container{
         display: flex;
         flex-direction: column;
@@ -712,11 +653,7 @@
                 }   
             }
         }
-        .slider-container__nav{
 
-            .nav__left{}
-            .nav__right{}
-        }
     }
 }
 

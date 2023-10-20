@@ -23,4 +23,10 @@ body {
   margin: auto;
 }
 
-/*# sourceMappingURL=main-style.css.map */
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}/*# sourceMappingURL=main-style.css.map */
