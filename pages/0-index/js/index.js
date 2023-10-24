@@ -44,7 +44,7 @@ const oneFlightElement = [
 ];
 const manyFlightElement = [
   flightFeatureContainer.querySelector('.flight__many-flight-btn-group'),
-  flightFeatureContainer.querySelector('.flight-info-item--many-flight'),
+  flightFeatureContainer.querySelector('.flight-info-container__many-flight-container'),
 ];
 
 // toggle flight type 
@@ -82,3 +82,17 @@ haveReturnFlightCheckbox.addEventListener('change', function(e) {
   }
 });
 
+//add more btn event
+const addMoreFlightBtn = flightFeatureContainer.querySelector('.flight__add-more-flight');
+const flightInfoContainer = flightFeatureContainer.querySelector('.flight-info-container');
+const manyFlightInfoContainer = flightInfoContainer.querySelector('.flight-info-container__many-flight-container');
+const flightInfoItems = Array.from(flightFeatureContainer.querySelectorAll('.flight-info-item--many-flight'));
+const flightInfoItemTemplate = flightFeatureContainer.querySelector('.flight-info-item--many-flight');
+
+
+addMoreFlightBtn.addEventListener('click', function(e) {
+  const newFlightInfoItem = flightInfoItemTemplate.cloneNode(true);
+  newFlightInfoItem.dataset.id = flightInfoItems.length;
+  flightInfoItems.push(newFlightInfoItem);
+  manyFlightInfoContainer.appendChild(newFlightInfoItem);
+});

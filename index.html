@@ -76,14 +76,14 @@
                     Vé máy bay
                 </div>
             </div>
-            <div class="navbar__item" data-feature-type="bus">
+            <div class="navbar__item" data-feature-type="coach">
                 <img class="icon item__icon--default" src="resources/images/svg/bus.svg" alt="">
                 <img class="icon item__icon--selected" src="resources/images/svg/bus-selected.svg" alt="">
                 <div class="text">
                     Vé xe khách
                 </div>
             </div>
-            <div class="navbar__item" data-feature-type="taxi">
+            <div class="navbar__item" data-feature-type="transfer">
                 <img class="icon item__icon--default" src="resources/images/svg/taxi.svg" alt="">
                 <img class="icon item__icon--selected" src="resources/images/svg/taxi-selected.svg" alt="">
                 <div class="text">
@@ -185,7 +185,7 @@
                                     Khứ hồi
                                 </div>
                             </div>
-                            <div class="select-dropdown return-date__select-dropdown">
+                            <div class="select-dropdown return-date__select-dropdown disable">
                                 <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
                                 <div class="text">
                                     20/10/2020
@@ -197,40 +197,42 @@
                         <img class="icon" src="./resources/images/svg/search-icon.svg" alt="" srcset="">
                     </div>
                 </div>
-                <div class="flight-info-container__flight-info-item flight-info-item--many-flight hide" data-flight-type="many">
-                    <div class="flight-info-item__location-info">
-                        <div class="location-info__departure-info">
-                            <div class="title-text">
-                                Điểm đi
+                <div class="flight-info-container__many-flight-container hide">
+                    <div class="flight-info-container__flight-info-item flight-info-item--many-flight" data-flight-type="many" data-id = '0'>
+                        <div class="flight-info-item__location-info">
+                            <div class="location-info__departure-info">
+                                <div class="title-text">
+                                    Điểm đi
+                                </div>
+                                <div class="select-dropdown departure-info__select-dropdown">
+                                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                                    <div class="text">
+                                        TP. Hồ Chí Minh
+                                    </div>
+                                </div>
                             </div>
-                            <div class="select-dropdown departure-info__select-dropdown">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                <div class="text">
-                                    TP. Hồ Chí Minh
+                            <div class="location-info__arrival-info">
+                                <div class="title-text">
+                                    Điểm đến
+                                </div>
+                                <div class="select-dropdown arrival-info__select-dropdown">
+                                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                                    <div class="text">
+                                        Hà Nội
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="location-info__arrival-info">
-                            <div class="title-text">
-                                Điểm đến
-                            </div>
-                            <div class="select-dropdown arrival-info__select-dropdown">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                <div class="text">
-                                    Hà Nội
+                        <div class="flight-info-item__date-info">
+                            <div class="date-info__departure-date">
+                                <div class="title-text">
+                                    Ngày đi
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flight-info-item__date-info">
-                        <div class="date-info__departure-date">
-                            <div class="title-text">
-                                Ngày đi
-                            </div>
-                            <div class="select-dropdown departure-date__select-dropdown">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                <div class="text">
-                                    08/04/2020
+                                <div class="select-dropdown departure-date__select-dropdown">
+                                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                                    <div class="text">
+                                        08/04/2020
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -252,10 +254,10 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid feature-container__item feature-container__bus" data-feature-type="bus">
+        <div class="container-fluid feature-container__item feature-container__bus" data-feature-type="coach">
 
         </div>
-        <div class="container-fluid feature-container__item feature-container__taxi" data-feature-type="taxi">
+        <div class="container-fluid feature-container__item feature-container__taxi" data-feature-type="transfer">
 
         </div>
         <div class="container-fluid feature-container__item feature-container__hotel" data-feature-type="hotel">
@@ -273,82 +275,7 @@
                 </div>
             </div>
             <div class="location-ad-card-container__item-container">
-                <div class="item-container__item">
-                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
-                    <div class="item__information">
-                        <div class="information__name">
-                            <div class="text">
-                                Đà Lạt
-                            </div>
-                        </div>
-                        <div class="information__description">
-                            <div class="text">
-                                4,7 triệu lượt du khách
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container__item">
-                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
-                    <div class="item__information">
-                        <div class="information__name">
-                            <div class="text">
-                                Đà Lạt
-                            </div>
-                        </div>
-                        <div class="information__description">
-                            <div class="text">
-                                4,7 triệu lượt du khách
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container__item">
-                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
-                    <div class="item__information">
-                        <div class="information__name">
-                            <div class="text">
-                                Đà Lạt
-                            </div>
-                        </div>
-                        <div class="information__description">
-                            <div class="text">
-                                4,7 triệu lượt du khách
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container__item">
-                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
-                    <div class="item__information">
-                        <div class="information__name">
-                            <div class="text">
-                                Đà Lạt
-                            </div>
-                        </div>
-                        <div class="information__description">
-                            <div class="text">
-                                4,7 triệu lượt du khách
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container__item">
-                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
-                    <div class="item__information">
-                        <div class="information__name">
-                            <div class="text">
-                                Đà Lạt
-                            </div>
-                        </div>
-                        <div class="information__description">
-                            <div class="text">
-                                4,7 triệu lượt du khách
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container__item">
+                <div class="item-container__item template hide">
                     <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
                     <div class="item__information">
                         <div class="information__name">
@@ -375,9 +302,9 @@
                     Sống thoải mái ở những thành phố được yêu thích nhất
                 </div>
             </div>
-            <div class="location-ad-slider-container__slider-container">
-                <div class="slider-container__slider">
-                    <div class="slider__item">
+            <div class="container-fluid main-content__container location-ad-slider-container__slider-container">
+                <div class="container-fluid slider-container__slider">
+                    <div class="slider__item template hide">
                         <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="">
                         <div class="item__information">
                             <div class="information__description">
@@ -392,56 +319,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider__item">
-                        <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="">
-                        <div class="item__information">
-                            <div class="information__description">
-                                <div class="text">
-                                    13.786 phòng
-                                </div>
-                            </div>
-                            <div class="information__name">
-                                <div class="text">
-                                    Đà Lạt
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="">
-                        <div class="item__information">
-                            <div class="information__description">
-                                <div class="text">
-                                    13.786 phòng
-                                </div>
-                            </div>
-                            <div class="information__name">
-                                <div class="text">
-                                    Đà Lạt
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="">
-                        <div class="item__information">
-                            <div class="information__description">
-                                <div class="text">
-                                    13.786 phòng
-                                </div>
-                            </div>
-                            <div class="information__name">
-                                <div class="text">
-                                    Đà Lạt
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="slider-container__nav">
-                    <div class="nav__left"></div>
-                    <div class="nav__right"></div>
+                    <div class="nav__item nav__left">
+                        <img src="/resources/images/svg/slider__arrow-left.svg" alt="" srcset="">
+                    </div>
+                    <div class="nav__item nav__right">
+                        <img src="/resources/images/svg/slider__arrow-right.svg" alt="" srcset="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -479,6 +364,7 @@
     </footer>
 
     <script src="pages/0-index/js/index.js"></script>
+    <script src="pages/0-index/js/index-load-ad.js"></script>
 </body>
 
 </html>
