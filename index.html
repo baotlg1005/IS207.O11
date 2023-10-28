@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div class="blur-panel hide"></div>
     <div class="container-fluid">
         <img class="top-background" src="pages/0-index/image/top-background.jpg" alt="">
     </div>
@@ -64,7 +65,7 @@
     </div>
     <div class="container slogan-container">
         <div class="text">
-            You Took My Heart, Held It And Ripped It Apart
+            Từ Đông Nam Á Đến Thế Giới, Trong Tầm Tay Bạn
         </div>
     </div>
     <div class="container feature-container">
@@ -101,157 +102,61 @@
         <svg class="container-fluid divine-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 2" fill="none">
             <path d="M0 1H1152" stroke="white" stroke-width="2" />
         </svg>
-        <div class="container-fluid feature-container__item feature-container__flight show" data-feature-type="flight">
+        <div id="feature-container__flight" class="container-fluid feature-container__item show" data-feature-type="flight">
             <div class="row">
-                <div class="row-item flight__flight-type-toggle">
-                    <div class="btn-toggle on flight-type-toggle__one-flight" data-flight-type="one">
+                <div class="flight__flight-type">
+                    <div class="flight-type-toggle flight-type--one-trip active" data-flight-type="one">
                         <div class="text">
-                            Một chiều /Khứ hồi
+                            Một chiều/Khứ hồi
                         </div>
                     </div>
-                    <div class="btn-toggle flight-type-toggle__many-flight" data-flight-type="many">
+                    <div class="flight-type-toggle flight-type--many-trip" data-flight-type="many">
                         <div class="text">
                             Nhiều thành phố
                         </div>
                     </div>
                 </div>
-                <div class="row-item">
-                    <div class="btn-dropdown flight__select-passenger-btn">
-                        <div class="icon">
-                            <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                <div class="flight__ticket-info">
+                    <div class="ticket-info__passenger">
+                        <ion-icon name="people"></ion-icon>
+                        <div class="passenger__information">
+                            1 Người lớn, 0 trẻ em, 0 em bé
                         </div>
-                        <div class="text">
-                            1 Người lớn, 0 Trẻ em, 0 Em bé
-                        </div>
-                        <div class="icon">
-                            <img src="resources/images/svg/dropdown-icon.svg" alt="" srcset="">
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                        <div class="passenger__dropdown-panel">
+
                         </div>
                     </div>
-                    <div class="btn-dropdown flight__filter-seat-btn">
-                        <div class="icon">
-                            <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                        </div>
+                    <div class="ticket-info__seat-type">
+                        <ion-icon name="star"></ion-icon>
                         <div class="text">
                             Phổ thông
                         </div>
-                        <div class="icon">
-                            <img src="resources/images/svg/dropdown-icon.svg" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row flight-info-container">
-                <div class="flight-info-container__flight-info-item flight-info-item--one-flight" data-flight-type="one">
-                    <div class="flight-info-item__location-info">
-                        <div class="location-info__departure-info">
-                            <div class="title-text">
-                                Điểm đi
-                            </div>
-                            <div class="select-dropdown departure-info__select-dropdown">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                        <div class="seat-type__drop-down-panel">
+                            <div class="drop-down-panel__item" data-ticket-type="economy">
+                                <ion-icon name="ellipse"></ion-icon>
                                 <div class="text">
-                                    TP. Hồ Chí Minh
+                                    Phổ thông
                                 </div>
                             </div>
-                        </div>
-                        <div class="location-info__arrival-info">
-                            <div class="title-text">
-                                Điểm đến
-                            </div>
-                            <div class="select-dropdown arrival-info__select-dropdown">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
+                            <div class="drop-down-panel__item" data-ticket-type="business">
+                                <ion-icon name="ellipse-outline"></ion-icon>
                                 <div class="text">
-                                    Hà Nội
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flight-info-item__date-info">
-                        <div class="date-info__departure-date">
-                            <div class="title-text">
-                                Ngày đi
-                            </div>
-                            <div class="select-dropdown departure-date__select-dropdown">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                <div class="text">
-                                    20/10/2020
-                                </div>
-                            </div>
-                        </div>
-                        <div class="date-info__return-date">
-                            <div class="return-date__checkbox">
-                                <input type="checkbox" name="" id="flight-return-checkbox">
-                                <div class="title-text">
-                                    Khứ hồi
-                                </div>
-                            </div>
-                            <div class="select-dropdown return-date__select-dropdown disable">
-                                <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                <div class="text">
-                                    20/10/2020
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flight-info-item__search-btn">
-                        <img class="icon" src="./resources/images/svg/search-icon.svg" alt="" srcset="">
-                    </div>
-                </div>
-                <div class="flight-info-container__many-flight-container hide">
-                    <div class="flight-info-container__flight-info-item flight-info-item--many-flight" data-flight-type="many" data-id = '0'>
-                        <div class="flight-info-item__location-info">
-                            <div class="location-info__departure-info">
-                                <div class="title-text">
-                                    Điểm đi
-                                </div>
-                                <div class="select-dropdown departure-info__select-dropdown">
-                                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                    <div class="text">
-                                        TP. Hồ Chí Minh
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="location-info__arrival-info">
-                                <div class="title-text">
-                                    Điểm đến
-                                </div>
-                                <div class="select-dropdown arrival-info__select-dropdown">
-                                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                    <div class="text">
-                                        Hà Nội
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flight-info-item__date-info">
-                            <div class="date-info__departure-date">
-                                <div class="title-text">
-                                    Ngày đi
-                                </div>
-                                <div class="select-dropdown departure-date__select-dropdown">
-                                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                                    <div class="text">
-                                        08/04/2020
-                                    </div>
+                                    Thương gia
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row flight__many-flight-btn-group hide">
-                <div class="flight__add-more-flight">
-                    <img class="icon" src="/resources/images/svg/user-icon-blue.svg" alt="">
-                    <div class="text">
-                        Thêm chuyến bay khác
-                    </div>
-                </div>
-                <div class="flight__search-btn">
-                    <img class="icon" src="/resources/images/svg/search-icon.svg" alt="" srcset="">
-                    <div class="text">
-                        Tìm chuyến bay
-                    </div>
-                </div>
+            <div class="flight__information-container">
+                <form class="information-container--one-trip" action="">
+
+                </form>
+                <form class="information-container--many-trip" action="">
+
+                </form>
             </div>
         </div>
         <div class="container-fluid feature-container__item feature-container__bus" data-feature-type="coach">
@@ -365,6 +270,11 @@
 
     <script src="pages/0-index/js/index.js"></script>
     <script src="pages/0-index/js/index-load-ad.js"></script>
+    <script src="pages/0-index/js/header-on-scroll.js"></script>
+    <script src="pages/0-index/js/flight-feature.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
