@@ -30,9 +30,7 @@
             </div>
             <div class="top-content__account-btn-group">
                 <div class="btn-default account-btn-group__login-btn">
-                    <img class="login-btn__icon--default" src="resources/images/svg/user-icon.svg" alt="" srcset="">
-                    <img class="login-btn__icon--on-scroll" src="resources/images/svg/user-icon-blue.svg" alt=""
-                        srcset="">
+                        <ion-icon class="login-btn__icon" name="person-outline"></ion-icon>
                     <div class="text">Đăng nhập</div>
                 </div>
                 <div class="btn-default btn account-btn-group__sign-up-btn">
@@ -71,29 +69,25 @@
     <div class="container feature-container">
         <div class="container-fluid feature-container__navbar">
             <div class="navbar__item selected" data-feature-type="flight">
-                <img class="icon item__icon--default" src="resources/images/svg/plane.svg" alt="">
-                <img class="icon item__icon--selected" src="resources/images/svg/plane-selected.svg" alt="">
+                <ion-icon class="airplane-icon" name="airplane"></ion-icon>
                 <div class="text">
                     Vé máy bay
                 </div>
             </div>
             <div class="navbar__item" data-feature-type="coach">
-                <img class="icon item__icon--default" src="resources/images/svg/bus.svg" alt="">
-                <img class="icon item__icon--selected" src="resources/images/svg/bus-selected.svg" alt="">
+                <ion-icon class="bus-icon" name="bus"></ion-icon>
                 <div class="text">
                     Vé xe khách
                 </div>
             </div>
             <div class="navbar__item" data-feature-type="transfer">
-                <img class="icon item__icon--default" src="resources/images/svg/taxi.svg" alt="">
-                <img class="icon item__icon--selected" src="resources/images/svg/taxi-selected.svg" alt="">
+                <ion-icon class="car-icon" name="car"></ion-icon>
                 <div class="text">
                     Đưa đón sân bay
                 </div>
             </div>
             <div class="navbar__item" data-feature-type="hotel">
-                <img class="icon item__icon--default" src="resources/images/svg/hotel.svg" alt="">
-                <img class="icon item__icon--selected" src="resources/images/svg/hotel-selected.svg" alt="">
+                <ion-icon class="business-icon" name="business"></ion-icon>
                 <div class="text">
                     Khách sạn
                 </div>
@@ -103,21 +97,21 @@
             <path d="M0 1H1152" stroke="white" stroke-width="2" />
         </svg>
         <div id="feature-container__flight" class="container-fluid feature-container__item show" data-feature-type="flight">
-            <div class="row">
+            <div class="row flight__config">
                 <div class="flight__flight-type">
-                    <div class="flight-type-toggle flight-type--one-trip active" data-flight-type="one">
+                    <div class="btn-toggle flight-type-toggle flight-type--one-trip active" data-flight-type="one">
                         <div class="text">
                             Một chiều/Khứ hồi
                         </div>
                     </div>
-                    <div class="flight-type-toggle flight-type--many-trip" data-flight-type="many">
+                    <div class="btn-toggle flight-type-toggle flight-type--many-trip" data-flight-type="many">
                         <div class="text">
                             Nhiều thành phố
                         </div>
                     </div>
                 </div>
                 <div class="flight__ticket-info">
-                    <div class="ticket-info__passenger">
+                    <div class="btn-dropdown ticket-info__passenger">
                         <ion-icon name="people"></ion-icon>
                         <div class="passenger__information">
                             1 Người lớn, 0 trẻ em, 0 em bé
@@ -134,14 +128,16 @@
                         </div>
                         <ion-icon name="chevron-down-outline"></ion-icon>
                         <div class="seat-type__drop-down-panel">
-                            <div class="drop-down-panel__item" data-ticket-type="economy">
-                                <ion-icon name="ellipse"></ion-icon>
+                            <div class="drop-down-panel__item selected" data-ticket-type="economy">
+                                <ion-icon name="ellipse" class="selected"></ion-icon>
+                                <ion-icon name="ellipse-outline" class="unselected"></ion-icon>
                                 <div class="text">
                                     Phổ thông
                                 </div>
                             </div>
                             <div class="drop-down-panel__item" data-ticket-type="business">
-                                <ion-icon name="ellipse-outline"></ion-icon>
+                                <ion-icon name="ellipse" class="selected"></ion-icon>
+                                <ion-icon name="ellipse-outline" class="unselected"></ion-icon>
                                 <div class="text">
                                     Thương gia
                                 </div>
@@ -150,31 +146,223 @@
                     </div>
                 </div>
             </div>
-            <div class="flight__information-container">
-                <form class="information-container--one-trip" action="">
-
+            <div class="flight__trip-info-container">
+                <form class="trip-info__form--one-trip" action="">
+                    <div class="trip-info--one-trip" id="flight-trip-info">
+                        <div class="trip-info__location">
+                            <div class="input-block location__departure">
+                                <div class="title">Điểm đi</div>
+                                <div class="input">
+                                    <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                                    <input 
+                                        id="flight-trip-info__departure" 
+                                        class="departure__input" 
+                                        type="text" 
+                                        list="flight__place-data" 
+                                        placeholder="Điểm đi">
+                                </div>
+                            </div>
+                            <div class="input-block location__destination">
+                                <div class="title">Điểm đến</div>
+                                <div class="input">
+                                    <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                                    <input 
+                                        id="flight-trip-info__destination" 
+                                        class="destination__input" 
+                                        type="text" 
+                                        list="flight__place-data" 
+                                        placeholder="Điểm đến">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trip-info__date">
+                            <div class="input-block date__departure">
+                                <div class="title">Ngày đi</div>
+                                <div class="input">
+                                    <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                    <input 
+                                        id="flight-trip-info__departure-date" 
+                                        class="departure-date__input" 
+                                        type="date" 
+                                        placeholder="Ngày đi">
+                                </div>
+                            </div>
+                            <div class="input-block date__return">
+                                <div class="title">
+                                    <input type="checkbox" name="" id="flight-trip-info__have-return">
+                                    Khứ hồi
+                                </div>
+                                <div class="input disabled">
+                                    <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                    <input 
+                                        id="flight-trip-info__return-date" 
+                                        class="return-date__input" 
+                                        type="date" 
+                                        placeholder="Ngày về">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trip-info--one-trip__submit-btn">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                    </div>
                 </form>
-                <form class="information-container--many-trip" action="">
+                <form class="trip-info__form--many-trip hide" action="">
+                    <div class="trip-info__form--many-trip__container">
+                        <div class="trip-info--many-trip template hide" id="flight-trip-info--">
+                            <div class="trip-info__location">
+                                <div class="input-block location__departure">
+                                    <div class="title">Điểm đi</div>
+                                    <div class="input">
+                                        <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                                        <input 
+                                            id="flight-trip-info--1__departure" 
+                                            class="departure__input" 
+                                            type="text" 
+                                            list="flight__place-data" 
+                                            placeholder="Điểm đi">
+                                    </div>
+                                </div>
+                                <div class="input-block location__destination">
+                                    <div class="title">Điểm đến</div>
+                                    <div class="input">
+                                        <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                                        <input 
+                                            id="flight-trip-info--1__destination" 
+                                            class="destination__input" 
+                                            type="text" 
+                                            list="flight__place-data" 
+                                            placeholder="Điểm đến">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trip-info__date">
+                                <div class="input-block date__departure">
+                                    <div class="title">Ngày đi</div>
+                                    <div class="input">
+                                        <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                        <input 
+                                            id="flight-trip-info--1__departure-date" 
+                                            class="departure-date__input" 
+                                            type="date" 
+                                            placeholder="Ngày đi">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row btn-group">
+                        <div class="trip-info__add-more-btn">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                            <div class="text">Thêm chuyến bay khác</div>
+                        </div>
+                        <div class="trip-info--many-trip__submit-btn">
+                            <ion-icon name="search-outline"></ion-icon>
+                            <div class="text">Tìm kiếm</div>
+                        </div>
+                    </div>
+                </form>
+                <!-- datalist for flight -->
+                <datalist id="flight__place-data"></datalist>
+            </div>
+        </div>
+        <div id="feature-container__coach" class="container-fluid feature-container__item hide" data-feature-type="coach">
+            <div class="row coach__config">
+                <div class="btn-dropdown coach__passenger-info">
+                    <ion-icon name="people"></ion-icon>
+                    <div class="text passenger-info__text">
+                        1 Hành khách
+                    </div>
+                    <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    <div class="passenger-info__dropdown-panel">
 
+                    </div>
+                </div>
+
+            </div>
+            <div class="coach__info-container">            
+                <form class="info__form" action="">
+                    <div class="coach-info__location">
+                        <div class="input-block location__departure">
+                            <div class="title">Điểm đi</div>
+                            <div class="input">
+                                <ion-icon class="icon" name="car" style="color: #236eff;"></ion-icon>
+                                <input 
+                                    id="coach-info__departure" 
+                                    class="departure__input" 
+                                    type="text" 
+                                    list="coach__place-data" 
+                                    placeholder="Điểm đi">
+                            </div>
+                        </div>
+                        <div class="input-block location__destination">
+                            <div class="title">Điểm đến</div>
+                            <div class="input">
+                                <ion-icon class="icon" name="car" style="color: #236eff;"></ion-icon>
+                                <input 
+                                    id="coach-info__destination" 
+                                    class="destination__input" 
+                                    type="text" 
+                                    list="coach__place-data" 
+                                    placeholder="Điểm đến">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coach-info__date">
+                        <div class="input-block date__departure">
+                            <div class="title">Ngày đi</div>
+                            <div class="input">
+                                <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                <input 
+                                    id="coach-info__departure-date" 
+                                    class="departure-date__input" 
+                                    type="date" 
+                                    placeholder="Ngày đi">
+                            </div>
+                        </div>
+                        <div class="input-block date__return">
+                            <div class="title">
+                                <input type="checkbox" name="" id="coach-info__have-return">
+                                Khứ hồi
+                            </div>
+                            <div class="input">
+                                <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                <input 
+                                    id="coach-info__return-date" 
+                                    class="return-date__input" 
+                                    type="date" 
+                                    placeholder="Ngày về">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coach-info__submit-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
                 </form>
             </div>
         </div>
-        <div class="container-fluid feature-container__item feature-container__bus" data-feature-type="coach">
-
+        <div id="feature-container__transfer" class="container-fluid feature-container__item hide" data-feature-type="transfer">
+            <div class="row transfer-config">
+                    <div class="btn-toggle active">
+                        <div class="text">
+                            Thuê xe
+                        </div>
+                    </div>
+                    <div class="btn-toggle">
+                        <div class="text">
+                            Đưa đón sân bay
+                        </div>
+                    </div>
+            </div>
         </div>
-        <div class="container-fluid feature-container__item feature-container__taxi" data-feature-type="transfer">
-
-        </div>
-        <div class="container-fluid feature-container__item feature-container__hotel" data-feature-type="hotel">
+        <div id="feature-container__hotel" class="container-fluid feature-container__item hide" data-feature-type="hotel">
 
         </div>
     </div>
     <div class="container-fluid main-content">
         <div class="container main-content__container location-ad-card-container">
             <div class="title-container location-ad-card-container__title-container">
-                <div class="icon">
-                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                </div>
+                <ion-icon name="airplane" style="color:#236eff;font-size:3rem"></ion-icon>
                 <div class="text">
                     Tái khám phá bản thân tại khắp nơi trên đất nước Việt Nam
                 </div>
@@ -200,9 +388,7 @@
         </div>
         <div class="container main-content__container location-ad-slider-container">
             <div class="title-container location-ad-slider-container__title-container">
-                <div class="icon">
-                    <img src="resources/images/svg/user-icon-blue.svg" alt="" srcset="">
-                </div>
+                <ion-icon name="business" style="color:#236eff;font-size:3rem"></ion-icon>
                 <div class="text">
                     Sống thoải mái ở những thành phố được yêu thích nhất
                 </div>

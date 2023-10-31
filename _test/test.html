@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelowkey</title>
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="../resources/css/main-style.css">
+</head>
+
+<body>
+    <div id="feature-container__flight" class="container feature-container__item show" data-feature-type="flight">
+        <div class="container-fluid flight__trip-info-container">
+            <form class="trip-info__form--one-trip" action="">
+                <div class="trip-info--one-trip" id="flight-trip-info">
+                    <div class="trip-info__location">
+                        <div class="input-block location__departure">
+                            <div class="title">Điểm đi</div>
+                            <div class="input">
+                                <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                                <input id="flight-trip-info__departure" class="departure__input" type="text"
+                                    list="flight__place-data" placeholder="Điểm đi">
+                            </div>
+                        </div>
+                        <div class="input-block location__destination">
+                            <div class="title">Điểm đến</div>
+                            <div class="input">
+                                <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                                <input id="flight-trip-info__destination" class="destination__input" type="text"
+                                    list="flight__place-data" placeholder="Điểm đến">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trip-info__date">
+                        <div class="input-block date__departure">
+                            <div class="title">Ngày đi</div>
+                            <div class="input">
+                                <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                <input id="flight-trip-info__departure-date" class="departure-date__input" type="date"
+                                    placeholder="Ngày đi">
+                            </div>
+                        </div>
+                        <div class="input-block date__return">
+                            <div class="title">
+                                <input type="checkbox" name="" id="flight-trip-info__have-return">
+                                Ngày về
+                            </div>
+                            <div class="input">
+                                <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                                <input id="flight-trip-info__return-date" class="return-date__input" type="date"
+                                    placeholder="Ngày về">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trip-info__submit-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </div>
+            </form>
+            <!-- datalist for flight -->
+            <datalist id="flight__place-data"></datalist>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

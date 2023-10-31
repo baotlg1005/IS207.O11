@@ -19,6 +19,93 @@
   line-height: normal;
 }
 
+.btn-dropdown {
+  display: flex;
+  width: 30.66667rem;
+  padding: 1rem 1rem;
+  align-items: center;
+  border-radius: 0.66667rem;
+  border: 1px solid #fff;
+  background: rgba(244, 241, 241, 0.5);
+  cursor: pointer;
+}
+.btn-dropdown ion-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.btn-dropdown .drop-down-icon {
+  align-self: flex-end;
+  margin-left: auto;
+}
+.btn-dropdown .text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.33333rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-left: 0.83333rem;
+}
+
+.btn-toggle {
+  min-width: 15rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.btn-toggle .text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.33333rem;
+  font-weight: 700;
+}
+
+.btn-toggle.active {
+  background: #236eff;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+}
+.input-block .title {
+  color: #fff;
+  font-size: 1.33333rem;
+  font-weight: 700;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.input-block .input {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1.33333rem;
+  border: 4px solid #c7c7c7;
+}
+.input-block .input .icon {
+  font-size: 2rem;
+}
+.input-block .input input[type=text],
+.input-block .input input[type=date] {
+  width: 100%;
+  display: flex;
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 400;
+  border: none;
+  padding-left: 1rem;
+}
+.input-block .input input[type=text]:focus {
+  outline: none;
+}
+
 .top-background {
   position: absolute;
   top: 0;
@@ -43,7 +130,7 @@
   gap: 2.16667rem;
   padding-top: 0.5rem;
   transition: 0.3s;
-  z-index: 1000;
+  z-index: 10;
 }
 .header-container .header__top-content {
   display: flex;
@@ -95,11 +182,8 @@
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
   color: #fff;
 }
-.header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--default {
-  display: flex;
-}
-.header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--on-scroll {
-  display: none;
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon {
+  font-size: 2rem;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
   border-radius: 0.66667rem;
@@ -155,11 +239,9 @@
 .header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .text {
   color: #000;
 }
-.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--default {
-  display: none;
-}
-.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon--on-scroll {
-  display: flex;
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon {
+  font-size: 2rem;
+  color: #000;
 }
 .header-container.on-scroll .header__navbar .navbar__item .text {
   color: #687176;
@@ -188,6 +270,7 @@
   align-items: center;
   gap: 1.66667rem;
   padding: 5rem;
+  transition: all 0.3s;
 }
 .feature-container .feature-container__navbar {
   display: flex;
@@ -215,17 +298,9 @@
   font-weight: 700;
   line-height: normal;
 }
-.feature-container .feature-container__navbar .navbar__item .item__icon--default {
-  display: flex;
-  width: 3.33333rem;
-  height: 3rem;
-  flex-shrink: 0;
-}
-.feature-container .feature-container__navbar .navbar__item .item__icon--selected {
-  display: none;
-  width: 3.33333rem;
-  height: 3rem;
-  flex-shrink: 0;
+.feature-container .feature-container__navbar .navbar__item ion-icon {
+  font-size: 3.33333rem;
+  color: #fff;
 }
 .feature-container .feature-container__navbar .navbar__item.selected {
   border-radius: 0.66667rem;
@@ -234,11 +309,21 @@
 .feature-container .feature-container__navbar .navbar__item.selected .text {
   color: black;
 }
-.feature-container .feature-container__navbar .navbar__item.selected .item__icon--default {
-  display: none;
+.feature-container .feature-container__navbar .navbar__item.selected .airplane-icon {
+  font-size: 3.33333rem;
+  color: #236eff;
 }
-.feature-container .feature-container__navbar .navbar__item.selected .item__icon--selected {
-  display: flex;
+.feature-container .feature-container__navbar .navbar__item.selected .bus-icon {
+  font-size: 3.33333rem;
+  color: #36c41f;
+}
+.feature-container .feature-container__navbar .navbar__item.selected .car-icon {
+  font-size: 3.33333rem;
+  color: #25dada;
+}
+.feature-container .feature-container__navbar .navbar__item.selected .business-icon {
+  font-size: 3.33333rem;
+  color: #1758a5;
 }
 .feature-container .feature-container__item .row {
   display: flex;
@@ -288,7 +373,7 @@
   padding: 1rem 1rem;
   align-items: center;
   border-radius: 0.66667rem;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   background: rgba(244, 241, 241, 0.5);
   cursor: pointer;
 }
@@ -301,7 +386,7 @@
   margin-left: auto;
 }
 .feature-container #feature-container__flight .flight__ticket-info .ticket-info__passenger .passenger__information {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 1.33333rem;
   font-style: normal;
@@ -327,7 +412,7 @@
   color: #fff;
 }
 .feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .text {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 1.33333rem;
   font-style: normal;
@@ -359,9 +444,229 @@
   font-size: 1rem;
   padding-right: 1rem;
 }
+.feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .seat-type__drop-down-panel .drop-down-panel__item ion-icon.selected {
+  display: none;
+}
+.feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .seat-type__drop-down-panel .drop-down-panel__item ion-icon.unselected {
+  display: flex;
+}
+.feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .seat-type__drop-down-panel .drop-down-panel__item.selected ion-icon.selected {
+  display: flex;
+}
+.feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .seat-type__drop-down-panel .drop-down-panel__item.selected ion-icon.unselected {
+  display: none;
+}
 .feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .seat-type__drop-down-panel.active {
   display: flex;
   flex-direction: column;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__location {
+  flex: 10;
+  display: flex;
+  flex-direction: row;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__location .location__departure {
+  flex: 1;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__location .location__departure .input {
+  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+  border-right: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__location .location__destination {
+  flex: 1;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__location .location__destination .input {
+  border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+  border-left: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date {
+  flex: 10;
+  display: flex;
+  flex-direction: row;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date .date__departure {
+  flex: 1;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date .date__departure .input {
+  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+  border-right: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date .date__return {
+  flex: 1;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date .date__return .input {
+  border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+  border-left: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date .date__return .input.disabled {
+  background: #c7c7c7;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__date .date__return .input.disabled input {
+  background: #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--one-trip {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--one-trip .trip-info--one-trip__submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  flex-shrink: 0;
+  background: #ff7a50;
+  margin-top: 2rem;
+  height: 4.66666rem;
+  width: 4.66666rem;
+  border-radius: 1rem;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--one-trip .trip-info--one-trip__submit-btn ion-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--many-trip {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--many-trip .date__departure {
+  flex: 1;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--many-trip .date__departure .input {
+  border-radius: 1.33333rem 1.33333rem 1.33333rem 1.33333rem;
+  border-right: 4px solid #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info__add-more-btn {
+  display: flex;
+  height: 6rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1.33333rem;
+  border: 4px dashed #fff;
+  cursor: pointer;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info__add-more-btn ion-icon {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 900;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info__add-more-btn .text {
+  color: #fff;
+  text-align: center;
+  font-size: 2.66667rem;
+  font-weight: 700;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info__add-more-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info--many-trip__submit-btn {
+  display: flex;
+  height: 6rem;
+  padding: 1.33333rem 1.66667rem;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.83333rem;
+  border-radius: 2rem;
+  border: 4px solid #c7c7c7;
+  background: #ff7a50;
+  cursor: pointer;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info--many-trip__submit-btn ion-icon {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 900;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info--many-trip__submit-btn .text {
+  color: #fff;
+  font-size: 2rem;
+}
+.feature-container #feature-container__coach {
+  display: flex;
+  flex-direction: column;
+  gap: 0.83333rem 2.33333rem;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__location {
+  flex: 10;
+  display: flex;
+  flex-direction: row;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__location .location__departure {
+  flex: 1;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__location .location__departure .input {
+  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+  border-right: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__location .location__destination {
+  flex: 1;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__location .location__destination .input {
+  border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+  border-left: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date {
+  flex: 10;
+  display: flex;
+  flex-direction: row;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date .date__departure {
+  flex: 1;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date .date__departure .input {
+  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+  border-right: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date .date__return {
+  flex: 1;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date .date__return .input {
+  border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+  border-left: 1px solid #c7c7c7;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date .date__return .input.disabled {
+  background: #c7c7c7;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__date .date__return .input.disabled input {
+  background: #c7c7c7;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  flex-shrink: 0;
+  background: #ff7a50;
+  margin-top: 2rem;
+  height: 4.66666rem;
+  width: 4.66666rem;
+  border-radius: 1rem;
+}
+.feature-container #feature-container__coach .coach__info-container .info__form .coach-info__submit-btn ion-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.feature-container.floating-container {
+  position: relative;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  z-index: 101;
 }
 
 .main-content {

@@ -22,6 +22,101 @@
   }
 }
 
+.btn-dropdown {
+  display: flex;
+  width: 30.66667rem;
+  padding: 1rem 1rem;
+  align-items: center;
+
+  border-radius: 0.66667rem;
+  border: 1px solid #fff;
+  background: rgba(244, 241, 241, 0.5);
+
+  cursor: pointer;
+
+  ion-icon {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .drop-down-icon {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  .text {
+    color: #fff;
+    text-align: center;
+    font-size: 1.33333rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding-left: 0.83333rem;
+  }
+}
+
+.btn-toggle {
+  min-width: 15rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+
+  .text {
+    color: #fff;
+    text-align: center;
+    font-size: 1.33333rem;
+    font-weight: 700;
+  }
+}
+.btn-toggle.active {
+  background: #236eff;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  .title {
+    color: #fff;
+    font-size: 1.33333rem;
+    font-weight: 700;
+
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .input {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #fff;
+
+    border-radius: 1.33333rem;
+    border: 4px solid #c7c7c7;
+
+    .icon {
+      font-size: 2rem;
+    }
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      display: flex;
+      color: #000;
+      font-size: 1.33333rem;
+      font-weight: 400;
+      border: none;
+      padding-left: 1rem;
+    }
+    input[type="text"]:focus {
+      outline: none;
+    }
+  }
+}
+
 .top-background {
   position: absolute;
   top: 0;
@@ -50,7 +145,7 @@
 
   transition: 0.3s;
 
-  z-index: 1000;
+  z-index: 10;
 
   .header__top-content {
     display: flex;
@@ -109,12 +204,8 @@
       .account-btn-group__login-btn {
         color: #fff;
 
-        .login-btn__icon--default {
-          display: flex;
-        }
-
-        .login-btn__icon--on-scroll {
-          display: none;
+        .login-btn__icon {
+          font-size: 2rem;
         }
       }
 
@@ -194,12 +285,9 @@
           color: #000;
         }
 
-        .login-btn__icon--default {
-          display: none;
-        }
-
-        .login-btn__icon--on-scroll {
-          display: flex;
+        .login-btn__icon {
+          font-size: 2rem;
+          color: #000;
         }
       }
     }
@@ -239,6 +327,7 @@
   align-items: center;
   gap: 1.66667rem; // 20px
   padding: 5rem;
+  transition: all 0.3s;
 
   .feature-container__navbar {
     display: flex;
@@ -269,18 +358,9 @@
         line-height: normal;
       }
 
-      .item__icon--default {
-        display: flex;
-        width: 3.33333rem; // 40px
-        height: 3rem; // 36px
-        flex-shrink: 0;
-      }
-
-      .item__icon--selected {
-        display: none;
-        width: 3.33333rem; // 40px
-        height: 3rem; // 36px
-        flex-shrink: 0;
+      ion-icon {
+        font-size: 3.33333rem;
+        color: #fff;
       }
     }
 
@@ -292,12 +372,21 @@
         color: black;
       }
 
-      .item__icon--default {
-        display: none;
+      .airplane-icon {
+        font-size: 3.33333rem;
+        color: #236eff;
       }
-
-      .item__icon--selected {
-        display: flex;
+      .bus-icon {
+        font-size: 3.33333rem;
+        color: #36c41f;
+      }
+      .car-icon {
+        font-size: 3.33333rem;
+        color: #25dada;
+      }
+      .business-icon {
+        font-size: 3.33333rem;
+        color: #1758a5;
       }
     }
   }
@@ -349,7 +438,7 @@
       align-items: flex-start;
       gap: 2rem;
 
-      .ticket-info__passenger{
+      .ticket-info__passenger {
         display: flex;
         width: 30.66667rem;
         padding: 1rem 1rem;
@@ -357,28 +446,28 @@
         // gap: 0.83333rem;
 
         border-radius: 0.66667rem;
-        border: 1px solid #FFF;
-        background: rgba(244, 241, 241, 0.50);
+        border: 1px solid #fff;
+        background: rgba(244, 241, 241, 0.5);
 
         cursor: pointer;
 
         ion-icon {
-            font-size: 2rem;
-            color: #fff;
+          font-size: 2rem;
+          color: #fff;
         }
-        .drop-down-icon{
-            align-self: flex-end;
-            margin-left: auto;
+        .drop-down-icon {
+          align-self: flex-end;
+          margin-left: auto;
         }
-        .passenger__information{
-            color: #FFF;
-            text-align: center;
-            font-size: 1.33333rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+        .passenger__information {
+          color: #fff;
+          text-align: center;
+          font-size: 1.33333rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
 
-            padding-left: 0.83333rem;
+          padding-left: 0.83333rem;
         }
       }
       .ticket-info__seat-type {
@@ -391,58 +480,301 @@
         border-radius: 0.66667rem;
         border: 1px solid #fff;
         background: rgba(244, 241, 241, 0.5);
-        
+
         position: relative;
-        
+
         cursor: pointer;
 
         ion-icon {
+          font-size: 2rem;
+          color: #fff;
+        }
+        .text {
+          color: #fff;
+          text-align: center;
+          font-size: 1.33333rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        .seat-type__drop-down-panel {
+          display: none;
+          position: absolute;
+          top: 4.5rem;
+          left: 0;
+          width: 100%;
+          padding: 1rem 1rem;
+
+          border-radius: 0.66667rem;
+          background: #fff;
+
+          .text {
+            font-size: 1.33333rem;
+            color: #000;
+            padding: 0.5rem 0;
+          }
+          .drop-down-panel__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            ion-icon {
+              color: #000;
+              font-size: 1rem;
+              padding-right: 1rem;
+            }
+            ion-icon.selected {
+              display: none;
+            }
+            ion-icon.unselected {
+              display: flex;
+            }
+          }
+          .drop-down-panel__item.selected {
+            ion-icon.selected {
+              display: flex;
+            }
+            ion-icon.unselected {
+              display: none;
+            }
+          }
+        }
+        .seat-type__drop-down-panel.active {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .flight__trip-info-container {
+      .trip-info__location {
+        flex: 10;
+        display: flex;
+        flex-direction: row;
+
+        .location__departure {
+          flex: 1;
+          .input {
+            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+            border-right: 1px solid #c7c7c7;
+          }
+        }
+        .location__destination {
+          flex: 1;
+          .input {
+            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+            border-left: 1px solid #c7c7c7;
+          }
+        }
+      }
+      .trip-info__date {
+        flex: 10;
+        display: flex;
+        flex-direction: row;
+
+        .date__departure {
+          flex: 1;
+          .input {
+            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+            border-right: 1px solid #c7c7c7;
+          }
+        }
+        .date__return {
+          flex: 1;
+          .input {
+            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+            border-left: 1px solid #c7c7c7;
+          }
+          .input.disabled {
+            background: #c7c7c7;
+            opacity: 0.5;
+
+            cursor: not-allowed;
+            input {
+              background: #c7c7c7;
+            }
+          }
+        }
+      }
+      .trip-info--one-trip {
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+
+        .trip-info--one-trip__submit-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.83333rem;
+          flex-shrink: 0;
+          background: #ff7a50;
+
+          margin-top: 2rem;
+          height: 4.66666rem;
+          width: 4.66666rem;
+          border-radius: 1rem;
+
+          ion-icon {
             font-size: 2rem;
             color: #fff;
+          }
         }
-        .text{
-            color: #FFF;
+      }
+      .trip-info--many-trip {
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+
+        margin-bottom: 2rem;
+        .date__departure {
+          flex: 1;
+          .input {
+            border-radius: 1.33333rem 1.33333rem 1.33333rem 1.33333rem;
+            border-right: 4px solid #c7c7c7;
+          }
+        }
+      }
+      .trip-info__form--many-trip {
+        .trip-info__add-more-btn {
+          display: flex;
+          height: 6rem;
+          padding: 1.33333rem 1.66667rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          border-radius: 1.33333rem;
+          border: 4px dashed #fff;
+
+          cursor: pointer;
+
+          ion-icon {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: 900;
+          }
+          .text {
+            color: #fff;
             text-align: center;
-            font-size: 1.33333rem;
-            font-style: normal;
+            font-size: 2.66667rem;
             font-weight: 700;
-            line-height: normal;
+          }
         }
-        .seat-type__drop-down-panel{
-            display: none;
-            position: absolute;
-            top: 4.5rem;
-            left: 0;
-            width: 100%;
-            padding: 1rem 1rem;
-
-            border-radius: 0.66667rem;
-            background: #fff;
-
-            .text{
-                font-size: 1.33333rem;
-                color: #000;
-                padding: 0.5rem 0;
-
-            }
-            .drop-down-panel__item{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                ion-icon{
-                    color: #000;
-                    font-size: 1rem;
-                    padding-right: 1rem;
-                }
-            }
+        .trip-info__add-more-btn.disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
         }
-        .seat-type__drop-down-panel.active{
-            display: flex;
-            flex-direction: column;
+
+        .trip-info--many-trip__submit-btn {
+          display: flex;
+          height: 6rem;
+          padding: 1.33333rem 1.66667rem;
+          align-items: center;
+          justify-content: space-around;
+
+          gap: 0.83333rem;
+          border-radius: 2rem;
+          border: 4px solid #c7c7c7;
+          background: #ff7a50;
+          cursor: pointer;
+
+          ion-icon {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 900;
+          }
+          .text {
+            color: #fff;
+            font-size: 2rem;
+          }
         }
       }
     }
   }
+  #feature-container__coach {
+    display: flex;
+    flex-direction: column;
+    gap: 0.83333rem 2.33333rem;
+
+    .coach__info-container .info__form{
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+
+      .coach-info__location {
+        flex: 10;
+        display: flex;
+        flex-direction: row;
+  
+        .location__departure {
+          flex: 1;
+          .input {
+            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+            border-right: 1px solid #c7c7c7;
+          }
+        }
+        .location__destination {
+          flex: 1;
+          .input {
+            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+            border-left: 1px solid #c7c7c7;
+          }
+        }
+      }
+      .coach-info__date {
+        flex: 10;
+        display: flex;
+        flex-direction: row;
+  
+        .date__departure {
+          flex: 1;
+          .input {
+            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+            border-right: 1px solid #c7c7c7;
+          }
+        }
+        .date__return {
+          flex: 1;
+          .input {
+            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+            border-left: 1px solid #c7c7c7;
+          }
+          .input.disabled {
+            background: #c7c7c7;
+            opacity: 0.5;
+  
+            cursor: not-allowed;
+            input {
+              background: #c7c7c7;
+            }
+          }
+        }
+      }
+      .coach-info__submit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.83333rem;
+        flex-shrink: 0;
+        background: #ff7a50;
+  
+        margin-top: 2rem;
+        height: 4.66666rem;
+        width: 4.66666rem;
+        border-radius: 1rem;
+  
+        ion-icon {
+          font-size: 2rem;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.feature-container.floating-container {
+  position: relative;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  z-index: 101;
 }
 
 .main-content {

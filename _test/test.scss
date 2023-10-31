@@ -1,0 +1,106 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  .title {
+    color: #fff;
+    font-size: 1.33333rem;
+    font-weight: 700;
+
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .input {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #fff;
+
+    border-radius: 1.33333rem;
+    border: 4px solid #c7c7c7;
+
+    .icon {
+      font-size: 2rem;
+      flex: 1;
+    }
+    input[type="text"],
+    input[type="date"] {
+      flex: 9;
+      display: flex;
+      color: #000;
+      font-size: 1.33333rem;
+      font-weight: 400;
+      border: none;
+      padding-left: 1rem;
+    }
+    input[type="text"]:focus {
+      outline: none;
+    }
+  }
+}
+.flight__trip-info-container {
+  .trip-info--one-trip {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+
+    .trip-info__location {
+      flex: 10;
+      display: flex;
+      flex-direction: row;
+
+      .location__departure {
+        flex: 1;
+        .input {
+          border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+          border-right: 1px solid #c7c7c7;
+        }
+      }
+      .location__destination {
+        flex: 1;
+        .input {
+          border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+          border-left: 1px solid #c7c7c7;
+        }
+      }
+    }
+    .trip-info__date {
+      flex: 10;
+      display: flex;
+      flex-direction: row;
+
+      .date__departure {
+        flex: 1;
+        .input {
+          border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+          border-right: 1px solid #c7c7c7;
+        }
+      }
+      .date__return {
+        flex: 1;
+        .input {
+          border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+          border-left: 1px solid #c7c7c7;
+        }
+      }
+    }
+    .trip-info__submit-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.83333rem;
+      flex-shrink: 0;
+      background: #ff7a50;
+
+      margin-top: 2rem;
+      height: 4.66666rem;
+      width: 4.66666rem;
+      border-radius: 1rem;
+
+      ion-icon {
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+  }
+}
