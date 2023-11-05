@@ -51,7 +51,7 @@
             </div>
             <div class="navbar__item">
                 <div class="text">
-                    Đưa đón sân bay
+                    Xe dịch vụ
                 </div>
             </div>
             <div class="navbar__item">
@@ -83,7 +83,7 @@
             <div class="navbar__item" data-feature-type="transfer">
                 <ion-icon class="car-icon" name="car"></ion-icon>
                 <div class="text">
-                    Đưa đón sân bay
+                    Xe dịch vụ
                 </div>
             </div>
             <div class="navbar__item" data-feature-type="hotel">
@@ -150,7 +150,7 @@
                 <form class="trip-info__form--one-trip" action="">
                     <div class="trip-info--one-trip" id="flight-trip-info">
                         <div class="trip-info__location">
-                            <div class="input-block location__departure">
+                            <div class="input-block right-connect location__departure">
                                 <div class="title">Điểm đi</div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
@@ -162,7 +162,7 @@
                                         placeholder="Điểm đi">
                                 </div>
                             </div>
-                            <div class="input-block location__destination">
+                            <div class="input-block left-connect location__destination">
                                 <div class="title">Điểm đến</div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                         <div class="trip-info__date">
-                            <div class="input-block date__departure">
+                            <div class="input-block right-connect date__departure">
                                 <div class="title">Ngày đi</div>
                                 <div class="input">
                                     <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
@@ -187,7 +187,7 @@
                                         placeholder="Ngày đi">
                                 </div>
                             </div>
-                            <div class="input-block date__return">
+                            <div class="input-block left-connect date__return">
                                 <div class="title">
                                     <input type="checkbox" name="" id="flight-trip-info__have-return">
                                     Khứ hồi
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="trip-info--one-trip__submit-btn">
+                        <div class="btn-submit trip-info--one-trip__submit-btn">
                             <ion-icon name="search-outline"></ion-icon>
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                     <div class="trip-info__form--many-trip__container">
                         <div class="trip-info--many-trip template hide" id="flight-trip-info--">
                             <div class="trip-info__location">
-                                <div class="input-block location__departure">
+                                <div class="input-block right-connect location__departure">
                                     <div class="title">Điểm đi</div>
                                     <div class="input">
                                         <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
@@ -223,7 +223,7 @@
                                             placeholder="Điểm đi">
                                     </div>
                                 </div>
-                                <div class="input-block location__destination">
+                                <div class="input-block left-connect location__destination">
                                     <div class="title">Điểm đến</div>
                                     <div class="input">
                                         <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
@@ -281,9 +281,9 @@
 
             </div>
             <div class="coach__info-container">            
-                <form class="info__form" action="">
+                <form id="coach__info-form" class="info-form" action="">
                     <div class="coach-info__location">
-                        <div class="input-block location__departure">
+                        <div class="input-block right-connect location__departure">
                             <div class="title">Điểm đi</div>
                             <div class="input">
                                 <ion-icon class="icon" name="car" style="color: #236eff;"></ion-icon>
@@ -295,7 +295,7 @@
                                     placeholder="Điểm đi">
                             </div>
                         </div>
-                        <div class="input-block location__destination">
+                        <div class="input-block left-connect location__destination">
                             <div class="title">Điểm đến</div>
                             <div class="input">
                                 <ion-icon class="icon" name="car" style="color: #236eff;"></ion-icon>
@@ -309,7 +309,7 @@
                         </div>
                     </div>
                     <div class="coach-info__date">
-                        <div class="input-block date__departure">
+                        <div class="input-block right-connect date__departure">
                             <div class="title">Ngày đi</div>
                             <div class="input">
                                 <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
@@ -320,7 +320,7 @@
                                     placeholder="Ngày đi">
                             </div>
                         </div>
-                        <div class="input-block date__return">
+                        <div class="input-block left-connect date__return">
                             <div class="title">
                                 <input type="checkbox" name="" id="coach-info__have-return">
                                 Khứ hồi
@@ -335,24 +335,84 @@
                             </div>
                         </div>
                     </div>
-                    <div class="coach-info__submit-btn">
+                    <div class="btn-submit coach-info__submit-btn">
                         <ion-icon name="search-outline"></ion-icon>
                     </div>
                 </form>
             </div>
         </div>
         <div id="feature-container__transfer" class="container-fluid feature-container__item hide" data-feature-type="transfer">
-            <div class="row transfer-config">
-                    <div class="btn-toggle active">
-                        <div class="text">
-                            Thuê xe
+            <div class="transfer-config">
+                <div class="transfer-info__driver-toggle">
+                    <ion-icon name="radio-button-off-sharp"></ion-icon>
+                    <div class="text">Có tài xế</div>
+                </div>
+            </div>
+            <div class="transfer__info-container">
+                <form id="transfer__info-form" class="info-form" action="">
+                    <div class="input-block right-connect transfer-info__location">
+                        <div class="title">Địa điểm</div>
+                        <div class="input">
+                            <ion-icon class="icon" name="location" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="transfer-info__location" 
+                                class="location__input" 
+                                type="text" 
+                                placeholder="Địa điểm">
                         </div>
                     </div>
-                    <div class="btn-toggle">
-                        <div class="text">
-                            Đưa đón sân bay
+                    <div class="input-block all-connect transfer-info__start-date">
+                        <div class="title">Ngày đến</div>
+                        <div class="input">
+                            <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="transfer-info__start-date" 
+                                class="start-date__input" 
+                                type="date" 
+                                placeholder="Ngày đến">
                         </div>
                     </div>
+                    <div class="input-block all-connect transfer-info__start-time">
+                        <div class="title">
+                            Giờ đến
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="transfer-info__start-time" 
+                                class="start-time__input" 
+                                type="time" 
+                                placeholder="Giờ đến">
+                        </div>
+                    </div>
+                    <div class="input-block all-connect transfer-info__end-date">
+                        <div class="title">Ngày trả</div>
+                        <div class="input">
+                            <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="transfer-info__end-date" 
+                                class="end-date__input" 
+                                type="date" 
+                                placeholder="Ngày trả">
+                        </div>
+                    </div>
+                    <div class="input-block all-connect transfer-info__end-time">
+                        <div class="title">
+                            Giờ trả
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="transfer-info__end-time" 
+                                class="end-time__input" 
+                                type="time" 
+                                placeholder="Giờ trả">
+                        </div>
+                    </div>
+                    <div class="btn-submit" id="transfer-info__submit-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="feature-container__hotel" class="container-fluid feature-container__item hide" data-feature-type="hotel">
@@ -458,6 +518,10 @@
     <script src="pages/0-index/js/index-load-ad.js"></script>
     <script src="pages/0-index/js/header-on-scroll.js"></script>
     <script src="pages/0-index/js/flight-feature.js"></script>
+    <script src="pages/0-index/js/coach-feature.js"></script>
+    <script src="pages/0-index/js/transfer-feature.js"></script>
+    <script src="pages/0-index/js/hotel-feature.js"></script>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

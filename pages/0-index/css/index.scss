@@ -16,9 +16,24 @@
   .text {
     text-align: right;
     font-size: 1.33333rem; // 16px
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
+  }
+}
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  flex-shrink: 0;
+  background: #ff7a50;
+
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  ion-icon {
+    font-size: 2rem;
+    color: #fff;
   }
 }
 
@@ -46,9 +61,7 @@
     color: #fff;
     text-align: center;
     font-size: 1.33333rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 
     padding-left: 0.83333rem;
   }
@@ -102,7 +115,8 @@
       font-size: 2rem;
     }
     input[type="text"],
-    input[type="date"] {
+    input[type="date"],
+    input[type="time"] {
       width: 100%;
       display: flex;
       color: #000;
@@ -114,6 +128,34 @@
     input[type="text"]:focus {
       outline: none;
     }
+  }
+  .input.disabled {
+    background: #c7c7c7;
+
+    cursor: not-allowed;
+    input {
+      opacity: 0.5;
+      background: #c7c7c7;
+    }
+  }
+}
+.input-block.left-connect {
+  .input {
+    border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+    border-left: 1px solid #c7c7c7;
+  }
+}
+.input-block.right-connect {
+  .input {
+    border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+    border-right: 1px solid #c7c7c7;
+  }
+}
+.input-block.all-connect {
+  .input {
+    border-radius: 0;
+    border-left: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7;
   }
 }
 
@@ -191,7 +233,6 @@
           font-size: 2.66667rem;
           font-style: italic;
           font-weight: 700;
-          line-height: normal;
         }
       }
     }
@@ -246,9 +287,7 @@
         color: #fff;
         text-align: center;
         font-size: 1.33333rem; // 16px
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
       }
     }
   }
@@ -314,9 +353,7 @@
     color: #fff;
     text-align: center;
     font-size: 2.66667rem; // 32px
-    font-style: normal;
     font-weight: 900;
-    line-height: normal;
   }
 }
 
@@ -353,9 +390,7 @@
         color: #fff;
         text-align: center;
         font-size: 1.33333rem; // 16px
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
       }
 
       ion-icon {
@@ -392,6 +427,9 @@
   }
 
   .feature-container__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.83333rem 2.33333rem;
     .row {
       display: flex;
       flex-direction: row;
@@ -402,10 +440,6 @@
   }
 
   #feature-container__flight {
-    display: flex;
-    flex-direction: column;
-    gap: 0.83333rem 2.33333rem;
-
     .flight__flight-type {
       display: flex;
       flex-direction: row;
@@ -424,9 +458,7 @@
           color: #fff;
           text-align: center;
           font-size: 1.33333rem;
-          font-style: normal;
           font-weight: 700;
-          line-height: normal;
         }
       }
       .flight-type-toggle.active {
@@ -463,9 +495,7 @@
           color: #fff;
           text-align: center;
           font-size: 1.33333rem;
-          font-style: normal;
           font-weight: 700;
-          line-height: normal;
 
           padding-left: 0.83333rem;
         }
@@ -493,9 +523,7 @@
           color: #fff;
           text-align: center;
           font-size: 1.33333rem;
-          font-style: normal;
           font-weight: 700;
-          line-height: normal;
         }
         .seat-type__drop-down-panel {
           display: none;
@@ -552,17 +580,9 @@
 
         .location__departure {
           flex: 1;
-          .input {
-            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-            border-right: 1px solid #c7c7c7;
-          }
         }
         .location__destination {
           flex: 1;
-          .input {
-            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
-            border-left: 1px solid #c7c7c7;
-          }
         }
       }
       .trip-info__date {
@@ -572,26 +592,9 @@
 
         .date__departure {
           flex: 1;
-          .input {
-            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-            border-right: 1px solid #c7c7c7;
-          }
         }
         .date__return {
           flex: 1;
-          .input {
-            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
-            border-left: 1px solid #c7c7c7;
-          }
-          .input.disabled {
-            background: #c7c7c7;
-            opacity: 0.5;
-
-            cursor: not-allowed;
-            input {
-              background: #c7c7c7;
-            }
-          }
         }
       }
       .trip-info--one-trip {
@@ -600,22 +603,9 @@
         flex-direction: row;
 
         .trip-info--one-trip__submit-btn {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 0.83333rem;
-          flex-shrink: 0;
-          background: #ff7a50;
-
           margin-top: 2rem;
           height: 4.66666rem;
           width: 4.66666rem;
-          border-radius: 1rem;
-
-          ion-icon {
-            font-size: 2rem;
-            color: #fff;
-          }
         }
       }
       .trip-info--many-trip {
@@ -689,11 +679,7 @@
     }
   }
   #feature-container__coach {
-    display: flex;
-    flex-direction: column;
-    gap: 0.83333rem 2.33333rem;
-
-    .coach__info-container .info__form{
+    .coach__info-container .info-form {
       display: flex;
       flex-direction: row;
       gap: 2rem;
@@ -702,67 +688,116 @@
         flex: 10;
         display: flex;
         flex-direction: row;
-  
+
         .location__departure {
           flex: 1;
-          .input {
-            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-            border-right: 1px solid #c7c7c7;
-          }
         }
         .location__destination {
           flex: 1;
-          .input {
-            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
-            border-left: 1px solid #c7c7c7;
-          }
         }
       }
       .coach-info__date {
         flex: 10;
         display: flex;
         flex-direction: row;
-  
+
         .date__departure {
           flex: 1;
-          .input {
-            border-radius: 1.33333rem 0rem 0rem 1.33333rem;
-            border-right: 1px solid #c7c7c7;
-          }
         }
         .date__return {
           flex: 1;
-          .input {
-            border-radius: 0rem 1.33333rem 1.33333rem 0rem;
-            border-left: 1px solid #c7c7c7;
-          }
-          .input.disabled {
-            background: #c7c7c7;
-            opacity: 0.5;
-  
-            cursor: not-allowed;
-            input {
-              background: #c7c7c7;
-            }
-          }
         }
       }
       .coach-info__submit-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.83333rem;
-        flex-shrink: 0;
-        background: #ff7a50;
-  
         margin-top: 2rem;
         height: 4.66666rem;
         width: 4.66666rem;
-        border-radius: 1rem;
-  
-        ion-icon {
+      }
+    }
+  }
+  #feature-container__transfer {
+    .transfer-config {
+      display: flex;
+      .transfer-info__driver-toggle {
+        display: flex;
+        padding: 0.83333rem 1.66667rem;
+        align-items: center;
+        gap: 0.83333rem;
+        border-radius: 1.66667rem;
+        border: 4px solid #c7c7c7;
+        background: #fff;
+
+        cursor: pointer;
+        ion-icon{
           font-size: 2rem;
-          color: #fff;
+          color: #236eff;
+        }
+        .text {
+          color: #236eff;
+          font-family: Inter;
+          font-size: 1.33333rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+    .transfer__info-container .info-form {
+      display: flex;
+      flex-direction: row;
+
+      display: flex;
+      flex-direction: row;
+      .transfer-info__location {
+        flex: 1;
+      }
+      .transfer-info__start-date {
+        flex: 1;
+      }
+      .transfer-info__start-time {
+        flex: 1;
+      }
+      .transfer-info__end-date {
+        flex: 1;
+      }
+      .car-rental__end-time {
+        flex: 1;
+      }
+      .btn-submit {
+        border-radius: 0 1.33333rem 1.33333rem 0;
+        margin-top: 2rem;
+        width: 4rem;
+      }
+      .info-form__airport-pick-up {
+        display: flex;
+        gap: 2rem;
+
+        .info-form__location {
+          flex: 10;
+          display: flex;
+          flex-direction: row;
+          .location__departure {
+            flex: 1;
+          }
+          .location__destination {
+            flex: 1;
+          }
+        }
+        .info-form__time {
+          flex: 10;
+          display: flex;
+          flex-direction: row;
+          .time__pick-up-date {
+            flex: 1;
+          }
+          .time__pick-up-time {
+            flex: 1;
+          }
+        }
+        .transfer-info__submit-btn {
+          margin-top: 2rem;
+          height: 4.66666rem;
+          width: 4.66666rem;
         }
       }
     }
