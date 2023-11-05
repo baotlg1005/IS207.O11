@@ -746,21 +746,7 @@
       display: flex;
       flex-direction: row;
 
-      display: flex;
-      flex-direction: row;
-      .transfer-info__location {
-        flex: 1;
-      }
-      .transfer-info__start-date {
-        flex: 1;
-      }
-      .transfer-info__start-time {
-        flex: 1;
-      }
-      .transfer-info__end-date {
-        flex: 1;
-      }
-      .car-rental__end-time {
+      .input-block{
         flex: 1;
       }
       .btn-submit {
@@ -768,37 +754,19 @@
         margin-top: 2rem;
         width: 4rem;
       }
-      .info-form__airport-pick-up {
-        display: flex;
-        gap: 2rem;
-
-        .info-form__location {
-          flex: 10;
-          display: flex;
-          flex-direction: row;
-          .location__departure {
-            flex: 1;
-          }
-          .location__destination {
-            flex: 1;
-          }
-        }
-        .info-form__time {
-          flex: 10;
-          display: flex;
-          flex-direction: row;
-          .time__pick-up-date {
-            flex: 1;
-          }
-          .time__pick-up-time {
-            flex: 1;
-          }
-        }
-        .transfer-info__submit-btn {
-          margin-top: 2rem;
-          height: 4.66666rem;
-          width: 4.66666rem;
-        }
+    }
+  }
+  #feature-container__hotel {
+    .hotel__info-container .info-form {
+      display: flex;
+      flex-direction: row;
+      .input-block{
+        flex: 1;
+      }
+      .btn-submit {
+        border-radius: 0 1.33333rem 1.33333rem 0;
+        margin-top: 2.1rem;
+        width: 4rem;
       }
     }
   }

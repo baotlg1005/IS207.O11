@@ -344,7 +344,7 @@
         <div id="feature-container__transfer" class="container-fluid feature-container__item hide" data-feature-type="transfer">
             <div class="transfer-config">
                 <div class="transfer-info__driver-toggle">
-                    <ion-icon name="radio-button-off-sharp"></ion-icon>
+                    <ion-icon name="ellipse-outline"></ion-icon>
                     <div class="text">Có tài xế</div>
                 </div>
             </div>
@@ -416,7 +416,46 @@
             </div>
         </div>
         <div id="feature-container__hotel" class="container-fluid feature-container__item hide" data-feature-type="hotel">
-
+            <div class="hotel__info-container">
+                <form id="hotel__info-form" class="info-form" action="">
+                    <div class="input-block right-connect hotel-info__location">
+                        <div class="title">Thành phố, địa điểm hoặc tên khách sạn</div>
+                        <div class="input">
+                            <ion-icon class="icon" name="location" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="hotel-info__location" 
+                                class="location__input" 
+                                type="text" 
+                                placeholder="Địa điểm">
+                        </div>
+                    </div>
+                    <div class="input-block all-connect hotel-info__checkin-and-checkout">
+                        <div class="title">Ngày nhận phòng ngày trả phòng</div>
+                        <div class="input">
+                            <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="hotel-info__start-date" 
+                                class="start-date__input" 
+                                type="text" 
+                                placeholder="09 thg 10 2023 - 10 thg 10 2023">
+                        </div>
+                    </div>
+                    <div class="input-block all-connect hotel-info__guest-and-room">
+                        <div class="title">Số khách và phòng</div>
+                        <div class="input">
+                            <ion-icon class="icon" name="people" style="color: #236eff;"></ion-icon>
+                            <input 
+                                id="hotel-info__guest-and-room" 
+                                class="guest-and-room__input" 
+                                type="text" 
+                                placeholder="2 người lớn, 0 trẻ em, 1 phòng">
+                        </div>
+                    </div>
+                    <div class="btn-submit" id="hotel-info__submit-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <div class="container-fluid main-content">

@@ -635,22 +635,8 @@
 .feature-container #feature-container__transfer .transfer__info-container .info-form {
   display: flex;
   flex-direction: row;
-  display: flex;
-  flex-direction: row;
 }
-.feature-container #feature-container__transfer .transfer__info-container .info-form .transfer-info__location {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .transfer-info__start-date {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .transfer-info__start-time {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .transfer-info__end-date {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .car-rental__end-time {
+.feature-container #feature-container__transfer .transfer__info-container .info-form .input-block {
   flex: 1;
 }
 .feature-container #feature-container__transfer .transfer__info-container .info-form .btn-submit {
@@ -658,36 +644,17 @@
   margin-top: 2rem;
   width: 4rem;
 }
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up {
-  display: flex;
-  gap: 2rem;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .info-form__location {
-  flex: 10;
+.feature-container #feature-container__hotel .hotel__info-container .info-form {
   display: flex;
   flex-direction: row;
 }
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .info-form__location .location__departure {
+.feature-container #feature-container__hotel .hotel__info-container .info-form .input-block {
   flex: 1;
 }
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .info-form__location .location__destination {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .info-form__time {
-  flex: 10;
-  display: flex;
-  flex-direction: row;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .info-form__time .time__pick-up-date {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .info-form__time .time__pick-up-time {
-  flex: 1;
-}
-.feature-container #feature-container__transfer .transfer__info-container .info-form .info-form__airport-pick-up .transfer-info__submit-btn {
-  margin-top: 2rem;
-  height: 4.66666rem;
-  width: 4.66666rem;
+.feature-container #feature-container__hotel .hotel__info-container .info-form .btn-submit {
+  border-radius: 0 1.33333rem 1.33333rem 0;
+  margin-top: 2.1rem;
+  width: 4rem;
 }
 
 .feature-container.floating-container {
