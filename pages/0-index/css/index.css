@@ -79,6 +79,91 @@
   background: #236eff;
 }
 
+.dropdown-panel {
+  display: flex;
+  padding: 0.83333rem 1.33333rem;
+  flex-direction: column;
+  gap: 0.83333rem;
+  border-radius: 0.66667rem;
+  background: #fff;
+  position: absolute;
+  z-index: 2;
+}
+
+.dropdown-panel--set-quantity .panel__title {
+  display: flex;
+  padding: 1.33333rem 0rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.83333rem;
+}
+.dropdown-panel--set-quantity .panel__title .text {
+  color: #687176;
+  font-size: 1.66666rem;
+  font-weight: 500;
+}
+.dropdown-panel--set-quantity .panel__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown-panel--set-quantity .panel__item .item__icon {
+  font-size: 4rem;
+  color: #236EFF;
+}
+.dropdown-panel--set-quantity .panel__item .item__title {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5rem;
+  padding-left: -2rem;
+}
+.dropdown-panel--set-quantity .panel__item .item__title .text {
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 500;
+  padding: 0;
+  text-align: left;
+}
+.dropdown-panel--set-quantity .panel__item .item__title .comment {
+  color: #687176;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+.dropdown-panel--set-quantity .panel__item .item__set-quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.dropdown-panel--set-quantity .panel__item .item__set-quantity .set-quantity__icon {
+  font-size: 3rem;
+  color: #236EFF;
+}
+.dropdown-panel--set-quantity .panel__item .item__set-quantity .set-quantity__quantity {
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 500;
+}
+.dropdown-panel--set-quantity .panel__confirm-btn {
+  display: flex;
+  width: 100%;
+  padding: 1.33333rem 1.66667rem;
+  gap: 0.83333rem;
+  border-radius: 0.66667rem;
+  background: rgba(35, 110, 255, 0.8);
+  cursor: pointer;
+  justify-content: center;
+}
+.dropdown-panel--set-quantity .panel__confirm-btn .text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.33333rem;
+  font-weight: 700;
+}
+
 .input-block {
   display: flex;
   flex-direction: column;
@@ -402,9 +487,10 @@
   border-radius: 0.66667rem;
   border: 1px solid #fff;
   background: rgba(244, 241, 241, 0.5);
+  position: relative;
   cursor: pointer;
 }
-.feature-container #feature-container__flight .flight__ticket-info .ticket-info__passenger ion-icon {
+.feature-container #feature-container__flight .flight__ticket-info .ticket-info__passenger .icon {
   font-size: 2rem;
   color: #fff;
 }
@@ -418,6 +504,11 @@
   font-size: 1.33333rem;
   font-weight: 700;
   padding-left: 0.83333rem;
+}
+.feature-container #feature-container__flight .flight__ticket-info .ticket-info__passenger .passenger__dropdown-panel {
+  top: 5rem;
+  left: 0;
+  width: 30.66667rem;
 }
 .feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type {
   display: flex;
@@ -445,10 +536,11 @@
 .feature-container #feature-container__flight .flight__ticket-info .ticket-info__seat-type .seat-type__drop-down-panel {
   display: none;
   position: absolute;
-  top: 4.5rem;
+  top: 5rem;
   left: 0;
   width: 100%;
   padding: 1rem 1rem;
+  z-index: 2;
   border-radius: 0.66667rem;
   background: #fff;
 }
@@ -527,6 +619,20 @@
 .feature-container #feature-container__flight .flight__trip-info-container .trip-info--many-trip .date__departure .input {
   border-radius: 1.33333rem 1.33333rem 1.33333rem 1.33333rem;
   border-right: 4px solid #c7c7c7;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--many-trip .remove-trip-btn {
+  display: none;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info--many-trip .remove-trip-btn ion-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info__form--many-trip__container.can-remove-trip .remove-trip-btn {
+  display: flex;
 }
 .feature-container #feature-container__flight .flight__trip-info-container .trip-info__form--many-trip .trip-info__add-more-btn {
   display: flex;

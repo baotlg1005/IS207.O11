@@ -88,6 +88,97 @@
 .btn-toggle.active {
   background: #236eff;
 }
+.dropdown-panel {
+  display: flex;
+
+  padding: 0.83333rem 1.33333rem;
+  flex-direction: column;
+  gap: 0.83333rem;
+
+  border-radius: 0.66667rem;
+  background: #fff;
+
+  position: absolute;
+  z-index: 2;
+}
+.dropdown-panel--set-quantity{
+  .panel__title {
+    display: flex;
+    padding: 1.33333rem 0rem; // 16px 20px
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.83333rem;
+    .text {
+      color: #687176;
+      font-size: 1.66666rem;
+      font-weight: 500;
+    }
+  }
+  .panel__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .item__icon{
+      font-size: 4rem;
+      color: #236EFF;
+    }    
+    .item__title{
+      display: flex;
+      flex-direction: column;
+      padding-right: 5rem;
+      padding-left: -2rem;
+      .text{
+        color: #000;
+        font-size: 1.33333rem;
+        font-weight: 500;
+        padding: 0;
+        text-align: left;
+      }
+      .comment{
+        color: #687176;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: left;
+      }
+    }
+    .item__set-quantity{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      .set-quantity__icon{
+        font-size: 3rem;
+        color: #236EFF;
+      }
+      .set-quantity__quantity{
+        color: #000;
+        font-size: 1.33333rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .panel__confirm-btn {
+    display: flex;
+    width: 100%;
+    padding: 1.33333rem 1.66667rem;
+    gap: 0.83333rem;
+    border-radius: 0.66667rem;
+    background: rgba(35, 110, 255, 0.8);
+
+    cursor: pointer;
+
+    justify-content: center;
+    .text {
+      color: #fff;
+      text-align: center;
+      font-size: 1.33333rem; // 16px
+      font-weight: 700;
+    }
+  }
+}
 
 .input-block {
   display: flex;
@@ -481,9 +572,11 @@
         border: 1px solid #fff;
         background: rgba(244, 241, 241, 0.5);
 
+        position: relative;
+
         cursor: pointer;
 
-        ion-icon {
+        .icon {
           font-size: 2rem;
           color: #fff;
         }
@@ -498,6 +591,11 @@
           font-weight: 700;
 
           padding-left: 0.83333rem;
+        }
+        .passenger__dropdown-panel {
+          top: 5rem;
+          left: 0;
+          width: 30.66667rem;
         }
       }
       .ticket-info__seat-type {
@@ -528,10 +626,11 @@
         .seat-type__drop-down-panel {
           display: none;
           position: absolute;
-          top: 4.5rem;
+          top: 5rem;
           left: 0;
           width: 100%;
           padding: 1rem 1rem;
+          z-index: 2;
 
           border-radius: 0.66667rem;
           background: #fff;
@@ -621,8 +720,24 @@
             border-right: 4px solid #c7c7c7;
           }
         }
+        .remove-trip-btn{
+          display: none;
+          height: 6rem;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2rem;
+          ion-icon{
+            font-size: 2rem;
+            color: #fff;
+          }
+        }
       }
       .trip-info__form--many-trip {
+        .trip-info__form--many-trip__container.can-remove-trip{
+          .remove-trip-btn{
+            display: flex;
+          }
+        }
         .trip-info__add-more-btn {
           display: flex;
           height: 6rem;
@@ -651,7 +766,6 @@
           opacity: 0.5;
           cursor: not-allowed;
         }
-
         .trip-info--many-trip__submit-btn {
           display: flex;
           height: 6rem;
@@ -728,7 +842,7 @@
         background: #fff;
 
         cursor: pointer;
-        ion-icon{
+        ion-icon {
           font-size: 2rem;
           color: #236eff;
         }
@@ -746,7 +860,7 @@
       display: flex;
       flex-direction: row;
 
-      .input-block{
+      .input-block {
         flex: 1;
       }
       .btn-submit {
@@ -760,7 +874,7 @@
     .hotel__info-container .info-form {
       display: flex;
       flex-direction: row;
-      .input-block{
+      .input-block {
         flex: 1;
       }
       .btn-submit {
