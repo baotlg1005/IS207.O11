@@ -11,12 +11,11 @@ let flightInfo = {
 };
 
 const featureContainer = document.querySelector(".feature-container");
-const flightFeatureContainer = document.getElementById(
-  "feature-container__flight"
-);
+const flightFeatureContainer = document.getElementById("feature-container__flight");
 
-// flight-type-toggle: CLICK EVENT
 
+
+//#region flight-type-toggle: CLICK EVENT
 const choiceOneTripType = flightFeatureContainer.querySelector(
   ".flight-type--one-trip"
 );
@@ -67,9 +66,9 @@ featureContainer.querySelector(".feature-container__navbar").addEventListener("c
   if(e.target.classList.contains("active")) return;
   SetFlightType("one");
 });
+//#endregion
 
-
-// ticket-info__passenger: CLICK EVENT
+//#region ticket-info__passenger: CLICK EVENT
 const passengerBtn = flightFeatureContainer.querySelector(
   ".ticket-info__passenger"
 );
@@ -142,8 +141,9 @@ decreaseQuantityBtns.forEach((btn) => {
     }
   });
 });
+//#endregion
 
-// ticket-info__seat-type: CLICK EVENT
+//#region ticket-info__seat-type: CLICK EVENT
 const seatTypeBtn = flightFeatureContainer.querySelector(
   ".ticket-info__seat-type"
 );
@@ -199,9 +199,9 @@ checkBoxHaveReturnTrip.addEventListener("change", (e) => {
     flightInfo.haveReturnTrip = false;
   }
 });
+// #endregion
 
-
-//many-trip info: ADD TRIP and REMOVE TRIP
+//#region many-trip info: ADD TRIP and REMOVE TRIP
 const addTripBtn = manyTripForm.querySelector(".trip-info__add-more-btn");
 const submitBtn = manyTripForm.querySelector(".trip-info--many-trip__submit-btn");
 const tripInfoInputContainer = manyTripForm.querySelector(".trip-info__form--many-trip__container");
@@ -240,10 +240,14 @@ addTripBtn.addEventListener("click", () => {
     flightFeatureContainer.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
 });	
+// #endregion
 
+//#region TODO:  one-trip info: submit event
 
-//TODO:  one-trip info
-//TODO:  many-trip info
+//#endregion
+//#region TODO:  many-trip info: submit event
+
+//#endregion
 
 //set default flight info
 AddTripInfoInput();

@@ -8,21 +8,21 @@
 
     <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="resources/css/main-style.css">
-    <link rel="stylesheet" href="pages/0-index/css/index.css">
+    <link rel="stylesheet" href="/resources/css/main-style.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div class="blur-panel hide"></div>
     <div class="container-fluid">
-        <img class="top-background" src="pages/0-index/image/top-background.jpg" alt="">
+        <img class="top-background" src="./image/top-background.jpg" alt="">
     </div>
     <div id="header" class="container-fluid header-container">
         <div class="container header__top-content">
             <div class="top-content__brand-container">
                 <div class="brand-container__brand-logo">
-                    <img class="brand-logo--default" src="resources\images\logo-white.png" alt="" sizes="" srcset="">
-                    <img class="brand-logo--on-scroll" src="resources\images\logo.png" alt="" sizes="" srcset="">
+                    <img class="brand-logo--default" src="resources/images/logo-white.png" alt="" sizes="" srcset="">
+                    <img class="brand-logo--on-scroll" src="resources/images/logo.png" alt="" sizes="" srcset="">
                 </div>
                 <div class="brand-container__brand-name">
                     <p class="text">travelowkey</p>
@@ -96,8 +96,7 @@
         <svg class="container-fluid divine-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 2" fill="none">
             <path d="M0 1H1152" stroke="white" stroke-width="2" />
         </svg>
-        <div id="feature-container__flight" class="container-fluid feature-container__item show"
-            data-feature-type="flight">
+        <div id="feature-container__flight" class="container-fluid feature-container__item show" data-feature-type="flight">
             <div class="row flight__config">
                 <div class="flight__flight-type">
                     <div class="btn-toggle flight-type-toggle flight-type--one-trip active" data-flight-type="one">
@@ -199,16 +198,16 @@
                                 <div class="title">Điểm đi</div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                                    <input id="flight-trip-info__departure" class="departure__input" type="text"
-                                        list="flight__place-data" placeholder="Điểm đi">
+                                    <input id="flight-trip-info__departure" class="departure__input datalist--flight__place-data" type="text"
+                                        placeholder="Điểm đi" autocomplete="off">
                                 </div>
                             </div>
                             <div class="input-block left-connect location__destination">
                                 <div class="title">Điểm đến</div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                                    <input id="flight-trip-info__destination" class="destination__input" type="text"
-                                        list="flight__place-data" placeholder="Điểm đến">
+                                    <input id="flight-trip-info__destination" class="destination__input datalist--flight__place-data" type="text"
+                                        placeholder="Điểm đến" autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -247,7 +246,7 @@
                                     <div class="input">
                                         <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
                                         <input id="flight-trip-info--1__departure" class="departure__input" type="text"
-                                            list="flight__place-data" placeholder="Điểm đi">
+                                             placeholder="Điểm đi">
                                     </div>
                                 </div>
                                 <div class="input-block left-connect location__destination">
@@ -255,7 +254,7 @@
                                     <div class="input">
                                         <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
                                         <input id="flight-trip-info--1__destination" class="destination__input"
-                                            type="text" list="flight__place-data" placeholder="Điểm đến">
+                                            type="text"  placeholder="Điểm đến">
                                     </div>
                                 </div>
                             </div>
@@ -285,8 +284,6 @@
                         </div>
                     </div>
                 </form>
-                <!-- datalist for flight -->
-                <datalist id="flight__place-data"></datalist>
             </div>
         </div>
         <div id="feature-container__coach" class="container-fluid feature-container__item hide"
@@ -312,7 +309,7 @@
                             <div class="input">
                                 <ion-icon class="icon" name="car" style="color: #236eff;"></ion-icon>
                                 <input id="coach-info__departure" class="departure__input" type="text"
-                                    list="coach__place-data" placeholder="Điểm đi">
+                                    placeholder="Điểm đi">
                             </div>
                         </div>
                         <div class="input-block left-connect location__destination">
@@ -320,7 +317,7 @@
                             <div class="input">
                                 <ion-icon class="icon" name="car" style="color: #236eff;"></ion-icon>
                                 <input id="coach-info__destination" class="destination__input" type="text"
-                                    list="coach__place-data" placeholder="Điểm đến">
+                                    placeholder="Điểm đến">
                             </div>
                         </div>
                     </div>
@@ -455,7 +452,7 @@
             </div>
             <div class="location-ad-card-container__item-container">
                 <div class="item-container__item template hide">
-                    <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="" srcset="">
+                    <img class="item__image-background" src="./image/top-background.jpg" alt="" srcset="">
                     <div class="item__information">
                         <div class="information__name">
                             <div class="text">
@@ -482,7 +479,7 @@
             <div class="container-fluid main-content__container location-ad-slider-container__slider-container">
                 <div class="container-fluid slider-container__slider">
                     <div class="slider__item template hide">
-                        <img class="item__image-background" src="pages/0-index/image/top-background.jpg" alt="">
+                        <img class="item__image-background" src="./image/top-background.jpg" alt="">
                         <div class="item__information">
                             <div class="information__description">
                                 <div class="text">
@@ -513,7 +510,7 @@
             <div class="footer__top-content">
                 <div class="top-content__brand-container">
                     <div class="brand-container__brand-logo">
-                        <img src="resources/images/logo.png" alt="" sizes="" srcset="">
+                        <img src="/resources/images/logo.png" alt="" sizes="" srcset="">
                     </div>
                     <div class="brand-container__brand-name">
                         <p class="text">travelowkey</p>
@@ -521,10 +518,10 @@
                 </div>
                 <div class="top-content__media-container">
                     <a href="#">
-                        <img src="resources/images/svg/facebook-icon.svg" alt="" class="media-icon">
+                        <img src="/resources/images/svg/facebook-icon.svg" alt="" class="media-icon">
                     </a>
                     <a href="#">
-                        <img src="resources/images/svg/youtube-icon.svg" alt="" class="media-icon">
+                        <img src="/resources/images/svg/youtube-icon.svg" alt="" class="media-icon">
                     </a>
                 </div>
             </div>
@@ -540,13 +537,13 @@
         </div>
     </footer>
 
-    <script src="pages/0-index/js/index.js"></script>
-    <script src="pages/0-index/js/index-load-ad.js"></script>
-    <script src="pages/0-index/js/header-on-scroll.js"></script>
-    <script src="pages/0-index/js/flight-feature.js"></script>
-    <script src="pages/0-index/js/coach-feature.js"></script>
-    <script src="pages/0-index/js/transfer-feature.js"></script>
-    <script src="pages/0-index/js/hotel-feature.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/index-load-ad.js"></script>
+    <script src="./js/header-on-scroll.js"></script>
+    <script src="./js/flight-feature.js"></script>
+    <script src="./js/coach-feature.js"></script>
+    <script src="./js/transfer-feature.js"></script>
+    <script src="./js/hotel-feature.js"></script>
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

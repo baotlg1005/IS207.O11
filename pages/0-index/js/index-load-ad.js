@@ -4,7 +4,7 @@ data = {
         {
             "id": 0,
             "name": "Đà Lạt",
-            "thumbImageUrl": "pages/0-index/image/ad-image/da-lat.png",
+            "thumbImageUrl": "./image/ad-image/da-lat.png",
             "accommodations": "4.7 triệu",
             "hotelRoom": "13.798 phòng",
             "FlightUrl": "",
@@ -13,7 +13,7 @@ data = {
         {
             "id": 1,
             "name": "Đà Nẵng",
-            "thumbImageUrl": "pages/0-index/image/ad-image/da-nang.png",
+            "thumbImageUrl": "./image/ad-image/da-nang.png",
             "accommodations": "3.2 triệu",
             "hotelRoom": "9.456 phòng",
             "FlightUrl": "",
@@ -22,7 +22,7 @@ data = {
         {
             "id": 2,
             "name": "Hồ Chí Minh",
-            "thumbImageUrl": "pages/0-index/image/ad-image/hcm.png",
+            "thumbImageUrl": "./image/ad-image/hcm.png",
             "accommodations": "5.1 triệu",
             "hotelRoom": "7.891 phòng",
             "FlightUrl": "",
@@ -31,7 +31,7 @@ data = {
         {
             "id": 3,
             "name": "SAPA",
-            "thumbImageUrl": "pages/0-index/image/ad-image/sapa.png",
+            "thumbImageUrl": "./image/ad-image/sapa.png",
             "accommodations": "2.8 triệu",
             "hotelRoom": "12.345 phòng",
             "FlightUrl": "",
@@ -40,7 +40,7 @@ data = {
         {
             "id": 4,
             "name": "Hà Nội",
-            "thumbImageUrl": "pages/0-index/image/ad-image/ha-noi.png",
+            "thumbImageUrl": "./image/ad-image/ha-noi.png",
             "accommodations": "3.9 triệu",
             "hotelRoom": "5.678 phòng",
             "FlightUrl": "",
@@ -49,7 +49,7 @@ data = {
         {
             "id": 5,
             "name": "Vũng Tàu",
-            "thumbImageUrl": "pages/0-index/image/ad-image/vung-tau.png",
+            "thumbImageUrl": "./image/ad-image/vung-tau.png",
             "accommodations": "6.2 triệu",
             "hotelRoom": "8.765 phòng",
             "FlightUrl": "",
