@@ -29,9 +29,11 @@
             .btn-dropdown{
                 background-color: rgba(244, 241, 241, 0.70);
             }
-            // .ticket-info__passenger-quantity{}
+            .ticket-info__passenger-quantity{
+                min-width: 28rem;
+            }
             .ticket-info__seat-type{
-
+                min-width: 15rem;
                 // .seat-type__info{}
                 .seat-type__dropdown-panel{
 
@@ -62,4 +64,72 @@
             }
         }
     }
+
+    .search-form--many {
+        display: flex;
+        flex-direction: column;
+        gap: 0.83333rem;
+      
+        .search-form-container__item{
+          display: flex;
+          flex-direction: row;
+          gap: 0.83333rem;
+      
+          .search-form__remove-btn {
+            flex: 0.2;
+        
+            display: none;
+        
+            margin-top: 2rem;
+            ion-icon {
+              font-size: 2rem;
+              align-self: center;
+        
+              cursor: pointer;
+            }
+          }
+        }
+        .search-form__btn-group {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+      
+          margin-top: 2rem;
+      
+          .btn-submit {
+            padding: 1rem;
+          }
+          .btn-add-more {
+            height: 6rem;
+            width: 38rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+      
+            padding: 1.33333rem 1.66667rem;
+            border-radius: 1.33333rem;
+            border: 4px dashed #c7c7c7;
+      
+            ion-icon{
+              font-size: 2.66667rem;
+              color: #c7c7c7;
+            }
+            .text {
+              color: #687176;
+              text-align: center;
+              font-size: 2.66667rem;
+              font-weight: 700;
+            }
+          }
+          .btn-add-more.disable{
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
+        }
+      }
+      .search-form-container.can-remove{
+        .search-form__remove-btn{
+          display: flex;
+        }
+      }
 }

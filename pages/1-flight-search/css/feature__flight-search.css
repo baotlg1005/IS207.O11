@@ -26,6 +26,12 @@
 #feature__flight-search .flight-search__config .config__ticket-info .btn-dropdown {
   background-color: rgba(244, 241, 241, 0.7);
 }
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__passenger-quantity {
+  min-width: 28rem;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type {
+  min-width: 15rem;
+}
 #feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item {
   display: flex;
   align-items: center;
@@ -45,4 +51,60 @@
 }
 #feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item.selected ion-icon.unselected {
   display: none;
+}
+#feature__flight-search .search-form--many {
+  display: flex;
+  flex-direction: column;
+  gap: 0.83333rem;
+}
+#feature__flight-search .search-form--many .search-form-container__item {
+  display: flex;
+  flex-direction: row;
+  gap: 0.83333rem;
+}
+#feature__flight-search .search-form--many .search-form-container__item .search-form__remove-btn {
+  flex: 0.2;
+  display: none;
+  margin-top: 2rem;
+}
+#feature__flight-search .search-form--many .search-form-container__item .search-form__remove-btn ion-icon {
+  font-size: 2rem;
+  align-self: center;
+  cursor: pointer;
+}
+#feature__flight-search .search-form--many .search-form__btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-submit {
+  padding: 1rem;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more {
+  height: 6rem;
+  width: 38rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.33333rem 1.66667rem;
+  border-radius: 1.33333rem;
+  border: 4px dashed #c7c7c7;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more ion-icon {
+  font-size: 2.66667rem;
+  color: #c7c7c7;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more .text {
+  color: #687176;
+  text-align: center;
+  font-size: 2.66667rem;
+  font-weight: 700;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more.disable {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+#feature__flight-search .search-form-container.can-remove .search-form__remove-btn {
+  display: flex;
 }/*# sourceMappingURL=feature__flight-search.css.map */
