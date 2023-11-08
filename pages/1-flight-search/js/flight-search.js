@@ -447,7 +447,7 @@ function CreateNewFlightInfo() {
 // if manyFlightInfo is more than 2, enable remove btn
 addMoreFlightBtn.addEventListener("click", () => {
     if (manyFlightInfo.length >= 4) return;
-    if (manyFlightInfo.length >= 2) {
+    if (manyFlightInfo.length > 2) {
         searchFormContainer.classList.add("can-remove");
     }
     const newFlightInfo = CreateNewFlightInfo()
