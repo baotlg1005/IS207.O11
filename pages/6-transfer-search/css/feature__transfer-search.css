@@ -6,6 +6,7 @@
   padding: 0.83333rem 1.66667rem;
   border-radius: 1.66667rem;
   border: 5px solid #9CC4FF;
+  cursor: pointer;
 }
 #feature__transfer-search .transfer-search__config #config__have-driver-checkbox .text {
   color: #236EFF;
