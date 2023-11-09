@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.83333rem;
   border-radius: 1rem;
   cursor: pointer;
 }

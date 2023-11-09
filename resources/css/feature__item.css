@@ -13,7 +13,19 @@
   flex-direction: row;
 }
 .search-form .search-form__input-container .input-block {
-  flex: 1;
+  flex: 10;
+}
+.search-form .search-form__input-container .btn-submit {
+  flex: 2;
+  margin-top: 2rem;
+}
+.search-form .search-form__input-container .btn-submit.left-connect {
+  border-radius: 0rem 2rem 2rem 0rem;
+  border-top: 4px solid #C7C7C7;
+  border-right: 4px solid #C7C7C7;
+  border-bottom: 4px solid #C7C7C7;
+  border-left: 1px solid #C7C7C7;
+  background: #FF7A50;
 }
 .search-form .search-form__btn-container {
   flex: 1;

@@ -1,0 +1,30 @@
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox {
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 0.83333rem;
+  padding: 0.83333rem 1.66667rem;
+  border-radius: 1.66667rem;
+  border: 5px solid #9CC4FF;
+}
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox .text {
+  color: #236EFF;
+  font-size: 1.33333rem;
+  font-weight: 700;
+}
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox ion-icon {
+  color: #236EFF;
+  font-size: 1.33333rem;
+}
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox ion-icon.checked {
+  display: none;
+}
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox ion-icon.unchecked {
+  display: flex;
+}
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox.checked ion-icon.checked {
+  display: flex;
+}
+#feature__transfer-search .transfer-search__config #config__have-driver-checkbox.checked ion-icon.unchecked {
+  display: none;
+}/*# sourceMappingURL=feature__transfer-search.css.map */
