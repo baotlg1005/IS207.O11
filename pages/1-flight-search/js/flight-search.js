@@ -307,8 +307,6 @@ const manyFlightSubmitBtn = manyFlightSearchForm.querySelector("#search-form__su
 
 let manyFlightInfo = []
 
-
-
 // Flight type toggle EVENT
 flightTypeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -459,3 +457,39 @@ addMoreFlightBtn.addEventListener("click", () => {
 //create 2 default flight info for many flight search form
 CreateNewFlightInfo()
 CreateNewFlightInfo()
+
+
+// submit btn EVENT
+
+// one flight submit btn EVENT
+
+oneFlightSubmitBtn.addEventListener("click", () => {
+    const departure = oneFlightSearchForm.querySelector("#flight-search__departure").value
+    const destination = oneFlightSearchForm.querySelector("#flight-search__destination").value
+    const departureDate = oneFlightSearchForm.querySelector("#flight-search__departure-date").value
+    const haveReturn = oneFlightSearchForm.querySelector("#flight-search__have-return").checked
+    const returnDate = oneFlightSearchForm.querySelector("#flight-search__return-date").value
+
+    searchInfo.oneFlightInfo.departure = departure
+    searchInfo.oneFlightInfo.destination = destination
+    searchInfo.oneFlightInfo.departureDate = departureDate
+    searchInfo.oneFlightInfo.haveReturn = haveReturn
+    searchInfo.oneFlightInfo.returnDate = returnDate
+
+    console.log(searchInfo)
+})
+// many flight submit btn EVENT
+
+manyFlightSubmitBtn.addEventListener("click", () => {
+    manyFlightInfo.forEach(flightInfo => {
+        const departure = flightInfo.querySelector(".departure__input").value
+        const destination = flightInfo.querySelector(".destination__input").value
+        const departureDate = flightInfo.querySelector(".departure-date__input").value
+
+        flightInfo.departure = departure
+        flightInfo.destination = destination
+        flightInfo.departureDate = departureDate
+    })
+
+    console.log(searchInfo)
+})
