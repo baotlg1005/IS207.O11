@@ -3,15 +3,6 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-#feature__flight-search .flight-search__config {
-  background: #2C63CC;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.83333rem;
-  border-radius: 0.66667rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
 #feature__flight-search .flight-search__config .config__flight-type {
   display: flex;
   gap: 2rem;
