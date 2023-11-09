@@ -23,6 +23,11 @@ body {
   margin: auto;
 }
 
+.header-space {
+  height: 9rem;
+  background-color: aqua;
+}
+
 .btn-default {
   display: flex;
   width: 12.5rem;
@@ -65,6 +70,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header-container .header__top-content a {
+  text-decoration: none;
+}
+.header-container .header__top-content a:visited {
+  text-decoration: none;
 }
 .header-container .header__top-content .top-content__brand-container {
   display: flex;
@@ -123,6 +134,12 @@ body {
   align-items: center;
   gap: 1rem;
   padding-bottom: 0.5rem;
+}
+.header-container .header__navbar a {
+  text-decoration: none;
+}
+.header-container .header__navbar a:visited {
+  text-decoration: none;
 }
 .header-container .header__navbar .navbar__item {
   width: 14rem;

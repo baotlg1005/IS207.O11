@@ -105,7 +105,15 @@
     display: flex;
     align-items: center;
     gap: 1rem; // 12px
+    padding-bottom: .5rem;
 
+    a{
+      text-decoration: none;
+    }
+    a:visited{
+      color: #fff;
+      text-decoration: none;
+    }
     .navbar__item {
       display: flex;
       width: 14rem; // 168px
@@ -128,6 +136,12 @@
         font-size: 1.33333rem; // 16px
         font-weight: 700;
       }
+    }
+    .navbar__item:hover{
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .navbar__item:active{
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -176,6 +190,12 @@
       .text {
         color: #687176;
       }
+    }
+    .navbar__item:hover{
+      background-color: #f2f3f3;
+    }
+    .navbar__item:active{
+      background-color: #e4e6e6;
     }
   }
 }

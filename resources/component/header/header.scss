@@ -20,6 +20,11 @@ body {
   margin: auto;
 }
 
+.header-space{
+  height: 9rem;
+  background-color: aqua;
+}
+
 .btn-default {
   display: flex;
   width: 12.5rem; 
@@ -68,6 +73,12 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    a {
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+    }
     .top-content__brand-container {
       display: flex;
 
@@ -142,6 +153,12 @@ body {
 
     padding-bottom: .5rem;
 
+    a {
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+    }
     .navbar__item {
       width: 14rem;
       height: 4.33333rem;
