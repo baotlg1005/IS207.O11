@@ -41,6 +41,11 @@ body {
   z-index: 100;
 }
 
+.header-space {
+  height: 9rem;
+  background-color: aqua;
+}
+
 .btn-default {
   display: flex;
   width: 12.5rem;

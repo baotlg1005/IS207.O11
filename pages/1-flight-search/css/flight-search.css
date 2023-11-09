@@ -3,11 +3,6 @@ body {
   background-color: antiquewhite;
 }
 
-.header-space {
-  height: 9rem;
-  background-color: aqua;
-}
-
 .ad-slider-container {
   display: flex;
   flex-direction: column;
