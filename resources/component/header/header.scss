@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+html {
+  font-size: 12px;
+}
+body {
+  position: relative;
+}
+
+.container-fluid {
+  width: 100%;
+}
+.container {
+  width: 80%;
+  padding: auto;
+  margin: auto;
+}
+
+.btn-default {
+  display: flex;
+  width: 12.5rem; 
+  height: 3.25rem; 
+  padding: 1.33333rem 1rem; 
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  border-radius: 0.66667rem; 
+  border: 1px solid #fff;
+
+  .text {
+    font-size: 1.33333rem;
+    font-weight: 500;
+  }
+}
+.btn-default:hover {
+  opacity: 0.8;
+}
+.btn-default:active {
+  opacity: 0.6;
+}
+
+.header-container {
+  background-color: #fff;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .5rem; 
+  
+  padding-top: 0.5rem; 
+
+  transition: 0.3s;
+
+  .header__top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .top-content__brand-container {
+      display: flex;
+
+      .brand-container__brand-logo {
+        width: 8rem; 
+        background: rgba(165, 165, 165, 0);
+        
+        display: flex;
+        flex-direction: column;
+        gap: 0.83333rem; 
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .brand-container__brand-name {
+        width: 12.5rem; 
+        height: 3rem;
+
+        display: flex;
+        align-items: center;
+        
+        padding: 0.83333rem; 
+
+        .text {
+          color: #000;
+          font-size: 2.66667rem;
+          font-style: italic;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .top-content__account-btn-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.66667rem;
+
+      .account-btn-group__login-btn {
+        border-radius: 0.66667rem;
+        border: 1px solid #236eff;
+        gap: 1rem;
+
+        .text {
+          color: #000;
+        }
+
+        .login-btn__icon {
+          font-size: 2rem;
+          color: #000;
+        }
+      }
+
+      .account-btn-group__sign-up-btn {
+        border-radius: 0.66667rem;
+        background: rgba(35, 110, 255, 0.8);
+
+        .text {
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .header__navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+
+    padding-bottom: .5rem;
+
+    .navbar__item {
+      width: 14rem;
+      height: 4.33333rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 1.33333rem 1.66667rem; 
+      border-radius: 0.66667rem; 
+
+      cursor: pointer;
+
+      .text {
+        color: #687176;
+        text-align: center;
+        font-size: 1.33333rem;
+        font-weight: 700;
+      }
+    }
+    .navbar__item:hover{
+      background-color: #f2f3f3;
+    }
+    .navbar__item:active{
+      background-color: #e4e6e6;
+    }
+  }
+}

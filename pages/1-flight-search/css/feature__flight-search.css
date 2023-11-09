@@ -1,0 +1,110 @@
+#feature__flight-search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#feature__flight-search .flight-search__config {
+  background: #2C63CC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.83333rem;
+  border-radius: 0.66667rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#feature__flight-search .flight-search__config .config__flight-type {
+  display: flex;
+  gap: 2rem;
+}
+#feature__flight-search .flight-search__config .config__flight-type .btn-toggle.active {
+  background-color: #568EFA;
+}
+#feature__flight-search .flight-search__config .config__ticket-info {
+  display: flex;
+  gap: 2rem;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .btn-dropdown {
+  background-color: rgba(244, 241, 241, 0.7);
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__passenger-quantity {
+  min-width: 28rem;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type {
+  min-width: 15rem;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item {
+  display: flex;
+  align-items: center;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item ion-icon {
+  color: black;
+  font-size: 1rem;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item ion-icon.selected {
+  display: none;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item .text {
+  color: black;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item.selected ion-icon.selected {
+  display: flex;
+}
+#feature__flight-search .flight-search__config .config__ticket-info .ticket-info__seat-type .seat-type__dropdown-panel .dropdown-panel__item.selected ion-icon.unselected {
+  display: none;
+}
+#feature__flight-search .search-form--many {
+  display: flex;
+  flex-direction: column;
+  gap: 0.83333rem;
+}
+#feature__flight-search .search-form--many .search-form-container__item {
+  display: flex;
+  flex-direction: row;
+  gap: 0.83333rem;
+}
+#feature__flight-search .search-form--many .search-form-container__item .search-form__remove-btn {
+  flex: 0.2;
+  display: none;
+  margin-top: 2rem;
+}
+#feature__flight-search .search-form--many .search-form-container__item .search-form__remove-btn ion-icon {
+  font-size: 2rem;
+  align-self: center;
+  cursor: pointer;
+}
+#feature__flight-search .search-form--many .search-form__btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-submit {
+  padding: 1rem;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more {
+  height: 6rem;
+  width: 38rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.33333rem 1.66667rem;
+  border-radius: 1.33333rem;
+  border: 4px dashed #c7c7c7;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more ion-icon {
+  font-size: 2.66667rem;
+  color: #c7c7c7;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more .text {
+  color: #687176;
+  text-align: center;
+  font-size: 2.66667rem;
+  font-weight: 700;
+}
+#feature__flight-search .search-form--many .search-form__btn-group .btn-add-more.disable {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+#feature__flight-search .search-form-container.can-remove .search-form__remove-btn {
+  display: flex;
+}/*# sourceMappingURL=feature__flight-search.css.map */
