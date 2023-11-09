@@ -17,6 +17,14 @@
   font-weight: 500;
 }
 
+.btn-default:hover {
+  opacity: 0.8;
+}
+
+.btn-default:active {
+  opacity: 0.6;
+}
+
 .btn-submit {
   background: #ff7a50;
   display: flex;
