@@ -39,9 +39,8 @@
 
       .brand-container__brand-logo {
         display: flex;
-        width: 13rem; // 156px
+        width: 8rem; // 156px
         flex-direction: column;
-        align-items: flex-start;
         gap: 0.83333rem; // 10px
         background: rgba(165, 165, 165, 0);
 
@@ -62,10 +61,10 @@
       .brand-container__brand-name {
         display: flex;
         width: 12.5rem; // 150px
-        height: 5rem; // 60px
-        padding: 0.83333rem; // 10px
+        height: 3rem;
         align-items: center;
-        gap: 0.83333rem; // 10px
+
+        padding: 0.83333rem; 
 
         .text {
           color: #fff;
@@ -218,7 +217,7 @@
 
 .feature-container {
   display: flex;
-  min-height: 50rem; // 600px
+  min-height: 60rem; // 600px
   flex-direction: column;
   align-items: center;
   gap: 1.66667rem; // 20px
