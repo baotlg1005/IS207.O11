@@ -78,7 +78,7 @@
 </form>
 </div> */}
 
-const transferSearch = {
+const searchInfo = {
     location: '',
     startDate: '',
     startTime: '',
@@ -103,17 +103,17 @@ const submitBtn = transferSearchForm.querySelector('#search-form__submit-btn--tr
 haveDriverCheckbox.addEventListener('click', () => {
     haveDriverCheckbox.classList.toggle('checked')
     haveDriverCheckbox.classList.toggle('unchecked')
-    transferSearch.haveDriver = !transferSearch.haveDriver
+    searchInfo.haveDriver = !searchInfo.haveDriver
 })
 
 
 //submit event
 submitBtn.addEventListener('click', () => {
-    transferSearch.location = locationInput.value
-    transferSearch.startDate = startDateInput.value
-    transferSearch.startTime = startTimeInput.value
-    transferSearch.endDate = endDateInput.value
-    transferSearch.endTime = endTimeInput.value
+    searchInfo.location = locationInput.value
+    searchInfo.startDate = startDateInput.value
+    searchInfo.startTime = startTimeInput.value
+    searchInfo.endDate = endDateInput.value
+    searchInfo.endTime = endTimeInput.value
   
-    console.log(transferSearch)
+    console.log(searchInfo)
 })

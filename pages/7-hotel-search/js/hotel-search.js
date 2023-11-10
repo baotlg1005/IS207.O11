@@ -104,7 +104,7 @@
 </form>
 </div> */}
 
-const hotelSearch = {
+const searchInfo = {
     location: '',
     checkinDate: '',
     checkoutDate: '',
@@ -166,15 +166,15 @@ guestAndRoomQuantityConfirmBtn.addEventListener('click', () => {
     const roomQuantity = guestAndRoomQuantityItems[2].querySelector('.set-quantity__quantity').innerText;
     guestAndRoomQuantityInfo.querySelector('.text').innerText = `${adultQuantity} Người lớn, ${childQuantity} trẻ em, ${roomQuantity} phòng`;
 
-    hotelSearch.adultQuantity = adultQuantity;
-    hotelSearch.childQuantity = childQuantity;
-    hotelSearch.roomQuantity = roomQuantity;
+    searchInfo.adultQuantity = adultQuantity;
+    searchInfo.childQuantity = childQuantity;
+    searchInfo.roomQuantity = roomQuantity;
 });
 
 //submit btn event
 submitBtn.addEventListener('click', () => {
-    hotelSearch.location = locationInput.value;
-    hotelSearch.checkinDate = checkinDateInput.value;
-    hotelSearch.checkoutDate = checkoutDateInput.value;
-    console.log(hotelSearch);
+    searchInfo.location = locationInput.value;
+    searchInfo.checkinDate = checkinDateInput.value;
+    searchInfo.checkoutDate = checkoutDateInput.value;
+    console.log(searchInfo);
 });

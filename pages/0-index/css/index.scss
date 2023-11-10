@@ -5,7 +5,7 @@
   left: 0;
   z-index: -100;
   width: 100%;
-  height: 75rem; // 900px
+  height: 100rem; // 900px
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -310,6 +310,22 @@
             color: #fff;
           }
         }
+      }
+    }
+  }
+
+  #feature__flight-search{
+    .search-form__remove-btn {
+      ion-icon{
+        color: white;
+      }
+    }
+    #search-form__add-more-btn{
+      ion-icon{
+        color: white;
+      }
+      .text{
+        color: white;
       }
     }
   }
