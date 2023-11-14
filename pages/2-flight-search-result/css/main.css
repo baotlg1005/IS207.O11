@@ -1,91 +1,73 @@
-.html {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.header{
-    height: 120px;
-}
-
-.header_page {
+.flight-result {
     display: flex;
+    gap: 2;
+}
+
+.sorting-list {
+    flex:1;
+}
+
+.flight-book{
+    flex:2;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 642px;
+    padding: 10px;
     justify-content: space-between;
-    margin-left: 144px;
-    margin-right: 144px;
-}
-
-.logo_name {
-    list-style-type: none;
-    display: flex;
-    width: 368px;
     align-items: flex-start;
-    flex-shrink: 0;
-    font-size: 1.5rem;
+    border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.button {
-    color: black;
-    text-decoration: none;
-    display: flex;
-    gap: 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.btn--signin {
-    width:  172px;
-    height: 50px;
-    flex: 1;
-    padding: 16px 20px;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 10px;
-    flex: 1;
-    border-radius: 25px;
-    border: 1px solid #236EFF;
-}
-
-.btn--registry {
-    flex: 1;
-    border-radius: 25px;
-    background: rgba(35, 110, 255, 0.80);
-    width: 172px;
-    height: 50px;
-    padding: 16px 20px;
-    align-items: flex-start;
-    gap: 10px;
-    text-align: center;
-}
-
-.page_function {
-    margin-left: 144px;
-    background-color: #FFFFFF;
-    padding: 0.5em;
-    top: 0;
-}
-
-.page_function_list{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    padding: 5px;
-}
-
-.page_function_item {
-    display: inline-block;
+.flight-info {
     flex: 2;
+    align-items: flex-start;
 }
 
-.footer {
-    background-color: #4A4A4B;
+.btn--search {
+    flex: 1;
+    display: inline-block;
 }
 
-.footer .text {
-    color: #FFF;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.place-flight {
+    flex: 1;
+    align-items: center;
+}
+
+
+.flight-book .search-bar .Start-place, .flight-book .search-bar .End-place {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.flight-book .search-bar .flight-date, .flight-book .search-bar .number-of-passengers, .flight-book .search-bar .customer-class {
+    display: inline-block;
+}
+
+.price-bar {
+    border-radius: 8px;
+    background: #2C63CC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 760px;
+    padding: 10px 25px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.price-item {
+    display: flex;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #568EFA;
+    flex-direction: column;
 }
