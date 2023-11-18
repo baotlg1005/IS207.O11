@@ -30,7 +30,8 @@
 }
 .input-block .input input[type=text],
 .input-block .input input[type=date],
-.input-block .input input[type=time] {
+.input-block .input input[type=time],
+.input-block .input input[type=password] {
   width: 100%;
   display: flex;
   color: #000;
@@ -40,6 +41,9 @@
   padding-left: 1rem;
 }
 .input-block .input input[type=text]:focus {
+  outline: none;
+}
+.input-block .input input[type=password]:focus {
   outline: none;
 }
 .input-block .input.disabled {
