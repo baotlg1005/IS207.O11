@@ -82,6 +82,7 @@
 
       .account-btn-group__login-btn {
         color: #fff;
+        text-decoration: none;
 
         .login-btn__icon {
           font-size: 2rem;
@@ -91,6 +92,8 @@
       .account-btn-group__sign-up-btn {
         border-radius: 0.66667rem;
         background: rgba(35, 110, 255, 0.8);
+
+        text-decoration: none;
 
         .text {
           color: #fff;

@@ -178,13 +178,13 @@ headerTemplate.innerHTML = `
             </div>
         </a>
         <div class="top-content__account-btn-group">
-            <div class="btn-default account-btn-group__login-btn">
+            <a class="btn-default account-btn-group__login-btn" href="/pages/9-login/login.html">
                 <ion-icon class="login-btn__icon" name="person-outline"></ion-icon>
                 <div class="text">Đăng nhập</div>
-            </div>
-            <div class="btn-default account-btn-group__sign-up-btn">
+            </a>
+            <a class="btn-default account-btn-group__sign-up-btn" href="/pages/10-signup/signup.html">
                 <div class="text">Đăng ký</div>
-            </div>
+            </a>
         </div>
     </div>
     <nav class="container header__navbar">
