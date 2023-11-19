@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+  }
+  html {
+    font-size: 12px;
+  }
+  body {
+    position: relative;
+  }
+  
+  .container-fluid {
+    width: 100%;
+  }
+  .container {
+    width: 80%;
+    padding: auto;
+    margin: auto;
+  }
+  footer {
+    display: flex;
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: #4a4a4b;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.41667rem;
+  
+    .footer__top-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+  
+      .top-content__brand-container {
+        display: flex;
+        align-items: flex-start;
+  
+        .brand-container__brand-logo {
+          display: flex;
+          width: 13rem; // 156px
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.83333rem; // 10px
+          background: rgba(165, 165, 165, 0);
+  
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+  
+        .brand-container__brand-name {
+          display: flex;
+          width: 12.5rem; // 150px
+          height: 5rem; // 60px
+          padding: 0.83333rem; // 10px
+          align-items: center;
+          gap: 0.83333rem; // 10px
+  
+          .text {
+            color: #fff;
+            font-size: 2rem; // 24px
+            font-style: italic;
+            font-weight: 700;
+            line-height: normal;
+          }
+        }
+      }
+  
+      .top-content__media-container {
+        display: flex;
+        gap: 1.25rem;
+      }
+    }
+  
+    .footer__information-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      align-self: stretch;
+  
+      color: white;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+  
