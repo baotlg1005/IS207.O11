@@ -1,0 +1,111 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.input-block .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+.input-block .title .text {
+  color: #687176;
+  font-size: 1.33333rem;
+  font-weight: 700;
+  padding-left: 0.5rem;
+}
+.input-block .input {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1.33333rem;
+  border: 4px solid #c7c7c7;
+}
+.input-block .input .icon {
+  font-size: 2rem;
+}
+.input-block .input input[type=text],
+.input-block .input input[type=date],
+.input-block .input input[type=time],
+.input-block .input input[type=password] {
+  width: 100%;
+  display: flex;
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 400;
+  border: none;
+  padding-left: 1rem;
+}
+.input-block .input input[type=text]:focus {
+  outline: none;
+}
+.input-block .input input[type=password]:focus {
+  outline: none;
+}
+.input-block .input.disabled {
+  background: #c7c7c7;
+  cursor: not-allowed;
+}
+.input-block .input.disabled input {
+  opacity: 0.5;
+  background: #c7c7c7;
+  z-index: -1;
+}
+.input-block .recommend-panel {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.83333rem;
+  padding: 0.83333rem 1.33333rem;
+  border-radius: 0.66667rem;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #fff;
+}
+.input-block .recommend-panel .panel__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+.input-block .recommend-panel .panel__item .item__title {
+  flex: 1;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.input-block .recommend-panel .panel__item .item__description {
+  flex: 1;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.input-block .recommend-panel.show {
+  display: flex;
+}
+
+.input-block.left-connect .input {
+  border-radius: 0rem 1.33333rem 1.33333rem 0rem;
+  border-left: 1px solid #c7c7c7;
+}
+
+.input-block.right-connect .input {
+  border-radius: 1.33333rem 0rem 0rem 1.33333rem;
+  border-right: 1px solid #c7c7c7;
+}
+
+.input-block.all-connect .input {
+  border-radius: 0;
+  border-left: 1px solid #c7c7c7;
+  border-right: 1px solid #c7c7c7;
+}/*# sourceMappingURL=input-block.css.map */
