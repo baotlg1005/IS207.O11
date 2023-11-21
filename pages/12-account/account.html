@@ -1,11 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/resources/css/main-style.css">
+    <link rel="stylesheet" href="/resources/css/btn.css">
+    <link rel="stylesheet" href="/resources/css/input-block.css">
+    <link rel="stylesheet" href="./css/account.css">
+
+    <script src="/resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+
+    <script src="./js/account-navbar.js" defer></script>
 </head>
+
 <body>
-    
+    <header-component></header-component>
+
+    <div class="container account-content-container">
+        <div class="account-navbar">
+            <div class="nav-label">
+                <div class="label-text">Tên tài khoản</div>
+            </div>
+            <div class="nav-tab-group">
+                <div type="button" class="btn-default nav-tab" id="btn-account-user">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <div class="text">Tài khoản</div>
+                </div>
+                <div type="button" class="btn-default nav-tab" id="btn-account-cart">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                    <div class="text">Thanh toán chưa hiện hành</div>
+                </div>
+                <div type="button" class="btn-default nav-tab" id="btn-account-bill">
+                    <ion-icon name="receipt-outline"></ion-icon>
+                    <div class="text">Lịch sử giao dịch</div>
+                </div>
+                <div type="button" class="btn-default nav-tab" id="btn-account-logout">
+                    <ion-icon name="power-outline"></ion-icon>
+                    <div class="text">Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+        <div class="account-content-window">
+            <div class="account-content-pane" id="user-pane">
+                <div class="pane-label">
+                    <div class="label-text">Thông tin cá nhân</div>
+                </div>
+                <form class="info-form" id="user-info-form">
+                    <div class="form-content">
+                        <div class="info-col" id="user-info-col-1">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Họ tên:</div>
+                                </div>
+                                <input class="input form-input" type="text" id="user-txt-name">
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Giới tính:</div>
+                                </div>
+                                <select id="txt-user-gender" class="input form-input">
+                                    <option value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                </select>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Ngày sinh:</div>
+                                </div>
+                                <input class="input form-input" type="date" id="user-txt-bdate">
+                            </div>
+                        </div>
+                        <div class="info-col" id="user-info-col-2">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Email:</div>
+                                </div>
+                                <input class="input form-input" type="text" id="user-txt-email">
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Quốc tịch:</div>
+                                </div>
+                                <input class="input form-input" type="text" id="user-txt-nation">
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">SĐT:</div>
+                                </div>
+                                <input class="input form-input" type="text" id="user-txt-phone">
+                            </div>
+                        </div>
+                        <div class="info-col" id="user-info-col-3">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Quốc gia cấp hộ chiếu:</div>
+                                </div>
+                                <input class="input form-input" type="text" id="user-txt-ppnation">
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Ngày hết hạn hộ chiếu:</div>
+                                </div>
+                                <input class="input form-input" type="date" id="user-txt-ppdate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-default form-btn-save" id="user-btn-save" type="button">
+                            <div class="text">Lưu</div>
+                        </button>
+                        <button class="btn-default form-btn-reset" id="user-btn-clear" type="reset">
+                            <div class="text">Hủy</div>
+                        </button>
+                    </div>
+                </form>
+                <div class="pane-label">
+                    <div class="label-text">Bảo mật & Mật khẩu</div>
+                </div>
+                <form class="info-form" id="password-info-form">
+                    <div class="form-content">
+                        <div class="info-col" id="password-info-col">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Mật khẩu hiện tại:</div>
+                                </div>
+                                <input class="input form-input" type="password" id="password-txt-old">
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Mật khẩu mới:</div>
+                                </div>
+                                <input class="input form-input" type="password" id="password-txt-new">
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Nhập lại mật khẩu mới:</div>
+                                </div>
+                                <input class="input form-input" type="password" id="password-txt-confirm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-default form-btn-save" id="password-btn-save" type="button">
+                            <div class="text">Lưu</div>
+                        </button>
+                        <button class="btn-default form-btn-reset" id="password-btn-clear" type="reset">
+                            <div class="text">Hủy</div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="account-content-pane hide" id="cart-pane">
+                <div class="pane-label">
+                    <div class="label-text">Phiếu thanh toán chưa hiện hành</div>
+                </div>
+                <div class="cart-item flight-bill">
+                    <div class="item-label">
+                        <div class="item-title-container"> <ion-icon name="airplane-outline"></ion-icon>
+                            <div class="item-title bill-type">
+                                Vé máy bay
+                            </div>
+                        </div>
+                        <div class="item-text flight-bill-brand">VietJet Air</div>
+                        <div class="item-text flight-bill-location">
+                            <div class="item-text flight-bill-fromlocation">
+                                TP HCM
+                            </div>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <div class="item-text flight-bill-tolocation">
+                                Hà Nội
+                            </div>
+                        </div>
+
+                        <div class="item-text flight-bill-date">CN, 30 thng 11, 2025, 06:20</div>
+                        <div class="item-text flight-bill-airport">Sân bay quốc tế Tân Sơn Nhất, Nhà ga 1</div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="item-title-container">
+                            <div class="item-title bill-type">
+                                Vé máy bay
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
