@@ -298,17 +298,17 @@ body {
 .admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group .table-btn {
   width: 5rem;
 }
-.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group #table-btn-modify {
+.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group .table-btn-modify {
   background-color: rgb(116, 116, 116);
 }
-.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group #table-btn-modify .text {
+.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group .table-btn-modify .text {
   color: white;
   font-weight: bold;
 }
-.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group #table-btn-delete {
+.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group .table-btn-delete {
   background-color: red;
 }
-.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group #table-btn-delete .text {
+.admin-window .admin-content-window .admin-content-pane .admin-table .table-btn-group .table-btn-delete .text {
   color: white;
   font-weight: bold;
 }
@@ -335,6 +335,9 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   height: 2.14286rem !important;
+}
+.admin-window .admin-content-window .admin-content-pane .input-block textarea {
+  height: 5rem !important;
 }
 
 .dataTables_wrapper label {

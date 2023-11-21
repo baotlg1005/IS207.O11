@@ -17,7 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
     <script src="/pages/11-admin/js/admin.js" defer></script>
-    <script src="/pages/11-admin/js/admin-navbar.js" defer></script>
 </head>
 
 <body>
@@ -58,8 +57,7 @@
                                     </div>
                                     <select id="flight-txt-id" class="input flight-form-input">
                                         <option value="newid">Tạo mã mới</option>
-                                        <option value="nd01">CB01</option>
-                                        <option value="nd02">CB02</option>
+                                        <option class="old-id hide" value=""></option>
                                     </select>
                                 </div>
                                 <div class="input-block">
@@ -158,21 +156,21 @@
                         <tr>
                             <td>CB01</td>
                             <td>Vietnam Airlines</td>
-                            <td>Economy</td>
+                            <td>Thương gia</td>
                             <td>10000000</td>
                             <td>Hanoi</td>
                             <td>Ho Chi Minh City</td>
                             <td>Da Nang</td>
-                            <td>2023-12-01</td>
+                            <td>Thứ 5, 9 thg 11 2023</td>
                             <td>08:00 AM</td>
                             <td>10:30 AM</td>
                             <td>2h 30m</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -181,21 +179,21 @@
                         <tr>
                             <td>CB02</td>
                             <td>Emirates</td>
-                            <td>Business</td>
+                            <td>Phổ thông</td>
                             <td>2500000</td>
                             <td>Dubai</td>
                             <td>New York</td>
                             <td>None</td>
-                            <td>2023-12-05</td>
+                            <td>Thứ 5, 9 thg 11 2023</td>
                             <td>02:00 PM</td>
                             <td>08:00 PM</td>
                             <td>6h 0m</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -208,6 +206,8 @@
     </div>
     </div>
     </div>
+
+    <script src="/pages/11-admin/js/admin-flight.js" defer></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

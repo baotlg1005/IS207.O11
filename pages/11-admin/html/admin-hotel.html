@@ -17,7 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
     <script src="/pages/11-admin/js/admin.js" defer></script>
-    <script src="/pages/11-admin/js/admin-navbar.js" defer></script>
 </head>
 
 <body>
@@ -58,8 +57,7 @@
                                     </div>
                                     <select id="hotel-txt-id" class="input hotel-form-input">
                                         <option value="newid">Tạo mã mới</option>
-                                        <option value="nd01">H01</option>
-                                        <option value="nd02">H02</option>
+                                        <option class="old-id hide" value=""></option>
                                     </select>
                                 </div>
                                 <div class="input-block">
@@ -72,7 +70,7 @@
                                     <div class="title">
                                         <div class="text">Địa chỉ:</div>
                                     </div>
-                                    <input class="input hotel-form-address" type="text" id="hotel-txt-address">
+                                    <textarea class="hotel-form-address" type="text" id="hotel-txt-address"></textarea>
                                 </div>
                             </div>
                             <div class="info-col" id="hotel-info-col-2">
@@ -80,10 +78,9 @@
                                     <div class="title">
                                         <div class="text">Mã phòng:</div>
                                     </div>
-                                    <select id="hotel-txt-roomid" class="input hotel-form-roomid">
+                                    <select id="hotel-txt-roomId" class="input hotel-form-roomId">
                                         <option value="newid">Tạo mã mới</option>
-                                        <option value="nd01">P01</option>
-                                        <option value="nd02">P02</option>
+                                        <option class="old-id2 hide" value=""></option>
                                     </select>
                                 </div>
                                 <div class="input-block">
@@ -133,10 +130,10 @@
                             <td>1500000</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -151,10 +148,10 @@
                             <td>2000000</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -167,6 +164,8 @@
     </div>
     </div>
     </div>
+
+    <script src="/pages/11-admin/js/admin-hotel.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

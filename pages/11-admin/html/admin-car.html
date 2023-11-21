@@ -17,7 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
     <script src="/pages/11-admin/js/admin.js" defer></script>
-    <script src="/pages/11-admin/js/admin-navbar.js" defer></script>
 </head>
 
 <body>
@@ -58,8 +57,7 @@
                                     </div>
                                     <select id="car-txt-id" class="input car-form-input">
                                         <option value="newid">Tạo mã mới</option>
-                                        <option value="nd01">X01</option>
-                                        <option value="nd02">X02</option>
+                                        <option class="old-id hide" value=""></option>
                                     </select>
                                 </div>
                                 <div class="input-block">
@@ -77,14 +75,15 @@
                                     </div>
                                     <input class="input car-form-input" type="text" id="car-txt-name">
                                 </div>
+
+                            </div>
+                            <div class="info-col" id="car-info-col-2">
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Số ghế:</div>
                                     </div>
                                     <input class="input car-form-input" type="text" id="car-txt-seat">
                                 </div>
-                            </div>
-                            <div class="info-col" id="car-info-col-2">
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Số hành lý:</div>
@@ -97,15 +96,7 @@
                                     </div>
                                     <input class="input car-form-price" type="text" id="car-txt-price">
                                 </div>
-                                <div class="input-block">
-                                    <div class="title">
-                                        <div class="text">Tên khu vực:</div>
-                                    </div>
-                                    <select id="car-txt-area" class="input car-form-input">
-                                        <option value="nd01">Quận 1</option>
-                                        <option value="nd02">Quận 2</option>
-                                    </select>
-                                </div>
+
                             </div>
                         </div>
 
@@ -128,7 +119,6 @@
                             <th>Số ghế</th>
                             <th>Số hành lý</th>
                             <th>Giá tiền (VNĐ)</th>
-                            <th>Tên khu vực</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -140,13 +130,12 @@
                             <td>4</td>
                             <td>2</td>
                             <td>3000000</td>
-                            <td>Quận 1</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -159,13 +148,12 @@
                             <td>12</td>
                             <td>5</td>
                             <td>2500000</td>
-                            <td>Quận 2</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -178,6 +166,8 @@
     </div>
     </div>
     </div>
+
+    <script src="/pages/11-admin/js/admin-car.js" defer></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

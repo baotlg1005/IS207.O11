@@ -360,7 +360,7 @@ body {
                         width: 5rem;
                     }
 
-                    #table-btn-modify {
+                    .table-btn-modify {
                         background-color: rgb(116, 116, 116);
 
                         .text {
@@ -369,7 +369,7 @@ body {
                         }
                     }
 
-                    #table-btn-delete {
+                    .table-btn-delete {
                         background-color: red;
 
                         .text {
@@ -408,6 +408,9 @@ body {
                     height: 2.14286rem !important;
                 }
 
+                textarea {
+                    height: 5rem!important;
+                }
             }
 
         }

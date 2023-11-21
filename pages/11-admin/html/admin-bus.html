@@ -17,7 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
     <script src="/pages/11-admin/js/admin.js" defer></script>
-    <script src="/pages/11-admin/js/admin-navbar.js" defer></script>
 </head>
 
 <body>
@@ -58,8 +57,7 @@
                                     </div>
                                     <select id="bus-txt-id" class="input bus-form-input">
                                         <option value="newid">Tạo mã mới</option>
-                                        <option value="nd01">B01</option>
-                                        <option value="nd02">B02</option>
+                                        <option class="old-id hide" value=""></option>
                                     </select>
                                 </div>
                                 <div class="input-block">
@@ -145,10 +143,10 @@
                             <td>3000000</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -165,10 +163,10 @@
                             <td>2500000</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -181,6 +179,8 @@
     </div>
     </div>
     </div>
+
+    <script src="/pages/11-admin/js/admin-bus.js" defer></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

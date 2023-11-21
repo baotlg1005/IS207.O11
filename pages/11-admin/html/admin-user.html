@@ -17,7 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
     <script src="/pages/11-admin/js/admin.js" defer></script>
-    <script src="/pages/11-admin/js/admin-navbar.js" defer></script>
 </head>
 
 <body>
@@ -58,8 +57,7 @@
                                     </div>
                                     <select id="user-txt-id" class="input user-form-input">
                                         <option value="newid">Tạo mã mới</option>
-                                        <option value="nd01">ND01</option>
-                                        <option value="nd02">ND02</option>
+                                        <option class="old-id hide" value=""></option>
                                     </select>
                                 </div>
                                 <div class="input-block">
@@ -72,8 +70,8 @@
                                     <div class="title">
                                         <div class="text">Giới tính:</div>
                                     </div>
-                                    <select id="txt-user-gender" class="input user-form-input">
-                                        <option value="male">Nam</option>
+                                    <select id="user-txt-gender" class="input user-form-input">
+                                        <option value="male" selected>Nam</option>
                                         <option value="female">Nữ</option>
                                     </select>
                                 </div>
@@ -157,18 +155,18 @@
                             <td>ND01</td>
                             <td>Người Dùng 1</td>
                             <td>Nam</td>
-                            <td>01/01/1990</td>
+                            <td>Thứ 5, 10 thg 11 2023</td>
                             <td>nd01@example.com</td>
                             <td>Vietnam</td>
                             <td>123456789</td>
                             <td>Vietnam</td>
-                            <td>01/01/2030</td>
+                            <td>Thứ 7, 1 thg 5 2027</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -178,18 +176,18 @@
                             <td>ND02</td>
                             <td>Người Dùng 2</td>
                             <td>Nữ</td>
-                            <td>05/10/1985</td>
+                            <td>Thứ 5, 9 thg 11 2024</td>
                             <td>nd02@example.com</td>
                             <td>USA</td>
                             <td>987654321</td>
                             <td>USA</td>
-                            <td>05/10/2025</td>
+                            <td>Thứ 5, 2 thg 1 2040</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -199,18 +197,18 @@
                             <td>ND03</td>
                             <td>Người Dùng 3</td>
                             <td>Nam</td>
-                            <td>15/07/1995</td>
+                            <td>Thứ 5, 12 thg 11 2023</td>
                             <td>nd03@example.com</td>
                             <td>France</td>
                             <td>555555555</td>
                             <td>France</td>
-                            <td>15/07/2035</td>
+                            <td>Thứ 2, 9 thg 11 2035</td>
                             <td>
                                 <div class="table-btn-group">
-                                    <button class="table-btn btn-default" type="button" id="table-btn-modify">
+                                    <button class="table-btn btn-default table-btn-modify" type="button">
                                         <div class="text">Sửa</div>
                                     </button>
-                                    <button class="table-btn btn-default" type="button" id="table-btn-delete">
+                                    <button class="table-btn btn-default table-btn-delete" type="button">
                                         <div class="text">Xóa</div>
                                     </button>
                                 </div>
@@ -223,6 +221,8 @@
     </div>
     </div>
     </div>
+
+    <script src="/pages/11-admin/js/admin-user.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
