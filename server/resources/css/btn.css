@@ -8,6 +8,7 @@
   gap: 0.83333rem;
   flex-shrink: 0;
   cursor: pointer;
+  text-decoration: none;
   border-radius: 0.66667rem;
   border: 1px solid #fff;
 }
@@ -23,11 +24,6 @@
 
 .btn-default:active {
   opacity: 0.6;
-}
-
-.btn-default:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
 .btn-submit {

@@ -13,48 +13,61 @@ $DepartureTime = $_POST["DepartureTime"];
 $ArrivalTime = $_POST["ArrivalTime"];
 $TravelTime = $_POST["TravelTime"];
 
-//print all Post data
-print_r($action);
-echo "<br>";
-print_r($ID);
-echo "<br>";
-print_r($Name);
-echo "<br>";
-print_r($Seat);
-echo "<br>";
-print_r($Price);
-echo "<br>";
-print_r($From);
-echo "<br>";
-print_r($To);
-echo "<br>";
-print_r($Stop_Direct);
-echo "<br>";
-print_r($Date);
-echo "<br>";
-print_r($TravelTime);
-echo "<br>";
-print_r($ArrivalTime);
-echo "<br>";
-print_r($TravelTime);
-echo "<br>";
-print_r($ArrivalTime);
-echo "<br>";
-print_r($TravelTime);
-echo "<br>";
-print_r($ArrivalTime);
-echo "<br>";
-print_r($TravelTime);
-
 if($SeatClass == 'economy'){
     $SeatClass = 'Phổ thông';
 }else if ($SeatClass == 'business'){
     $SeatClass = 'Thương gia';
 }
 
+
+//print all Post data
+print_r("action: ");
+print_r($action);
+echo "<br>";
+print_r("ID: ");
+print_r($ID);
+echo "<br>";
+print_r("Name: ");
+print_r($Name);
+echo "<br>";
+print_r("Seat Class: ");
+print_r($SeatClass);
+echo "<br>";
+print_r("Price: ");
+print_r($Price);
+echo "<br>";
+print_r("From: ");
+print_r($From);
+echo "<br>";
+print_r("To: ");
+print_r($To);
+echo "<br>";
+print_r("Stop/Direct: ");
+print_r($Stop_Direct);
+echo "<br>";
+print_r("Date: ");
+print_r($Date);
+echo "<br>";
+print_r("Travel Time: ");
+print_r($DepartureTime);
+echo "<br>";
+print_r("Arrival Time: ");
+print_r($ArrivalTime);
+echo "<br>";
+print_r("Travel Time: ");
+print_r($TravelTime);
+
 require_once("../connect.php");
 
 if ($action == "create") {
+    $ID = uniqid();
+    //insert data to flight table
+    $sql = "INSERT INTO `flight`(`ID`, `From`, `To`, `Date`, `DepartureTime`, `ArrivalTime`, `TravelTime`, `Stop/Direct`, `Name`, `SeatClass`, `Price`) VALUES ('". $ID ."','". $From ."','". $To ."','". $Date ."','". $DepartureTime ."','". $ArrivalTime ."','". $TravelTime ."','". $Stop_Direct ."','". $Name ."','". $SeatClass ."','". $Price ."')";
+    if ($conn->query($sql) === TRUE) {
+        echo "Thêm thành công!";
+    } else {
+        echo "Thêm thất bại: " . $conn->error;
+    }
 
 } else if ($action == "update") {
     //update data to flight table with ID
@@ -64,8 +77,7 @@ if ($action == "create") {
     } else {
         echo "Cập nhật thất bại: " . $conn->error;
     }
-
-    $conn->close();
 }
 
-header('Location: ../index.php');
+$conn->close();
+header('Location: ./index.php');

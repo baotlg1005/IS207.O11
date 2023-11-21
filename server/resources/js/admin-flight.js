@@ -69,6 +69,11 @@ function ChangeTextToDate(text) {
   if (text == "") {
     return "";
   }
+  //check if text is already in date format yyyy-mm-dd or not
+  if (text.split("-").length == 3) {
+    return text;
+  }
+  
   let date = text.split(" ");
   let day = date[2];
   let month = date[4];
@@ -83,7 +88,10 @@ function formatDate(date = new Date()) {
   });
   const day = date.toLocaleString("default", { day: "2-digit" });
 
-  return [year, month, day].join("-");
+  let textDate = [year, month, day].join("-");
+  //increase month by 1
+  textDate = textDate.split("-")[0] + "-" + (parseInt(textDate.split("-")[1]) - 1) + "-" + textDate.split("-")[2];
+  return textDate;
 }
 
 
