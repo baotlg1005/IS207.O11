@@ -70,7 +70,12 @@ body {
             border-radius: 0.57143rem;
         }
 
-        #cart-pane {
+        #cart-pane,
+        #bill-pane {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
             .pane-label {
                 border-bottom: 0;
             }
@@ -122,9 +127,37 @@ body {
                     padding: 0.35714rem;
                     display: flex;
                     flex-direction: column;
-                    justify-content: right;
-                    gap: 1rem;
-                    width: 50%; 
+                    align-items: end;
+                    justify-content: space-between;
+                    width: 50%;
+
+                    .flight-unpaid-bill-pay-btn,
+                    .hotel-unpaid-bill-pay-btn,
+                    .bus-unpaid-bill-pay-btn,
+                    .car-unpaid-bill-pay-btn {
+                        width: auto;
+                        padding: 2rem;
+                        background-color: #FF5E1F;
+
+                        .text {
+                            color: white;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .flight-paid-bill-pay-btn,
+                    .hotel-paid-bill-pay-btn,
+                    .bus-paid-bill-pay-btn,
+                    .car-paid-bill-pay-btn {
+                        width: 15rem;
+                        padding: 1rem;
+                        background-color: #236EFF;
+
+                        .text {
+                            color: white;
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
         }
