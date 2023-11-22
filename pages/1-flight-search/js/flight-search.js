@@ -1,4 +1,4 @@
-let searchInfo = {
+let flightSearchInfo = {
     flightType: "one",
     passengerQuantity: {
         adult: 1,
@@ -55,7 +55,7 @@ flightTypeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         flightTypeBtns.forEach(btn => btn.classList.remove("active"))
         btn.classList.add("active")
-        searchInfo.flightType = btn.dataset.flightType
+        flightSearchInfo.flightType = btn.dataset.flightType
         if (btn.dataset.flightType === "one") {
             document.querySelector("#flight-search__search-form--one").classList.remove("hide")
             document.querySelector("#flight-search__search-form--many").classList.add("hide")
@@ -92,18 +92,18 @@ passengerQuantityItems.forEach(item => {
     const increaseBtn = setQuantity.querySelector(".set-quantity__icon.increase")
     const decreaseBtn = setQuantity.querySelector(".set-quantity__icon.decrease")
 
-    quantity.innerText = searchInfo.passengerQuantity[passengerType]
+    quantity.innerText = flightSearchInfo.passengerQuantity[passengerType]
 
     increaseBtn.addEventListener("click", () => {
-        if (searchInfo.passengerQuantity[passengerType] < 9) {
-            searchInfo.passengerQuantity[passengerType]++
-            quantity.innerText = searchInfo.passengerQuantity[passengerType]
+        if (flightSearchInfo.passengerQuantity[passengerType] < 9) {
+            flightSearchInfo.passengerQuantity[passengerType]++
+            quantity.innerText = flightSearchInfo.passengerQuantity[passengerType]
         }
     })
     decreaseBtn.addEventListener("click", () => {
-        if (searchInfo.passengerQuantity[passengerType] > 0) {
-            searchInfo.passengerQuantity[passengerType]--
-            quantity.innerText = searchInfo.passengerQuantity[passengerType]
+        if (flightSearchInfo.passengerQuantity[passengerType] > 0) {
+            flightSearchInfo.passengerQuantity[passengerType]--
+            quantity.innerText = flightSearchInfo.passengerQuantity[passengerType]
         }
     })
 })
@@ -111,7 +111,7 @@ passengerQuantityItems.forEach(item => {
 //update passenger quantity info when click confirm button
 function UpdatePassengerQuantityInfo() {
     passengerQuantityInfo.querySelector(".text").innerText = 
-        `${searchInfo.passengerQuantity.adult} Người lớn, ${searchInfo.passengerQuantity.child} trẻ em, ${searchInfo.passengerQuantity.baby} em bé`
+        `${flightSearchInfo.passengerQuantity.adult} Người lớn, ${flightSearchInfo.passengerQuantity.child} trẻ em, ${flightSearchInfo.passengerQuantity.baby} em bé`
 }
 passengerQuantityConfirmBtn.addEventListener("click", () => {
     UpdatePassengerQuantityInfo()
@@ -136,7 +136,7 @@ seatTypeItems.forEach(item => {
     item.addEventListener("click", () => {
         seatTypeItems.forEach(item => item.classList.remove("selected"))
         item.classList.add("selected")
-        searchInfo.seatType = item.dataset.ticketType
+        flightSearchInfo.seatType = item.dataset.ticketType
         seatTypeInfo.querySelector(".text").innerText = item.querySelector(".text").innerText
         seatTypeDropdownPanel.classList.add("hide")
     })
@@ -145,10 +145,10 @@ seatTypeItems.forEach(item => {
 //haveReturn EVENT
 const haveReturnCheckbox = oneFlightSearchForm.querySelector('#flight-search__have-return');
 haveReturnCheckbox.addEventListener('change', () => {
-    searchInfo.haveReturn = haveReturnCheckbox.checked;
+    flightSearchInfo.haveReturn = haveReturnCheckbox.checked;
     const returnDateInput = oneFlightSearchForm.querySelector('.return-date__input');
     const returnDateInputContainer = oneFlightSearchForm.querySelector('.return-date__input').parentElement;
-    if (searchInfo.haveReturn) {
+    if (flightSearchInfo.haveReturn) {
         returnDateInputContainer.classList.remove('disabled');
         returnDateInput.disabled = false;
     } else {
@@ -222,13 +222,13 @@ oneFlightSubmitBtn.addEventListener("click", () => {
     const haveReturn = oneFlightSearchForm.querySelector("#flight-search__have-return").checked
     const returnDate = oneFlightSearchForm.querySelector("#flight-search__return-date").value
 
-    searchInfo.oneFlightInfo.departure = departure
-    searchInfo.oneFlightInfo.destination = destination
-    searchInfo.oneFlightInfo.departureDate = departureDate
-    searchInfo.oneFlightInfo.haveReturn = haveReturn
-    searchInfo.oneFlightInfo.returnDate = returnDate
+    flightSearchInfo.oneFlightInfo.departure = departure
+    flightSearchInfo.oneFlightInfo.destination = destination
+    flightSearchInfo.oneFlightInfo.departureDate = departureDate
+    flightSearchInfo.oneFlightInfo.haveReturn = haveReturn
+    flightSearchInfo.oneFlightInfo.returnDate = returnDate
 
-    console.log(searchInfo)
+    console.log(flightSearchInfo)
 })
 // many flight submit btn EVENT
 
@@ -243,5 +243,5 @@ manyFlightSubmitBtn.addEventListener("click", () => {
         flightInfo.departureDate = departureDate
     })
 
-    console.log(searchInfo)
+    console.log(flightSearchInfo)
 })
