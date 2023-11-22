@@ -70,6 +70,7 @@
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
   color: #fff;
+  text-decoration: none;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon {
   font-size: 2rem;
@@ -77,6 +78,7 @@
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
   border-radius: 0.66667rem;
   background: rgba(35, 110, 255, 0.8);
+  text-decoration: none;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn .text {
   color: #fff;

@@ -1,6 +1,7 @@
 .input-block {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .input-block .title {
   display: flex;
@@ -54,6 +55,43 @@
   opacity: 0.5;
   background: #c7c7c7;
   z-index: -1;
+}
+.input-block .recommend-panel {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.83333rem;
+  padding: 0.83333rem 1.33333rem;
+  border-radius: 0.66667rem;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #fff;
+}
+.input-block .recommend-panel .panel__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+.input-block .recommend-panel .panel__item .item__title {
+  flex: 1;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.input-block .recommend-panel .panel__item .item__description {
+  flex: 1;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.input-block .recommend-panel.show {
+  display: flex;
 }
 
 .input-block.left-connect .input {
