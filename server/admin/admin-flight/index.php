@@ -71,7 +71,11 @@
                                     <div class="title">
                                         <div class="text">Hạng ghế:</div>
                                     </div>
-                                    <input class="input flight-form-input" type="text" id="flight-txt-seat" name="SeatClass">
+                                    <!-- <input class="input flight-form-input" type="text" id="flight-txt-seat" name="SeatClass"> -->
+                                    <select id="flight-txt-seat" class="input flight-form-input" name='SeatClass'>
+                                        <option value="economy">Phổ thông</option>
+                                        <option value="business" selected>Thương gia</option>
+                                    </select>
                                 </div>
                                 <div class="input-block">
                                     <div class="title">

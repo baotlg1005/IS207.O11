@@ -18,16 +18,27 @@ const flightSubmitBtn = document.getElementById("flight-btn-save");
 const flightClearBtn = document.getElementById("flight-btn-clear");
 
 const flightTable = document.getElementById("flight-table");
-const flightInfoModifyButtons =
-  flightTable.querySelectorAll(".table-btn-modify");
-const flightInfoDeleteButtons =
-  flightTable.querySelectorAll(".table-btn-delete");
+const flightInfoModifyButtons = flightTable.querySelectorAll(".table-btn-modify");
+const flightInfoDeleteButtons = flightTable.querySelectorAll(".table-btn-delete");
+
+
+flightDataTable.on('click', 'tbody tr', (e) => {
+  let classList = e.currentTarget.classList;
+
+  if (classList.contains('selected')) {
+      classList.remove('selected');
+  }
+  else {
+      flightDataTable.rows('.selected').nodes().each((row) => row.classList.remove('selected'));
+      classList.add('selected');
+  }
+});
+  
 
 flightInfoModifyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const flightInfoRow = button.closest("tr");
     const flightInfoRowCells = flightInfoRow.querySelectorAll("td");
-    console.log(flightInfoRowCells);
 
     const odlIdOption = flightInfoFormInputs.id.querySelector('option.old-id');
     odlIdOption.classList.remove("hide");
