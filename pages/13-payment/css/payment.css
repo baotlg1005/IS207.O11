@@ -1,0 +1,36 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 5rem;
+}
+.payment-container .title {
+  display: flex;
+  padding: 0.41667rem;
+  gap: 0.41667rem;
+}
+.payment-container .title .text {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.payment-container .info-container {
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+.payment-container .info-container .content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+}/*# sourceMappingURL=payment.css.map */

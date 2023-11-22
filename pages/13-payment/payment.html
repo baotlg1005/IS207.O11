@@ -9,6 +9,9 @@
     <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="/resources/css/main-style.css">
+    <link rel="stylesheet" href="../../resources/css/input-block.css">
+
+    <link rel="stylesheet" href="./css/payment.css">
 
     <script src="/resources/component/header/headerComponent.js" type="text/javascript" defer></script>
     <script src="/resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
@@ -17,7 +20,34 @@
 
 <body>
     <header-component></header-component>
+        <div class="container payment-container">
+            <div class="title">
+                <div class="text">Thông tin liên hệ</div>
+            </div>
+            <div class="info-container">
+                <div class="content-container">
+                    <div class="input-block">
+                        <div class="title">
+                            <div class="text">
+                                Họ(vd: Nguyen)
+                            </div>
+                        </div>
+                        <div class="input">
+                            <input id="hotel-search__location" class="location__input" type="text"
+                                placeholder="Địa điểm" autocomplete="off">
+                        </div>
+                        <div class="title">
+                            <div class="text">
+                                Như trên CMND (không dấu)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
 
+                </div>
+            </div>
+        </div>
     <footer-component></footer-component>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
