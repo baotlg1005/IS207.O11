@@ -190,9 +190,9 @@
                                     echo "<td  class=\"flight-info__travel_time\">" . $flight_travel_time . "</td>";
                                     echo "<td>";
                                         echo "<div class=\"table-btn-group\">";
-                                            echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $flight_id ."\">";
-                                                echo "<div class=\"text\">Sửa</div>";
-                                            echo "</button>";
+                                            // echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $flight_id ."\">";
+                                            //     echo "<div class=\"text\">Sửa</div>";
+                                            // echo "</button>";
                                             echo "<a href='./process__delete.php?id=".$flight_id."' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"". $flight_id ."\">";
                                                 echo "<div class=\"text\">Xóa</div>";
                                             echo "</a>";
