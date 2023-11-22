@@ -16,6 +16,19 @@
   font-weight: 700;
   padding-left: 0.5rem;
 }
+.input-block .description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+.input-block .description .text {
+  color: #687176;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 0.5rem;
+}
 .input-block .input {
   flex: 1;
   display: flex;

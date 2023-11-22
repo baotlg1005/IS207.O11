@@ -20,6 +20,24 @@
         padding-left: 0.5rem;
       }
     }
+
+    .description {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      padding-left: 1rem;
+      padding-bottom: 0.5rem;
+  
+      .text {
+        color: #687176;
+        font-size: 1rem;
+        font-weight: 700;
+  
+        padding-left: 0.5rem;
+      }
+    }
+
     .input {
       flex: 1;
       display: flex;
