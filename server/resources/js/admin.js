@@ -1,5 +1,5 @@
 new DataTable('#user-table');
-new DataTable('#flight-table');
+const flightDataTable = new DataTable('#flight-table');
 new DataTable('#car-table');
 new DataTable('#bus-table');
 new DataTable('#hotel-table');

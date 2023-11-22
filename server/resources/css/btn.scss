@@ -1,0 +1,72 @@
+.btn-default {
+  display: flex;
+  width: 12.5rem; // 150px
+  height: 3.25rem;
+  padding: 1.33333rem 1rem; // 16px 12px
+  align-items: center;
+  justify-content: center;
+  gap: 0.83333rem;
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  border-radius: 0.66667rem; // 8px
+  border: 1px solid #fff;
+
+  .text {
+    text-align: right;
+    font-size: 1.33333rem; // 16px
+    font-weight: 500;
+  }
+}
+.btn-default:hover {
+  opacity: 0.8;
+}
+.btn-default:active {
+  opacity: 0.6;
+}
+.btn-submit {
+  background: #ff7a50;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  ion-icon {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .text {
+    color: #fff;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+.btn-toggle {
+  min-width: 15rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83333rem;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+
+  .text {
+    color: #fff;
+    text-align: center;
+    font-size: 1.33333rem;
+    font-weight: 700;
+  }
+}
+.btn-toggle.active {
+  background: #236eff;
+}

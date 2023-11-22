@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+html {
+  font-size: 10.5px;
+}
+
+body {
+  position: relative;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  padding: auto;
+  margin: auto;
+}
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.blur-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}/*# sourceMappingURL=main-style.css.map */

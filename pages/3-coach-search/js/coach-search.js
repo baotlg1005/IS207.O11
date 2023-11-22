@@ -1,4 +1,4 @@
-const searchInfo = {
+let CoachSearchInfo = {
     departure: '',
     destination: '',
     departureDate: '',
@@ -42,17 +42,17 @@ dropdownPanelItems.forEach(item => {
         })
         item.classList.add('selected');
         passengerQuantityInfo.querySelector('.text').innerHTML = item.querySelector('.text').innerHTML;
-        searchInfo.passengerQuantity = item.dataset.ticketType;
+        CoachSearchInfo.passengerQuantity = item.dataset.ticketType;
     })
 })
 
 //haveReturn EVENT
 const haveReturnCheckbox = coachSearchForm.querySelector('#coach-search__have-return');
 haveReturnCheckbox.addEventListener('change', () => {
-    searchInfo.haveReturn = haveReturnCheckbox.checked;
+    CoachSearchInfo.haveReturn = haveReturnCheckbox.checked;
     const returnDateInput = coachSearchForm.querySelector('.return-date__input');
     const returnDateInputContainer = coachSearchForm.querySelector('.return-date__input').parentElement;
-    if (searchInfo.haveReturn) {
+    if (CoachSearchInfo.haveReturn) {
         returnDateInputContainer.classList.remove('disabled');
         returnDateInput.disabled = false;
     } else {
@@ -62,10 +62,10 @@ haveReturnCheckbox.addEventListener('change', () => {
 })
 
 searchBtn.addEventListener('click', () => {
-    searchInfo.departure = departureInput.value;
-    searchInfo.destination = destinationInput.value;
-    searchInfo.departureDate = departureDateInput.value;
-    searchInfo.returnDate = returnDateInput.value;
+    CoachSearchInfo.departure = departureInput.value;
+    CoachSearchInfo.destination = destinationInput.value;
+    CoachSearchInfo.departureDate = departureDateInput.value;
+    CoachSearchInfo.returnDate = returnDateInput.value;
 
-    console.log(searchInfo);
+    console.log(CoachSearchInfo);
 })

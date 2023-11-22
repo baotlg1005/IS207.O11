@@ -14,7 +14,7 @@ body {
     .admin-navbar {
         display: flex;
         height: auto;
-        padding: 1rem;
+        padding: 0.5rem;
         padding-top: 0;
         flex-direction: column;
         align-items: center;
@@ -30,11 +30,12 @@ body {
             align-items: center;
             flex-shrink: 0;
             align-self: stretch;
+            text-decoration: none;
 
             .text {
                 color: white;
                 text-align: center;
-                font-size: 1.25rem;
+                font-size: 1rem;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
@@ -359,7 +360,7 @@ body {
                         width: 5rem;
                     }
 
-                    #table-btn-modify {
+                    .table-btn-modify {
                         background-color: rgb(116, 116, 116);
 
                         .text {
@@ -368,7 +369,7 @@ body {
                         }
                     }
 
-                    #table-btn-delete {
+                    .table-btn-delete {
                         background-color: red;
 
                         .text {
@@ -407,6 +408,9 @@ body {
                     height: 2.14286rem !important;
                 }
 
+                textarea {
+                    height: 5rem!important;
+                }
             }
 
         }
