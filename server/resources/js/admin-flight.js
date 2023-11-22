@@ -24,6 +24,8 @@ const flightInfoDeleteButtons = flightTable.querySelectorAll(".table-btn-delete"
 
 flightDataTable.on('click', 'tbody tr', (e) => {
   let classList = e.currentTarget.classList;
+  const flightInfoRow = e.currentTarget.closest("tr");
+
 
   if (classList.contains('selected')) {
       classList.remove('selected');
@@ -31,9 +33,47 @@ flightDataTable.on('click', 'tbody tr', (e) => {
   else {
       flightDataTable.rows('.selected').nodes().each((row) => row.classList.remove('selected'));
       classList.add('selected');
+      console.log(flightInfoRow);
+      getInfoFromRow(flightInfoRow);
   }
 });
-  
+
+function getInfoFromRow(flightInfoRow){
+  const flightInfoRowCells = flightInfoRow.querySelectorAll("td");
+
+  const odlIdOption = flightInfoFormInputs.id.querySelector('option.old-id');
+  odlIdOption.classList.remove("hide");
+  odlIdOption.innerText = flightInfoRowCells[0].innerText;
+  odlIdOption.value = flightInfoRowCells[0].innerText;
+  odlIdOption.selected = true;
+
+  if (flightInfoRowCells[2].innerText == "Phổ thông") {
+    flightInfoFormInputs.seat.value = "economy";
+  } else if (flightInfoRowCells[2].innerText == "Thương gia") {
+    flightInfoFormInputs.seat.value = "business";
+  } else {
+    flightSeat.innerText = "";
+  }
+
+  flightInfoFormInputs.date.value = ChangeTextToDate(
+    flightInfoRowCells[7].innerText
+  );
+
+  flightInfoFormInputs.name.value = flightInfoRowCells[1].innerText;
+  flightInfoFormInputs.price.value = flightInfoRowCells[3].innerText;
+  flightInfoFormInputs.location.value = flightInfoRowCells[4].innerText;
+  flightInfoFormInputs.destination.value = flightInfoRowCells[5].innerText;
+  flightInfoFormInputs.stop.value = flightInfoRowCells[6].innerText;
+  flightInfoFormInputs.startTime.value = flightInfoRowCells[8].innerText;
+  flightInfoFormInputs.arrivalTime.value = flightInfoRowCells[9].innerText;
+  flightInfoFormInputs.time.value = flightInfoRowCells[10].innerText;
+
+  flightInfoFormInputs.action.value = "update";
+
+  if(CheckAllInputFilled(flightInfoFormInputs)){
+      flightSubmitBtn.disabled = false;
+  }
+}
 
 flightInfoModifyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
