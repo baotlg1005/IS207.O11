@@ -1,6 +1,7 @@
 let sortType;
 
 const sortContainer = document.getElementById("sort-container");
+const sortValueSelect = document.getElementById("sort-value-select");
 const sortTypeDropdown = document.getElementById("sort-type-dropdown");
 const sortTypeItem = sortTypeDropdown.querySelectorAll(".sort-type-item");
 
@@ -10,7 +11,9 @@ sortType = sortTypeDropdown
 
 const sortTypeValue = document.getElementById("sort-type-value");
 
-sortContainer.addEventListener("click", (e) => {
+sortValueSelect.addEventListener("click", (e) => {
+  //check if click on dropdown then return
+  if (e.target.closest("#sort-type-dropdown")) return;
   sortContainer.classList.toggle("show-dropdown");
 });
 
@@ -34,16 +37,15 @@ function createResultItem(data) {
   resultItem.id = resultItem.id.replace("template", data.id);
   resultItem.classList.add("result-item");
   resultItem.querySelector(".plane-name .text").innerText = data.planeName;
-  resultItem.querySelector(".flight-info .departure .time").innerText =
+  resultItem.querySelector(".departure .time").innerText =
     data.departureTime;
-  resultItem.querySelector(".flight-info .departure .location").innerText =
+  resultItem.querySelector(".departure .location").innerText =
     data.departureLocation;
-  resultItem.querySelector(".flight-info .destination .time").innerText =
+  resultItem.querySelector(".destination .time").innerText =
     data.destinationTime;
-  resultItem.querySelector(".flight-info .destination .location").innerText =
+  resultItem.querySelector(".destination .location").innerText =
     data.destinationLocation;
-  resultItem.querySelector(".flight-info .price .price-text").innerText =
-    data.price;
+  resultItem.querySelector(".price .price-text").innerText = data.price + ' VND';
   return resultItem;
 }
 

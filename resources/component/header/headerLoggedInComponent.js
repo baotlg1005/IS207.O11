@@ -108,25 +108,14 @@ headerTemplate.innerHTML = `
     align-items: flex-start;
     gap: 1.66667rem;
   }
-  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn {
-    border-radius: 0.66667rem;
-    border: 1px solid #236eff;
+  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn {
     gap: 1rem;
   }
-  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .text {
-    color: rgba(35, 110, 255, 0.8);
-    font-weight: 700;
-  }
-  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon {
+  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
     font-size: 2rem;
     color: rgba(35, 110, 255, 0.8);
   }
-  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
-    border-radius: 0.66667rem;
-    background: rgba(35, 110, 255, 0.8);
-  }
-  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn .text {
-    color: #fff;
+  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .text {
     font-weight: 700;
   }
   .header-container .header__navbar {
@@ -178,15 +167,12 @@ headerTemplate.innerHTML = `
                 <p class="text">travelowkey</p>
             </div>
         </a>
-        <div class="top-content__account-btn-group">
-            <a class="btn-default account-btn-group__login-btn" href="/pages/9-login/login.html">
-                <ion-icon class="login-btn__icon" name="person-outline"></ion-icon>
-                <div class="text">Đăng nhập</div>
-            </a>
-            <a class="btn-default account-btn-group__sign-up-btn" href="/pages/10-signup/signup.html">
-                <div class="text">Đăng ký</div>
-            </a>
-        </div>
+            <div class="top-content__account-btn-group">
+              <div class="btn-default account-btn-group__account-btn">
+                <ion-icon class="icon account-btn__icon" name="person-circle-outline"></ion-icon>
+                <div class="text">Tài khoản</div>
+              </div>
+            </div>
     </div>
     <nav class="container header__navbar">
         <a class="navbar__item" href="/pages/1-flight-search/flight-search.html">
@@ -227,4 +213,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define("header-component", Header);
+customElements.define("header-logged-in-component", Header);
