@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./.css/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
@@ -48,14 +48,16 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <form>
-                <input type="checkbox" id="baythang">
-                <label for="vehicle1"> Bay thẳng</label><br>
-                <input type="checkbox" id="1diemdung">
-                <label for="vehicle2"> 1 điểm dừng</label><br>
-                <input type="checkbox" id="2diemdung">
-                <label for="vehicle3"> +2 điểm dừng</label><br>
-              </form>
+              <div class="content">
+                <form>
+                  <input type="checkbox" id="baythang">
+                  <label for="way1"> Bay thẳng</label><br>
+                  <input type="checkbox" id="1diemdung">
+                  <label for="way2"> 1 điểm dừng</label><br>
+                  <input type="checkbox" id="2diemdung">
+                  <label for="way3"> +2 điểm dừng</label><br>
+                </form>
+              </div>
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -66,12 +68,14 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <form>
-                <input type="checkbox" id="VNA">
-                <label for="vehicle1"> Vietnam Airlines</label><br>
-                <input type="checkbox" id="Vietjet">
-                <label for="vehicle2"> VietjetAir</label><br>
-              </form>
+              <div class="content">
+                <form>
+                  <input type="checkbox" id="VNA">
+                  <label for="brand1"> Vietnam Airlines</label><br>
+                  <input type="checkbox" id="Vietjet">
+                  <label for="brand2"> VietjetAir</label><br>
+                </form>
+              </div> 
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -82,8 +86,10 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <input type="range" min="0" max="53" value="0" id="Tgianbay">
+              <div class="content">
+                <input type="range" min="0" max="53" value="0" id="Tgianbay">
                 <span class="slider-value" id="tgian"></span>
+              </div>  
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -94,18 +100,20 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <form>
-                <input type="checkbox" id="Luggage">
-                <label for="vehicle1"> Hành lý</label><br>
-                <input type="checkbox" id="Food">
-                <label for="vehicle2"> Suất ăn</label><br>
-                <input type="checkbox" id="Entertain">
-                <label for="vehicle3"> Giải trí</label><br>
-                <input type="checkbox" id="Wifi">
-                <label for="vehicle3"> Wifi</label><br>
-                <input type="checkbox" id="Charge">
-                <label for="vehicle3"> Nguồn sạc/Cổng USB</label><br>
-              </form>
+              <div class="content">
+                <form>
+                  <input type="checkbox" id="Luggage">
+                  <label for="opt1"> Hành lý</label><br>
+                  <input type="checkbox" id="Food">
+                  <label for="opt2"> Suất ăn</label><br>
+                  <input type="checkbox" id="Entertain">
+                  <label for="opt3"> Giải trí</label><br>
+                  <input type="checkbox" id="Wifi">
+                  <label for="opt4"> Wifi</label><br>
+                  <input type="checkbox" id="Charge">
+                  <label for="opt5"> Nguồn sạc/Cổng USB</label><br>
+                </form>
+              </div>  
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -116,8 +124,10 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <input type="range" min="2750000" max="111586820" value="2750000" id="price-slider">
+              <div class="content">
+                <input type="range" min="2750000" max="111586820" value="2750000" id="price-slider">
                 <span class="slider-value" id="price-value"></span> 
+              </div>  
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -128,16 +138,18 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <form>
-                <input type="checkbox" id="overnight">
-                <label for="vehicle1"> Không quá cảnh qua đêm</label><br>
-                <input type="checkbox" id="late">
-                <label for="vehicle2"> Không chọn chuyến bay muộn</label><br>
-                <input type="checkbox" id="thutuc">
-                <label for="vehicle3"> Chỉ làm thủ tục 1 làn</label><br>
-                <input type="checkbox" id="luyendanh">
-                <label for="vehicle3"> Không chuyến bay luyên doanh</label><br>
-              </form>
+              <div class="content">
+                <form>
+                  <input type="checkbox" id="overnight">
+                  <label for="op1"> Không quá cảnh qua đêm</label><br>
+                  <input type="checkbox" id="late">
+                  <label for="op2"> Không chọn chuyến bay muộn</label><br>
+                  <input type="checkbox" id="thutuc">
+                  <label for="op3"> Chỉ làm thủ tục 1 làn</label><br>
+                  <input type="checkbox" id="luyendanh">
+                  <label for="op4"> Không chuyến bay luyên doanh</label><br>
+                </form>
+              </div>
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -148,18 +160,20 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <form>
-                <input type="checkbox" id="Shanghai">
-                <label for="vehicle1"> Thượng Hải</label><br>
-                <input type="checkbox" id="Osaka">
-                <label for="vehicle2"> Osaka</label><br>
-                <input type="checkbox" id="Taipei">
-                <label for="vehicle3"> Đài Bắc</label><br>
-                <input type="checkbox" id="Bangkok">
-                <label for="vehicle3"> Bangkok</label><br>
-                <input type="checkbox" id="NhaTrang">
-                <label for="vehicle3"> Nha Trang</label><br>
-              </form>
+              <div class="content">
+                <form>
+                  <input type="checkbox" id="Shanghai">
+                  <label for="place1"> Thượng Hải</label><br>
+                  <input type="checkbox" id="Osaka">
+                  <label for="place2"> Osaka</label><br>
+                  <input type="checkbox" id="Taipei">
+                  <label for="place3"> Đài Bắc</label><br>
+                  <input type="checkbox" id="Bangkok">
+                  <label for="place4"> Bangkok</label><br>
+                  <input type="checkbox" id="NhaTrang">
+                  <label for="place5"> Nha Trang</label><br>
+                </form>
+              </div>  
             </div>
             <div class="ightadvancesorting-flightstyl">
               <div class="s-im-dng-parent">
@@ -170,8 +184,10 @@
                   src="./public/slider--arrow1.svg"
                 />
               </div>
-              <input type="range" min="0" max="27" value="0" id="Tgianquacanh">
+              <div class="content">
+                <input type="range" min="0" max="27" value="0" id="Tgianquacanh">
                 <span class="slider-value" id="tgianqc"></span>
+              </div>
             </div>
           </div>
         </div>
