@@ -168,49 +168,49 @@ headerTemplate.innerHTML = `
   }/*# sourceMappingURL=header.css.map */
     </style>
     <div id="header" class="container-fluid header-container">
-    <div class="container header__top-content">
-        <a class="top-content__brand-container" href="/pages/0-index/index.html">
-            <div class="brand-container__brand-logo">
-                <img class="brand-logo" src="/resources/images/logo.png">
-            </div>
-            <div class="brand-container__brand-name">
-                <p class="text">travelowkey</p>
-            </div>
-        </a>
-        <div class="top-content__account-btn-group">
-            <a class="btn-default account-btn-group__login-btn" href="/pages/9-login/login.html">
-                <ion-icon class="login-btn__icon" name="person-outline"></ion-icon>
-                <div class="text">Đăng nhập</div>
+        <div class="container header__top-content">
+            <a class="top-content__brand-container" href="../../../pages/index/index.html">
+                <div class="brand-container__brand-logo">
+                    <img class="brand-logo" src="/resources/images/logo.png">
+                </div>
+                <div class="brand-container__brand-name">
+                    <p class="text">travelowkey</p>
+                </div>
             </a>
-            <a class="btn-default account-btn-group__sign-up-btn" href="/pages/10-signup/signup.html">
-                <div class="text">Đăng ký</div>
-            </a>
+            <div class="top-content__account-btn-group">
+                <a class="btn-default account-btn-group__login-btn" href="../../../pages/login/login.html">
+                    <ion-icon class="login-btn__icon" name="person-outline"></ion-icon>
+                    <div class="text">Đăng nhập</div>
+                </a>
+                <a class="btn-default account-btn-group__sign-up-btn" href="../../../pages/signup/signup.html">
+                    <div class="text">Đăng ký</div>
+                </a>
+            </div>
         </div>
+        <nav class="container header__navbar">
+            <a class="navbar__item" href="../../../pages/flight-search/flight-search.html">
+                <div class="text">
+                    Vé máy bay
+                </div>
+            </a>
+            <a class="navbar__item" href="../../../pages/coach-search/coach-seach.html">
+                <div class="text">
+                    Vé xe khách
+                </div>
+            </a>
+            <a class="navbar__item" href="../../../pages/transfer-search/transfer-search.html">
+                <div class="text">
+                    Xe dịch vụ
+                </div>
+            </a>
+            <a class="navbar__item" href="../../../pages/hotel-search/hotel-search.html">
+                <div class="text">
+                    Khách sạn
+                </div>
+            </a>
+        </nav>
     </div>
-    <nav class="container header__navbar">
-        <a class="navbar__item" href="/pages/1-flight-search/flight-search.html">
-            <div class="text">
-                Vé máy bay
-            </div>
-        </a>
-        <a class="navbar__item" href="/pages/3-coach-search/coach-seach.html">
-            <div class="text">
-                Vé xe khách
-            </div>
-        </a>
-        <a class="navbar__item" href="/pages/6-transfer-search/transfer-search.html">
-            <div class="text">
-                Xe dịch vụ
-            </div>
-        </a>
-        <a class="navbar__item" href="/pages/7-hotel-search/hotel-search.html">
-            <div class="text">
-                Khách sạn
-            </div>
-        </a>
-    </nav>
-</div>
-<div class="header-space"></div>
+    <div class="header-space"></div>
 
 `;
 
