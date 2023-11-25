@@ -9,13 +9,13 @@ body {
   margin-top: 5rem;
   gap: 2rem;
 }
-.main-container .sort-container {
+.main-container #sort-container {
   display: flex;
   flex: 1;
   flex-direction: column;
   margin-bottom: 1rem;
 }
-.main-container .sort-container .sort-value-select {
+.main-container #sort-container .sort-value-select {
   display: flex;
   height: 6.16667rem;
   padding: 1.33333rem 1.66667rem;
@@ -24,71 +24,71 @@ body {
   border-radius: 0.66667rem;
   background: #fff;
 }
-.main-container .sort-container .sort-value-select .text-holder {
+.main-container #sort-container .sort-value-select .text-holder {
   display: flex;
   flex-direction: column;
 }
-.main-container .sort-container .sort-value-select .text-holder .title {
+.main-container #sort-container .sort-value-select .text-holder .title {
   color: #000;
   font-size: 1.33333rem;
   font-weight: 700;
 }
-.main-container .sort-container .sort-value-select .text-holder .text {
+.main-container #sort-container .sort-value-select .text-holder .sort-type-value {
   color: #000;
   font-size: 1.33333rem;
   font-weight: 500;
 }
-.main-container .sort-container .sort-value-select .icon-holder .icon {
+.main-container #sort-container .sort-value-select .icon-holder .icon {
   font-size: 3.5rem;
   color: #236EFF;
 }
-.main-container .sort-container .sort-value-select .icon-holder .show-dropdown {
+.main-container #sort-container .sort-value-select .icon-holder .show-dropdown {
   display: flex;
 }
-.main-container .sort-container .sort-value-select .icon-holder .hide-dropdown {
+.main-container #sort-container .sort-value-select .icon-holder .hide-dropdown {
   display: none;
 }
-.main-container .sort-container .sort-type-dropdown {
+.main-container #sort-container #sort-type-dropdown {
   display: none;
   background-color: #FFFFFF;
   margin-top: -5px;
   padding-top: 5px;
   border-radius: 0rem 0rem 0.66667rem 0.66667rem;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item {
+.main-container #sort-container #sort-type-dropdown .sort-type-item {
   display: flex;
   padding: 0rem 1.66667rem;
   align-items: center;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item .text {
+.main-container #sort-container #sort-type-dropdown .sort-type-item .text {
   padding: 1.33333rem 1.66667rem;
   color: #000;
   font-size: 1.33333rem;
   font-weight: 500;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item .icon {
+.main-container #sort-container #sort-type-dropdown .sort-type-item .icon {
   font-size: 2rem;
   color: #236EFF;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item .icon.select {
+.main-container #sort-container #sort-type-dropdown .sort-type-item .icon.select {
   display: none;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item .icon.unselect {
+.main-container #sort-container #sort-type-dropdown .sort-type-item .icon.unselect {
   display: flex;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item.select .icon.select {
+.main-container #sort-container #sort-type-dropdown .sort-type-item.select .icon.select {
   display: flex;
 }
-.main-container .sort-container .sort-type-dropdown .sort-type-item.select .icon.unselect {
+.main-container #sort-container #sort-type-dropdown .sort-type-item.select .icon.unselect {
   display: none;
 }
-.main-container .sort-container.show-dropdown .sort-value-select .show-dropdown {
+.main-container #sort-container.show-dropdown .sort-value-select .show-dropdown {
   display: none;
 }
-.main-container .sort-container.show-dropdown .sort-value-select .hide-dropdown {
+.main-container #sort-container.show-dropdown .sort-value-select .hide-dropdown {
   display: flex;
 }
-.main-container .sort-container.show-dropdown .sort-type-dropdown {
+.main-container #sort-container.show-dropdown #sort-type-dropdown {
   display: flex;
   flex-direction: column;
 }
@@ -185,6 +185,7 @@ body {
   padding: 0.41667rem 1.66667rem;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .main-container .main-content .date-block-container .date-item .date {
   color: #fff;
@@ -203,14 +204,15 @@ body {
   background: #568efa;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.main-container .main-content .result-container {
+.main-container .main-content #result-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.66667rem;
+  margin-bottom: 3rem;
 }
-.main-container .main-content .result-container .result-item {
+.main-container .main-content #result-container .result-item {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -220,85 +222,85 @@ body {
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.main-container .main-content .result-container .result-item .row {
+.main-container .main-content #result-container .result-item .row {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0.83333rem;
 }
-.main-container .main-content .result-container .result-item .row .plane-name {
+.main-container .main-content #result-container .result-item .row .plane-name {
   display: flex;
   padding: 1.33333rem 1.66667rem;
   align-items: center;
   gap: 0.83333rem;
 }
-.main-container .main-content .result-container .result-item .row .plane-name ion-icon {
+.main-container .main-content #result-container .result-item .row .plane-name ion-icon {
   font-size: 2.5rem;
   color: #236eff;
 }
-.main-container .main-content .result-container .result-item .row .plane-name .text {
+.main-container .main-content #result-container .result-item .row .plane-name .text {
   color: #000;
   text-align: center;
   font-size: 1.33333rem;
   font-weight: 500;
 }
-.main-container .main-content .result-container .result-item .row .flight-info {
+.main-container .main-content #result-container .result-item .row .flight-info {
   display: flex;
   align-items: center;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .time-and-location {
+.main-container .main-content #result-container .result-item .row .flight-info .time-and-location {
   display: flex;
   align-items: center;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .time-and-location .departure,
-.main-container .main-content .result-container .result-item .row .flight-info .time-and-location .destination {
+.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .departure,
+.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .destination {
   display: flex;
   flex-direction: column;
   padding: 0rem 0.41667rem;
   justify-content: center;
   align-items: center;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .time-and-location .time {
+.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .time {
   color: #000;
   text-align: center;
   font-size: 1.33333rem;
   font-weight: 600;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .time-and-location .location {
+.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .location {
   color: #687176;
   font-family: Inter;
   font-size: 1.16667rem;
   font-weight: 600;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .time-and-location ion-icon {
+.main-container .main-content #result-container .result-item .row .flight-info .time-and-location ion-icon {
   font-size: 1.8rem;
   color: #687176;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .price {
+.main-container .main-content #result-container .result-item .row .flight-info .price {
   display: flex;
   padding: 1.33333rem 1.66667rem;
   justify-content: center;
   align-items: center;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .price .price-text {
+.main-container .main-content #result-container .result-item .row .flight-info .price .price-text {
   color: #ff5e1f;
   text-align: center;
   font-size: 1.33333rem;
   font-weight: 700;
 }
-.main-container .main-content .result-container .result-item .row .flight-info .price .text {
+.main-container .main-content #result-container .result-item .row .flight-info .price .text {
   color: #000;
   font-size: 1.16667rem;
   font-weight: 500;
 }
-.main-container .main-content .result-container .result-item .row .option-btn-group {
+.main-container .main-content #result-container .result-item .row .option-btn-group {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
 }
-.main-container .main-content .result-container .result-item .row .option-btn-group .detail-btn,
-.main-container .main-content .result-container .result-item .row .option-btn-group .show-ticket-price-and-luggage-btn {
+.main-container .main-content #result-container .result-item .row .option-btn-group .detail-btn,
+.main-container .main-content #result-container .result-item .row .option-btn-group .show-ticket-price-and-luggage-btn {
   display: flex;
   width: 14.33333rem;
   padding: 1.33333rem 1.66667rem;
@@ -306,21 +308,21 @@ body {
   align-items: center;
   gap: 0.83333rem;
 }
-.main-container .main-content .result-container .result-item .row .option-btn-group .detail-btn .text,
-.main-container .main-content .result-container .result-item .row .option-btn-group .show-ticket-price-and-luggage-btn .text {
+.main-container .main-content #result-container .result-item .row .option-btn-group .detail-btn .text,
+.main-container .main-content #result-container .result-item .row .option-btn-group .show-ticket-price-and-luggage-btn .text {
   color: #687176;
   text-align: center;
   font-size: 1.33333rem;
   font-weight: 700;
 }
-.main-container .main-content .result-container .result-item .row .select-btn {
+.main-container .main-content #result-container .result-item .row .select-btn {
   display: flex;
   padding: 1.33333rem 1.66667rem;
   align-items: center;
   border-radius: 0.66667rem;
   background: rgba(35, 110, 255, 0.8);
 }
-.main-container .main-content .result-container .result-item .row .select-btn .text {
+.main-container .main-content #result-container .result-item .row .select-btn .text {
   color: #fff;
   text-align: center;
   font-size: 1.33333rem;

@@ -23,18 +23,18 @@
     <header-component></header-component>
 
     <div class="container main-container">
-        <div class="sort-container show-dropdown">
+        <div id="sort-container" class="show-dropdown">
             <div class="sort-value-select">
                 <div class="text-holder">
                     <div class="title">Sắp xếp</div>
-                    <div class="sort-type-value">Giá thấp nhất</div>
+                    <div id="sort-type-value">Giá thấp nhất</div>
                 </div>
                 <div class="icon-holder">
                     <ion-icon class="icon show-dropdown" name="chevron-down-outline"></ion-icon>
                     <ion-icon class="icon hide-dropdown" name="chevron-up-outline"></ion-icon>
                 </div>
             </div>
-            <div class="sort-type-dropdown">
+            <div id="sort-type-dropdown">
                 <div class="sort-type-item select">
                     <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
                     <ion-icon class="icon select" name="ellipse"></ion-icon>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="change-search-btn">
+                <div id="change-search-btn" class="btn-default">
                     <ion-icon name="search-outline"></ion-icon>
                     <div class="text">Đổi tìm kiếm</div>
                 </div>
@@ -142,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="result-container">
+            <div id="result-container">
                 <div id="result-item-template" class="result-item">
                     <div class="row">
                         <div class="plane-name">
