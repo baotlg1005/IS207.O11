@@ -32,7 +32,18 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 4px;
   padding: 5px;
 }
+#mySelect {
+  width: 253px;
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #fff;
+}
+
 .content {
+  width: 368px;
   display: none;
   overflow: hidden;
 }
