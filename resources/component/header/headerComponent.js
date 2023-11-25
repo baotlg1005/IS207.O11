@@ -172,7 +172,7 @@ headerTemplate.innerHTML = `
         <div class="container header__top-content">
             <a class="top-content__brand-container" href="../../../pages/index/index.html">
                 <div class="brand-container__brand-logo">
-                    <img class="brand-logo" src="/resources/images/logo.png">
+                    <img class="brand-logo" src="../../resources/images/logo.png">
                 </div>
                 <div class="brand-container__brand-name">
                     <p class="text">travelowkey</p>
