@@ -228,7 +228,8 @@ oneFlightSubmitBtn.addEventListener("click", () => {
     flightSearchInfo.oneFlightInfo.haveReturn = haveReturn
     flightSearchInfo.oneFlightInfo.returnDate = returnDate
 
-    console.log(flightSearchInfo)
+    console.log(flightSearchInfo);
+    sessionStorage.setItem('flightSearchInfo', JSON.stringify(flightSearchInfo));
 })
 // many flight submit btn EVENT
 
@@ -245,3 +246,4 @@ manyFlightSubmitBtn.addEventListener("click", () => {
 
     console.log(flightSearchInfo)
 })
+
