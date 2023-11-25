@@ -1,0 +1,233 @@
+body{
+    background: #f1f1f1;
+    .main-container {
+        min-height: 67vh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        gap: 2rem;
+        width: 60%;
+        .search-container{
+            display: flex;
+            flex-direction: row;
+            // width: 100rem;
+            align-items: flex-start;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 0rem 0.57143rem 0.57143rem 0rem;
+            background: #D4D4D4;
+            .search-info-container{
+                display: flex;
+                // width: 65rem;
+                padding: 1.42857rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.71429rem;
+                flex-shrink: 0;
+                border-radius: 0rem 3.57143rem 3.57143rem 0rem;
+                background: #FFF;
+                .title{
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 1.71429rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+                .description{
+                    color: #687176;
+                    font-family: Inter;
+                    font-size: 1.14286rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+            .change-search-info-container{
+                display: flex;
+                height: 7rem;
+                padding: 1.42857rem;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 0.71429rem;
+                flex: 1;
+                #change-search-info{
+                    display: flex;
+                    width: 20rem;
+                    height: 4.58333rem;
+                    padding: 1.33333rem 1.66667rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.83333rem;
+                    border-radius: 2rem;
+                    background: #ff7a50;
+                    text-decoration: none;
+                    .text{
+                        color: #fff;
+                        text-align: right;
+                        font-size: 1.33333rem;
+                        font-weight: 700;
+                    }
+                    ion-icon{
+                        font-size: 1.8rem;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .filter-container{
+            display: flex;
+            flex-direction: row;
+            .title{
+                color: #000;
+                text-align: right;
+                font-family: Inter;
+                font-size: 1.14286rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .filter-items{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .filter-item{  
+                    margin: 0 1rem;
+                }
+                    .type-of-item-filter{
+                        display: flex;
+                        flex-direction: row;
+                        width: wrap-content;//15.71429rem;
+                        padding: 0.71429rem 1.42857rem;
+                        align-items: center;
+                        gap: 0.71429rem;
+                        border-radius: 1.42857rem;
+                        background: #FFF;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        .text{
+                            color: #236EFF;
+                            font-family: Inter;
+                            font-size: 1.14286rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                }
+            }
+        }
+        .result-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.71429rem;
+            .result-item{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                padding: 1.42857rem;
+                align-items: center;
+                gap: 2.28571rem;
+                border-radius: 0.57143rem;
+                background: #FFF;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                img {
+                    width: 10rem;
+                    height: 5.64286rem;
+                }
+                .col{
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .text-info{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        gap: 2rem;
+                        .title{
+                            color: #000;
+                            font-family: Inter;
+                            font-size: 1.71429rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                        .description{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            .detail{
+                                display: flex;
+                                flex-direction: row;
+                                gap: 1rem;
+                                color: #000;
+                                font-family: Inter;
+                                font-size: 1.14286rem;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;
+                                .hightlight{
+                                    color: #0264C8;
+                                    font-family: Inter;
+                                    font-size: 1.14286rem;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                }
+                            }
+                        }
+                    }
+                    .booking{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                        gap: 1.71429rem;
+                        .price-item{
+                            display: flex;
+                            padding: 0.71429rem;
+                            justify-content: center;
+                            align-items: center;
+                            .price-text{
+                                color: #FF5E1F;
+                                font-family: Inter;
+                                font-size: 1.71429rem;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+                            .text{
+                                color: #000;
+                                font-family: Inter;
+                                font-size: 1.14286rem;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;
+                                padding:5px;
+                            }
+                        }
+                        a{
+                            display: flex;
+                            width: 21.42857rem;
+                            padding: 1.14286rem 1.42857rem;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.71429rem;
+                            border-radius: 0.57143rem;
+                            background: rgba(35, 110, 255, 0.80);
+                            text-decoration: none;
+                            .text{
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Inter;
+                                font-size: 1.14286rem;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
