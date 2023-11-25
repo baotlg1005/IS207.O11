@@ -9,7 +9,7 @@ body .main-container {
   gap: 2rem;
   width: 60%;
 }
-body .main-container .search-container {
+body .main-container #search-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -17,7 +17,7 @@ body .main-container .search-container {
   border-radius: 0rem 0.57143rem 0.57143rem 0rem;
   background: #D4D4D4;
 }
-body .main-container .search-container .search-info-container {
+body .main-container #search-container .search-info-container {
   display: flex;
   padding: 1.42857rem;
   flex-direction: column;
@@ -27,7 +27,7 @@ body .main-container .search-container .search-info-container {
   border-radius: 0rem 3.57143rem 3.57143rem 0rem;
   background: #FFF;
 }
-body .main-container .search-container .search-info-container .title {
+body .main-container #search-container .search-info-container .title {
   color: #000;
   font-family: Inter;
   font-size: 1.71429rem;
@@ -35,7 +35,7 @@ body .main-container .search-container .search-info-container .title {
   font-weight: 700;
   line-height: normal;
 }
-body .main-container .search-container .search-info-container .description {
+body .main-container #search-container .search-info-container .description {
   color: #687176;
   font-family: Inter;
   font-size: 1.14286rem;
@@ -43,7 +43,7 @@ body .main-container .search-container .search-info-container .description {
   font-weight: 700;
   line-height: normal;
 }
-body .main-container .search-container .change-search-info-container {
+body .main-container #search-container .change-search-info-container {
   display: flex;
   height: 7rem;
   padding: 1.42857rem;
@@ -52,7 +52,7 @@ body .main-container .search-container .change-search-info-container {
   gap: 0.71429rem;
   flex: 1;
 }
-body .main-container .search-container .change-search-info-container #change-search-info {
+body .main-container #search-container .change-search-info-container #change-search-info {
   display: flex;
   width: 20rem;
   height: 4.58333rem;
@@ -64,21 +64,21 @@ body .main-container .search-container .change-search-info-container #change-sea
   background: #ff7a50;
   text-decoration: none;
 }
-body .main-container .search-container .change-search-info-container #change-search-info .text {
+body .main-container #search-container .change-search-info-container #change-search-info .text {
   color: #fff;
   text-align: right;
   font-size: 1.33333rem;
   font-weight: 700;
 }
-body .main-container .search-container .change-search-info-container #change-search-info ion-icon {
+body .main-container #search-container .change-search-info-container #change-search-info ion-icon {
   font-size: 1.8rem;
   color: #fff;
 }
-body .main-container .filter-container {
+body .main-container #filter-container {
   display: flex;
   flex-direction: row;
 }
-body .main-container .filter-container .title {
+body .main-container #filter-container .title {
   color: #000;
   text-align: right;
   font-family: Inter;
@@ -87,17 +87,18 @@ body .main-container .filter-container .title {
   font-weight: 700;
   line-height: normal;
 }
-body .main-container .filter-container .filter-items {
+body .main-container #filter-container .filter-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-body .main-container .filter-container .filter-items .filter-item {
+body .main-container #filter-container .filter-items .filter-item {
   margin: 0 1rem;
 }
-body .main-container .filter-container .filter-items .type-of-item-filter {
+body .main-container #filter-container .filter-items .filter-item .type-of-item-filter {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: wrap-content;
   padding: 0.71429rem 1.42857rem;
   align-items: center;
@@ -106,7 +107,7 @@ body .main-container .filter-container .filter-items .type-of-item-filter {
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-body .main-container .filter-container .filter-items .type-of-item-filter .text {
+body .main-container #filter-container .filter-items .filter-item .type-of-item-filter .text {
   color: #236EFF;
   font-family: Inter;
   font-size: 1.14286rem;
@@ -114,13 +115,43 @@ body .main-container .filter-container .filter-items .type-of-item-filter .text 
   font-weight: 700;
   line-height: normal;
 }
-body .main-container .result-container {
+body .main-container #filter-container .filter-items .filter-item .type-of-item-filter .drop-down-icon {
+  color: #236EFF;
+}
+body .main-container #filter-container .filter-items .filter-item .dropdown-item-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: wrap-content;
+  padding: 0.5rem 0 0 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.57143rem;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+body .main-container #filter-container .filter-items .filter-item .dropdown-item-filter .item-filter {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+body .main-container #filter-container .filter-items .filter-item .dropdown-item-filter .item-filter ion-icon {
+  font-size: 1.8rem;
+  color: #236EFF;
+}
+body .main-container #filter-container .filter-items .filter-item .dropdown-item-filter .item-filter .text {
+  font-family: Inter;
+  font-size: 1.14286rem;
+  font-style: normal;
+  line-height: normal;
+  margin-left: 0.5rem;
+}
+body .main-container #result-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.71429rem;
 }
-body .main-container .result-container .result-item {
+body .main-container #result-container .result-item {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -131,24 +162,24 @@ body .main-container .result-container .result-item {
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-body .main-container .result-container .result-item img {
+body .main-container #result-container .result-item img {
   width: 10rem;
   height: 5.64286rem;
 }
-body .main-container .result-container .result-item .col {
+body .main-container #result-container .result-item .col {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
   justify-content: space-between;
 }
-body .main-container .result-container .result-item .col .text-info {
+body .main-container #result-container .result-item .col .text-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
 }
-body .main-container .result-container .result-item .col .text-info .title {
+body .main-container #result-container .result-item .col .text-info .title {
   color: #000;
   font-family: Inter;
   font-size: 1.71429rem;
@@ -156,12 +187,12 @@ body .main-container .result-container .result-item .col .text-info .title {
   font-weight: 700;
   line-height: normal;
 }
-body .main-container .result-container .result-item .col .text-info .description {
+body .main-container #result-container .result-item .col .text-info .description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-body .main-container .result-container .result-item .col .text-info .description .detail {
+body .main-container #result-container .result-item .col .text-info .description .detail {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -172,7 +203,7 @@ body .main-container .result-container .result-item .col .text-info .description
   font-weight: 600;
   line-height: normal;
 }
-body .main-container .result-container .result-item .col .text-info .description .detail .hightlight {
+body .main-container #result-container .result-item .col .text-info .description .detail .hightlight {
   color: #0264C8;
   font-family: Inter;
   font-size: 1.14286rem;
@@ -180,19 +211,19 @@ body .main-container .result-container .result-item .col .text-info .description
   font-weight: 600;
   line-height: normal;
 }
-body .main-container .result-container .result-item .col .booking {
+body .main-container #result-container .result-item .col .booking {
   display: flex;
   flex-direction: column;
   align-items: end;
   gap: 1.71429rem;
 }
-body .main-container .result-container .result-item .col .booking .price-item {
+body .main-container #result-container .result-item .col .booking .price-item {
   display: flex;
   padding: 0.71429rem;
   justify-content: center;
   align-items: center;
 }
-body .main-container .result-container .result-item .col .booking .price-item .price-text {
+body .main-container #result-container .result-item .col .booking .price-item .price-text {
   color: #FF5E1F;
   font-family: Inter;
   font-size: 1.71429rem;
@@ -200,7 +231,7 @@ body .main-container .result-container .result-item .col .booking .price-item .p
   font-weight: 700;
   line-height: normal;
 }
-body .main-container .result-container .result-item .col .booking .price-item .text {
+body .main-container #result-container .result-item .col .booking .price-item .text {
   color: #000;
   font-family: Inter;
   font-size: 1.14286rem;
@@ -209,7 +240,7 @@ body .main-container .result-container .result-item .col .booking .price-item .t
   line-height: normal;
   padding: 5px;
 }
-body .main-container .result-container .result-item .col .booking a {
+body .main-container #result-container .result-item .col .booking a {
   display: flex;
   width: 21.42857rem;
   padding: 1.14286rem 1.42857rem;
@@ -220,7 +251,7 @@ body .main-container .result-container .result-item .col .booking a {
   background: rgba(35, 110, 255, 0.8);
   text-decoration: none;
 }
-body .main-container .result-container .result-item .col .booking a .text {
+body .main-container #result-container .result-item .col .booking a .text {
   color: #FFF;
   text-align: center;
   font-family: Inter;

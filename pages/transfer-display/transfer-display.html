@@ -21,7 +21,7 @@
 <body>
     <header-component></header-component>
     <div class="container main-container">
-        <div class="search-container">
+        <div id="search-container">
             <div class="search-info-container">
                 <div class="title">
                     Có tài xế
@@ -31,13 +31,13 @@
                 </div>
             </div>
             <div class="change-search-info-container">
-                <a id="change-search-info" class="btn-default btn-submit" href="../6-transfer-search/transfer-search.html">
+                <a id="change-search-info" class="btn-default btn-submit" href="../transfer-search/transfer-search.html">
                     <ion-icon name="search-outline"></ion-icon>
                     <div class="text">Thay đổi tìm kiếm</div>
                 </a>
             </div>
         </div>
-        <div class="filter-container">
+        <div id="filter-container">
             <div class="title">
                 BỘ LỌC:
             </div>
@@ -50,23 +50,24 @@
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
                     <div class="dropdown-item-filter hide">
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                        <div class ="title">Số hành khách tối đa</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 4
                             </div>
                         </div>
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 5-6
                             </div>
                         </div>
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 >6
                             </div>
@@ -80,17 +81,18 @@
                         </div>
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
-                    <div class="item-filter-dropdown hide">
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Số xe</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 Tự động
                             </div>
                         </div>
-                        <div class="item-filter select hide">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                        <div class="item-filter unselect hide">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 Số sàn
                             </div>
@@ -106,24 +108,25 @@
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
 
-                    <div class="item-filter-dropdown hide">
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Loại xe</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 City Car
                             </div>
                         </div>
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 Compact MPV
                             </div>
                         </div>
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 SUV
                             </div>
@@ -138,10 +141,11 @@
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
 
-                    <div class="item-filter-dropdown hide">
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Nhà cung cấp</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
                             <div class="text">
                                 Mioto Ho Chi Minh City
                             </div>
@@ -155,16 +159,17 @@
                         </div>
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
-                    <div class="item-filter-dropdown hide">
-                        <div class="item-filter select">
+                    <div class="dropdown-item-filter hide">
+                        <div class="title">Sắp xếp theo</div>
+                        <div id="max-price"class="item-filter unselect">
                             <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
-                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                            <ion-icon class="icon select hide" name="ellipse"></ion-icon>
                             <div class="text">
                                 Giá cao nhất
                             </div>
                         </div>
-                        <div class="item-filter select">
-                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                        <div id="min-price" class="item-filter select">
+                            <ion-icon class="icon unselect hide" name="ellipse-outline"></ion-icon>
                             <ion-icon class="icon select" name="ellipse"></ion-icon>
                             <div class="text">
                                 Giá thấp nhất
@@ -174,7 +179,7 @@
                 </div>
             </div>
         </div>
-        <div class="result-container">
+        <div id="result-container">
             <div id="result-item-template" class="result-item">
                 <img src="https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140"
                     alt="" class="result-item-img">
@@ -207,7 +212,7 @@
                             <div class=price-text>1.000.000 VND </div>
                             <div class="text"> /ngày</div>
                         </div>
-                        <a id="change-search-info" class="btn-default" href="/pages/13-payment/payment.html">
+                        <a id="change-search-info" class="btn-default" href="/pages/payment/payment.html">
                             <div class="text">Tiếp tục</div>
                         </a>
                     </div>
@@ -217,7 +222,7 @@
     </div>
 
     <footer-component></footer-component>
-
+    <script src="./js/transfer-display.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
