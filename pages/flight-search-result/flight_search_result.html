@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Kết quả tìm kiếm</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./.css/index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
@@ -21,21 +22,21 @@
                 <p class="sp-xp">
                   <b>Sắp xếp:</b>
                 </p>
-                <p class="gi-thp-nht">Giá thấp nhất</p>
+                <select id="mySelect">
+                  <option value="option1">Giá thấp nhất</option>
+                  <option value="option2">Các chuyến bay thẳng đầu tiên</option>
+                  <option value="option3">Cất cánh sớm nhất</option>
+                  <option value="option4">Cất cánh muộn nhất</option>
+                  <option value="option5">Hạ cánh sớm nhất</option>
+                  <option value="option6">Hạ cánh muộn nhất</option>
+                  <option value="option7">Thời gian bay ngắn nhất</option>
+                </select>
               </div>
-              <img
-                class="slider-arrow-icon"
-                alt=""
-                src="./public/slider--arrow.svg"
-              />
             </div>
           </div>
           <div class="sortingtext">
             <div class="b-lc-wrapper">
               <b class="b-lc">Bộ lọc:</b>
-            </div>
-            <div class="textbutton">
-              <b class="b-lc">Đặt lại</b>
             </div>
           </div>
           <div class="flightadvancesorting-list">
