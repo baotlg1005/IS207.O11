@@ -58,3 +58,8 @@ resultContainer.appendChild(
     price: "1.000.000",
   })
 );
+
+
+var flightSearchInfo = JSON.parse(sessionStorage.flightSearchInfo);
+
+console.log(flightSearchInfo);

@@ -245,3 +245,5 @@ manyFlightSubmitBtn.addEventListener("click", () => {
 
     console.log(flightSearchInfo)
 })
+
+sessionStorage.setItem('flightSearchInfo', JSON.stringify(flightSearchInfo));
