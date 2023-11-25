@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelowkey</title>
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../resources/css/main-style.css">
+    <link rel="stylesheet" href="../../resources/css/btn.css">
+
+    <link rel="stylesheet" href="./css/flight-display.css">
+
+
+    <script src="/resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="/resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+    <header-component></header-component>
+
+    <div class="container main-container">
+        <div id="sort-container" class="show-dropdown">
+            <div class="sort-value-select">
+                <div class="text-holder">
+                    <div class="title">Sắp xếp</div>
+                    <div id="sort-type-value">Giá thấp nhất</div>
+                </div>
+                <div class="icon-holder">
+                    <ion-icon class="icon show-dropdown" name="chevron-down-outline"></ion-icon>
+                    <ion-icon class="icon hide-dropdown" name="chevron-up-outline"></ion-icon>
+                </div>
+            </div>
+            <div id="sort-type-dropdown">
+                <div class="sort-type-item select">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Giá thấp nhất
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Giá cao nhất
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Các chuyến bay thẳng đầu tiên
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Cất cánh sớm nhất
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Cất cánh muộn nhất
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Hạ cánh sớm nhất
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Hạ cánh muộn nhất
+                    </div>
+                </div>
+                <div class="sort-type-item">
+                    <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="icon select" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Thời gian bay ngắn nhất
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="search-info-block">
+                <div class="info-container">
+                    <div class="departure-and-destination">
+                        <div class="departure">
+                            <div class="text">
+                                TP HCM (SGN)
+                            </div>
+                        </div>
+                        <ion-icon name="arrow-forward"></ion-icon>
+                        <div class="destination">
+                            <div class="text">
+                                TOKYO (TYOA)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-info">
+                        <div class="date">
+                        <div class="text">
+                            15, tháng 10, 2023
+                        </div>
+                        </div>
+                        <div class="passenger-quantity">
+                        <div class="text">
+                            1 hành khách
+                        </div>
+                        </div>
+                        <div class="seat-type">
+                        <div class="text">
+                            Phổ thông
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="change-search-btn" class="btn-default">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <div class="text">Đổi tìm kiếm</div>
+                </div>
+            </div>
+            <div class="date-block-container">
+                <div class="date-item selected">
+                    <div class="date">
+                        15 tháng 10
+                    </div>
+                    <div class="price">
+                        6.152.000 VND
+                    </div>
+                </div>
+            </div>
+            <div id="result-container">
+                <div id="result-item-template" class="result-item">
+                    <div class="row">
+                        <div class="plane-name">
+                            <ion-icon name="airplane"></ion-icon> 
+                            <div class="text">Vietnam Airlines</div>
+                        </div>
+                        <div class="flight-info">
+                            <div class="time-and-location">
+                                <div class="departure">
+                                    <div class="time">00:00</div>
+                                    <div class="location">SGN</div>
+                                </div>
+                                <ion-icon name="ellipsis-horizontal"></ion-icon>
+                                <div class="destination">
+                                    <div class="time">12:00</div>
+                                    <div class="location">TYOA</div>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <div class="price-text">2.752.000 VND</div>
+                                <div class="text">/khách</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="option-btn-group">
+                            <div class="btn-default detail-btn">
+                                <div class="text">Chi tiết</div>
+                            </div>
+                            <div class="btn-default show-ticket-price-and-luggage-btn">
+                                <div class="text">Giá vé và hành lý</div>
+                            </div>
+                        </div>
+                        <div class="btn-default select-btn">
+                            <div class="text">Chọn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+
+    <script type="module" src="./js/flight-display.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
