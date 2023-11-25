@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     margin-bottom: 1rem;
 
-    .sort-value-select {
+    #sort-value-select {
       display: flex;
       height: 6.16667rem;
       padding: 1.33333rem 1.66667rem;
@@ -90,7 +90,7 @@ body {
     }
   }
   #sort-container.show-dropdown{
-    .sort-value-select {
+    #sort-value-select {
       .show-dropdown{
         display: none;
       }
@@ -256,6 +256,7 @@ body {
             padding: 1.33333rem 1.66667rem;
             align-items: center;
             gap: 0.83333rem;
+            width: 50%;
             ion-icon {
               font-size: 2.5rem;
               color: #236eff;
@@ -264,77 +265,52 @@ body {
               color: #000;
               text-align: center;
               font-size: 1.33333rem;
-              font-weight: 500;
+              font-weight: 700;
             }
           }
-          .flight-info {
+          .time-and-location {
             display: flex;
             align-items: center;
-            .time-and-location {
+            .departure,
+            .destination {
               display: flex;
-              align-items: center;
-              .departure,
-              .destination {
-                display: flex;
-                flex-direction: column;
-                padding: 0rem 0.41667rem;
-                justify-content: center;
-                align-items: center;
-              }
-              .time {
-                color: #000;
-                text-align: center;
-                font-size: 1.33333rem;
-                font-weight: 600;
-              }
-              .location {
-                color: #687176;
-                font-family: Inter;
-                font-size: 1.16667rem;
-                font-weight: 600;
-              }
-              ion-icon {
-                font-size: 1.8rem;
-                color: #687176;
-              }
-            }
-            .price {
-              display: flex;
-              padding: 1.33333rem 1.66667rem;
+              flex-direction: column;
+              padding: 0rem 0.41667rem;
               justify-content: center;
               align-items: center;
-              .price-text {
-                color: #ff5e1f;
-                text-align: center;
-                font-size: 1.33333rem;
-                font-weight: 700;
-              }
-              .text {
-                color: #000;
-                font-size: 1.16667rem;
-                font-weight: 500;
-              }
+            }
+            .time {
+              color: #000;
+              text-align: center;
+              font-size: 1.33333rem;
+              font-weight: 600;
+            }
+            .location {
+              color: #687176;
+              font-family: Inter;
+              font-size: 1.16667rem;
+              font-weight: 600;
+            }
+            ion-icon {
+              font-size: 1.8rem;
+              color: #687176;
             }
           }
-
-          .option-btn-group {
+          .price {
             display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-            .detail-btn,
-            .show-ticket-price-and-luggage-btn {
-              display: flex;
-              width: 14.33333rem;
-              padding: 1.33333rem 1.66667rem;
-              justify-content: center;
-              align-items: center;
-              gap: 0.83333rem;
-              .text {
-                color: #687176;
-                text-align: center;
-                font-size: 1.33333rem;
-                font-weight: 700;
-              }
+            padding: 1.33333rem 1.66667rem;
+            justify-content: center;
+            align-items: center;
+            .price-text {
+              color: #ff5e1f;
+              text-align: center;
+              font-size: 1.5rem;
+              font-weight: 700;
+            }
+            .text {
+              color: #687176;
+              font-size: 1.16667rem;
+              font-weight: 700;
             }
           }
           .select-btn {
@@ -343,6 +319,8 @@ body {
             align-items: center;
             border-radius: 0.66667rem;
             background: rgba(35, 110, 255, 0.8);
+
+            margin-left: auto;
             .text {
               color: #fff;
               text-align: center;

@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   margin-bottom: 1rem;
 }
-.main-container #sort-container .sort-value-select {
+.main-container #sort-container #sort-value-select {
   display: flex;
   height: 6.16667rem;
   padding: 1.33333rem 1.66667rem;
@@ -24,28 +24,28 @@ body {
   border-radius: 0.66667rem;
   background: #fff;
 }
-.main-container #sort-container .sort-value-select .text-holder {
+.main-container #sort-container #sort-value-select .text-holder {
   display: flex;
   flex-direction: column;
 }
-.main-container #sort-container .sort-value-select .text-holder .title {
+.main-container #sort-container #sort-value-select .text-holder .title {
   color: #000;
   font-size: 1.33333rem;
   font-weight: 700;
 }
-.main-container #sort-container .sort-value-select .text-holder .sort-type-value {
+.main-container #sort-container #sort-value-select .text-holder .sort-type-value {
   color: #000;
   font-size: 1.33333rem;
   font-weight: 500;
 }
-.main-container #sort-container .sort-value-select .icon-holder .icon {
+.main-container #sort-container #sort-value-select .icon-holder .icon {
   font-size: 3.5rem;
   color: #236EFF;
 }
-.main-container #sort-container .sort-value-select .icon-holder .show-dropdown {
+.main-container #sort-container #sort-value-select .icon-holder .show-dropdown {
   display: flex;
 }
-.main-container #sort-container .sort-value-select .icon-holder .hide-dropdown {
+.main-container #sort-container #sort-value-select .icon-holder .hide-dropdown {
   display: none;
 }
 .main-container #sort-container #sort-type-dropdown {
@@ -82,10 +82,10 @@ body {
 .main-container #sort-container #sort-type-dropdown .sort-type-item.select .icon.unselect {
   display: none;
 }
-.main-container #sort-container.show-dropdown .sort-value-select .show-dropdown {
+.main-container #sort-container.show-dropdown #sort-value-select .show-dropdown {
   display: none;
 }
-.main-container #sort-container.show-dropdown .sort-value-select .hide-dropdown {
+.main-container #sort-container.show-dropdown #sort-value-select .hide-dropdown {
   display: flex;
 }
 .main-container #sort-container.show-dropdown #sort-type-dropdown {
@@ -234,6 +234,7 @@ body {
   padding: 1.33333rem 1.66667rem;
   align-items: center;
   gap: 0.83333rem;
+  width: 50%;
 }
 .main-container .main-content #result-container .result-item .row .plane-name ion-icon {
   font-size: 2.5rem;
@@ -243,76 +244,51 @@ body {
   color: #000;
   text-align: center;
   font-size: 1.33333rem;
-  font-weight: 500;
+  font-weight: 700;
 }
-.main-container .main-content #result-container .result-item .row .flight-info {
+.main-container .main-content #result-container .result-item .row .time-and-location {
   display: flex;
   align-items: center;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .time-and-location {
-  display: flex;
-  align-items: center;
-}
-.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .departure,
-.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .destination {
+.main-container .main-content #result-container .result-item .row .time-and-location .departure,
+.main-container .main-content #result-container .result-item .row .time-and-location .destination {
   display: flex;
   flex-direction: column;
   padding: 0rem 0.41667rem;
   justify-content: center;
   align-items: center;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .time {
+.main-container .main-content #result-container .result-item .row .time-and-location .time {
   color: #000;
   text-align: center;
   font-size: 1.33333rem;
   font-weight: 600;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .time-and-location .location {
+.main-container .main-content #result-container .result-item .row .time-and-location .location {
   color: #687176;
   font-family: Inter;
   font-size: 1.16667rem;
   font-weight: 600;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .time-and-location ion-icon {
+.main-container .main-content #result-container .result-item .row .time-and-location ion-icon {
   font-size: 1.8rem;
   color: #687176;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .price {
+.main-container .main-content #result-container .result-item .row .price {
   display: flex;
   padding: 1.33333rem 1.66667rem;
   justify-content: center;
   align-items: center;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .price .price-text {
+.main-container .main-content #result-container .result-item .row .price .price-text {
   color: #ff5e1f;
   text-align: center;
-  font-size: 1.33333rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
-.main-container .main-content #result-container .result-item .row .flight-info .price .text {
-  color: #000;
-  font-size: 1.16667rem;
-  font-weight: 500;
-}
-.main-container .main-content #result-container .result-item .row .option-btn-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.main-container .main-content #result-container .result-item .row .option-btn-group .detail-btn,
-.main-container .main-content #result-container .result-item .row .option-btn-group .show-ticket-price-and-luggage-btn {
-  display: flex;
-  width: 14.33333rem;
-  padding: 1.33333rem 1.66667rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.83333rem;
-}
-.main-container .main-content #result-container .result-item .row .option-btn-group .detail-btn .text,
-.main-container .main-content #result-container .result-item .row .option-btn-group .show-ticket-price-and-luggage-btn .text {
+.main-container .main-content #result-container .result-item .row .price .text {
   color: #687176;
-  text-align: center;
-  font-size: 1.33333rem;
+  font-size: 1.16667rem;
   font-weight: 700;
 }
 .main-container .main-content #result-container .result-item .row .select-btn {
@@ -321,6 +297,7 @@ body {
   align-items: center;
   border-radius: 0.66667rem;
   background: rgba(35, 110, 255, 0.8);
+  margin-left: auto;
 }
 .main-container .main-content #result-container .result-item .row .select-btn .text {
   color: #fff;
