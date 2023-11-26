@@ -115,11 +115,12 @@ body {
   gap: 1rem;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .text {
-  color: #000;
+  color: rgba(35, 110, 255, 0.8);
+  font-weight: 700;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon {
   font-size: 2rem;
-  color: #000;
+  color: rgba(35, 110, 255, 0.8);
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
   border-radius: 0.66667rem;
@@ -127,6 +128,16 @@ body {
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn .text {
   color: #fff;
+  font-weight: 700;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn {
+  gap: 1rem;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
+  font-size: 2rem;
+  color: rgba(35, 110, 255, 0.8);
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .text {
   font-weight: 700;
 }
 .header-container .header__navbar {
