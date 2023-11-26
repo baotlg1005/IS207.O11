@@ -1,4 +1,12 @@
 const filterItems = document.querySelectorAll(".filter-item")
+const resultContainer = document.getElementById("result-container")
+const resultItemTemplate = document.getElementById("result-item-template")
+const itemFilters = document.querySelectorAll(".item-filter")
+const sort = document.querySelector("#sort")
+const itemSort = sort.querySelectorAll(".item-filter")
+const searchInfoTitle = document.getElementById("search-info-title")
+const searchInfoDescription = document.getElementById("search-info-description")
+
 filterItems.forEach(item=>{
     const typeOfFilter = item.querySelector(".type-of-item-filter")
     const dropdownItemFilter = item.querySelector(".dropdown-item-filter")
@@ -7,7 +15,6 @@ filterItems.forEach(item=>{
     })
 })
 
-const itemFilters = document.querySelectorAll(".item-filter")
 itemFilters.forEach(item=>{
     const iconSelect = item.querySelector(".icon.select")
     const iconUnselect = item.querySelector(".icon.unselect")
@@ -20,13 +27,19 @@ itemFilters.forEach(item=>{
         }
     )}
 })
-const sort = document.querySelector("#sort")
-const itemSort = sort.querySelectorAll(".item-filter")
+
 itemSort.forEach(item=>{
     const iconSelect = item.querySelector(".icon.select")
     const iconUnselect = item.querySelector(".icon.unselect")
     item.addEventListener("click",()=>{
         if (item.classList.contains("unselect")){
+            resultContainer.innerHTML = ""
+            if (item.id=="max-price"){
+                getData("showResultDESC")
+            }
+            else{
+                getData("showResultASC")
+            }
             item.classList.remove("unselect")
             item.classList.add("select")
             iconSelect.classList.remove("hide")
@@ -46,54 +59,98 @@ itemSort.forEach(item=>{
     )
 })
 
-const resultContainer = document.getElementById("result-container")
-const resultItemTemplate = document.getElementById("result-item-template")
-
 function createResultItem(data){
-    const resultItem = resultItemTemplate.cloneNode(true)
-    resultItem.classList.add("result-item");
-    resultItem.id = resultItem.id.replace("template", data.Id)
-    resultItem.querySelector(".title").innerText = data.Name
-    resultItem.querySelector("#luggage").innerText =data.Luggage
-    resultItem.querySelector("#numofSeat").innerText = data.NumofSeat
-    resultItem.querySelector("#type-of-car").innerText = data.Type_id
-    resultItem.querySelector(".price-item .price-text").innerText = data.Price
-    resultItem.querySelector(".result-item-img").setAttribute('src',"https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208326192-014d03e4ea8f912c822478949676aca7.jpeg?tr=q-75,w-140")
-    return resultItem
+    let price = ''
+    let count = 0
+    for (let i=data.Price.length-1;i>=0;i--){
+        if (count==3){
+            price = '.'+price
+        }
+        price = data.Price[i]+price
+        if (count==3){
+            count=1
+        }
+        else{
+            count++
+        }
+    }
+    document.getElementById("result-container").innerHTML+=
+    `<div id="${data.Id}" class="result-item">
+    <img src="https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140"
+        alt="" class="result-item-img">
+    <div class="col">
+        <div class="text-info">
+            <div class="title">
+                ${data.Name}
+            </div>
+            <div class="description">
+                <div class="detail">
+                    <div id="luggage" class="description-item hightlight">
+                        ${data.Luggage}
+                    </div>
+                    <div id="numofSeat" class="description-item hightlight">
+                        ${data.NumofSeat}
+                    </div>
+                </div>
+                <div class="detail">
+                    <div id="type-of-car" class="description-item">
+                        ${data.Type}
+                    </div>
+                    <div id="num-of-provider" class="description-item hightlight">
+                        Hiện có 1 nhà cung cấp
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="booking">
+            <div id="price" class="price-item">
+                <div class=price-text>${price} VND</div>
+                <div class="text"> /ngày</div>
+            </div>
+            <a id="change-search-info" class="btn-default" href="/pages/payment/payment.html">
+                <div class="text">Tiếp tục</div>
+            </a>
+        </div>
+    </div>
+</div>`
 }
-data = [{"Id": "CCH", 
-"Type_id": "Tự lái", 
-"Name": "City Car (2 Hours)", 
-"Luggage": "2 hành lý", 
-"NumofSeat": "4 ghế", 
-"DepartureTime": " Thứ 2, 20 thg 11 2023 08:00 ", 
-"ArrivalTime": " Thứ 2, 20 thg 11 2023 23:59", 
-"Price": "508.000 VND", 
-"PickPoint": "Tan Son Nhat International Airport (SGN) ", 
-"State": "Free"},{"Id": "CCH", 
-"Type_id": "Tự lái", 
-"Name": "City Car (2 Hours)", 
-"Luggage": "2 hành lý", 
-"NumofSeat": "4 ghế", 
-"DepartureTime": " Thứ 2, 20 thg 11 2023 08:00 ", 
-"ArrivalTime": " Thứ 2, 20 thg 11 2023 23:59", 
-"Price": "508.000 VND", 
-"PickPoint": "Tan Son Nhat International Airport (SGN) ", 
-"State": "Free"},{"Id": "CCH", 
-"Type_id": "Tự lái", 
-"Name": "City Car (8 Hours)", 
-"Luggage": "2 hành lý", 
-"NumofSeat": "4 ghế", 
-"DepartureTime": " Thứ 2, 20 thg 11 2023 08:00 ", 
-"ArrivalTime": " Thứ 2, 20 thg 11 2023 23:59", 
-"Price": "508.000 VND", 
-"PickPoint": "Tan Son Nhat International Airport (SGN) ", 
-"State": "Free"}]
-for (let i=0;i<data.length;i++){
-    resultContainer.appendChild(
-        createResultItem(data[i])
-    )
+
+let transferSearchInfo;
+//check if session storage flightSearchInfo is exist
+if (sessionStorage.getItem("transferSearchInfo")) {
+  transferSearchInfo = JSON.parse(sessionStorage.getItem("transferSearchInfo"))
 }
+
+
+searchInfoDescription.innerText = transferSearchInfo.location+' • '+transferSearchInfo.startDate+' '+transferSearchInfo.startTime+' • '+transferSearchInfo.endDate+' '+transferSearchInfo.endTime
+
+function getData(action){
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText);
+        let searchResults = JSON.parse(this.responseText);
+        searchInfoTitle.innerText = searchResults[0].Type
+        if (searchResults.length > 0) {
+            searchResults.forEach(item=>{
+                createResultItem(item)
+            })
+          }
+        else{
+            console.log("Không tìm thấy kết quả phù hợp")
+            document.getElementById("result-container").innerHTML=
+            `<div class="title">Không tìm thấy kết quả phù hợp</div>`
+        }
+        }
+      }
+    xhttp.open("POST", "../../server/data-controller/transfer/get-data.php", true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhttp.send(`action=${action}&location=${transferSearchInfo.location}&startDate=${transferSearchInfo.startDate}&startTime=${transferSearchInfo.startTime}&endDate=${transferSearchInfo.endDate}&endTime=${transferSearchInfo.endTime}&haveDriver=${transferSearchInfo.haveDriver}`)
+}
+
+window.onload = function (e) {
+    getData("showResultASC")
+} 
 
 
 
