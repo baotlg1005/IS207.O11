@@ -231,7 +231,7 @@ input[type="range"]::-moz-range-thumb{
 .hotel-book-position-text {
   color: #000;
   height: auto;
-  width: 470px;
+  /* width: 470px; */
   font-size: 14px;
   font-style: Bold;
   text-align: center;
@@ -266,9 +266,17 @@ input[type="range"]::-moz-range-thumb{
   flex-direction: column;
 }
 
+.btn-dropdown{
+  width: auto;
+}
+
+.btn-dropdown .text{
+  overflow: visible;
+  text-overflow: ellipsis;
+}
 .ReSearch-Button{
   display: flex;
-  width: 168px;
+  /* width: 168px; */
   height: 46px;
   padding: 16px 20px;
   justify-content: flex-end;
@@ -393,9 +401,10 @@ input[type="range"]::-moz-range-thumb{
 }
 
 .hotel-item {
-  width: 900px;
+  /* width: 900px; */
   height: auto;
   display: flex;
+  padding: 1rem;
   border: 1px solid black;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
   align-items: center;
