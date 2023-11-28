@@ -1,4 +1,4 @@
-.flight-book-container {
+.BusBook {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -6,551 +6,120 @@
   align-items: center;
   flex-direction: column;
 }
-.flight-book-flight-book {
-  width: 100%;
-  height: auto;
+.BusBook .BusBook__SearchBar {
   display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  flex-direction: column;
-}
-.flight-book-flight-book-container {
-  gap: 24px;
-  display: flex;
+  width: 1280px;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 15px;
+  justify-content: space-between;
   align-items: flex-start;
-}
-.flight-book-sorting {
-  gap: 20px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-flight-sort-sorting-list {
-  display: flex;
-  align-items: flex-start;
-  border-radius: 8px;
-  flex-direction: column;
-}
-.flight-book-frame98 {
-  gap: 128px;
-  width: 368px;
-  height: 74px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
   border-radius: 8px;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255, 255, 255);
+  border-bottom: 5px solid #687176;
 }
-.flight-book-text {
-  color: rgba(0, 0, 0, 1);
-  width: 104px;
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text001 {
-  font-weight: 700;
-}
-.flight-book-slider-arrow {
-  width: 42px;
-  height: 42px;
-}
-.flight-book-sorting-text {
-  gap: 191px;
-  width: 368px;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame76 {
-  gap: 10px;
-  height: 52px;
-  display: flex;
-  padding: 16px 15px;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text009 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text-button {
-  gap: 10px;
-  height: 52px;
-  display: flex;
-  padding: 16px 15px;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text011 {
-  color: rgba(35, 110, 255, 0.800000011920929);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-flight-advance-sorting-list {
-  gap: 10px;
-  display: flex;
-  padding: 16px 0;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-ight-advance-sorting-flight-style {
+.BusBook .BusBook__SearchBar .Destination_and_Date {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
-.flight-book-frame93 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text013 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow1 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-ight-advance-sorting-brand {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame95 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text015 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow2 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-flight-advance-sorting-flight-time {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame97 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text017 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow3 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-ight-advance-sorting-goods {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame94 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text019 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow4 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-flight-advance-sorting-price {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame951 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text021 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow5 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-ight-advance-sorting-prefers {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame952 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text023 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow6 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-ight-advance-sorting-stops {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame96 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text025 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow7 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-flight-advance-sorting-stop-time {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame941 {
-  gap: 10px;
-  width: 368px;
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 0 1px;
-  justify-content: space-between;
-}
-.flight-book-text027 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-slider-arrow8 {
-  width: 20px;
-  height: 20px;
-}
-.flight-book-flight-book1 {
-  gap: 40px;
-  width: 760px;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-  flex-direction: column;
-}
-.flight-book-flight-book-search-bar {
-  gap: 20px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-frame21 {
-  width: 642px;
-  display: flex;
-  padding: 10px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame20 {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.flight-book-search-bar-destiantion {
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion {
   display: flex;
   align-items: center;
 }
-.flight-book-search-bar-des1 {
-  gap: 10px;
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des1 {
   display: flex;
   padding: 5px 20px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.flight-book-text029 {
-  color: rgba(0, 0, 0, 1);
-  width: 120px;
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des1 .text {
+  color: #000;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-vector6 {
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .vector6 {
   width: 40px;
-  height: 8px;
+  height: 12px;
 }
-.flight-book-search-bar-des2 {
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des2 {
   gap: 10px;
   display: flex;
   padding: 5px 20px;
   align-items: center;
   justify-content: center;
 }
-.flight-book-text031 {
-  color: rgba(0, 0, 0, 1);
-  width: 120px;
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des2 .text {
+  color: #000;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-frame19 {
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat {
   display: flex;
   align-items: flex-start;
 }
-.flight-book-frame16 {
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Date {
   gap: 10px;
   display: flex;
   padding: 5px 10px 5px 20px;
   align-items: center;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 1px 0 0;
   justify-content: center;
 }
-.flight-book-text033 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 14px;
-  font-style: Bold;
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Date .text {
+  color: #687176;
   text-align: center;
   font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame17 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 10px;
-  align-items: center;
-  border-color: rgba(104, 113, 118, 1);
-  border-style: solid;
-  border-width: 0 1px 0 0;
-  justify-content: center;
-}
-.flight-book-text035 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
   font-size: 14px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-frame18 {
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Seat {
   gap: 10px;
   display: flex;
   padding: 5px 10px;
   align-items: center;
   justify-content: center;
 }
-.flight-book-text037 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 14px;
-  font-style: Bold;
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Seat .text {
+  color: #687176;
   text-align: center;
   font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-feature-frame-sub-item {
-  gap: 10px;
+.BusBook .BusBook__SearchBar .FeatureFrame__SubItem {
+  display: flex;
   width: 168px;
   height: 55px;
-  display: flex;
   padding: 16px 20px;
-  position: relative;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 24px;
   justify-content: flex-end;
-  background-color: rgba(255, 121, 79, 1);
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #FF7A50;
+  text-decoration: none;
 }
-.flight-book-vector {
-  top: 18px;
-  left: 21px;
+.BusBook .BusBook__SearchBar .FeatureFrame__SubItem .icon {
   width: 20px;
-  height: 20px;
-  position: absolute;
+  height: 30px;
+  text-decoration: none;
+  color: aliceblue;
 }
-.flight-book-text039 {
-  color: rgba(255, 255, 255, 1);
+.BusBook .BusBook__SearchBar .FeatureFrame__SubItem .text {
+  color: rgb(255, 255, 255);
   height: auto;
   z-index: 1;
   flex-grow: 1;
@@ -560,1271 +129,304 @@
   font-family: Inter;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-flight-book-price-bar {
-  width: 760px;
+.BusBook .BusBook__Main {
   display: flex;
-  padding: 10px 25px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
   align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 8px;
-  flex-direction: column;
-  background-color: rgba(44, 98, 204, 1);
+  flex-direction: row;
+  padding: 15px;
+  gap: 40px;
 }
-.flight-book-frame37 {
+.BusBook .BusBook__Main .BusBook__Sorting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList {
+  display: flex;
+  flex-direction: column;
+  width: 368px;
+  height: 74px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  background: #FFF;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice {
+  display: flex;
+  flex-direction: row;
+  width: 368px;
+  height: 74px;
+  padding: 16px 20px;
+  justify-content: space-between;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .text .text--label {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: Bold;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .text .text--choice {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .icon {
+  width: 40px;
+  height: 40px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .dropdown-panel__item {
+  color: rgb(0, 0, 0);
+  height: auto;
+  font-size: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .SortingText {
+  display: flex;
+  width: 325px;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 30px;
+  padding: 15px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .SortingText .SortingText-Filter {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .SortingText .SortingText-ClearFilter {
+  color: rgba(35, 110, 255, 0.8);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List {
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  width: 368px;
+  height: 74px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  background: #FFF;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp {
+  display: flex;
+  flex-direction: row;
+  width: 368px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #687176;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .BusAdvanceSorting__PickUp__Choice .text {
+  flex: 1 0 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .BusAdvanceSorting__PickUp__Choice .icon {
+  flex: 1;
+  width: 20px;
+  height: 20px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .dropdown-panel__item {
+  color: rgb(0, 0, 0);
+  height: auto;
+  font-size: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__BusList {
+  flex: 2;
+  flex-direction: column;
   align-items: flex-start;
-}
-.flight-book-frame36 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-  background-color: rgba(85, 141, 249, 1);
-}
-.flight-book-text041 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame35 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text046 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text047 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-price-bar-item {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text052 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text053 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame28 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text058 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text059 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame29 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text064 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text065 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame30 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text070 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text071 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame31 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text076 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text077 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame32 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text082 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text083 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame33 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text088 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text089 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame34 {
-  gap: 10px;
-  display: flex;
-  padding: 5px 20px;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text094 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text095 {
-  color: rgba(255, 255, 255, 1);
-}
-.flight-book-vector1 {
-  top: 52px;
-  left: 756px;
-  width: 18px;
-  height: 38px;
-  z-index: 1;
-  position: absolute;
-}
-.flight-book-flight-book-flight-list {
   gap: 20px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
 }
-.flight-book-flight-list-item {
-  gap: 18px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem .BusBook__BusBrand {
+  display: flex;
   width: 760px;
-  display: flex;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame48 {
-  gap: 3px;
-  display: flex;
   padding: 10px;
-  align-self: stretch;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame40 {
-  gap: 10px;
-  width: 328px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-}
-.flight-book-vector2 {
-  width: 32px;
-  height: 30px;
-}
-.flight-book-text100 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame46 {
-  display: flex;
-  align-items: center;
-}
-.flight-book-frame41 {
-  gap: 10px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  justify-content: center;
-}
-.flight-book-text102 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text103 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-flight-list-item01 {
-  display: flex;
-  align-items: center;
   flex-direction: column;
-}
-.flight-book-frame42 {
-  gap: 10px;
-  width: 40px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text108 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-flight-list-item02 {
-  width: 40px;
-  height: 10px;
-}
-.flight-book-frame43 {
-  gap: 10px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text110 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame45 {
-  gap: 10px;
-  width: 56px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text112 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text113 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-frame47 {
-  gap: 10px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  justify-content: center;
-}
-.flight-book-text118 {
-  color: rgba(255, 94, 31, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text119 {
-  color: rgba(255, 94, 31, 1);
-  font-weight: 700;
-}
-.flight-book-frame50 {
-  gap: 2px;
-  display: flex;
-  padding: 10px;
-  align-self: stretch;
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame49 {
-  gap: 24px;
-  display: flex;
   align-items: flex-start;
 }
-.flight-book-navigation-item {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text121 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem .BusBook__BusBrand .text {
+  color: #000;
   text-align: center;
   font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-navigation-item01 {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text123 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
   font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 82px;
+  height: 20px;
 }
-.flight-book-navigation-item02 {
-  gap: 10px;
-  width: 172px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price {
   display: flex;
-  padding: 16px 20px;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: rgba(35, 110, 255, 0.800000011920929);
-}
-.flight-book-text125 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-flight-list-item03 {
-  gap: 18px;
   width: 760px;
-  display: flex;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame481 {
-  gap: 3px;
-  display: flex;
   padding: 10px;
-  align-self: stretch;
-  align-items: center;
-  flex-shrink: 0;
   justify-content: space-between;
+  align-items: center;
 }
-.flight-book-frame401 {
-  gap: 10px;
-  width: 328px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Depature_Info {
   display: flex;
   padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-}
-.flight-book-vector3 {
-  width: 32px;
-  height: 30px;
-}
-.flight-book-text127 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame461 {
-  display: flex;
-  align-items: center;
-}
-.flight-book-frame411 {
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  justify-content: center;
 }
-.flight-book-text129 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Semi Bold;
-  text-align: center;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Depature_Info .BusBook__Start_Time {
+  height: 18px;
+  align-self: stretch;
+  color: #000;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-text130 {
-  color: rgba(0, 0, 0, 1);
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Depature_Info .BusBook__Start_Place {
+  align-self: stretch;
+  color: #687176;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
-.flight-book-flight-list-item04 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.flight-book-frame421 {
-  gap: 10px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .icon {
   width: 40px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
+  height: 40px;
 }
-.flight-book-text135 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-flight-list-item05 {
-  width: 70px;
-  height: 10px;
-}
-.flight-book-frame431 {
-  gap: 10px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text137 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame451 {
-  gap: 10px;
-  width: 56px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text139 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text140 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-frame471 {
-  gap: 10px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Arrival_Info {
   display: flex;
   padding: 16px 20px;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-right: 1px solid #687176;
 }
-.flight-book-text145 {
-  color: rgba(255, 94, 31, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Arrival_Info .BusBook__Arrival_Time {
+  height: 18px;
+  align-self: stretch;
+  color: #000;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-text146 {
-  color: rgba(255, 94, 31, 1);
-  font-weight: 700;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Arrival_Info .BusBook__Arrival_Place {
+  align-self: stretch;
+  color: #687176;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
-.flight-book-frame501 {
-  gap: 2px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Duration {
   display: flex;
   padding: 10px;
-  align-self: stretch;
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame491 {
-  gap: 24px;
-  display: flex;
-  align-items: flex-start;
-}
-.flight-book-navigation-item03 {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
   justify-content: center;
-}
-.flight-book-text148 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-navigation-item04 {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
   align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: center;
+  gap: 10px;
 }
-.flight-book-text150 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Duration .time {
+  width: 200px;
+  color: #000;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-navigation-item05 {
-  gap: 10px;
-  width: 172px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Price {
   display: flex;
   padding: 16px 20px;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: rgba(35, 110, 255, 0.800000011920929);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.flight-book-text152 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Price .price {
+  color: #FF5E1F;
   text-align: center;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-flight-list-item06 {
-  gap: 18px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Price .units {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment {
+  display: flex;
   width: 760px;
-  display: flex;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame482 {
-  gap: 3px;
-  display: flex;
   padding: 10px;
-  align-self: stretch;
-  align-items: center;
-  flex-shrink: 0;
   justify-content: space-between;
-}
-.flight-book-frame402 {
-  gap: 10px;
-  width: 328px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-}
-.flight-book-vector4 {
-  width: 32px;
-  height: 30px;
-}
-.flight-book-text154 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame462 {
-  display: flex;
-  align-items: center;
-}
-.flight-book-frame412 {
-  gap: 10px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  justify-content: center;
-}
-.flight-book-text156 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text157 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-flight-list-item07 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.flight-book-frame422 {
-  gap: 10px;
-  width: 40px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text162 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-flight-list-item08 {
-  width: 100px;
-  height: 10px;
-}
-.flight-book-frame432 {
-  gap: 10px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text164 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame452 {
-  gap: 10px;
-  width: 56px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text166 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text167 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-frame472 {
-  gap: 10px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  justify-content: center;
-}
-.flight-book-text172 {
-  color: rgba(255, 94, 31, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text173 {
-  color: rgba(255, 94, 31, 1);
-  font-weight: 700;
-}
-.flight-book-frame502 {
-  gap: 2px;
-  display: flex;
-  padding: 10px;
-  align-self: stretch;
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame492 {
-  gap: 24px;
-  display: flex;
   align-items: flex-start;
 }
-.flight-book-navigation-item06 {
-  gap: 10px;
-  width: 172px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .navigation-item {
   display: flex;
   padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
 }
-.flight-book-text175 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .navigation-item .text {
+  color: #236EFF;
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }
-.flight-book-navigation-item07 {
-  gap: 10px;
-  width: 172px;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .BusBook__Payment {
   display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text177 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-navigation-item08 {
-  gap: 10px;
   width: 172px;
-  display: flex;
   padding: 16px 20px;
   align-items: flex-start;
+  gap: 10px;
   flex-shrink: 0;
   border-radius: 8px;
-  background-color: rgba(35, 110, 255, 0.800000011920929);
+  background: rgba(35, 110, 255, 0.8);
 }
-.flight-book-text179 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  flex-grow: 1;
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .BusBook__Payment .payment {
+  flex: 1;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
   font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-stretch: normal;
   text-decoration: none;
-}
-.flight-book-flight-list-item09 {
-  gap: 18px;
-  width: 760px;
-  display: flex;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
-}
-.flight-book-frame483 {
-  gap: 3px;
-  display: flex;
-  padding: 10px;
-  align-self: stretch;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame403 {
-  gap: 10px;
-  width: 328px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-}
-.flight-book-vector5 {
-  width: 32px;
-  height: 30px;
-}
-.flight-book-text181 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame463 {
-  display: flex;
-  align-items: center;
-}
-.flight-book-frame413 {
-  gap: 10px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  justify-content: center;
-}
-.flight-book-text183 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text184 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-flight-list-item10 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.flight-book-frame423 {
-  gap: 10px;
-  width: 40px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text189 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-flight-list-item11 {
-  width: 130px;
-  height: 10px;
-}
-.flight-book-frame433 {
-  gap: 10px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text191 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  font-size: 12px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-frame453 {
-  gap: 10px;
-  width: 56px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.flight-book-text193 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text194 {
-  color: rgba(0, 0, 0, 1);
-}
-.flight-book-frame473 {
-  gap: 10px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  justify-content: center;
-}
-.flight-book-text199 {
-  color: rgba(255, 94, 31, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-text200 {
-  color: rgba(255, 94, 31, 1);
-  font-weight: 700;
-}
-.flight-book-frame503 {
-  gap: 2px;
-  display: flex;
-  padding: 10px;
-  align-self: stretch;
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: space-between;
-}
-.flight-book-frame493 {
-  gap: 24px;
-  display: flex;
-  align-items: flex-start;
-}
-.flight-book-navigation-item09 {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text202 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-navigation-item10 {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 8px;
-  justify-content: center;
-}
-.flight-book-text204 {
-  color: rgba(104, 113, 118, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.flight-book-navigation-item11 {
-  gap: 10px;
-  width: 172px;
-  display: flex;
-  padding: 16px 20px;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: rgba(35, 110, 255, 0.800000011920929);
-}
-.flight-book-text206 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  flex-grow: 1;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
+}/*# sourceMappingURL=index.css.map */

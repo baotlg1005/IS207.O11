@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tìm kiếm chuyến xe</title>
+
+  <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/resources/css/main-style.css">
+  <link rel="stylesheet" href="/pages/coach-search-result/css/style.css">
+  <link rel="stylesheet" href="/pages/coach-search-result/css/index.css">
+  <link rel="stylesheet" href="/resources/css/btn.css">
+  <link rel="stylesheet" href="/resources/css/dropdown.css">
+  <link rel="stylesheet" href="/resources/css/input-block.css">
+  <link rel="stylesheet" href="/resources/css/feature__item.css">
+  <link rel="stylesheet" href="/resources/css/ad-slider.css">
+
+  <!-- Add CSS file here -->
+  <script src="/resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+  <script src="/resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+  <script src="/pages/coach-search-result/js/coach-search-page.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <header-component></header-component>
+
+  <!-- code here -->
+  <div class="BusBook">
+    <div class="BusBook__SearchBar">
+      <div class="Destination_and_Date">
+        <div class="SearchBar__Destiantion">
+          <div class="SearchBar__Des1">
+            <div class="text">Da Nang</div>
+          </div>
+          <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
+          <div class="SearchBar__Des2">
+            <div class="text">Ho Chi Minh city</div>
+          </div>
+        </div>
+        <div class="Date_and_Seat">
+          <div class="Date">
+            <div class="text">Thứ Hai, 23 tháng 10 2023</div>
+          </div>
+          <div class="Seat">
+            <div class="text">1 chỗ ngồi</div>
+          </div>
+        </div>
+      </div>
+      <a class="FeatureFrame__SubItem" href="/pages/3-coach-search/coach-seach.html">
+        <ion-icon name="search" class="icon"></ion-icon>
+        <div class="text">Đổi tìm kiếm</div>
+      </a>
+    </div>
+    <div class="BusBook__Main">
+      <div class="BusBook__Sorting">
+        <div class="BusSort__SortingList">
+          <div id="dropdown__Sorting--choice">
+            <div class="btn-dropdown dropdown__Sorting--choice">
+              <div class="info dropdown__Sorting--choice__info">
+                <div class="BusSort__SortingChoice">
+                  <div class="text">
+                    <p class="text--label">Sắp xếp:</p>
+                    <p class="text--choice">Giá thấp nhất</p>
+                  </div>
+                  <div class="icon">
+                    <img class="BusSort_SortingChoice--icon" alt="Slide down"
+                      src="./public/external/coach-slider__arrow.svg" />
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-panel dropdown-panel--set-quantity Sorting--choice__dropdown-panel hide">
+                <div class="dropdown-panel__item" data-passenger-type="adult">
+                  <input type="checkbox" id="myCheckbox" name="option1" value="Giá thấp nhất" class="CBox"
+                    style="margin-right: 20dp;">
+                  <div class="text rating-content">
+                    <label for="option1">Giá thấp nhất</label><br>
+                  </div>
+                </div>
+                <div class="dropdown-panel__item" data-passenger-type="adult">
+                  <input type="checkbox" id="myCheckbox" name="option2" value="Thời gian khởi hành sớm nhất"
+                    class="CBox" style="margin-right: 20dp;">
+                  <div class="text rating-content">
+                    <label for="option2">Thời gian khởi hành sớm nhất</label><br>
+                  </div>
+                </div>
+                <div class="dropdown-panel__item" data-passenger-type="adult">
+                  <input type="checkbox" id="myCheckbox" name="option3" value="Thời gian đến sớm nhất" class="CBox"
+                    style="margin-right: 20dp;">
+                  <div class="text rating-content">
+                    <label for="option3">Thời gian đến sớm nhất</label><br>
+                  </div>
+                </div>
+                <div class="dropdown-panel__item" data-passenger-type="adult">
+                  <input type="checkbox" id="myCheckbox" name="option4" value="Thời gian ngắn nhất" class="CBox"
+                    style="margin-right: 20dp;">
+                  <div class="text rating-content">
+                    <label for="option4">Thời gian ngắn nhất</label><br>
+                  </div>
+                </div>
+                <div class="dropdown-panel__item" data-passenger-type="adult">
+                  <input type="checkbox" id="myCheckbox" name="option5" value="Đánh giá cao nhất" class="CBox"
+                    style="margin-right: 20dp;">
+                  <div class="text rating-content">
+                    <label for="option5">Đánh giá cao nhất</label><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="SortingText">
+            <div class="SortingText-Filter">Bộ lọc:</div>
+            <button class="SortingText-ClearFilter">Đặt lại</button>
+          </div>
+          <div class="BusAdvanceSorting__List">
+            <div class="btn-dropdown BusAdvanceSorting__PickUp">
+                <div class="info dropdown__BusAdvanceSorting__PickUp__info">
+                  <div class="BusAdvanceSorting__PickUp__Choice">
+                    <div class="text">Chọn điểm lên xe</div>
+                    <div class="icon">
+                      <img class="BusSort_SortingChoice--icon" alt="Slide down"
+                      src="./public/external/coach-slider__arrow.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-panel dropdown-panel--set-quantity BusAdvanceSorting__PickUp__Choice__dropdown-panel hide">
+                  <div class="dropdown-panel__item" data-passenger-type="adult">
+                    <input type="checkbox" id="myCheckbox" name="coach-departure-place1" value="VP Đà Nẵng" class="CBox"
+                      style="margin-right: 20dp;">
+                    <div class="text">
+                      <label for="coach-departure-place1">VP Đà Nẵng</label><br>
+                    </div>
+                  </div>
+                  <div class="dropdown-panel__item" data-passenger-type="adult">
+                    <input type="checkbox" id="myCheckbox" name="coach-departure-place2" value="Bến xe Đức Long Đà Nẵng"
+                      class="CBox" style="margin-right: 20dp;">
+                    <div class="text">
+                      <label for="coach-departure-place2">Bến xe Đức Long Đà Nẵng</label><br>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="BusAdvanceSorting__Destination">
+              <div class="text">Chọn điểm đến
+
+              </div>
+              <div class="BusAdvanceSorting__Destination__Sorting-Choice">
+                <form>
+                  <input type="checkbox" id="choice-1" name="coach-destination-place1" value="VP An Sương">
+                  <label for="coach-destination-place1">VP An Sương</label><br>
+                  <input type="checkbox" id="choice-2" name="coach-destination-place2" value="VP Tân Bình">
+                  <label for="coach-destination-place2">VP Tân Bình</label><br>
+                  <input type="checkbox" id="choice-3" name="coach-destination-place3" value="Bến xe Miền Đông mới">
+                  <label for="coach-destination-place3">Bến xe Miền Đông mới</label><br>
+                  <input type="checkbox" id="choice-4" name="coach-destination-place4" value="Bến xe Miền Đông">
+                  <label for="coach-destination-place4">Bến xe Miền Đông</label><br>
+                </form>
+              </div>
+            </div>
+            <div class="BusAdvanceSorting__StartTime">
+              <div class="coach-book-sorting-list-item3">
+                <div class="sorting-list-item3--label">Giờ khởi hành</div>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
+              <div class="coach-book-sorting-list-item3-sorting-choice">
+                <form>
+                  <input type="checkbox" id="choice-1" name="coach-start-time1" value="00.00 - 06.00">
+                  <label for="coach-start-time1">00.00 - 06.00</label><br>
+                  <input type="checkbox" id="choice-2" name="coach-start-time2" value="06.00 - 12.00">
+                  <label for="coach-start-time2">06.00 - 12.00</label><br>
+                  <input type="checkbox" id="choice-3" name="coach-start-time3" value="12.00 - 18.00">
+                  <label for="coach-start-time3">12.00 - 18.00</label><br>
+                  <input type="checkbox" id="choice-4" name="coach-start-time4" value="18.00 - 00.00">
+                  <label for="coach-start-time4">18.00 - 00.00</label><br>
+                </form>
+              </div>
+            </div>
+            <div class="BusAdvanceSorting__ArriveTime">
+              <div class="coach-book-sorting-list-item4">
+                <span class="sorting-list-item4--label">
+                  <span>Giờ đến</span>
+                </span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
+              <div class="coach-book-sorting-list-item4-sorting-choice">
+                <form>
+                  <input type="checkbox" id="choice-1" name="coach-arrival-time1" value="00.00 - 06.00">
+                  <label for="coach-arrival-time1">00.00 - 06.00</label><br>
+                  <input type="checkbox" id="choice-2" name="coach-arrival-time2" value="06.00 - 12.00">
+                  <label for="coach-arrival-time2">06.00 - 12.00</label><br>
+                  <input type="checkbox" id="choice-3" name="coach-arrival-time3" value="12.00 - 18.00">
+                  <label for="coach-arrival-time3">12.00 - 18.00</label><br>
+                  <input type="checkbox" id="choice-4" name="coach-arrival-time4" value="18.00 - 00.00">
+                  <label for="coach-arrival-time4">18.00 - 00.00</label><br>
+                </form>
+              </div>
+            </div>
+            <div class="BusAdvanceSorting__BusBrand">
+              <div class="coach-book-sorting-list-item5">
+                <span class="sorting-list-item5--label">
+                  <span>Hãng xe khách</span>
+                </span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
+              <div class="coach-book-sorting-list-item5-sorting-choice">
+                <form>
+                  <input type="checkbox" id="choice-1" name="coach-brand1" value="Dinh Nhan">
+                  <label for="coach-brand1">Dinh Nhan</label><br>
+                  <input type="checkbox" id="choice-2" name="coach-brand2" value="Tam Minh Phuong">
+                  <label for="coach-brand2">Tam Minh Phuong</label><br>
+                </form>
+              </div>
+            </div>
+            <div class="BusAdvanceSorting__Goods">
+              <div class="coach-book-sorting-list-item6">
+                <span class="sorting-list-item6--label">
+                  <span>Tiện ích</span>
+                </span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="coach-book-sorting-list-item6-sorting-choice">
+                  <form>
+                    <input type="checkbox" id="choice-1" name="coach-utility1" value="Máy lạnh">
+                    <label for="coach-utility1">Máy lạnh</label><br>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="BusAdvanceSorting__Seats">
+              <div class="coach-book-sorting-list-item7">
+                <span class="sorting-list-item7--label">
+                  <span>Kiểu ghế ngồi</span>
+                </span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="coach-book-sorting-list-item7-sorting-choice">
+                  <form>
+                    <input type="checkbox" id="choice-1" name="coach-seat-type1" value="1 - 20 chỗ">
+                    <label for="coach-seat-type1">1 - 20 chỗ</label><br>
+                    <input type="checkbox" id="choice-2" name="coach-seat-type2" value="21 - 30 chỗ">
+                    <label for="coach-seat-type2">21 - 30 chỗ</label><br>
+                    <input type="checkbox" id="choice-3" name="coach-seat-type3" value="31 - 40 chỗ">
+                    <label for="coach-seat-type3">31 - 40 chỗ </label><br>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="BusBook__BusList">
+        <div class="BusBook__BusItem">
+          <div class="BusBook__BusBrand">
+            <div class="text">Dinh Nhan</div>
+          </div>
+          <div class="BusBook__Place_Time_Price">
+            <div class="BusBook__Depature_Info">
+              <div class="BusBook__Start_Time">08:30</div>
+              <div class="BusBook__Start_Place">VP Đà Nẵng</div>
+            </div>
+            <div class="icon">
+              <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
+            </div>
+            <div class="BusBook__Arrival_Info">
+              <div class="BusBook__Arrival_Time">03:40</div>
+              <div class="BusBook__Arrival_Place">VP An Sương</div>
+            </div>
+            <div class="BusBook__Duration">
+              <div class="time">19 giờ 10 phút</div>
+            </div>
+            <div class="BusBook__Price">
+              <div class="price">450.000 VND</div>
+              <div class="units">/khách</div>
+            </div>
+          </div>
+          <div class="BusBook__Detail_Payment">
+            <div class="navigation-item">
+              <b class="text">Chi tiết</b>
+            </div>
+            <div class="BusBook__Payment">
+              <a class="payment" href="/pages/pages/payment.html">Chọn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer-component></footer-component>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
