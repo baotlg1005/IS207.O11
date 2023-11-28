@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả tìm kiếm</title>
+
+    <!-- <meta property="twitter:card" content="summary_large_image" /> -->
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/resources/css/main-style.css">
+
+    <link rel="stylesheet" href="/resources/css/btn.css">
+    <link rel="stylesheet" href="/resources/css/dropdown.css">
+    <link rel="stylesheet" href="/resources/css/input-block.css">
+    <link rel="stylesheet" href="/resources/css/feature__item.css">
+    <link rel="stylesheet" href="/resources/css/ad-slider.css">
+    <!-- <link href="./css/index.css" rel="stylesheet" /> -->
+    <!-- <link rel="stylesheet" href="./css/hotel-seach.css"> -->
+
+    <script src="./js/hotel-search-result.js" type="text/javascript" defer></script>
+
+    <link rel="stylesheet" href="./css/hotel-result.css">
+    <!-- <link rel="stylesheet" href="./css/feature__hotel-search.css"> -->
+
+    <script src="/resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="/resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <header-component></header-component>
+    <div class="container main-content" id="info_search">
+      <div id="feature__hotel-search" class="container-fluid feature__item">
+        <div class="hotel-search__config config">
+          <div class="btn-dropdown">
+              <ion-icon name="location-outline"></ion-icon>
+              <div class="text">Đà Nẵng, Việt Nam</div>
+          </div>
+          <div class="btn-dropdown">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <div class="text">09 thg 10 - 10 thg 10, 1 đêm</div>
+          </div>
+          <div class="btn-dropdown">
+            <ion-icon class="icon" name="people"></ion-icon>
+            <div class="text">1 Người lớn, 0 trẻ em, 1 phòng</div>
+          </div>
+          <div class = "btn-default ReSearch-Button" style="background-color: #FF7A50">
+            <div>Tìm khách sạn</div>
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="info_hotel-book-sorting" style="margin-top:0; width: 290px;">
+        <div class="hotel-book-sorting-text">
+          <div class="hotel-filter-text">Bộ lọc:</div>
+          <button class="hotel-book-text-reset" id="hotel-reset-text">Đặt lại</button>
+        </div>
+        <div id="facilities-filter-container" style="width: auto;display:flex; flex-direction: row; margin-top: 5px; gap: 2px;"></div>
+        <div id="all-filter-container" style="width: 300px; display: flex; flex-direction: column; margin-top: 5px;"></div>
+      </div> -->
+    </div>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <div class="container main-content">
+      <div class="hotel-book-container">
+        <!-- <div class="hotel-book-sorting">
+          <div class="info_hotel-book-sorting" style="margin-top:0; width: 290px;">
+            <div class="hotel-book-sorting-text">
+              <div class="hotel-filter-text">Bộ lọc:</div>
+              <button class="hotel-book-text-reset" id="hotel-reset-text">Đặt lại</button>
+            </div>
+            <div class="filter-container-class" id="filter-container-">
+              <div id="facilities-filter-container" style="width: auto;display:flex; flex-direction: row; margin-top: 5px; gap: 2px;"></div>
+              <div id="all-filter-container" style="width: auto; display: flex; flex-direction: column; margin-top: 5px;"></div>
+            </div>
+          </div>
+          <div id ="hotel-book-advance-sorting-list-id" class="hotel-book-advance-sorting-list">
+            <div id = 'price-hotel' class="filter-hotel">
+              <div class="btn-dropdown rating-hotel-quantity" style="min-width: 15rem;">
+                <div class="wrapper">
+                  <div class="select-hotel-price">
+                    <div class="text" style="color: black">Phạm vi giá</div>
+                    <div id="reset-filter" class="text" style="color: black">Đặt lại</div>
+                  </div>
+                  <div class="price-input">
+                    <div class="field">
+                      <div class="text" style="color: black; font-size: 10px;">VND</div>
+                      <input id="InputMin" type="number" class="input-min" value="0" style="border: none">
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                      <div class="text" style="color: black; font-size: 10px;">VND</div>
+                      <input id="InputMax" type="number" class="input-max" value="24000000" style="border: none">
+                    </div>
+                  </div>
+                  <div class="slider">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="24000000" value="0" step="200">
+                    <input type="range" class="range-max" min="0" max="24000000" value="24000000" step="200">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id = 'rating-hotel' class="filter-hotel" style="width: 270px; margin-top: 15px;">
+              <div class="btn-dropdown rating-hotel-quantity" style="min-width: 15rem;">
+                <div class="info rating-hotel-quantity__info">
+                    <div class="text" style="color: black">
+                      Hạng sao
+                    </div>
+                    <div class="arrow-icon">
+                      <ion-icon class="drop-down-icon" name="chevron-down-outline" style="color: black"></ion-icon>
+                    </div>
+                </div>
+                <div class="dropdown-panel dropdown-panel--set-quantity rating-hotel-quantity__dropdown-panel hide">
+                    <div class="dropdown-panel__item" data-passenger-type="adult" style="gap: 1px">
+                      <input type="checkbox" id="myCheckbox" class = "CBox" style="margin-right: 20dp;">
+                      <div class="text rating-content">
+                        <ion-icon name="star" class="star" style="color:rgb(255, 255, 0)"></ion-icon>
+                      </div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "CBox" style="margin-right: 20dp;">
+                      <div class="text rating-content">
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                      </div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "CBox" style="margin-right: 20dp;">
+                      <div class="text rating-content">
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                      </div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "CBox" style="margin-right: 20dp;">
+                      <div class="text rating-content">
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                      </div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "CBox" style="margin-right: 20dp;">
+                      <div class="text rating-content">
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                        <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div id="facilities-hotel" style="width: 270px; margin-top: 5px;">
+              <div class="btn-dropdown guest-and-room-quantity" style="min-width: 15rem;">
+                <div class="info guest-and-room-quantity__info">
+                    <div class="text" style="color: black">
+                            Tiện nghi
+                    </div>
+                    <div class="arrow-icon">
+                      <ion-icon class="drop-down-icon" name="chevron-down-outline" style="color: black"></ion-icon>
+                    </div>
+                </div>
+                <div class="dropdown-panel dropdown-panel--set-quantity guest-and-room-quantity__dropdown-panel hide">
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "FacilitiesCBox">
+                      <div class="text facilities-content">Wifi</div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "FacilitiesCBox">
+                      <div class="text facilities-content">Swimming Pool</div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "FacilitiesCBox">
+                      <div class="text facilities-content">Restaurant</div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "FacilitiesCBox">
+                      <div class="text facilities-content">24-Hour Front Desk</div>
+                    </div>
+                    <div class="dropdown-panel__item" data-passenger-type="adult">
+                      <input type="checkbox" id="myCheckbox" class = "FacilitiesCBox">
+                      <div class="text facilities-content">Elevator</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="container detail-hotel-book">
+          <div id ="detail-hotel-book-list-id" class="detail-hotel-book-list">
+            <div id="hotel-item-template" class = "hotel-item">
+              <div class="image-hotel-item">
+                <!-- <img src="./images/hotel1.jpg" alt="hotel1" class="image-hotel-item"> -->
+              </div>
+              <div class="hotel-item-info">
+                <div class="hotel-item-1">
+                  <div id = "hotel-name" class="name-hotel-item">
+                      Davue Hotel Da Nang
+                  </div>
+                  <!-- <div class="rating-hotel-item">
+                    <div class="hotel-rating-point" style="margin-bottom:5px">8.7</div>
+                    <div style="color:#687176">Ấn tượng</div>
+                  </div> -->
+                  <div class="price-hotel-item">1.052.000 VND</div>
+                </div>
+                <!-- <div class="rating-star-hotem-item">
+                  <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                  <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                  <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                  <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                  <ion-icon name="star" class="star" style="color:yellow"></ion-icon>
+                </div> -->
+                <div class="hotel-item-2">
+                  <div class="hotel-book-position-frame">
+                      <ion-icon name="location-outline" style="color: black; width: 20px; height: 20px;"></ion-icon>
+                      <div id="position-hotel" class="hotel-book-position-text">
+                            Mĩ An, Đà Nẵng
+                      </div>
+                  </div>
+                </div>
+                <div class="selected-btn-frame">
+                  <div class="selected-btn"> Chọn phòng </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
