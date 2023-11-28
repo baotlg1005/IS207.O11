@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../resources/css/main-style.css">
+    <link rel="stylesheet" href="../../resources/css/input-block.css">
+    <link rel="stylesheet" href="../../resources/css/btn.css">
+    <link rel="stylesheet" href="./css/transfer-display.css">
+
+    <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+    <header-component></header-component>
+    <div class="container main-container">
+        <div id="search-container">
+            <div class="search-info-container">
+                <div id="search-info-title" class="title">
+                    Có tài xế
+                </div>
+                <div id ="search-info-description" class="description">
+                    Tan Son Nhat International Airport (SGN) • Thứ 2, 06 thg 11 2023 09:00 - Thứ 4, 08 thg 11 2023 09:00
+                </div>
+            </div>
+            <div class="change-search-info-container">
+                <a id="change-search-info" class="btn-default btn-submit" href="../transfer-search/transfer-search.html">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <div class="text">Thay đổi tìm kiếm</div>
+                </a>
+            </div>
+        </div>
+        <div id="filter-container">
+            <div class="title">
+                BỘ LỌC:
+            </div>
+            <div class="filter-items">
+                <div id="num-of-customer" class="filter-item">
+                    <div class="type-of-item-filter">
+                        <div class="text">
+                            Số khách tối đa
+                        </div>
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Số hành khách tối đa</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                4
+                            </div>
+                        </div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                5-6
+                            </div>
+                        </div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                >6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="num-in-car" class="filter-item">
+                    <div class="type-of-item-filter">
+                        <div class="text">
+                            Số xe
+                        </div>
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Số xe</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                Tự động
+                            </div>
+                        </div>
+                        <div class="item-filter unselect hide">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                Số sàn
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="type-of-car" class="filter-item">
+                    <div class="type-of-item-filter">
+                        <div class="text">
+                            Loại xe
+                        </div>
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    </div>
+
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Loại xe</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                City Car
+                            </div>
+                        </div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                Compact MPV
+                            </div>
+                        </div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                SUV
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="provider" class="filter-item">
+                    <div class="type-of-item-filter">
+                        <div class="text">
+                            Nhà cung cấp
+                        </div>
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    </div>
+
+                    <div class="dropdown-item-filter hide">
+                        <div class ="title">Nhà cung cấp</div>
+                        <div class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="checkbox-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="checkbox"></ion-icon>
+                            <div class="text">
+                                Mioto Ho Chi Minh City
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sort" class="filter-item">
+                    <div class="type-of-item-filter">
+                        <div class="text">
+                            Sắp xếp
+                        </div>
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <div class="dropdown-item-filter hide">
+                        <div class="title">Sắp xếp theo</div>
+                        <div id="max-price" class="item-filter unselect">
+                            <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                            <ion-icon class="icon select hide" name="ellipse"></ion-icon>
+                            <div class="text">
+                                Giá cao nhất
+                            </div>
+                        </div>
+                        <div id="min-price" class="item-filter select">
+                            <ion-icon class="icon unselect hide" name="ellipse-outline"></ion-icon>
+                            <ion-icon class="icon select" name="ellipse"></ion-icon>
+                            <div class="text">
+                                Giá thấp nhất
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result-container">
+            
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+    <script src="./js/transfer-display.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
