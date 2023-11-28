@@ -232,14 +232,12 @@
   color: #000;
   font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 .BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .BusAdvanceSorting__PickUp__Choice .icon {
   flex: 1;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 .BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .dropdown-panel__item {
   color: rgb(0, 0, 0);
