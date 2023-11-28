@@ -21,73 +21,17 @@ if ($action!='getLocation')
     }
 }
 
-if ($action == 'showResult')
-{
-    $sql = "SELECT taxi.Id,taxi.Name,taxi.Luggage,taxi.NumofSeat,taxi.Price,taxi_type.Type 
-    FROM taxi,taxi_area,taxi_area_detail,taxi_type 
-    WHERE taxi.Type_id=taxi_type.Id and taxi.Id=taxi_area_detail.Taxi_id and taxi_area_detail.Pickpoint_id=taxi_area.Id and taxi.Type_id = $searchedTransferInfo->haveDriver and taxi.State='Free' and taxi_area.PickPoint LIKE '$searchedTransferInfo->location%'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0)
-    {
-        while ($row = $result->fetch_assoc())
-        {
-            $data = $result->fetch_all(MYSQLI_ASSOC);
-            echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        }
-    }
-    else
-    {
-        echo "No result found";
-    }
-    $conn->close();
-}
-if ($action == 'showResult')
-{
-    $sql = "SELECT taxi.Id,taxi.Name,taxi.Luggage,taxi.NumofSeat,taxi.Price,taxi_type.Type 
-    FROM taxi,taxi_area,taxi_area_detail,taxi_type 
-    WHERE taxi.Type_id=taxi_type.Id and taxi.Id=taxi_area_detail.Taxi_id and taxi_area_detail.Pickpoint_id=taxi_area.Id and taxi.Type_id = $searchedTransferInfo->haveDriver and taxi.State='Free' and taxi_area.PickPoint LIKE '$searchedTransferInfo->location%'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0)
-    {
-        while ($row = $result->fetch_assoc())
-        {
-            $data = $result->fetch_all(MYSQLI_ASSOC);
-            echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        }
-    }
-    else
-    {
-        echo "No result found";
-    }
-    $conn->close();
-}
-if ($action == 'showResultASC')
-{
+if ($action=='showResultASC'||$action=='showResultDESC')
+{if ($action == 'showResultASC'){
     $sql = "SELECT taxi.Id,taxi.Name,taxi.Luggage,taxi.NumofSeat,taxi.Price,taxi_type.Type 
     FROM taxi,taxi_area,taxi_area_detail,taxi_type 
     WHERE taxi.Type_id=taxi_type.Id and taxi.Id=taxi_area_detail.Taxi_id and taxi_area_detail.Pickpoint_id=taxi_area.Id and taxi.Type_id = $searchedTransferInfo->haveDriver and taxi.State='Free' and taxi_area.PickPoint LIKE '$searchedTransferInfo->location%'
-    ORDER BY taxi.Price ASC;";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0)
-    {
-        while ($row = $result->fetch_assoc())
-        {
-            $data = $result->fetch_all(MYSQLI_ASSOC);
-            echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        }
-    }
-    else
-    {
-        echo "No result found";
-    }
-    $conn->close();
-}
-if ($action == 'showResultDESC')
-{
+    ORDER BY taxi.Price ASC;";}
+else {
     $sql = "SELECT taxi.Id,taxi.Name,taxi.Luggage,taxi.NumofSeat,taxi.Price,taxi_type.Type 
     FROM taxi,taxi_area,taxi_area_detail,taxi_type 
     WHERE taxi.Type_id=taxi_type.Id and taxi.Id=taxi_area_detail.Taxi_id and taxi_area_detail.Pickpoint_id=taxi_area.Id and taxi.Type_id = $searchedTransferInfo->haveDriver and taxi.State='Free' and taxi_area.PickPoint LIKE '$searchedTransferInfo->location%'
-    ORDER BY taxi.Price DESC;";
+    ORDER BY taxi.Price DESC;";}
     $result = $conn->query($sql);
     if ($result->num_rows > 0)
     {
@@ -109,11 +53,8 @@ if ($action == 'getLocation')
     $result = $conn->query($sql);
     if ($result->num_rows > 0)
     {
-        while ($row = $result->fetch_assoc())
-        {
             $data = $result->fetch_all(MYSQLI_ASSOC);
             echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        }
     }
     else
     {

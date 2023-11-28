@@ -6,6 +6,13 @@ const sort = document.querySelector("#sort")
 const itemSort = sort.querySelectorAll(".item-filter")
 const searchInfoTitle = document.getElementById("search-info-title")
 const searchInfoDescription = document.getElementById("search-info-description")
+fetch('../../resources/images/imgs_taxi.json')
+  .then(response => response.json())
+  .then(data => {
+    const imgs = data.imgs;
+    console.log(imgs);
+  });
+
 
 filterItems.forEach(item=>{
     const typeOfFilter = item.querySelector(".type-of-item-filter")
@@ -74,9 +81,18 @@ function createResultItem(data){
             count++
         }
     }
+    let link = ''
+    for (let item of imgs){
+        if (item.img_name in data.Name){
+            link = item.img_link
+            break
+        }
+    }
+    if (link==''){
+        link = 'https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140'}
     document.getElementById("result-container").innerHTML+=
     `<div id="${data.Id}" class="result-item">
-    <img src="https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140"
+    <img src="${link}"
         alt="" class="result-item-img">
     <div class="col">
         <div class="text-info">
