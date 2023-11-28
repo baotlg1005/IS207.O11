@@ -119,27 +119,3 @@ window.onload = function (e) {
   xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   xhttp.send(`action=showresult&seatType=${flightSearchInfo.seatType}&departure=${flightSearchInfo.oneFlightInfo.departure}&destination=${flightSearchInfo.oneFlightInfo.destination}&departureDate=${flightSearchInfo.oneFlightInfo.departureDate}&haveReturn=${flightSearchInfo.oneFlightInfo.haveReturn}&returnDate=${flightSearchInfo.oneFlightInfo.returnDate}`);
 }
-
-// let flightSearchInfo = {
-//   flightType: "one",
-//   passengerQuantity: {
-//       adult: 1,
-//       child: 0,
-//       baby: 0
-//   },
-//   seatType: "economy",
-//   oneFlightInfo: {
-//       departure: "",
-//       destination: "",
-//       departureDate: "",
-//       haveReturn: false,
-//       returnDate: "",
-//   },
-//   manyFlightInfo: [
-//       {
-//           departure: "",
-//           destination: "",
-//           departureDate: "",
-//       }
-//   ],
-// }
