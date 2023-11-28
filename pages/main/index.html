@@ -35,41 +35,41 @@
 
     <div id="header" class="container-fluid header-container">
         <div class="container header__top-content">
-            <div class="top-content__brand-container">
+            <a class="top-content__brand-container" href="#">
                 <div class="brand-container__brand-logo">
                     <img class="brand-logo" src="../../resources/images/logo.png">
                 </div>
                 <div class="brand-container__brand-name">
                     <p class="text">travelowkey</p>
                 </div>
-            </div>
+            </a>
             <div class="top-content__account-btn-group">
-                <a class="btn-default account-btn-group__login-btn" href="../login/login.html">
+                <a class="btn-default account-btn-group__login-btn" href="../login">
                     <ion-icon class="login-btn__icon" name="person-outline"></ion-icon>
                     <div class="text">Đăng nhập</div>
                 </a>
-                <a class="btn-default account-btn-group__sign-up-btn" href="../signup/signup.html">
+                <a class="btn-default account-btn-group__sign-up-btn" href="../signup">
                     <div class="text">Đăng ký</div>
                 </a>
             </div>
         </div>
         <nav class="container header__navbar">
-            <a class="navbar__item" href="../flight-search/flight-search.html">
+            <a class="navbar__item" href="../flight-search">
                 <div class="text">
                     Vé máy bay
                 </div>
             </a>
-            <a class="navbar__item" href="../coach-search/coach-seach.html">
+            <a class="navbar__item" href="../coach-search">
                 <div class="text">
                     Vé xe khách
                 </div>
             </a>
-            <a class="navbar__item" href="../transfer-search/transfer-search.html">
+            <a class="navbar__item" href="../transfer-search">
                 <div class="text">
                     Xe dịch vụ
                 </div>
             </a>
-            <a class="navbar__item" href="../hotel-search/hotel-search.html">
+            <a class="navbar__item" href="../hotel-search">
                 <div class="text">
                     Khách sạn
                 </div>
@@ -112,7 +112,8 @@
         <svg class="container-fluid divine-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 2" fill="none">
             <path d="M0 1H1152" stroke="white" stroke-width="2" />
         </svg>
-        <div id="feature__flight-search" class="container-fluid feature__item feature-container__item show" data-feature-type="flight">
+        <div id="feature__flight-search" class="container-fluid feature__item feature-container__item show"
+            data-feature-type="flight">
             <div class="flight-search__config config">
                 <div class="config__flight-type" data-flight-type="one">
                     <div class="btn-toggle active" data-flight-type="one">
@@ -135,7 +136,8 @@
                             </div>
                             <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                         </div>
-                        <div class="dropdown-panel dropdown-panel--set-quantity passenger-quantity__dropdown-panel hide">
+                        <div
+                            class="dropdown-panel dropdown-panel--set-quantity passenger-quantity__dropdown-panel hide">
                             <div class="dropdown-panel__title">
                                 <div class="text">Số hành khách</div>
                             </div>
@@ -221,13 +223,8 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__departure" 
-                                class="departure__input" 
-                                type="text"
-                                placeholder="Điểm đi" 
-                                autocomplete="off"
-                            >
+                            <input id="flight-search__departure" class="departure__input" type="text"
+                                placeholder="Điểm đi" autocomplete="off">
                         </div>
                     </div>
                     <div class="input-block left-connect">
@@ -238,13 +235,8 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__destination" 
-                                class="destination__input" 
-                                type="text"
-                                placeholder="Điểm đến" 
-                                autocomplete="off"
-                            >
+                            <input id="flight-search__destination" class="destination__input" type="text"
+                                placeholder="Điểm đến" autocomplete="off">
                         </div>
                     </div>
                 </div>
@@ -253,36 +245,25 @@
                         <div class="title">
                             <div class="text">
                                 Ngày đi
-                            </div> 
+                            </div>
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__departure-date" 
-                                class="departure-date__input" 
-                                type="date" 
-                                placeholder="Ngày đi"
-                            >
+                            <input id="flight-search__departure-date" class="departure-date__input" type="date"
+                                placeholder="Ngày đi">
                         </div>
                     </div>
                     <div class="input-block left-connect">
                         <div class="title">
-                            <input 
-                                id="flight-search__have-return" 
-                                type="checkbox" 
-                            >
+                            <input id="flight-search__have-return" type="checkbox">
                             <div class="text">
                                 Khứ hồi
                             </div>
                         </div>
                         <div class="input disabled">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__return-date" 
-                                class="return-date__input" 
-                                type="date"
-                                placeholder="Ngày về"
-                            >
+                            <input id="flight-search__return-date" class="return-date__input" type="date"
+                                placeholder="Ngày về">
                         </div>
                     </div>
                 </div>
@@ -291,7 +272,7 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </div>
                 </div>
-                
+
             </form>
             <form action="" id="flight-search__search-form--many" class="search-form search-form--many hide">
                 <div class="search-form-container">
@@ -305,12 +286,8 @@
                                 </div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                                    <input 
-                                        class="departure__input" 
-                                        type="text"
-                                        placeholder="Điểm đi" 
-                                        autocomplete="off"
-                                    >
+                                    <input class="departure__input" type="text" placeholder="Điểm đi"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="input-block left-connect">
@@ -321,12 +298,8 @@
                                 </div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                                    <input 
-                                        class="destination__input" 
-                                        type="text"
-                                        placeholder="Điểm đến" 
-                                        autocomplete="off"
-                                    >
+                                    <input class="destination__input" type="text" placeholder="Điểm đến"
+                                        autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -335,15 +308,11 @@
                                 <div class="title">
                                     <div class="text">
                                         Ngày đi
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="input">
                                     <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                                    <input 
-                                        class="departure-date__input" 
-                                        type="date" 
-                                        placeholder="Ngày đi"
-                                    >
+                                    <input class="departure-date__input" type="date" placeholder="Ngày đi">
                                 </div>
                             </div>
                         </div>
@@ -368,7 +337,8 @@
                 </div>
             </form>
         </div>
-        <div id="feature__coach-search" class="container-fluid feature__item feature-container__item hide" data-feature-type="coach">
+        <div id="feature__coach-search" class="container-fluid feature__item feature-container__item hide"
+            data-feature-type="coach">
             <div class="coach-search__config config">
                 <div class="btn-dropdown config__passenger-quantity">
                     <div class="info">
@@ -464,7 +434,8 @@
                 </div>
             </form>
         </div>
-        <div id="feature__transfer-search" class="container-fluid feature__item feature-container__item hide" data-feature-type="transfer">
+        <div id="feature__transfer-search" class="container-fluid feature__item feature-container__item hide"
+            data-feature-type="transfer">
             <div class="transfer-search__config config">
                 <div id="config__have-driver-checkbox" class="">
                     <ion-icon class="unchecked" name="ellipse-outline"></ion-icon>
@@ -543,7 +514,8 @@
                 </div>
             </form>
         </div>
-        <div id="feature__hotel-search" class="container-fluid feature__item feature-container__item hide" data-feature-type="hotel">
+        <div id="feature__hotel-search" class="container-fluid feature__item feature-container__item hide"
+            data-feature-type="hotel">
             <div class="hotel-search__config config">
                 <div class="btn-dropdown guest-and-room-quantity">
                     <div class="info guest-and-room-quantity__info">
@@ -553,7 +525,8 @@
                         </div>
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
-                    <div class="dropdown-panel dropdown-panel--set-quantity guest-and-room-quantity__dropdown-panel hide">
+                    <div
+                        class="dropdown-panel dropdown-panel--set-quantity guest-and-room-quantity__dropdown-panel hide">
                         <div class="dropdown-panel__title">
                             <div class="text">Số hành khách</div>
                         </div>
@@ -566,8 +539,7 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">1</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
+                                <ion-icon class="set-quantity__icon decrease" name="remove-circle-outline"></ion-icon>
                             </div>
                         </div>
                         <div class="dropdown-panel__item" data-passenger-type="child">
@@ -579,8 +551,7 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">0</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
+                                <ion-icon class="set-quantity__icon decrease" name="remove-circle-outline"></ion-icon>
                             </div>
                         </div>
                         <div class="dropdown-panel__item" data-passenger-type="room">
@@ -591,8 +562,7 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">1</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
+                                <ion-icon class="set-quantity__icon decrease" name="remove-circle-outline"></ion-icon>
                             </div>
                         </div>
                         <div class="dropdown-panel__confirm-btn">
