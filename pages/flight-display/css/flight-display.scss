@@ -256,7 +256,7 @@ body {
             padding: 1.33333rem 1.66667rem;
             align-items: center;
             gap: 0.83333rem;
-            width: 50%;
+            width: 30%;
             ion-icon {
               font-size: 2.5rem;
               color: #236eff;
@@ -329,6 +329,18 @@ body {
             }
           }
         }
+      }
+    }
+
+    #btn-showMore {
+      border: 0px!important;
+      margin-bottom: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      .text {
+        font-weight: 700;
+        color: #236eff;
       }
     }
   }
