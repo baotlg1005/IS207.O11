@@ -94,6 +94,6 @@ submitBtn.addEventListener('click', () => {
         alert('Start time must be before end time');
         return;
     }
-    window.location.href = '../transfer-display/transfer-display.html'
+    window.location.href = '../transfer-display/'
     sessionStorage.setItem('transferSearchInfo', JSON.stringify(transferSearchInfo))
 })
