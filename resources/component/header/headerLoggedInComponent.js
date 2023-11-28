@@ -1,6 +1,6 @@
-const headerTemplate = document.createElement("template");
+const headerLoggedInTemplate = document.createElement("template");
 
-headerTemplate.innerHTML = `
+headerLoggedInTemplate.innerHTML = `
     <style>
     * {
     padding: 0;
@@ -201,7 +201,7 @@ headerTemplate.innerHTML = `
 
 `;
 
-class Header extends HTMLElement {
+class HeaderLoggedIn extends HTMLElement {
   constructor() {
     super();
   }
@@ -209,8 +209,8 @@ class Header extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "closed" });
 
-    shadowRoot.appendChild(headerTemplate.content);
+    shadowRoot.appendChild(headerLoggedInTemplate.content);
   }
 }
 
-customElements.define("header-logged-in-component", Header);
+customElements.define("header-logged-in-component", HeaderLoggedIn);
