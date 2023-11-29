@@ -1,3 +1,12 @@
+.title {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.71429rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .BusBook {
   width: 100%;
   display: flex;
@@ -126,7 +135,6 @@
 .BusBook .BusBook__Main {
   display: flex;
   align-items: flex-start;
-  flex-direction: row;
   padding: 15px;
   gap: 40px;
 }
@@ -253,6 +261,7 @@
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 5rem;
 }
 .BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem .BusBook__BusBrand {
   display: flex;
@@ -417,6 +426,16 @@
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
+}
+.BusBook .BusBook__Main #btn-showMore {
+  border: 0px !important;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.BusBook .BusBook__Main #btn-showMore .text {
+  font-weight: 700;
+  color: #236eff;
 }
 
 #sort-container {

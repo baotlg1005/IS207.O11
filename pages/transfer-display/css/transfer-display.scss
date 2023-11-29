@@ -264,5 +264,24 @@ body{
                 }
             }
         }
+        #btn-showMore {
+            border: 0px!important;
+            margin-bottom: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+        
+            .text {
+                font-weight: 700;
+                color: #236eff;
+            }
+            }
     }
+    .title{
+        color: #000;
+        font-family: Inter;
+        font-size: 1.71429rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
 }

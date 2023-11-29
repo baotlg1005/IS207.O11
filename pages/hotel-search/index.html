@@ -113,7 +113,9 @@
                         <div class="input">
                             <ion-icon class="icon" name="location" style="color: #236eff;"></ion-icon>
                             <input id="hotel-search__location" class="location__input" type="text"
-                                placeholder="Địa điểm" autocomplete="off">
+                                placeholder="Địa điểm" autocomplete="off" list="location">
+                                <datalist id="location">
+                                </datalist>
                         </div>
                     </div>
                 </div>
@@ -127,7 +129,7 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input id="hotel-search__checkin-date" class="checkin-date__input" type="text"
+                            <input id="hotel-search__checkin-date" class="checkin-date__input" type="date"
                                 placeholder="Ngày nhận phòng" autocomplete="off">
                         </div>
                     </div>
@@ -139,13 +141,13 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input id="hotel-search__checkout-date" class="checkout-date__input" type="text"
+                            <input id="hotel-search__checkout-date" class="checkout-date__input" type="date"
                                 placeholder="Ngày trả phòng" autocomplete="off">
                         </div>
                     </div>
-                    <a id="search-form__submit-btn--hotel" class="btn-submit left-connect" href="../hotel-display/">
+                    <div id="search-form__submit-btn--hotel" class="btn-submit left-connect">
                         <ion-icon name="search-outline"></ion-icon>
-                    </a>
+                    </div>
                 </div>
             </form>
         </div>

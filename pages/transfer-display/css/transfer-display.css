@@ -264,4 +264,22 @@ body .main-container #result-container .result-item .col .booking a .text {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+body .main-container #btn-showMore {
+  border: 0px !important;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container #btn-showMore .text {
+  font-weight: 700;
+  color: #236eff;
+}
+body .title {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.71429rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }/*# sourceMappingURL=transfer-display.css.map */

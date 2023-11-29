@@ -87,7 +87,9 @@
                         <div class="input">
                             <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
                             <input id="coach-search__departure" class="departure__input" type="text"
-                                placeholder="Điểm đi" autocomplete="off">
+                                placeholder="Điểm đi" autocomplete="off" list="departure-location">
+                                <datalist id="departure-location">
+                                </datalist>
                         </div>
                         <div class="recommend-panel">
                             <div class="panel__item hide" data-type = "Template">
@@ -109,7 +111,9 @@
                         <div class="input">
                             <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
                             <input id="coach-search__destination" class="destination__input" type="text"
-                                placeholder="Điểm đến" autocomplete="off">
+                                placeholder="Điểm đến" autocomplete="off" list="arrival-location">
+                                <datalist id="arrival-location">
+                                </datalist>
                         </div>
                     </div>
                 </div>
@@ -141,9 +145,9 @@
                     </div>
                 </div>
                 <div class="search-form__btn-container">
-                    <a id="search-form__submit-btn--coach" class="btn-submit" href="../coach-display/">
+                    <div id="search-form__submit-btn--coach" class="btn-submit"">
                         <ion-icon name="search-outline"></ion-icon>
-                    </a>
+                    </div>
                 </div>
             </form>
         </div>

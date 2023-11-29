@@ -261,3 +261,39 @@ const departureDateInputs = featureFlightSearch.querySelectorAll(".departure-dat
 departureDateInputs.forEach(input => {
     input.value = todayDate
 })
+window.onload = function (e) {
+    let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            try{
+            console.log(this.responseText);
+            let locations = JSON.parse(this.responseText);
+                locations.forEach(item=>{
+                    document.getElementById("departureLocation").innerHTML += `<option>${item.From}</option>`
+                })
+            }
+            catch(e){
+                console.log(e);
+            }}
+          }
+        xhttp.open("POST", "../../server/data-controller/flight/get-data.php", true);
+        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp.send(`action=getDepartureLocation`)
+    let xhttp2 = new XMLHttpRequest();
+        xhttp2.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            try{
+            console.log(this.responseText);
+            let locations = JSON.parse(this.responseText);
+                locations.forEach(item=>{
+                    document.getElementById("arrivalLocation").innerHTML += `<option>${item.To}</option>`
+                })
+            }
+            catch(e){
+                console.log(e);
+            }}
+          }
+        xhttp2.open("POST", "../../server/data-controller/flight/get-data.php", true);
+        xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp2.send(`action=getArrivalLocation`)
+    }

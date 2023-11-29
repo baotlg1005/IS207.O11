@@ -11,6 +11,7 @@ if ($action!='getLocation')
     $searchedTransferInfo->endDate = $_POST["endDate"];
     $searchedTransferInfo->startTime = $_POST["startTime"];
     $searchedTransferInfo->endTime = $_POST["endTime"];
+    $pageLimit  = $_POST["pageLimit"];
     if ($_POST["haveDriver"]=='true')
     {
         $searchedTransferInfo->haveDriver = 0;
@@ -26,12 +27,12 @@ if ($action=='showResultASC'||$action=='showResultDESC')
     $sql = "SELECT taxi.Id,taxi.Name,taxi.Luggage,taxi.NumofSeat,taxi.Price,taxi_type.Type 
     FROM taxi,taxi_area,taxi_area_detail,taxi_type 
     WHERE taxi.Type_id=taxi_type.Id and taxi.Id=taxi_area_detail.Taxi_id and taxi_area_detail.Pickpoint_id=taxi_area.Id and taxi.Type_id = $searchedTransferInfo->haveDriver and taxi.State='Free' and taxi_area.PickPoint LIKE '$searchedTransferInfo->location%'
-    ORDER BY taxi.Price ASC;";}
+    ORDER BY taxi.Price ASC LIMIT $pageLimit";}
 else {
     $sql = "SELECT taxi.Id,taxi.Name,taxi.Luggage,taxi.NumofSeat,taxi.Price,taxi_type.Type 
     FROM taxi,taxi_area,taxi_area_detail,taxi_type 
     WHERE taxi.Type_id=taxi_type.Id and taxi.Id=taxi_area_detail.Taxi_id and taxi_area_detail.Pickpoint_id=taxi_area.Id and taxi.Type_id = $searchedTransferInfo->haveDriver and taxi.State='Free' and taxi_area.PickPoint LIKE '$searchedTransferInfo->location%'
-    ORDER BY taxi.Price DESC;";}
+    ORDER BY taxi.Price DESC LIMIT $pageLimit";}
     $result = $conn->query($sql);
     if ($result->num_rows > 0)
     {
@@ -55,10 +56,6 @@ if ($action == 'getLocation')
     {
             $data = $result->fetch_all(MYSQLI_ASSOC);
             echo json_encode($data, JSON_UNESCAPED_UNICODE);
-    }
-    else
-    {
-        echo "No result found";
     }
     $conn->close();
 }
