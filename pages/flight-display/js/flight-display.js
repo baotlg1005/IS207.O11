@@ -81,17 +81,22 @@ function changeDateFormat(date) {
   return `${day}, ${monthArray[month - 1]}, ${year}`;
 }
 
-window.onload = function (e) {
+window.onload = function () {
+  searchDestination.innerHTML = flightSearchInfo.oneFlightInfo.destination;
+  searchDepature.innerHTML = flightSearchInfo.oneFlightInfo.departure;
+  searchDepartureDate.innerHTML = changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
+  if (flightSearchInfo.seatType == 'economy') {
+    searchSeatType.innerHTML = 'Phổ thông';
+  }
+  else if (flightSearchInfo.seatType == 'business') {
+    searchSeatType.innerHTML = 'Thương gia';
+  }
+  searchPassenger.innerHTML = (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
+  
   loadResult();
 }
 
 function loadResult() {
-  searchDestination.innerHTML= flightSearchInfo.oneFlightInfo.destination;
-  searchDepature.innerHTML= flightSearchInfo.oneFlightInfo.departure;
-  searchDepartureDate.innerHTML= changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
-  searchSeatType.innerHTML= flightSearchInfo.seatType;
-  searchPassenger.innerHTML= flightSearchInfo.passengerQuantity;
-
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -145,15 +150,16 @@ function changeMoneyFormat(money) {
   return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-let paymentInfo = {
-  flightID:"",
+let flightPaymentInfo = {
+  flightID: "",
   ticketNumber: 0,
 };
 
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('select-btn')) {
     let id = e.target.closest(".result-item").id;
-    paymentInfo.flightID = id.replace("result-item-", "");
-    sessionStorage.setItem("paymentInfo", JSON.stringify(paymentInfo));
+    flightPaymentInfo.flightID = id.substring(12);
+    flightPaymentInfo.ticketNumber = flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby;
+    sessionStorage.setItem("flightPaymentInfo", JSON.stringify(flightPaymentInfo));
   }
 });
