@@ -86,6 +86,17 @@ window.onload = function (e) {
 }
 
 function loadResult() {
+  searchDestination.innerHTML= flightSearchInfo.oneFlightInfo.destination;
+  searchDepature.innerHTML= flightSearchInfo.oneFlightInfo.departure;
+  searchDepartureDate.innerHTML= changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
+  if (flightSearchInfo.seatType == 'economy') {
+    searchSeatType.innerHTML= 'Phổ thông';
+  }
+  else if (flightSearchInfo.seatType == 'business') {
+    searchSeatType.innerHTML= 'Thương gia';
+  }
+  searchPassenger.innerHTML= (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
+
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -134,11 +145,8 @@ function loadResult() {
   xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   xhttp.send(`action=load&pageLimit=${pageLimit}&sortType=${sortType}&seatType=${flightSearchInfo.seatType}&departure=${flightSearchInfo.oneFlightInfo.departure}&destination=${flightSearchInfo.oneFlightInfo.destination}&departureDate=${flightSearchInfo.oneFlightInfo.departureDate}`);
 }
-<<<<<<< HEAD
-=======
 
 function changeMoneyFormat(money) {
   console.log(money);
   return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
->>>>>>> 80e51c401274b7c592be51855e07d63ac046baf0
