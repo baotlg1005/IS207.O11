@@ -38,7 +38,7 @@ sortTypeItem.forEach((item) => {
 });
 
 btnShowMore.addEventListener("click", (e) => {
-  pageLimit += 6;
+  pageLimit += 10;
   loadResult();
 })
 
@@ -64,9 +64,11 @@ function createResultItem(data) {
 }
 
 let flightSearchInfo;
+let numOfSeat
 
 if (sessionStorage.getItem("flightSearchInfo")) {
   flightSearchInfo = JSON.parse(sessionStorage.getItem("flightSearchInfo"));
+  numOfSeat = flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby;
 }
 
 function changeDateFormat(date) {
@@ -111,8 +113,8 @@ function loadResult() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+      try{
       let searchResults = JSON.parse(this.responseText);
-      if (searchResults.length > 0) {
         document.getElementById("result-container").innerHTML = " ";
         for (let i = 0; i < searchResults.length; i++) {
           document.getElementById("result-container").innerHTML += `
@@ -143,18 +145,19 @@ function loadResult() {
                   <div class="text">Chọn</div>
               </a>
             </div>
-          </div>
-            `
+          </div>`
         }
       }
-      else {
-        document.getElementById("result-container").innerHTML += "0 results";
+      catch(err) {
+        document.getElementById("result-container").innerHTML=
+            `<div class="title">Không tìm thấy kết quả phù hợp</div>`
+        btnShowMore.style.display = 'none';
       }
     }
   };
   xhttp.open("POST", "../../server/data-controller/flight/get-data.php", true);
   xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  xhttp.send(`action=load&pageLimit=${pageLimit}&sortType=${sortType}&seatType=${flightSearchInfo.seatType}&departure=${flightSearchInfo.oneFlightInfo.departure}&destination=${flightSearchInfo.oneFlightInfo.destination}&departureDate=${flightSearchInfo.oneFlightInfo.departureDate}`);
+  xhttp.send(`action=load&pageLimit=${pageLimit}&sortType=${sortType}&seatType=${flightSearchInfo.seatType}&departure=${flightSearchInfo.oneFlightInfo.departure}&destination=${flightSearchInfo.oneFlightInfo.destination}&departureDate=${flightSearchInfo.oneFlightInfo.departureDate}&numOfSeat=${numOfSeat}`);
 }
 
 function changeMoneyFormat(money) {

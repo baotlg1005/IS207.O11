@@ -20,7 +20,7 @@
   <!-- Add CSS file here -->
   <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
   <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
-  <script src="./js/coach-search-page.js" type="text/javascript" defer></script>
+  <script src="./js/coach-search-result.js" type="text/javascript" defer></script>
 
 </head>
 
@@ -33,19 +33,19 @@
       <div class="Destination_and_Date">
         <div class="SearchBar__Destiantion">
           <div class="SearchBar__Des1">
-            <div class="text">Da Nang</div>
+            <div id="SearchBar-departure" class="text">Da Nang</div>
           </div>
           <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
           <div class="SearchBar__Des2">
-            <div class="text">Ho Chi Minh city</div>
+            <div id="SearchBar-arrival" class="text">Ho Chi Minh city</div>
           </div>
         </div>
         <div class="Date_and_Seat">
           <div class="Date">
-            <div class="text">Thứ Hai, 23 tháng 10 2023</div>
+            <div id="SearchBar-date" class="text">Thứ Hai, 23 tháng 10 2023</div>
           </div>
           <div class="Seat">
-            <div class="text">1 chỗ ngồi</div>
+            <div id="SearchBar-passenger" class="text">1 chỗ ngồi</div>
           </div>
         </div>
       </div>
@@ -86,65 +86,72 @@
                   <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
                   <ion-icon class="icon select" name="ellipse"></ion-icon>
                   <div class="text">
-                      Cất cánh sớm nhất
+                      Xuất phát sớm nhất
                   </div>
               </div>
               <div class="sort-type-item">
                   <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
                   <ion-icon class="icon select" name="ellipse"></ion-icon>
                   <div class="text">
-                      Cất cánh muộn nhất
+                      Xuất phát muộn nhất
                   </div>
               </div>
               <div class="sort-type-item">
                   <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
                   <ion-icon class="icon select" name="ellipse"></ion-icon>
                   <div class="text">
-                      Hạ cánh sớm nhất
+                      Đến nơi sớm nhất
                   </div>
               </div>
               <div class="sort-type-item">
                   <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
                   <ion-icon class="icon select" name="ellipse"></ion-icon>
                   <div class="text">
-                      Hạ cánh muộn nhất
+                      Đến nơi muộn nhất
                   </div>
               </div>
           </div>
       </div>
       </div>
-      <div class="BusBook__BusList">
-        <div class="BusBook__BusItem">
-          <div class="BusBook__BusBrand">
-            <div class="text">Dinh Nhan</div>
+      <div id="result-container" class="BusBook__BusList">
+        <div id="list-item">
+          <div class="BusBook__BusItem hide">
+            <div class="BusBook__BusBrand">
+              <div class="text">Dinh Nhan</div>
+            </div>
+            <div class="BusBook__Place_Time_Price">
+              <div class="BusBook__Depature_Info">
+                <div class="BusBook__Start_Time">08:30</div>
+                <div class="BusBook__Start_Place">VP Đà Nẵng</div>
+              </div>
+              <div class="icon">
+                <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
+              </div>
+              <div class="BusBook__Arrival_Info">
+                <div class="BusBook__Arrival_Time">03:40</div>
+                <div class="BusBook__Arrival_Place">VP An Sương</div>
+              </div>
+              <div class="BusBook__Duration">
+                <div class="time">19 giờ 10 phút</div>
+              </div>
+              <div class="BusBook__Price">
+                <div class="price">450.000 VND</div>
+                <div class="units">/khách</div>
+              </div>
+            </div>
+            <div class="BusBook__Detail_Payment">
+              <div class="navigation-item">
+                <b class="text">Chi tiết</b>
+              </div>
+              <div class="BusBook__Payment">
+                <a class="payment" href="../payment">Chọn</a>
+              </div>
+            </div>
           </div>
-          <div class="BusBook__Place_Time_Price">
-            <div class="BusBook__Depature_Info">
-              <div class="BusBook__Start_Time">08:30</div>
-              <div class="BusBook__Start_Place">VP Đà Nẵng</div>
-            </div>
-            <div class="icon">
-              <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
-            </div>
-            <div class="BusBook__Arrival_Info">
-              <div class="BusBook__Arrival_Time">03:40</div>
-              <div class="BusBook__Arrival_Place">VP An Sương</div>
-            </div>
-            <div class="BusBook__Duration">
-              <div class="time">19 giờ 10 phút</div>
-            </div>
-            <div class="BusBook__Price">
-              <div class="price">450.000 VND</div>
-              <div class="units">/khách</div>
-            </div>
-          </div>
-          <div class="BusBook__Detail_Payment">
-            <div class="navigation-item">
-              <b class="text">Chi tiết</b>
-            </div>
-            <div class="BusBook__Payment">
-              <a class="payment" href="/pages/pages/payment.html">Chọn</a>
-            </div>
+        </div>
+        <div class="btn-default" id="btn-showMore">
+          <div class="text">
+              Show more
           </div>
         </div>
       </div>

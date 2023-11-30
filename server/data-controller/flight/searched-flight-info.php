@@ -7,4 +7,5 @@ class SearchedFlightInfo {
     public $departureDate;
     public $haveReturn;
     public $returnDate;
+    public $numOfSeat;
 }

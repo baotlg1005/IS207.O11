@@ -4,15 +4,31 @@ const resultItemTemplate = document.getElementById("result-item-template")
 const itemFilters = document.querySelectorAll(".item-filter")
 const sort = document.querySelector("#sort")
 const itemSort = sort.querySelectorAll(".item-filter")
-const searchInfoTitle = document.getElementById("search-info-title")
+let searchInfoTitle = document.getElementById("search-info-title")
 const searchInfoDescription = document.getElementById("search-info-description")
+const btnShowMore = document.getElementById("btn-showMore");
+let imgs = []
+let pageLimit = 11;
+let action = "showResultASC"
 fetch('../../resources/images/imgs_taxi.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => {
-    const imgs = data.imgs;
-    console.log(imgs);
+    imgs = data;
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error fetching and parsing JSON:', error);
   });
 
+btnShowMore.addEventListener("click", (e) => {
+    pageLimit += 10;
+    getData();
+})
 
 filterItems.forEach(item=>{
     const typeOfFilter = item.querySelector(".type-of-item-filter")
@@ -42,11 +58,13 @@ itemSort.forEach(item=>{
         if (item.classList.contains("unselect")){
             resultContainer.innerHTML = ""
             if (item.id=="max-price"){
-                getData("showResultDESC")
+                action = "showResultDESC"
             }
             else{
-                getData("showResultASC")
+                action = "showResultASC"
+                
             }
+            getData()
             item.classList.remove("unselect")
             item.classList.add("select")
             iconSelect.classList.remove("hide")
@@ -65,31 +83,30 @@ itemSort.forEach(item=>{
     }
     )
 })
-
+function changeMoneyFormat(money) {
+    console.log(money);
+    return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+  function changeDateFormat(date) {
+    //change date format from 'yyyy-mm-dd' to 'dd, thng mm, yyyy'
+    let dateArray = date.split('-');
+    let day = dateArray[2];
+    let month = dateArray[1];
+    let year = dateArray[0];
+    let monthArray = ['tháng 1', 'tháng 2', 'tháng 3', 'tháng 4',
+      'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8',
+      'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
+    return `${day}, ${monthArray[month - 1]}, ${year}`;
+  }
 function createResultItem(data){
-    let price = ''
-    let count = 0
-    for (let i=data.Price.length-1;i>=0;i--){
-        if (count==3){
-            price = '.'+price
-        }
-        price = data.Price[i]+price
-        if (count==3){
-            count=1
-        }
-        else{
-            count++
-        }
-    }
-    let link = ''
+
+    let link = 'https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140';
     for (let item of imgs){
-        if (item.img_name in data.Name){
-            link = item.img_link
+        if (data.Name.indexOf(item.img_name) > -1){
+            link = item.img_src
             break
         }
     }
-    if (link==''){
-        link = 'https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140'}
     document.getElementById("result-container").innerHTML+=
     `<div id="${data.Id}" class="result-item">
     <img src="${link}"
@@ -120,10 +137,10 @@ function createResultItem(data){
         </div>
         <div class="booking">
             <div id="price" class="price-item">
-                <div class=price-text>${price} VND</div>
+                <div class=price-text>${changeMoneyFormat(data.Price)} VND</div>
                 <div class="text"> /ngày</div>
             </div>
-            <a id="change-search-info" class="btn-default" href="/pages/payment/payment.html">
+            <a id="change-search-info" class="btn-default" href="../payment">
                 <div class="text">Tiếp tục</div>
             </a>
         </div>
@@ -135,37 +152,44 @@ let transferSearchInfo;
 //check if session storage flightSearchInfo is exist
 if (sessionStorage.getItem("transferSearchInfo")) {
   transferSearchInfo = JSON.parse(sessionStorage.getItem("transferSearchInfo"))
+  searchInfoDescription.innerText = transferSearchInfo.location+' • '+changeDateFormat(transferSearchInfo.startDate)+' '+transferSearchInfo.startTime+' • '+changeDateFormat(transferSearchInfo.endDate)+' '+transferSearchInfo.endTime
+    if (transferSearchInfo.haveDriver){
+        searchInfoTitle.innerHTML = `Có tài xế`
+    }
+    else{
+        searchInfoTitle.innerHTML = `Tự lái`
+    }
 }
 
+ 
 
-searchInfoDescription.innerText = transferSearchInfo.location+' • '+transferSearchInfo.startDate+' '+transferSearchInfo.startTime+' • '+transferSearchInfo.endDate+' '+transferSearchInfo.endTime
-
-function getData(action){
+function getData(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
+        try{
         console.log(this.responseText);
         let searchResults = JSON.parse(this.responseText);
-        searchInfoTitle.innerText = searchResults[0].Type
-        if (searchResults.length > 0) {
+            document.getElementById("result-container").innerHTML = " ";
             searchResults.forEach(item=>{
                 createResultItem(item)
             })
           }
-        else{
+        catch(e){
             console.log("Không tìm thấy kết quả phù hợp")
             document.getElementById("result-container").innerHTML=
             `<div class="title">Không tìm thấy kết quả phù hợp</div>`
+            btnShowMore.style.display = 'none'; 
         }
         }
       }
     xhttp.open("POST", "../../server/data-controller/transfer/get-data.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send(`action=${action}&location=${transferSearchInfo.location}&startDate=${transferSearchInfo.startDate}&startTime=${transferSearchInfo.startTime}&endDate=${transferSearchInfo.endDate}&endTime=${transferSearchInfo.endTime}&haveDriver=${transferSearchInfo.haveDriver}`)
+    xhttp.send(`action=${action}&pageLimit=${pageLimit}&location=${transferSearchInfo.location}&startDate=${transferSearchInfo.startDate}&startTime=${transferSearchInfo.startTime}&endDate=${transferSearchInfo.endDate}&endTime=${transferSearchInfo.endTime}&haveDriver=${transferSearchInfo.haveDriver}`)
 }
 
 window.onload = function (e) {
-    getData("showResultASC")
+    getData()
 } 
 
 

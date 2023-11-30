@@ -37,11 +37,18 @@ let xhttp = new XMLHttpRequest();
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.send(`action=getLocation`)
 }
-
+function GetTodayDate() {
+    const today = new Date()
+    const todayDate = today.getDate()
+    const todayMonth = today.getMonth() + 1
+    const todayYear = today.getFullYear()
+    return `${todayYear}-${todayMonth < 10 ? "0" + todayMonth : todayMonth}-${todayDate < 10 ? "0" + todayDate : todayDate}`
+}
+const todayDate = GetTodayDate()
 let date = new Date();
 let today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 input_dates = document.querySelectorAll(".date__input");
-input_dates.forEach(item=>{item.setAttribute("min", today); console.log(item)})
+input_dates.forEach(item=>{item.setAttribute("min", today); item.value = todayDate})
 
 // haveDriverCheckbox EVENT
 haveDriverCheckbox.addEventListener('click', () => {
@@ -55,10 +62,18 @@ haveDriverCheckbox.addEventListener('click', () => {
 submitBtn.addEventListener('click', () => {
     transferSearchInfo.location = locationInput.value
     startDate = new Date(startDateInput.value)
+    if (isNaN(startDate)) {
+        alert('Invalid checkin date');
+        return;
+    }
     startDate = `${startDate.getFullYear()}-${startDate.getMonth()+1}-${startDate.getDate()}`;
     transferSearchInfo.startDate = startDate
     transferSearchInfo.startTime = startHourInput.value+":"+startMinuteInput.value
     endDate = new Date(endDateInput.value)
+    if (isNaN(endDate)) {
+        alert('Invalid checkout date');
+        return;
+    }
     endDate = `${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`;
     transferSearchInfo.endDate = endDate
     transferSearchInfo.endTime = endHourInput.value +":"+endMinuteInput.value
@@ -66,21 +81,12 @@ submitBtn.addEventListener('click', () => {
         alert('Location is required');
         return;
       }
-      
-    if (!transferSearchInfo.startDate) {
-        alert('Start date is required');
-        return;
-    }
 
     if (!transferSearchInfo.startTime) {
         alert('Start time is required');
         return;
     }
 
-    if (!transferSearchInfo.endDate) {
-        alert('End date is required');
-        return;
-    }
 
     if (!transferSearchInfo.endTime) {
         alert('End time is required');
