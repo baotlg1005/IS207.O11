@@ -32,6 +32,7 @@
 .header-container .header__top-content .top-content__brand-container {
   display: flex;
   align-items: flex-start;
+  text-decoration: none;
 }
 .header-container .header__top-content .top-content__brand-container .brand-container__brand-logo {
   display: flex;

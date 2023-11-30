@@ -1,0 +1,524 @@
+.title {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.71429rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.BusBook {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.BusBook .BusBook__SearchBar {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0.66667rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgb(255, 255, 255);
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion {
+  display: flex;
+  align-items: center;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des1 {
+  display: flex;
+  padding: 5px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des1 .text {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .vector6 {
+  width: 40px;
+  height: 12px;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des2 {
+  gap: 10px;
+  display: flex;
+  padding: 5px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .SearchBar__Destiantion .SearchBar__Des2 .text {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat {
+  display: flex;
+  align-items: flex-start;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Date {
+  gap: 10px;
+  display: flex;
+  padding: 5px 10px 5px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Date .text {
+  color: #687176;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Seat {
+  gap: 10px;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: center;
+}
+.BusBook .BusBook__SearchBar .Destination_and_Date .Date_and_Seat .Seat .text {
+  color: #687176;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__SearchBar .FeatureFrame__SubItem {
+  display: flex;
+  width: 168px;
+  height: 55px;
+  padding: 16px 20px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #FF7A50;
+  text-decoration: none;
+}
+.BusBook .BusBook__SearchBar .FeatureFrame__SubItem .icon {
+  width: 20px;
+  height: 30px;
+  text-decoration: none;
+  color: aliceblue;
+}
+.BusBook .BusBook__SearchBar .FeatureFrame__SubItem .text {
+  color: rgb(255, 255, 255);
+  height: auto;
+  z-index: 1;
+  flex-grow: 1;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: right;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__Main {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 40px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList {
+  display: flex;
+  flex-direction: column;
+  width: 368px;
+  height: 74px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  background: #FFF;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice {
+  display: flex;
+  flex-direction: row;
+  width: 368px;
+  height: 74px;
+  padding: 16px 20px;
+  justify-content: space-between;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .text .text--label {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: Bold;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .text .text--choice {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .icon {
+  width: 40px;
+  height: 40px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .dropdown__Sorting--choice .dropdown-panel__item {
+  color: rgb(0, 0, 0);
+  height: auto;
+  font-size: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .SortingText {
+  display: flex;
+  width: 325px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 15px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .SortingText .SortingText-Filter {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusSort__SortingList .SortingText .SortingText-ClearFilter {
+  color: rgba(35, 110, 255, 0.8);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List {
+  display: flex;
+  flex-direction: column;
+  width: 368px;
+  height: 74px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  background: #FFF;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp {
+  display: flex;
+  flex-direction: row;
+  width: 368px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #687176;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .BusAdvanceSorting__PickUp__Choice .text {
+  flex: 1 0 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .BusAdvanceSorting__PickUp__Choice .icon {
+  flex: 1;
+  width: 40px;
+  height: 40px;
+}
+.BusBook .BusBook__Main .BusBook__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .dropdown-panel__item {
+  color: rgb(0, 0, 0);
+  height: auto;
+  font-size: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+}
+.BusBook .BusBook__Main .BusBook__BusList {
+  flex: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 100vh;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 5rem;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem .BusBook__BusBrand {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__BusItem .BusBook__BusBrand .text {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: rgb(0, 0, 0);
+  width: 82px;
+  height: 20px;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Depature_Info {
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Depature_Info .BusBook__Start_Time {
+  height: 18px;
+  align-self: stretch;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Depature_Info .BusBook__Start_Place {
+  align-self: stretch;
+  color: #687176;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .icon {
+  width: 40px;
+  height: 40px;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Arrival_Info {
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-right: 1px solid #687176;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Arrival_Info .BusBook__Arrival_Time {
+  height: 18px;
+  align-self: stretch;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Arrival_Info .BusBook__Arrival_Place {
+  align-self: stretch;
+  color: #687176;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Duration {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Duration .time {
+  width: 200px;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Price {
+  display: flex;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Price .price {
+  color: #FF5E1F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Place_Time_Price .BusBook__Price .units {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .navigation-item {
+  display: flex;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .navigation-item .text {
+  color: #236EFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .BusBook__Payment {
+  display: flex;
+  width: 172px;
+  padding: 16px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(35, 110, 255, 0.8);
+}
+.BusBook .BusBook__Main .BusBook__BusList .BusBook__Detail_Payment .BusBook__Payment .payment {
+  flex: 1;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+.BusBook .BusBook__Main #btn-showMore {
+  border: 0px !important;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.BusBook .BusBook__Main #btn-showMore .text {
+  font-weight: 700;
+  color: #236eff;
+}
+
+#sort-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+#sort-container #sort-value-select {
+  display: flex;
+  height: 6.16667rem;
+  padding: 1.33333rem 1.66667rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.66667rem;
+  background: #fff;
+}
+#sort-container #sort-value-select .text-holder {
+  display: flex;
+  flex-direction: column;
+}
+#sort-container #sort-value-select .text-holder .title {
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 700;
+}
+#sort-container #sort-value-select .text-holder #sort-type-value {
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 500;
+}
+#sort-container #sort-value-select .icon-holder .icon {
+  font-size: 3.5rem;
+  color: #236EFF;
+}
+#sort-container #sort-value-select .icon-holder .show-dropdown {
+  display: flex;
+}
+#sort-container #sort-value-select .icon-holder .hide-dropdown {
+  display: none;
+}
+#sort-container #sort-type-dropdown {
+  display: none;
+  background-color: #FFFFFF;
+  margin-top: -5px;
+  padding-top: 5px;
+  border-radius: 0rem 0rem 0.66667rem 0.66667rem;
+}
+#sort-container #sort-type-dropdown .sort-type-item {
+  display: flex;
+  padding: 0rem 1.66667rem;
+  align-items: center;
+}
+#sort-container #sort-type-dropdown .sort-type-item .text {
+  padding: 1.33333rem 1.66667rem;
+  color: #000;
+  font-size: 1.33333rem;
+  font-weight: 500;
+}
+#sort-container #sort-type-dropdown .sort-type-item .icon {
+  font-size: 2rem;
+  color: #236EFF;
+}
+#sort-container #sort-type-dropdown .sort-type-item .icon.select {
+  display: none;
+}
+#sort-container #sort-type-dropdown .sort-type-item .icon.unselect {
+  display: flex;
+}
+#sort-container #sort-type-dropdown .sort-type-item.select .icon.select {
+  display: flex;
+}
+#sort-container #sort-type-dropdown .sort-type-item.select .icon.unselect {
+  display: none;
+}
+
+#sort-container.show-dropdown #sort-value-select .show-dropdown {
+  display: none;
+}
+#sort-container.show-dropdown #sort-value-select .hide-dropdown {
+  display: flex;
+}
+#sort-container.show-dropdown #sort-type-dropdown {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=index.css.map */

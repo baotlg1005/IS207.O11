@@ -44,7 +44,7 @@
         </div>
         <div id="feature__transfer-search" class="container-fluid feature__item">
             <div class="transfer-search__config config">
-                <div id="config__have-driver-checkbox" class="">
+                <div id="config__have-driver-checkbox" class="unchecked">
                     <ion-icon class="unchecked" name="ellipse-outline"></ion-icon>
                     <ion-icon class="checked" name="ellipse"></ion-icon>
                     <div class="text">
@@ -64,7 +64,9 @@
                         <div class="input">
                             <ion-icon class="icon" name="location" style="color: #236eff;"></ion-icon>
                             <input id="transfer-search__location" class="location__input" type="text"
-                                placeholder="Địa điểm" autocomplete="off">
+                                placeholder="Địa điểm" autocomplete="off" list="location">
+                                <datalist id="location">
+                                </datalist>
                         </div>
                     </div>
                     <div class="input-block all-connect">
@@ -75,7 +77,7 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input id="transfer-search__start-date" class="start-date__input" type="text"
+                            <input id="transfer-search__start-date" class="date__input" type="date"
                                 placeholder="Ngày bắt đầu" autocomplete="off">
                         </div>
                     </div>
@@ -87,8 +89,29 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
-                            <input id="transfer-search__start-time" class="start-time__input" type="text"
-                                placeholder="Giờ bắt đầu" autocomplete="off">
+                            <div id="transfer-search__start-time" class="start-time__input">
+                                <div class ="hour">
+                                    <select id="select-hour-start" class="start-time__select">
+                                        <script>
+                                            const selectHourElementStart = document.getElementById('select-hour-start');
+                                            for (let i = 0; i <= 23; i++) {
+                                            const hour = i < 10 ? '0' + i : i;
+                                            const optionElement = document.createElement('option');
+                                            optionElement.value = hour;
+                                            optionElement.textContent = hour;
+                                            selectHourElementStart.appendChild(optionElement);
+                                            }
+                                        </script>
+                                    </select>
+                                </div>
+                                <div>:</div>
+                                <div class="minute">
+                                    <select id="select-minute-start" class="start-time__select">
+                                        <option value="00">00</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="input-block all-connect">
@@ -99,7 +122,7 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input id="transfer-search__end-date" class="end-date__input" type="text"
+                            <input id="transfer-search__end-date" class="date__input" type="date"
                                 placeholder="Ngày kết thúc" autocomplete="off">
                         </div>
                     </div>
@@ -111,13 +134,34 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
-                            <input id="transfer-search__end-time" class="end-time__input" type="text"
-                                placeholder="Giờ kết thúc" autocomplete="off">
+                            <div id="transfer-search__start-time" class="start-time__input">
+                                <div class ="hour">
+                                    <select id="select-hour-end" class="start-time__select">
+                                        <script>
+                                            const selectHourElementEnd = document.getElementById('select-hour-end');
+                                            for (let i = 0; i <= 23; i++) {
+                                            const hour = i < 10 ? '0' + i : i;
+                                            const optionElement = document.createElement('option');
+                                            optionElement.value = hour;
+                                            optionElement.textContent = hour;
+                                            selectHourElementEnd.appendChild(optionElement);
+                                            }
+                                        </script>
+                                    </select>
+                                </div>
+                                <div>:</div>
+                                <div class="minute">
+                                    <select id="select-minute-end" class="start-time__select">
+                                        <option value="00">00</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="search-form__submit-btn--transfer" class="btn-submit left-connect">
+                    <a id="search-form__submit-btn--transfer" class="btn-submit left-connect">
                         <ion-icon name="search-outline"></ion-icon>
-                    </div>
+                    </a>
                 </div>
             </form>
         </div>

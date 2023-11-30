@@ -153,9 +153,10 @@
                                 id="flight-search__departure" 
                                 class="departure__input" 
                                 type="text"
-                                placeholder="Điểm đi" 
                                 autocomplete="off"
+                                list = "departureLocation"
                             >
+                            <datalist id="departureLocation"></datalist>    
                         </div>
                     </div>
                     <div class="input-block left-connect">
@@ -170,9 +171,10 @@
                                 id="flight-search__destination" 
                                 class="destination__input" 
                                 type="text"
-                                placeholder="Điểm đến" 
                                 autocomplete="off"
+                                list="arrivalLocation"
                             >
+                            <datalist id="arrivalLocation"></datalist>
                         </div>
                     </div>
                 </div>
@@ -215,9 +217,9 @@
                     </div>
                 </div>
                 <div class="search-form__btn-container">
-                    <div id="search-form__submit-btn--one-flight" class="btn-submit">
+                    <a id="search-form__submit-btn--one-flight" class="btn-submit" href="../flight-display/index.html">
                         <ion-icon name="search-outline"></ion-icon>
-                    </div>
+                    </a>
                 </div>
                 
             </form>

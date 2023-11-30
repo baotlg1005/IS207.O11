@@ -78,8 +78,8 @@ passengerQuantityDropdownPanel.addEventListener("click", (e) => {
 
 //click outside passenger quantity dropdown panel close the dropdown panel
 document.addEventListener("click", (e) => {
-    if(passengerQuantityDropdownPanel.classList.contains("hide")) return;
-    if(passengerQuantityBtn.contains(e.target)) return;
+    if (passengerQuantityDropdownPanel.classList.contains("hide")) return;
+    if (passengerQuantityBtn.contains(e.target)) return;
     passengerQuantityDropdownPanel.classList.add("hide")
 })
 
@@ -110,7 +110,7 @@ passengerQuantityItems.forEach(item => {
 
 //update passenger quantity info when click confirm button
 function UpdatePassengerQuantityInfo() {
-    passengerQuantityInfo.querySelector(".text").innerText = 
+    passengerQuantityInfo.querySelector(".text").innerText =
         `${flightSearchInfo.passengerQuantity.adult} Người lớn, ${flightSearchInfo.passengerQuantity.child} trẻ em, ${flightSearchInfo.passengerQuantity.baby} em bé`
 }
 passengerQuantityConfirmBtn.addEventListener("click", () => {
@@ -126,8 +126,8 @@ seatTypeBtn.addEventListener("click", () => {
 
 //click outside seat type dropdown panel close the dropdown panel
 document.addEventListener("click", (e) => {
-    if(seatTypeDropdownPanel.classList.contains("hide")) return;
-    if(seatTypeBtn.contains(e.target)) return;
+    if (seatTypeDropdownPanel.classList.contains("hide")) return;
+    if (seatTypeBtn.contains(e.target)) return;
     seatTypeDropdownPanel.classList.add("hide")
 })
 
@@ -198,7 +198,7 @@ function CreateNewFlightInfo() {
 addMoreFlightBtn.addEventListener("click", () => {
     if (manyFlightInfo.length == 4) return;
     const newFlightInfo = CreateNewFlightInfo()
-    if(manyFlightInfo.length == 4) {
+    if (manyFlightInfo.length == 4) {
         addMoreFlightBtn.classList.add("disable")
     }
     if (manyFlightInfo.length > 2) {
@@ -228,7 +228,8 @@ oneFlightSubmitBtn.addEventListener("click", () => {
     flightSearchInfo.oneFlightInfo.haveReturn = haveReturn
     flightSearchInfo.oneFlightInfo.returnDate = returnDate
 
-    console.log(flightSearchInfo)
+    console.log(flightSearchInfo);
+    sessionStorage.setItem('flightSearchInfo', JSON.stringify(flightSearchInfo));
 })
 // many flight submit btn EVENT
 
@@ -245,3 +246,54 @@ manyFlightSubmitBtn.addEventListener("click", () => {
 
     console.log(flightSearchInfo)
 })
+
+//get today date and set it to be the value of departure-date__input when the page is loaded
+function GetTodayDate() {
+    const today = new Date()
+    const todayDate = today.getDate()
+    const todayMonth = today.getMonth() + 1
+    const todayYear = today.getFullYear()
+    return `${todayYear}-${todayMonth < 10 ? "0" + todayMonth : todayMonth}-${todayDate < 10 ? "0" + todayDate : todayDate}`
+}
+const todayDate = GetTodayDate()
+const departureDateInputs = featureFlightSearch.querySelectorAll(".departure-date__input")
+
+departureDateInputs.forEach(input => {
+    input.value = todayDate
+})
+window.onload = function (e) {
+    let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            try{
+            console.log(this.responseText);
+            let locations = JSON.parse(this.responseText);
+                locations.forEach(item=>{
+                    document.getElementById("departureLocation").innerHTML += `<option>${item.From}</option>`
+                })
+            }
+            catch(e){
+                console.log(e);
+            }}
+          }
+        xhttp.open("POST", "../../server/data-controller/flight/get-data.php", true);
+        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp.send(`action=getDepartureLocation`)
+    let xhttp2 = new XMLHttpRequest();
+        xhttp2.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            try{
+            console.log(this.responseText);
+            let locations = JSON.parse(this.responseText);
+                locations.forEach(item=>{
+                    document.getElementById("arrivalLocation").innerHTML += `<option>${item.To}</option>`
+                })
+            }
+            catch(e){
+                console.log(e);
+            }}
+          }
+        xhttp2.open("POST", "../../server/data-controller/flight/get-data.php", true);
+        xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp2.send(`action=getArrivalLocation`)
+    }

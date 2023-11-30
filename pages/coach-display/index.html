@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tìm kiếm chuyến xe</title>
+
+  <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../resources/css/main-style.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../../resources/css/btn.css">
+  <link rel="stylesheet" href="../../resources/css/dropdown.css">
+  <link rel="stylesheet" href="../../resources/css/input-block.css">
+  <link rel="stylesheet" href="../../resources/css/feature__item.css">
+  <link rel="stylesheet" href="../../resources/css/ad-slider.css">
+
+  <!-- Add CSS file here -->
+  <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+  <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+  <script src="./js/coach-search-result.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+  <header-component></header-component>
+
+  <!-- code here -->
+  <div class="BusBook">
+    <div class="container BusBook__SearchBar">
+      <div class="Destination_and_Date">
+        <div class="SearchBar__Destiantion">
+          <div class="SearchBar__Des1">
+            <div id="SearchBar-departure" class="text">Da Nang</div>
+          </div>
+          <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
+          <div class="SearchBar__Des2">
+            <div id="SearchBar-arrival" class="text">Ho Chi Minh city</div>
+          </div>
+        </div>
+        <div class="Date_and_Seat">
+          <div class="Date">
+            <div id="SearchBar-date" class="text">Thứ Hai, 23 tháng 10 2023</div>
+          </div>
+          <div class="Seat">
+            <div id="SearchBar-passenger" class="text">1 chỗ ngồi</div>
+          </div>
+        </div>
+      </div>
+      <a class="FeatureFrame__SubItem" href="../coach-search/">
+        <ion-icon name="search" class="icon"></ion-icon>
+        <div class="text">Đổi tìm kiếm</div>
+      </a>
+    </div>
+    <div class="container BusBook__Main">
+      <div class="BusBook__Sorting">
+        <div id="sort-container" class="show-dropdown">
+          <div id="sort-value-select">
+              <div class="text-holder">
+                  <div class="title">Sắp xếp</div>
+                  <div id="sort-type-value">Giá thấp nhất</div>
+              </div>
+              <div class="icon-holder">
+                  <ion-icon class="icon show-dropdown" name="chevron-down-outline"></ion-icon>
+                  <ion-icon class="icon hide-dropdown" name="chevron-up-outline"></ion-icon>
+              </div>
+          </div>
+          <div id="sort-type-dropdown">
+              <div class="sort-type-item select">
+                  <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                  <ion-icon class="icon select" name="ellipse"></ion-icon>
+                  <div class="text">
+                      Giá thấp nhất
+                  </div>
+              </div>
+              <div class="sort-type-item">
+                  <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                  <ion-icon class="icon select" name="ellipse"></ion-icon>
+                  <div class="text">
+                      Giá cao nhất
+                  </div>
+              </div>
+              <div class="sort-type-item">
+                  <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                  <ion-icon class="icon select" name="ellipse"></ion-icon>
+                  <div class="text">
+                      Xuất phát sớm nhất
+                  </div>
+              </div>
+              <div class="sort-type-item">
+                  <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                  <ion-icon class="icon select" name="ellipse"></ion-icon>
+                  <div class="text">
+                      Xuất phát muộn nhất
+                  </div>
+              </div>
+              <div class="sort-type-item">
+                  <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                  <ion-icon class="icon select" name="ellipse"></ion-icon>
+                  <div class="text">
+                      Đến nơi sớm nhất
+                  </div>
+              </div>
+              <div class="sort-type-item">
+                  <ion-icon class="icon unselect" name="ellipse-outline"></ion-icon>
+                  <ion-icon class="icon select" name="ellipse"></ion-icon>
+                  <div class="text">
+                      Đến nơi muộn nhất
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div id="result-container" class="BusBook__BusList">
+        <div id="list-item">
+          <div class="BusBook__BusItem hide">
+            <div class="BusBook__BusBrand">
+              <div class="text">Dinh Nhan</div>
+            </div>
+            <div class="BusBook__Place_Time_Price">
+              <div class="BusBook__Depature_Info">
+                <div class="BusBook__Start_Time">08:30</div>
+                <div class="BusBook__Start_Place">VP Đà Nẵng</div>
+              </div>
+              <div class="icon">
+                <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
+              </div>
+              <div class="BusBook__Arrival_Info">
+                <div class="BusBook__Arrival_Time">03:40</div>
+                <div class="BusBook__Arrival_Place">VP An Sương</div>
+              </div>
+              <div class="BusBook__Duration">
+                <div class="time">19 giờ 10 phút</div>
+              </div>
+              <div class="BusBook__Price">
+                <div class="price">450.000 VND</div>
+                <div class="units">/khách</div>
+              </div>
+            </div>
+            <div class="BusBook__Detail_Payment">
+              <div class="navigation-item">
+                <b class="text">Chi tiết</b>
+              </div>
+              <div class="BusBook__Payment">
+                <a class="payment" href="../payment">Chọn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-default" id="btn-showMore">
+          <div class="text">
+              Show more
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer-component></footer-component>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
