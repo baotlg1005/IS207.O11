@@ -1,5 +1,7 @@
 let flightPaymentInfo;
 
+const btnPayment = document.querySelector(".btn-payment");
+
 if (sessionStorage.getItem("flightPaymentInfo")) {
     flightPaymentInfo = JSON.parse(sessionStorage.getItem("flightPaymentInfo"));
 }
@@ -98,3 +100,15 @@ function changeDateFormat(date) {
 function changeMoneyFormat(money) {
     return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
+btnPayment.addEventListener("click", function () { 
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log("Payment success");
+        }
+    };
+    xhttp.open("POST", "../../server/data-controller/payment-flight/post-data.php", true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhttp.send(`action=payment`);
+})
