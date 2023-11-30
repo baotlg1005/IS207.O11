@@ -102,6 +102,19 @@
           font-weight: 700;
         }
       }
+
+      .account-btn-group__account-btn {
+        border: none;
+        .account-btn__icon {
+          font-size: 3rem;
+          color: #fff;
+        }
+
+        .text {
+          font-weight: 700;
+          color: #fff;
+        }
+      }
     }
   }
 
@@ -186,6 +199,18 @@
           color: #000;
         }
       }
+      .account-btn-group__account-btn {
+        // border-radius: 0.66667rem;
+        // border: 1px solid #236eff;
+        .account-btn__icon {
+          color: rgba(35, 110, 255, 0.8);
+        }
+
+        .text {
+          font-weight: 700;
+          color: #000;
+        }
+      }
     }
   }
 
@@ -222,7 +247,7 @@
 
 .feature-container {
   display: flex;
-  min-height: 60rem; // 600px
+  min-height: 20rem; // 600px
   flex-direction: column;
   align-items: center;
   gap: 1.66667rem; // 20px
@@ -346,8 +371,8 @@
 
     .title-container {
       display: flex;
-      width: 65.16667rem;
-      height: 5.16667rem;
+      // width: 65.16667rem;
+      // height: 5.16667rem;
       padding: 1.33333rem 1.66667rem;
       padding-left: 0;
       justify-content: flex-start;

@@ -130,9 +130,6 @@ body {
   color: #fff;
   font-weight: 700;
 }
-.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn {
-  gap: 1rem;
-}
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
   font-size: 2rem;
   color: rgba(35, 110, 255, 0.8);
