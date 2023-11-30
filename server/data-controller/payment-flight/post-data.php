@@ -13,8 +13,7 @@ $ticketNum = $_POST["ticketNum"];
 if ($action == "payment") {
     $invoiceID = getInvoiceID($conn) + 1;
     $flightInvoiceID = getFlightInvoiceID($conn) + 1;
-    createInvoice($conn, $invoiceID, $totalPrice, $userID);
-    createFlightInvoice($conn, $flightInvoiceID, $invoiceID, $flightID, $ticketNum);
+    createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum);
 
     $conn->close();
 }
@@ -38,21 +37,13 @@ function getFlightInvoiceID($conn) {
     return $flightInvoiceID;
 }
 
-function createInvoice($conn, $invoiceID, $totalPrice, $userID)
+function createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum)
 {
     $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice')";
-    if ($conn->query($sql) === TRUE) {
-        echo"Invoice created";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-
-function createFlightInvoice($conn, $flightInvoiceID, $invoiceID, $flightID, $ticketNum) {
-    $sql = "INSERT INTO flight_invoice(Id, Flight_id, Invoice_id, Num_Ticket)
+    $sql .= "INSERT INTO flight_invoice(Id, Flight_id, Invoice_id, Num_Ticket)
     VALUES('$flightInvoiceID', '$flightID', '$invoiceID', '$ticketNum')";
-    if ($conn->query($sql) === TRUE) {
-        echo"Flight invoice created";
+    if ($conn->multi_query($sql) === TRUE) {
+        echo"Invoice created";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
