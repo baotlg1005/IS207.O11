@@ -96,7 +96,7 @@ function createResultItem(data){
         <b class="text">Chi tiết</b>
       </div>
       <div class="BusBook__Payment">
-        <a class="payment" href="/pages/pages/payment.html">Chọn</a>
+        <a class="payment" href="../payment">Chọn</a>
       </div>
     </div>
   </div>`
