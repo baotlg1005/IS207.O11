@@ -97,6 +97,17 @@ window.onload = function () {
 }
 
 function loadResult() {
+  searchDestination.innerHTML= flightSearchInfo.oneFlightInfo.destination;
+  searchDepature.innerHTML= flightSearchInfo.oneFlightInfo.departure;
+  searchDepartureDate.innerHTML= changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
+  if (flightSearchInfo.seatType == 'economy') {
+    searchSeatType.innerHTML= 'Phổ thông';
+  }
+  else if (flightSearchInfo.seatType == 'business') {
+    searchSeatType.innerHTML= 'Thương gia';
+  }
+  searchPassenger.innerHTML= (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
+
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
