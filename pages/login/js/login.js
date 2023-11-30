@@ -16,7 +16,7 @@ document.querySelector('.btn-login').addEventListener('click', async (e) => {
         let result = await response.json();
 
         if (result.success) {
-            // window.location.href = "../../main"; //Chỉnh đường dẫn
+            window.location.href = "../../main"; //Chỉnh đường dẫn
             setCookie('userId', result.userId, 1);
         } else {
             alert('Invalid email/phone or password');
