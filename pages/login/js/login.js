@@ -1,23 +1,26 @@
-$(document).ready(function(){
-    $(".btn-login").click(function(){
-        var email = $(".login-input input[type='text']").val();
-        var password = $(".login-input input[type='password']").val();
+document.querySelector('.btn-login').addEventListener('click', async (e) => {
+    e.preventDefault();
 
-        $.ajax({
-            url: "./login.php",
-            // Thay đường dẫn phù hợp
-            type: "POST",
-            data: {
-                email: email,
-                password: password
+    let emailOrPhone = document.querySelector('input[type="text"]').value;
+    let password = document.querySelector('input[type="password"]').value;
+
+    try {
+        let response = await fetch('login.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
             },
-            success: function(response){
-                if(response == "success"){
-                    window.location.href = "../../main";
-                }else{
-                    alert(response);
-                }
-            }
+            body: JSON.stringify({ emailOrPhone, password })
         });
-    });
+
+        let result = await response.json();
+
+        if (result.success) {
+            window.location.href = "../../main"; //Chỉnh đường dẫn
+        } else {
+            alert('Invalid email/phone or password');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
 });
