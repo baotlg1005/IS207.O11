@@ -13,7 +13,7 @@ $(document).ready(function(){
             },
             success: function(response){
                 if(response == "success"){
-                    window.location.href = "D:\Homework\Web\IE104-Group14-test-reponsive\pages\index\index.html";
+                    window.location.href = "../../main";
                 }else{
                     alert(response);
                 }
