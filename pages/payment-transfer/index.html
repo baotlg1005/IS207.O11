@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,13 +21,12 @@
 
 <body>
     <header-component></header-component>
-    
     <div class="container payment-container">
         <div class="container payment-window">
-            <div class="payment-window__title border-bottom">
+            <div class="title border-bottom">
                 <h1 class="text">Chi tiết hóa đơn</h1>
             </div>
-            <div class="payment-window__info-container flex-column border-bottom">
+            <div class="info-container flex-column border-bottom" id="payment-window__flight-info">
                 <div class="container row-container flex-row justify-between">
                     <div class="content-container flex-row align-center">
                         <div class="label">Điểm đi:</div>
@@ -51,11 +50,11 @@
                 <div class="container row-container flex-row justify-between">
                     <div class="content-container flex-row align-center">
                         <div class="label">Thời gian bay:</div>
-                        <div class="text" id="txt-flightTime">9h 5m</div>
+                        <div class="text" id="txt-travelTime">9h 5m</div>
                     </div>
                     <div class="content-container flex-row align-center">
                         <div class="label">Giờ hạ cánh:</div>
-                        <div class="text" id="txt-departureTime">22:00</div>
+                        <div class="text" id="txt-arrivalTime">22:00</div>
                     </div>
                 </div>
                 <div class="container row-container flex-row justify-between">
@@ -69,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="payment-window__info-container flex-column">
+            <div class="info-container flex-column" id="payment-window__price-info">
                 <div class="container row-container flex-row justify-between">
                     <div class="content-container flex-row align-center">
                         <div class="label">Số vé:</div>
@@ -95,11 +94,13 @@
             </div>
         </div>
     </div>
-
+    
     <footer-component></footer-component>
+
+    <script type="module" src="./js/payment-flight.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
-</html> -->
+</html>

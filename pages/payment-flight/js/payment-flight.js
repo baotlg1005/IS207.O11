@@ -107,7 +107,15 @@ btnPayment.addEventListener("click", function () {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log("Payment success");
+            let result = JSON.parse(this.responseText);
+            if (result == "success") {
+                alert("Thanh toán thành công!");
+                window.location.href = "../main/index.html";
+            }
+            else {
+                alert("Thanh toán thất bại!");
+                window.location.href = "../main/index.html";
+            }
         }
     };
     xhttp.open("POST", "../../server/data-controller/payment-flight/post-data.php", true);

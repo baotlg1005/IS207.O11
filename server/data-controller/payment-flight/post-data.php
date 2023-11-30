@@ -11,40 +11,20 @@ $ticketNum = $_POST["ticketNum"];
 
 
 if ($action == "payment") {
-    $invoiceID = getInvoiceID($conn) + 1;
-    $flightInvoiceID = getFlightInvoiceID($conn) + 1;
+    $invoiceID = uniqid("INVOICE");
+    $flightInvoiceID = uniqid("FINVOICE");
     createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum);
-
-    $conn->close();
 }
-
-function getInvoiceID($conn)
-{
-    $sql = "SELECT MAX(Id) AS InvoiceID FROM invoice";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $invoiceID = $row["InvoiceID"];
-
-    return $invoiceID;
-}
-
-function getFlightInvoiceID($conn) {
-    $sql = "SELECT MAX(Id) AS FlightInvoiceID FROM flight_invoice";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $flightInvoiceID = $row["FlightInvoiceID"];
-
-    return $flightInvoiceID;
-}
-
 function createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum)
 {
-    $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice')";
+    $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice');";
     $sql .= "INSERT INTO flight_invoice(Id, Flight_id, Invoice_id, Num_Ticket)
-    VALUES('$flightInvoiceID', '$flightID', '$invoiceID', '$ticketNum')";
+    VALUES('$flightInvoiceID', '$flightID', '$invoiceID', '$ticketNum');";
     if ($conn->multi_query($sql) === TRUE) {
-        echo"Invoice created";
+        $success = "success";
+        echo json_encode($success, JSON_UNESCAPED_UNICODE);
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $error = "error";
+        echo json_encode($error, JSON_UNESCAPED_UNICODE);
     }
 }
