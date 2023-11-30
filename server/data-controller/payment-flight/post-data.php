@@ -1,15 +1,59 @@
 <?php
-require_once('../connect.php'); 
+
+require_once('../connect.php');
 
 $action = $_POST["action"];
 
-if ($action == "payment") { 
-    $sql = "SELECT Id from invoice LIMIT 1";
-    $result = $conn->query($sql);
-    while ($row = $result->fetch_assoc())
-    {
-        $data = $result->fetch_all(MYSQLI_ASSOC);
-        print_r($row); 
-        // echo json_encode($data, JSON_UNESCAPED_UNICODE);
+$totalPrice = $_POST["totalPrice"];
+$userID = "1";
+$flightID = $_POST["flightID"];
+$ticketNum = $_POST["ticketNum"];
+
+
+if ($action == "payment") {
+    $invoiceID = getInvoiceID($conn) + 1;
+    $flightInvoiceID = getFlightInvoiceID($conn) + 1;
+    createInvoice($conn, $invoiceID, $totalPrice, $userID);
+    createFlightInvoice($conn, $flightInvoiceID, $invoiceID, $flightID, $ticketNum);
+
+    $conn->close();
+}
+
+function getInvoiceID($conn)
+{
+    $sql = "SELECT MAX(Id) AS InvoiceID FROM invoice";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $invoiceID = $row["InvoiceID"];
+
+    return $invoiceID;
+}
+
+function getFlightInvoiceID($conn) {
+    $sql = "SELECT MAX(Id) AS FlightInvoiceID FROM flight_invoice";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $flightInvoiceID = $row["FlightInvoiceID"];
+
+    return $flightInvoiceID;
+}
+
+function createInvoice($conn, $invoiceID, $totalPrice, $userID)
+{
+    $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice')";
+    if ($conn->query($sql) === TRUE) {
+        echo"Invoice created";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+function createFlightInvoice($conn, $flightInvoiceID, $invoiceID, $flightID, $ticketNum) {
+    $sql = "INSERT INTO flight_invoice(Id, Flight_id, Invoice_id, Num_Ticket)
+    VALUES('$flightInvoiceID', '$flightID', '$invoiceID', '$ticketNum')";
+    if ($conn->query($sql) === TRUE) {
+        echo"Flight invoice created";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }

@@ -1,4 +1,5 @@
 let flightPaymentInfo;
+let totalPrice;
 
 const btnPayment = document.querySelector(".btn-payment");
 
@@ -73,6 +74,7 @@ window.onload = function () {
                         <div class="label" id="txt-totalPrice">${changeMoneyFormat(flightInfo.Price * flightPaymentInfo.ticketNumber)} VND</div>
                     </div>
                 </div>`
+                totalPrice = flightInfo.Price * flightPaymentInfo.ticketNumber;
             }
             else {
                 document.getElementById("payment-window__flight-info").innerHTML += "ERROR";
@@ -110,5 +112,5 @@ btnPayment.addEventListener("click", function () {
     };
     xhttp.open("POST", "../../server/data-controller/payment-flight/post-data.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send(`action=payment`);
+    xhttp.send(`action=payment&totalPrice=${totalPrice}&flightID=${flightPaymentInfo.flightID}&ticketNum=${flightPaymentInfo.ticketNumber}`);
 })
