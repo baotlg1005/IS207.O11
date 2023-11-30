@@ -31,11 +31,13 @@ $userExists = $result->num_rows > 0;
 if ($userExists) {
     $row = $result->fetch_assoc();
     $storedPassword = $row['Password']; 
-    $passwordIsCorrect = password_verify($password, $storedPassword);
-
+    // $passwordIsCorrect = password_verify($password, $storedPassword);
+    $passwordIsCorrect = $storedPassword == $password;
     if ($passwordIsCorrect) {
-        // User successfully logged in, return success message
-        echo json_encode(array('success' => true));
+        // User successfully logged in, return success message and user id
+        echo json_encode(array('success' => true, 'userId' => $row['Id']));
+        // echo json_encode(array('success' => true));
+
     } else {
         // Password is incorrect, return error message
         echo json_encode(array('success' => false));
