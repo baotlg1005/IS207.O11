@@ -1,33 +1,49 @@
 <?php
 header('Content-Type: application/json');
 
+// Database connection
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "db_ie104";
 
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$emailOrPhone = $_POST['emailOrPhone'];
-$password = $_POST['password'];
+// Get data from the POST request
+$data = json_decode(file_get_contents('php://input'), true);
+$emailOrPhone = $data['emailOrPhone'];
+$password = $data['password'];
 
-$sql = "SELECT * FROM user WHERE (Phone = ? OR Email = ?) AND Password = ?";
-
+// Check if the user exists in the database
+$sql = "SELECT * FROM user WHERE Email = ? OR Phone = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $emailOrPhone, $emailOrPhone, $password);
+$stmt->bind_param("ss", $emailOrPhone, $emailOrPhone);
 $stmt->execute();
-$stmt->store_result();
+$result = $stmt->get_result();
+$userExists = $result->num_rows > 0;
 
-if ($stmt->num_rows > 0) {
-    echo json_encode(array('status' => 'success'));
+if ($userExists) {
+    $row = $result->fetch_assoc();
+    $storedPassword = $row['Password']; 
+    $passwordIsCorrect = password_verify($password, $storedPassword);
+
+    if ($passwordIsCorrect) {
+        // User successfully logged in, return success message
+        echo json_encode(array('success' => true));
+    } else {
+        // Password is incorrect, return error message
+        echo json_encode(array('success' => false));
+    }
 } else {
-    echo json_encode(array('status' => 'error'));
+    // User does not exist, return error message
+    echo json_encode(array('success' => false));
 }
-
 $stmt->close();
 $conn->close();
 ?>
