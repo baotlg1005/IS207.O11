@@ -1,34 +1,33 @@
 <?php
-    require 'D:\Homework\Web\IE104-Group14-test-reponsive\server\admin\connect.php';
+header('Content-Type: application/json');
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $email = trim($_POST["email"]);
-        $password = trim($_POST["password"]);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "db_ie104";
 
-        $sql = "SELECT Id, Email, Password FROM user WHERE Email = :email";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-        if($stmt->execute()){
-            $user = $stmt->fetch();
-            if($user){
-                if(password_verify($password, $user['Password'])){
-                    session_start();
-                    $_SESSION["loggedin"] = true;
-                    $_SESSION["Id"] = $user["Id"];
-                    $_SESSION["Email"] = $user["Email"];
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-                    echo "success";
-                }else{
-                    echo "Wrong password!";
-                }
-            }else{
-                echo "No account found with that email!";
-            }
-        }else{
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+$emailOrPhone = $_POST['emailOrPhone'];
+$password = $_POST['password'];
 
-        $conn = null;
-    }
+$sql = "SELECT * FROM user WHERE (Phone = ? OR Email = ?) AND Password = ?";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sss", $emailOrPhone, $emailOrPhone, $password);
+$stmt->execute();
+$stmt->store_result();
+
+if ($stmt->num_rows > 0) {
+    echo json_encode(array('status' => 'success'));
+} else {
+    echo json_encode(array('status' => 'error'));
+}
+
+$stmt->close();
+$conn->close();
 ?>
