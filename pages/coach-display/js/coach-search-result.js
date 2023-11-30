@@ -3,10 +3,10 @@ const sortContainer = document.getElementById("sort-container");
 const sortValueSelect = document.getElementById("sort-value-select");
 const sortTypeDropdown = document.getElementById("sort-type-dropdown");
 const sortTypeItem = sortTypeDropdown.querySelectorAll(".sort-type-item");
-const searchBarDeparture = document.getElementById("SearchBar-departure");
-const searchBarArrival = document.getElementById("SearchBar-arrival");
-const searchBarDate = document.getElementById("SearchBar-date");
-const searchBarPassenger = document.getElementById("SearchBar-passenger");
+const searchBarDeparture = document.getElementById("search-bar-departure");
+const searchBarArrival = document.getElementById("search-bar-arrival");
+const searchBarDate = document.getElementById("search-bar-date");
+const searchBarPassenger = document.getElementById("search-bar-passenger");
 const btnShowMore = document.getElementById("btn-showMore");
 let imgs = []
 let pageLimit = 11;
@@ -67,35 +67,35 @@ function createResultItem(data){
     //     }
     // }
     document.getElementById("list-item").innerHTML+=
-    `<div class="BusBook__BusItem">
-    <div class="BusBook__BusBrand">
+    `<div class="bus-book__BusItem">
+    <div class="bus-book__BusBrand">
       <div class="text">${data.Name}</div>
     </div>
-    <div class="BusBook__Place_Time_Price">
-      <div class="BusBook__Depature_Info">
-        <div class="BusBook__Start_Time">${data.DepartureTime}</div>
-        <div class="BusBook__Start_Place">${data.PickPoint}</div>
+    <div class="bus-book__Place_Time_Price">
+      <div class="bus-book__Depature_Info">
+        <div class="bus-book__Start_Time">${data.DepartureTime}</div>
+        <div class="bus-book__Start_Place">${data.PickPoint}</div>
       </div>
       <div class="icon">
         <img class="vector6" alt="" src="./public/external/coach-vector6.svg" />
       </div>
-      <div class="BusBook__Arrival_Info">
-        <div class="BusBook__Arrival_Time">${data.ArrivalTime}</div>
-        <div class="BusBook__Arrival_Place">${data.DesPoint}</div>
+      <div class="bus-book__Arrival_Info">
+        <div class="bus-book__Arrival_Time">${data.ArrivalTime}</div>
+        <div class="bus-book__Arrival_Place">${data.DesPoint}</div>
       </div>
-      <div class="BusBook__Duration">
+      <div class="bus-book__Duration">
         <div class="time">${data.TravelTime}</div>
       </div>
-      <div class="BusBook__Price">
+      <div class="bus-book__Price">
         <div class="price">${changeMoneyFormat(data.Price)}</div>
         <div class="units">/khách</div>
       </div>
     </div>
-    <div class="BusBook__Detail_Payment">
+    <div class="bus-book__Detail_Payment">
       <div class="navigation-item">
         <b class="text">Chi tiết</b>
       </div>
-      <div class="BusBook__Payment">
+      <div class="bus-book__Payment">
         <a class="payment" href="../payment">Chọn</a>
       </div>
     </div>

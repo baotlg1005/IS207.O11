@@ -6,13 +6,13 @@
     font-weight: 700;
     line-height: normal;
 }
-.BusBook {
+.bus-book {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    .BusBook__SearchBar
+    .bus-book__search-bar
     {
         display: flex;
         padding: 15px;
@@ -27,11 +27,11 @@
             align-items: flex-start;
             flex-direction: column;
 
-            .SearchBar__Destiantion {
+            .search-bar__Destiantion {
                 display: flex;
                 align-items: center;
 
-                .SearchBar__Des1 {
+                .search-bar__Des1 {
                     display: flex;
                     padding: 5px 20px;
                     justify-content: center;
@@ -53,7 +53,7 @@
                     height: 12px;
                 }
                 
-                .SearchBar__Des2 {
+                .search-bar__Des2 {
                     gap: 10px;
                     display: flex;
                     padding: 5px 20px;
@@ -146,14 +146,14 @@
         }
     }
 
-    .BusBook__Main {
+    .bus-book__Main {
         display: flex;
         align-items: flex-start;
         // flex-direction: row;
         padding: 15px;
         gap: 40px;
 
-        .BusBook__Sorting {
+        .bus-book__Sorting {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -303,21 +303,21 @@
             }
         }
 
-        .BusBook__BusList {
+        .bus-book__BusList {
             flex: 2;
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
             min-height: 100vh;
     
-            .BusBook__BusItem {
+            .bus-book__BusItem {
                 display: flex;
                 flex-direction: column;
                 border-radius: 8px;
                 background: #FFF;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                 margin-bottom: 5rem;
-                .BusBook__BusBrand {
+                .bus-book__BusBrand {
                     display: flex;
                     padding: 10px;
                     flex-direction: column;
@@ -338,19 +338,19 @@
                 }
             }
         
-            .BusBook__Place_Time_Price {
+            .bus-book__Place_Time_Price {
                 display: flex;
                 padding: 10px;
                 justify-content: space-between;
                 align-items: center;
-                .BusBook__Depature_Info{
+                .bus-book__Depature_Info{
                     display: flex;
                     padding: 16px 20px;
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 10px;  
     
-                    .BusBook__Start_Time {
+                    .bus-book__Start_Time {
                         height: 18px;
                         align-self: stretch;
                         color: #000;
@@ -361,7 +361,7 @@
                         line-height: normal;
                     }
     
-                    .BusBook__Start_Place {
+                    .bus-book__Start_Place {
                         align-self: stretch;
                         color: #687176;
                         font-family: Inter;
@@ -375,7 +375,7 @@
                     width: 40px;
                     height: 40px;
                 }
-                .BusBook__Arrival_Info {
+                .bus-book__Arrival_Info {
                     display: flex;
                     padding: 16px 20px;
                     flex-direction: column;
@@ -383,7 +383,7 @@
                     gap: 10px;
                     border-right: 1px solid #687176;
     
-                    .BusBook__Arrival_Time {
+                    .bus-book__Arrival_Time {
                         height: 18px;
                         align-self: stretch;
                         color: #000;
@@ -394,7 +394,7 @@
                         line-height: normal;
                     }
     
-                    .BusBook__Arrival_Place {
+                    .bus-book__Arrival_Place {
                         align-self: stretch;
                         color: #687176;
                         font-family: Inter;
@@ -404,7 +404,7 @@
                         line-height: normal;
                     }
                 }
-                .BusBook__Duration {
+                .bus-book__Duration {
                     display: flex;
                     padding: 10px;
                     justify-content: center;
@@ -421,7 +421,7 @@
                         line-height: normal;
                     }
                 }
-                .BusBook__Price {
+                .bus-book__Price {
                     display: flex;
                     padding: 16px 20px;
                     justify-content: center;
@@ -448,7 +448,7 @@
                 }
             }
         
-            .BusBook__Detail_Payment {
+            .bus-book__Detail_Payment {
                 display: flex;
                 padding: 10px;
                 justify-content: space-between;
@@ -469,7 +469,7 @@
                         line-height: normal;
                     }
                 }
-                .BusBook__Payment {
+                .bus-book__Payment {
                     display: flex;
                     width: 172px;
                     padding: 16px 20px;
