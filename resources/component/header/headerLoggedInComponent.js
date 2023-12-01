@@ -112,11 +112,12 @@ headerLoggedInTemplate.innerHTML = `
     gap: 1rem;
   }
   .header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgba(35, 110, 255, 0.8);
   }
   .header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .text {
     font-weight: 700;
+    color: #000;
   }
   .header-container .header__navbar {
     display: flex;
@@ -159,38 +160,38 @@ headerLoggedInTemplate.innerHTML = `
     </style>
     <div id="header" class="container-fluid header-container">
     <div class="container header__top-content">
-        <a class="top-content__brand-container" href="/pages/0-index/index.html">
+        <a class="top-content__brand-container" href="../../pages/main">
             <div class="brand-container__brand-logo">
-                <img class="brand-logo" src="/resources/images/logo.png">
+                <img class="brand-logo" src="../../resources/images/logo.png">
             </div>
             <div class="brand-container__brand-name">
                 <p class="text">travelowkey</p>
             </div>
         </a>
             <div class="top-content__account-btn-group">
-              <div class="btn-default account-btn-group__account-btn">
+              <a class="btn-default account-btn-group__account-btn" href="../../pages/account">
                 <ion-icon class="icon account-btn__icon" name="person-circle-outline"></ion-icon>
                 <div class="text">Tài khoản</div>
-              </div>
+              </a>
             </div>
     </div>
     <nav class="container header__navbar">
-        <a class="navbar__item" href="/pages/1-flight-search/flight-search.html">
+        <a class="navbar__item" href="../../pages/flight-search">
             <div class="text">
                 Vé máy bay
             </div>
         </a>
-        <a class="navbar__item" href="/pages/3-coach-search/coach-seach.html">
+        <a class="navbar__item" href="../../pages/coach-search">
             <div class="text">
                 Vé xe khách
             </div>
         </a>
-        <a class="navbar__item" href="/pages/6-transfer-search/transfer-search.html">
+        <a class="navbar__item" href="../../pages/transfer-search">
             <div class="text">
                 Xe dịch vụ
             </div>
         </a>
-        <a class="navbar__item" href="/pages/7-hotel-search/hotel-search.html">
+        <a class="navbar__item" href="../../pages/hotel-search">
             <div class="text">
                 Khách sạn
             </div>

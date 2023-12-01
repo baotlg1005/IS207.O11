@@ -85,6 +85,17 @@
   color: #fff;
   font-weight: 700;
 }
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn {
+  border: none;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
+  font-size: 3rem;
+  color: #fff;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .text {
+  font-weight: 700;
+  color: #fff;
+}
 .header-container .header__navbar {
   display: flex;
   align-items: center;
@@ -147,6 +158,13 @@
   font-size: 2rem;
   color: #000;
 }
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
+  color: rgba(35, 110, 255, 0.8);
+}
+.header-container.on-scroll .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .text {
+  font-weight: 700;
+  color: #000;
+}
 .header-container.on-scroll .header__navbar .navbar__item .text {
   color: #687176;
 }
@@ -173,7 +191,7 @@
 
 .feature-container {
   display: flex;
-  min-height: 60rem;
+  min-height: 20rem;
   flex-direction: column;
   align-items: center;
   gap: 1.66667rem;
@@ -274,8 +292,6 @@
 }
 .main-content .main-content__container .title-container {
   display: flex;
-  width: 65.16667rem;
-  height: 5.16667rem;
   padding: 1.33333rem 1.66667rem;
   padding-left: 0;
   justify-content: flex-start;
