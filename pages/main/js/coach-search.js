@@ -74,7 +74,7 @@ input_date = document.querySelector("#coach-search__departure-date");
 input_date.value = flightTodayDate
 input_date.setAttribute("min", coachToday);
 
-window.onload = function (e) {
+window.addEventListener("load",function(event) {
     let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
@@ -105,7 +105,7 @@ window.onload = function (e) {
         xhttp2.open("POST", "../../server/data-controller/coach/get-data.php", true);
         xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhttp2.send(`action=getArrivalLocation`)
-}
+});
 
 
 searchBtn.addEventListener('click', () => {

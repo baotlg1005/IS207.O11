@@ -20,15 +20,16 @@ function getCookie(cname) {
   const headerSignUpBtn = headerAccountBtnGroup.querySelector(".account-btn-group__sign-up-btn");
   const headerAccountBtn = headerAccountBtnGroup.querySelector(".account-btn-group__account-btn");
   
-  window.onload = function (e) {
+  window.addEventListener("load",function(event){
     const userId = getCookie("userId");
-    if (userId) {
-        headerLoginBtn.classList.add("hide");
-        headerSignUpBtn.classList.add("hide");
-        headerAccountBtn.classList.remove("hide");
-    } else {
-        headerLoginBtn.classList.remove("hide");
-        headerSignUpBtn.classList.remove("hide");
-        headerAccountBtn.classList.add("hide");
-    }
-}
+    console.log("userId: ", userId);
+      if (userId) {
+          headerLoginBtn.classList.add("hide");
+          headerSignUpBtn.classList.add("hide");
+          headerAccountBtn.classList.remove("hide");
+      } else {
+          headerLoginBtn.classList.remove("hide");
+          headerSignUpBtn.classList.remove("hide");
+          headerAccountBtn.classList.add("hide");
+      }
+  });

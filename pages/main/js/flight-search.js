@@ -261,7 +261,7 @@ const departureDateInputs = featureFlightSearch.querySelectorAll(".departure-dat
 departureDateInputs.forEach(input => {
     input.value = flightTodayDate
 })
-window.onload = function (e) {
+window.addEventListener("load",function(event) {
     let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
@@ -296,4 +296,4 @@ window.onload = function (e) {
         xhttp2.open("POST", "../../server/data-controller/flight/get-data.php", true);
         xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhttp2.send(`action=getArrivalLocation`)
-    }
+    });

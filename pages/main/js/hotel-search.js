@@ -21,7 +21,7 @@ const checkinDateInput = hotelSearchForm.querySelector('#hotel-search__checkin-d
 const checkoutDateInput = hotelSearchForm.querySelector('#hotel-search__checkout-date');
 const hotelSubmitBtn = hotelSearchForm.querySelector('#search-form__submit-btn--hotel');
 
-window.onload = function (e) {
+window.addEventListener("load",function(event){
     console.log(HotelSearchInfo);
     let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -38,7 +38,7 @@ window.onload = function (e) {
         xhttp.open("POST", "../../server/data-controller/hotel/get-data.php", true);
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhttp.send(`action=getLocation`)
-    }
+    });
 function GetTodayDate() {
     const today = new Date()
     const todayDate = today.getDate()

@@ -20,7 +20,7 @@ const endDateInput = transferSearchForm.querySelector('#transfer-search__end-dat
 const endHourInput = transferSearchForm.querySelector('#select-hour-end')
 const endMinuteInput = transferSearchForm.querySelector('#select-minute-end')
 const submitBtn = transferSearchForm.querySelector('#search-form__submit-btn--transfer')
-window.onload = function (e) {
+window.addEventListener("load",function(event) {
 let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -36,7 +36,7 @@ let xhttp = new XMLHttpRequest();
     xhttp.open("POST", "../../server/data-controller/transfer/get-data.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.send(`action=getLocation`)
-}
+});
 function GetTodayDate() {
     const today = new Date()
     const todayDate = today.getDate()
