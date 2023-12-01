@@ -278,8 +278,6 @@
   font-weight: 700;
   line-height: normal;
   color: rgb(0, 0, 0);
-  width: 82px;
-  height: 20px;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price {
   display: flex;
