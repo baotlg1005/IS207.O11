@@ -15,12 +15,21 @@
     <link rel="stylesheet" href="../../resources/css/payment.css">
 
     <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
 
 </head>
 
 <body>
-    <header-component></header-component>
+    <div id="header-container">
+        <div id="header-default" class="hide">
+            <header-component></header-component>
+        </div>
+        <div id="header-logged-in" class="hide">
+            <header-logged-in-component></header-logged-in-component>
+        </div>
+    </div>
     
     <div class="container payment-container">
         <div class="container payment-window">
