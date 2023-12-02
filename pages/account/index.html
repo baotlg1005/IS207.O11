@@ -163,128 +163,46 @@
             </div>
             <div class="account-content-pane hide" id="bill-pane">
                 <div class="pane-label">
-                    <div class="label-text">Phiếu thanh toán chưa hiện hành</div>
+                    <div class="label-text">Lịch sử thanh toán</div>
                 </div>
                 <div id="bill-container">
-                    <div class="cart-item flight-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="airplane-outline"></ion-icon>
-                                <div class="item-title">
+                    <div class="bill-item">
+                        <div class="left-label">
+                            <div class="bill-type">
+                                <ion-icon name="airplane"></ion-icon>
+                                <div class="text">
                                     Vé máy bay
                                 </div>
                             </div>
-                            <div class="item-text flight-paid-bill-name">VietJet Air</div>
-                            <div class="item-text flight-paid-bill-location">
-                                <div class="item-text flight-paid-bill-fromlocation">
-                                    TP HCM
+                            <div class="bill-id">
+                                <div class="text">
+                                    Mã giao dịch:
                                 </div>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                                <div class="item-text flight-paid-bill-tolocation">
-                                    Hà Nội
+                                <div class="id-text">
+                                    123456789
                                 </div>
                             </div>
-    
-                            <div class="item-text flight-paid-bill-date">CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text flight-paid-bill-airport">Sân bay quốc tế Tân Sơn Nhất, Nhà ga 1</div>
                         </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title flight-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
+                        <div class="right-label">
+                            <div class="bill-price">
+                                <div class="text">
+                                    5.000.000 VND
                                 </div>
-                                <div class="item-text">Đã thanh toán</div>
                             </div>
-                            <button class="btn-default flight-paid-bill-pay-btn" type="button">
+                            <div class="bill-status">
+                                <div class="text">
+                                    Đã thanh toán
+                                </div>
+                            </div>
+                            <div class="btn-default detail-btn">
                                 <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="cart-item hotel-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="business-outline"></ion-icon>
-                                <div class="item-title">
-                                    Phòng khách sạn
-                                </div>
                             </div>
-                            <div class="item-text hotel-paid-bill-name">Davue Hotel Da Nang</div>
-                            <div class="item-text hotel-paid-bill-address">
-                                57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 550000
-                            </div>
-                            <div class="item-text hotel-paid-bill-checkin">Từ: CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text hotel-paid-bill-checkout">Đến: T2, 31 thng 11, 2025, 06:20</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title hotel-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default hotel-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="cart-item bus-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="bus-outline"></ion-icon>
-                                <div class="item-title">
-                                    Vé xe khách
-                                </div>
-                            </div>
-                            <div class="item-text bus-paid-bill-name">Phương Trang</div>
-                            <div class="item-text bus-paid-bill-location">
-                                <div class="item-text bus-paid-bill-fromlocation">
-                                    TP HCM
-                                </div>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                                <div class="item-text bus-paid-bill-tolocation">
-                                    Hà Nội
-                                </div>
-                            </div>
-    
-                            <div class="item-text bus-paid-bill-date">CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text bus-paid-bill-address">Bến xe Miền Tây</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title bus-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default bus-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="cart-item car-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="car-outline"></ion-icon>
-                                <div class="item-title">
-                                    Xe dịch vụ
-                                </div>
-                            </div>
-                            <div class="item-text car-paid-bill-name">TOYOTA</div>
-                            <div class="item-text car-paid-bill-type">Có tài xế</div>
-                            <div class="item-text car-paid-bill-date">CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text car-paid-bill-location">Sân bay quốc tế Tân Sơn Nhất, Nhà ga 1</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title car-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default car-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
