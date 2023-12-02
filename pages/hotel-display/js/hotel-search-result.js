@@ -21,11 +21,10 @@ const location_title = document.getElementById('location');
 const checkInTime = document.getElementById('checkInTime');
 const numOfPass = document.getElementById('numOfPass');
 
-for (let i = 0; i < FacilitySelectQuantityItems.length; i++)
-{
+for (let i = 0; i < FacilitySelectQuantityItems.length; i++) {
     let RatingCheckBox = FacilitySelectQuantityItems[i].querySelector('.FacilitiesCBox');
     let RatingContent = FacilitySelectQuantityItems[i].querySelector('.facilities-content').innerHTML;
-    RatingCheckBox.addEventListener('change', function() {
+    RatingCheckBox.addEventListener('change', function () {
         if (this.checked) {
             temp.style.marginTop = "140px";
 
@@ -40,10 +39,10 @@ for (let i = 0; i < FacilitySelectQuantityItems.length; i++)
             childnewElement.style.display = 'flex';
             childnewElement.style.flexDirection = 'row';
             childnewElement.style.alignItems = "center";
-            childnewElement.style.gap="5px";
+            childnewElement.style.gap = "5px";
             let newElement = document.createElement("ion-icon");
             newElement.name = "close-outline";
-            newElement.addEventListener("click",function(){
+            newElement.addEventListener("click", function () {
                 let remove_element = document.getElementById('facilities-filter-container ' + i);
                 let parentElement = remove_element.parentNode;
                 parentElement.removeChild(remove_element);
@@ -55,7 +54,7 @@ for (let i = 0; i < FacilitySelectQuantityItems.length; i++)
             childnewElement.appendChild(newElement_text);
             childnewElement.appendChild(newElement);
             FilerContainer.style.overflowY = 'visible';
-        } 
+        }
         else {
             let all_filter_container = document.getElementById("facilities-filter-container")
             let existingElement = document.getElementById('facilities-filter-container ' + i)
@@ -70,8 +69,7 @@ const ArrowImage = FacilitySelectQuantityInfo.querySelector('.arrow-icon')
 FacilitySelectQuantityInfo.addEventListener('click', () => {
     FacilitySelectQuantityDropdownPanel.classList.toggle('hide');
     let imageArrow = ArrowImage.querySelector('.drop-down-icon');
-    if(imageArrow.name === "chevron-up-outline")
-    {
+    if (imageArrow.name === "chevron-up-outline") {
         imageArrow.name = "chevron-down-outline";
     }
     else
@@ -98,8 +96,7 @@ const RatingArrowImage = RatingSelectQuantityInfo.querySelector('.arrow-icon')
 RatingSelectQuantityInfo.addEventListener('click', () => {
     RatingSelectQuantityDropdownPanel.classList.toggle('hide');
     let imageArrow = RatingArrowImage.querySelector('.drop-down-icon');
-    if(imageArrow.name === "chevron-up-outline")
-    {
+    if (imageArrow.name === "chevron-up-outline") {
         imageArrow.name = "chevron-down-outline";
     }
     else
@@ -116,11 +113,10 @@ document.addEventListener('click', (e) => {
 });
 
 // // add filter
-for (let i = 0; i <= 4; i++)
-{
+for (let i = 0; i <= 4; i++) {
     let RatingCheckBox = RatingSelectQuantityItems[i].querySelector('.CBox');
     let RatingContent = RatingSelectQuantityItems[i].querySelector('.rating-content').innerHTML;
-    RatingCheckBox.addEventListener('change', function() {
+    RatingCheckBox.addEventListener('change', function () {
         if (this.checked) {
             temp.style.marginTop = "140px";
 
@@ -134,11 +130,11 @@ for (let i = 0; i <= 4; i++)
             childnewElement.style.display = 'flex';
             childnewElement.style.flexDirection = 'row';
             childnewElement.style.alignItems = "center";
-            childnewElement.style.gap="3px";
+            childnewElement.style.gap = "3px";
             childnewElement.appendChild(newElement_);
             let newElement = document.createElement("ion-icon");
             newElement.name = "close-outline";
-            newElement.addEventListener("click",function(){
+            newElement.addEventListener("click", function () {
                 let remove_element = document.getElementById('all-filter-container ' + i);
                 let parentElement = remove_element.parentNode;
                 parentElement.removeChild(remove_element);
@@ -148,7 +144,7 @@ for (let i = 0; i <= 4; i++)
             childnewElement.appendChild(newElement);
             let all_filter_container = document.getElementById("all-filter-container")
             all_filter_container.appendChild(childnewElement);
-        } 
+        }
         else {
             let all_filter_container = document.getElementById("all-filter-container")
             let existingElement = document.getElementById('all-filter-container ' + i)
@@ -159,7 +155,7 @@ for (let i = 0; i <= 4; i++)
     });
 }
 const FilterResetBtn = document.getElementById("hotel-reset-text")
-FilterResetBtn.addEventListener("click", function(){
+FilterResetBtn.addEventListener("click", function () {
     temp.style.marginTop = "50px";
     let container = document.getElementById('all-filter-container');
     let container_facilities = document.getElementById('facilities-filter-container');
@@ -170,54 +166,51 @@ FilterResetBtn.addEventListener("click", function(){
     while (container_facilities.firstChild) {
         container_facilities.removeChild(container_facilities.firstChild);
     }
-    for (let i = 0; i < RatingSelectQuantityItems.length; i++)
-    {
+    for (let i = 0; i < RatingSelectQuantityItems.length; i++) {
         let RatingCheckBox = RatingSelectQuantityItems[i].querySelector('.CBox');
         RatingCheckBox.checked = false;
     }
-    for (let k = 0; k < FacilitySelectQuantityItems.length; k++)
-    {
+    for (let k = 0; k < FacilitySelectQuantityItems.length; k++) {
         let FacilitiesCheckBox = FacilitySelectQuantityItems[k].querySelector('.FacilitiesCBox');
         FacilitiesCheckBox.checked = false;
     }
 });
 
-if (AllchildNodes.length === 0 && FacilitieschildNodes.length === 0)
-{
+if (AllchildNodes.length === 0 && FacilitieschildNodes.length === 0) {
     temp.style.marginTop = "50px";
 }
 
 const rangeInput = document.querySelectorAll(".range-input input"),
-priceInput = document.querySelectorAll(".price-input input"),
-range = document.querySelector(".slider .progress");
+    priceInput = document.querySelectorAll(".price-input input"),
+    range = document.querySelector(".slider .progress");
 let priceGap = 1900000;
-priceInput.forEach(input =>{
-    input.addEventListener("input", e =>{
+priceInput.forEach(input => {
+    input.addEventListener("input", e => {
         let minPrice = parseInt(priceInput[0].value),
-        maxPrice = parseInt(priceInput[1].value);
-        
-        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
-            if(e.target.className === "input-min"){
+            maxPrice = parseInt(priceInput[1].value);
+
+        if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max) {
+            if (e.target.className === "input-min") {
                 rangeInput[0].value = minPrice;
                 range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
-            }else{
+            } else {
                 rangeInput[1].value = maxPrice;
                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
             }
         }
     });
 });
-rangeInput.forEach(input =>{
-    input.addEventListener("input", e =>{
+rangeInput.forEach(input => {
+    input.addEventListener("input", e => {
         let minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
-        if((maxVal - minVal) < priceGap){
-            if(e.target.className === "range-min"){
+            maxVal = parseInt(rangeInput[1].value);
+        if ((maxVal - minVal) < priceGap) {
+            if (e.target.className === "range-min") {
                 rangeInput[0].value = maxVal - priceGap
-            }else{
+            } else {
                 rangeInput[1].value = minVal + priceGap;
             }
-        }else{
+        } else {
             priceInput[0].value = minVal;
             priceInput[1].value = maxVal;
             range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
@@ -226,8 +219,7 @@ rangeInput.forEach(input =>{
     });
 });
 const FilterPriceBtn = document.getElementById("reset-filter");
-FilterPriceBtn.addEventListener("click", function()
-{
+FilterPriceBtn.addEventListener("click", function () {
     let inputMin = document.getElementById("InputMin");
     let inputMax = document.getElementById("InputMax");
     inputMin.value = 0;
@@ -245,7 +237,7 @@ FilterPriceBtn.addEventListener("click", function()
 //     let resultItem = resultItemTemplate.cloneNode(true)
 //     // resultItem.classList.add("hotel-item");
 //     resultItem.id = resultItem.id.replace("template", data_.Id)
-    
+
 //     let tempName = resultItem.querySelector(".hotel-item-info").querySelector(".hotel-item-1")
 //     tempName.querySelector("#hotel-name").textContent = data_.Name
 
@@ -260,22 +252,22 @@ FilterPriceBtn.addEventListener("click", function()
 //     resultContainer.appendChild(createResultItem(data[i]))
 // }
 imgs = [];
-let pageLimit = 10; 
+let pageLimit = 10;
 let action = "showResult"
 fetch('../../resources/images/imgs_hotel.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    imgs = data;
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error fetching and parsing JSON:', error);
-  });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        imgs = data;
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error fetching and parsing JSON:', error);
+    });
 const btnShowMore = document.getElementById("btn-showMore");
 btnShowMore.addEventListener("click", (e) => {
     pageLimit += 10;
@@ -284,27 +276,27 @@ btnShowMore.addEventListener("click", (e) => {
 function changeMoneyFormat(money) {
     console.log(money);
     return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
-  function changeDateFormat(date) {
+}
+function changeDateFormat(date) {
     //change date format from 'yyyy-mm-dd' to 'dd, thng mm, yyyy'
     let dateArray = date.split('-');
     let day = dateArray[2];
     let month = dateArray[1];
     let year = dateArray[0];
     let monthArray = ['tháng 1', 'tháng 2', 'tháng 3', 'tháng 4',
-      'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8',
-      'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
+        'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8',
+        'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
     return `${day}, ${monthArray[month - 1]}, ${year}`;
-  }
-function createResultItem(data){
+}
+function createResultItem(data) {
 
     let link1 = 'https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10019543-67f76e17c47cc0e0d64887dc42349d7e.jpeg?_src=imagekit&tr=c-at_max,h-144,q-40,w-287'
     let link2 = 'https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-ad8ff0eb27f6d8a8dd5bc41e4a8a10cb.jpeg?_src=imagekit&tr=h-50,q-40,w-94'
     let link3 = 'https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-73c2dcb0f4fcb55547c1cbf4e426f85f.jpeg?_src=imagekit&tr=h-50,q-40,w-94'
     let link4 = 'https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/67757118-3000x2695-FIT_AND_TRIM-9e0ae1cc48ae4effc54738916dbfc0fb.jpeg?_src=imagekit&tr=h-50,q-40,w-94'
-    for (let item of imgs){
-        if (data.roomname.indexOf(item.img_name) > -1){
-          
+    for (let item of imgs) {
+        if (data.roomname.indexOf(item.img_name) > -1) {
+
             link1 = item.img_src[0]
             link2 = item.img_src[1]
             link3 = item.img_src[2]
@@ -313,8 +305,8 @@ function createResultItem(data){
             break
         }
     }
-    document.getElementById("detail-hotel-book-list-id").innerHTML+=
-    `<div id="hotel-item-template" class = "hotel-item">
+    document.getElementById("detail-hotel-book-list-id").innerHTML +=
+        `<div id="hotel-item-template-${data.roomid}" class = "hotel-item">
     <div class="image-hotel-item">
       <img src='${link1}' alt="room1" class="image-hotel-item-main"> 
       <div class="image-hotel-item-sub-frame">
@@ -350,7 +342,7 @@ function createResultItem(data){
         </div>
       </div>
       <div class="selected-btn-frame">
-        <a class="selected-btn" href="../payment" style="outline:none;"> Chọn phòng</a>
+        <a class="selected-btn" href="../payment-hotel" style="outline:none;"> Chọn phòng</a>
       </div>
     </div>
   </div>`
@@ -359,7 +351,8 @@ function createResultItem(data){
 let HotelSearchInfo;
 // check if session storage flightSearchInfo is exist
 if (sessionStorage.getItem("HotelSearchInfo")) {
-  HotelSearchInfo = JSON.parse(sessionStorage.getItem("HotelSearchInfo"))}
+    HotelSearchInfo = JSON.parse(sessionStorage.getItem("HotelSearchInfo"))
+}
 //   searchInfoDescription.innerText = transferSearchInfo.location+' • '+transferSearchInfo.startDate+' '+transferSearchInfo.startTime+' • '+transferSearchInfo.endDate+' '+transferSearchInfo.endTime
 //     if (transferSearchInfo.haveDriver){
 //         searchInfoTitle.innerHTML = `Có tài xế`
@@ -369,28 +362,28 @@ if (sessionStorage.getItem("HotelSearchInfo")) {
 //     }
 // }
 
- 
 
-function getData(){
+
+function getData() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        try{
-        console.log(this.responseText);
-        let searchResults = JSON.parse(this.responseText);
-            document.getElementById("detail-hotel-book-list-id").innerHTML = " ";
-            searchResults.forEach(item=>{
-                createResultItem(item)
-            })
-          }
-        catch(e){
-            console.log("Không tìm thấy kết quả phù hợp")
-            document.getElementById("detail-hotel-book-list-id").innerHTML=
-            `<div class="title">Không tìm thấy kết quả phù hợp</div>`
-            btnShowMore.style.display = 'none';
+        if (this.readyState == 4 && this.status == 200) {
+            try {
+                console.log(this.responseText);
+                let searchResults = JSON.parse(this.responseText);
+                document.getElementById("detail-hotel-book-list-id").innerHTML = " ";
+                searchResults.forEach(item => {
+                    createResultItem(item)
+                })
+            }
+            catch (e) {
+                console.log("Không tìm thấy kết quả phù hợp")
+                document.getElementById("detail-hotel-book-list-id").innerHTML =
+                    `<div class="title">Không tìm thấy kết quả phù hợp</div>`
+                btnShowMore.style.display = 'none';
+            }
         }
-        }
-      }
+    }
     xhttp.open("POST", "../../server/data-controller/hotel/get-data.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.send(`action=${action}&pageLimit=${pageLimit}&location=${HotelSearchInfo.location}&checkinDate=${HotelSearchInfo.checkinDate}&checkoutDate=${HotelSearchInfo.checkoutDate}&adultQuantity=${HotelSearchInfo.adultQuantity}&childQuantity=${HotelSearchInfo.childQuantity}&roomQuantity=${HotelSearchInfo.roomQuantity}`)
@@ -398,7 +391,34 @@ function getData(){
 
 window.onload = function (e) {
     location_title.innerText = HotelSearchInfo.location
-    checkInTime.innerText = changeDateFormat(HotelSearchInfo.checkinDate) + ' - ' +changeDateFormat(HotelSearchInfo.checkoutDate)
+    checkInTime.innerText = changeDateFormat(HotelSearchInfo.checkinDate) + ' - ' + changeDateFormat(HotelSearchInfo.checkoutDate)
     numOfPass.innerText = HotelSearchInfo.adultQuantity + ' người lớn, ' + HotelSearchInfo.childQuantity + ' trẻ em, ' + HotelSearchInfo.roomQuantity + ' phòng'
     getData()
-} 
+}
+
+let hotelPaymentInfo = {
+    ID: "",
+    guestNum: 0,
+    hotelName: "",
+    hotelAddress: "",
+    price: 0,
+}
+
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('selected-btn')) {
+
+        //get id out of hotel-item-template-${data.roomid} 
+        let id = e.target.closest(".hotel-item").id;
+        hotelPaymentInfo.ID = id.substring(20);
+        hotelPaymentInfo.guestNum = HotelSearchInfo.adultQuantity + HotelSearchInfo.childQuantity;
+        hotelPaymentInfo.hotelName = e.target.closest(".hotel-item").querySelector("#hotel-name").innerText;
+        hotelPaymentInfo.hotelAddress = e.target.closest(".hotel-item").querySelector("#position-hotel").innerText;
+        hotelPaymentInfo.price = changeMoneyFormatBack(e.target.closest(".hotel-item").querySelector(".price-hotel-item").innerText);
+        sessionStorage.setItem("hotelPaymentInfo", JSON.stringify(hotelPaymentInfo));
+        console.log(hotelPaymentInfo);
+    }
+})
+
+function changeMoneyFormatBack(money) {
+    return parseInt(money.replace(/\./g, '').replace(' VND', ''));
+}
