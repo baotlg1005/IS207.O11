@@ -68,42 +68,48 @@ body {
 .account-content-container .account-content-window #bill-pane .pane-label {
   border-bottom: 0;
 }
-.account-content-container .account-content-window #cart-pane .cart-item,
-.account-content-container .account-content-window #bill-pane .cart-item {
+.account-content-container .account-content-window #cart-pane #bill-container,
+.account-content-container .account-content-window #bill-pane #bill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item {
   padding: 2rem;
   background-color: white;
   border-radius: 0.57143rem;
   display: flex;
   flex-direction: row;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-title-container,
-.account-content-container .account-content-window #bill-pane .cart-item .item-title-container {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-title-container,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-title-container ion-icon,
-.account-content-container .account-content-window #bill-pane .cart-item .item-title-container ion-icon {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-title-container ion-icon,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-title-container ion-icon {
   font-size: 28px;
   color: #236EFF;
   font-weight: 700;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-title-container .item-title,
-.account-content-container .account-content-window #bill-pane .cart-item .item-title-container .item-title {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-title-container .item-title,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-title-container .item-title {
   font-size: 16px;
   font-weight: bold;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-text {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-text {
   font-size: 14px;
   display: flex;
   flex-direction: row;
   color: #606060;
   font-weight: bold;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-label,
-.account-content-container .account-content-window #bill-pane .cart-item .item-label {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-label,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-label {
   padding: 0.35714rem;
   display: flex;
   flex-direction: column;
@@ -111,8 +117,8 @@ body {
   width: 50%;
   border-right: 1px solid #C7C7C7;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions {
   padding: 0.35714rem;
   display: flex;
   flex-direction: column;
@@ -120,50 +126,55 @@ body {
   justify-content: space-between;
   width: 50%;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .flight-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .hotel-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .bus-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .car-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .flight-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .hotel-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .bus-unpaid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .car-unpaid-bill-pay-btn {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .flight-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .hotel-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .bus-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .car-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .flight-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .hotel-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .bus-unpaid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .car-unpaid-bill-pay-btn {
   width: auto;
   padding: 2rem;
   background-color: #FF5E1F;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .flight-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .hotel-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .bus-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .car-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .flight-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .hotel-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .bus-unpaid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .car-unpaid-bill-pay-btn .text {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .flight-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .hotel-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .bus-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .car-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .flight-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .hotel-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .bus-unpaid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .car-unpaid-bill-pay-btn .text {
   color: white;
   font-weight: bold;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .flight-paid-bill-pay-btn,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .hotel-paid-bill-pay-btn,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .bus-paid-bill-pay-btn,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .car-paid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .flight-paid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .hotel-paid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .bus-paid-bill-pay-btn,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .car-paid-bill-pay-btn {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .flight-paid-bill-pay-btn,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .hotel-paid-bill-pay-btn,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .bus-paid-bill-pay-btn,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .car-paid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .flight-paid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .hotel-paid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .bus-paid-bill-pay-btn,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .car-paid-bill-pay-btn {
   width: 15rem;
   padding: 1rem;
   background-color: #236EFF;
 }
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .flight-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .hotel-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .bus-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #cart-pane .cart-item .item-actions .car-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .flight-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .hotel-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .bus-paid-bill-pay-btn .text,
-.account-content-container .account-content-window #bill-pane .cart-item .item-actions .car-paid-bill-pay-btn .text {
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .flight-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .hotel-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .bus-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #cart-pane #bill-container .cart-item .item-actions .car-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .flight-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .hotel-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .bus-paid-bill-pay-btn .text,
+.account-content-container .account-content-window #bill-pane #bill-container .cart-item .item-actions .car-paid-bill-pay-btn .text {
   color: white;
+  font-weight: bold;
+}
+.account-content-container .account-content-window #cart-pane #bill-container .no-result-text,
+.account-content-container .account-content-window #bill-pane #bill-container .no-result-text {
+  font-size: 2rem;
   font-weight: bold;
 }
 .account-content-container .account-content-window .account-content-pane {

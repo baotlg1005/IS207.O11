@@ -128,8 +128,16 @@
                 </a>
             </div>
             <div id="result-container">
+                <div class="loading-block">
+                    <div class="loading-icon">
+                        <ion-icon name="airplane-outline"></ion-icon>
+                    </div>
+                    <div class="loading-text">
+                        Đang tìm kiếm chuyến bay
+                    </div>
+                </div>
             </div>
-            <div class="btn-default" id="btn-showMore">
+            <div class="btn-default hide" id="btn-showMore">
                 <div class="text">
                     Show more
                 </div>
@@ -139,7 +147,7 @@
 
     <footer-component></footer-component>
 
-    <script type="module" src="./js/flight-display.js"></script>
+    <!-- <script type="module" src="./js/flight-display.js"></script> -->
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
