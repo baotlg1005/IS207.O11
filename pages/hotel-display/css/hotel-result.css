@@ -282,7 +282,7 @@ input[type="range"]::-moz-range-thumb{
 }
 .ReSearch-Button{
   display: flex;
-  /* width: 168px; */
+  width: auto;
   height: 46px;
   padding: 16px 20px;
   justify-content: flex-end;
@@ -373,6 +373,7 @@ input[type="range"]::-moz-range-thumb{
 }
 
 .selected-btn {
+  text-decoration: none;
   width: fit-content;
   padding: 16px 20px;
   align-items: flex-start;
@@ -447,14 +448,27 @@ input[type="range"]::-moz-range-thumb{
 .image-hotel-item .image-hotel-item-main{
   width: 100%;
   height: auto;
-  border-radius: 8px 0 0 8px;
+  flex-grow: 3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border: 1px solid black;
 
 }
 .image-hotel-item .image-hotel-item-sub-frame{
   width: 100%;
   height: auto;
-  border-radius: 8px 0 0 8px;
+  flex-grow: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.image-hotel-item-sub{
+  width: fixed;
+  height: fixed;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   border: 1px solid black;
   display: flex;
   flex-direction: row;

@@ -48,7 +48,7 @@ const todayDate = GetTodayDate()
 let date = new Date();
 let today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 input_dates = document.querySelectorAll(".date__input");
-input_dates.forEach(item=>{item.setAttribute("min", today); item.value = todayDate})
+input_dates.forEach(item=>{item.setAttribute("min", todayDate); item.value = todayDate})
 
 // haveDriverCheckbox EVENT
 haveDriverCheckbox.addEventListener('click', () => {

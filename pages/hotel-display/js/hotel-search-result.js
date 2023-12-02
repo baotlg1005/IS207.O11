@@ -309,7 +309,6 @@ function createResultItem(data){
             link2 = item.img_src[1]
             link3 = item.img_src[2]
             link4 = item.img_src[3]
-            console.log(link1)
             break
         }
     }

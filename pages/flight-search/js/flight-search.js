@@ -260,6 +260,7 @@ const departureDateInputs = featureFlightSearch.querySelectorAll(".departure-dat
 
 departureDateInputs.forEach(input => {
     input.value = todayDate
+    input.setAttribute("min", todayDate);
 })
 window.onload = function (e) {
     let xhttp = new XMLHttpRequest();

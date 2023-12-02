@@ -50,10 +50,10 @@ const todayDate = GetTodayDate()
 let date = new Date();
 let today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 input_date = document.querySelector(".checkin-date__input");
-input_date.setAttribute("min", today);
+input_date.setAttribute("min", todayDate);
 input_date.value = todayDate
 output_date = document.querySelector(".checkout-date__input");
-output_date.setAttribute("min", today);
+output_date.setAttribute("min", todayDate);
 output_date.value = todayDate
 //guestAndRoomQuantity EVENT
 guestAndRoomQuantityInfo.addEventListener('click', () => {
