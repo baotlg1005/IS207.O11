@@ -13,12 +13,6 @@ $ticketNum = $_POST["ticketNum"];
 if ($action == "payment") {
     $invoiceID = uniqid("I");
     $flightInvoiceID = uniqid("FI");
-    createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum);
-
-    $conn->close();
-}
-function createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum)
-{
     $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice');";
     $sql .= "INSERT INTO flight_invoice(Id, Flight_id, Invoice_id, Num_Ticket)
     VALUES('$flightInvoiceID', '$flightID', '$invoiceID', '$ticketNum');";
@@ -29,4 +23,6 @@ function createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID
         $error = "error";
         echo json_encode($error, JSON_UNESCAPED_UNICODE);
     }
+
+    $conn->close();
 }

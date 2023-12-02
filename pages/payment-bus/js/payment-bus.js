@@ -68,5 +68,5 @@ btnPayment.addEventListener("click", function () {
     };
     xhttp.open("POST", "../../server/data-controller/payment-bus/post-data.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(`action="payment"&busID=${busPaymentInfo.ID}&ticketNumber=${busPaymentInfo.ticketNumber}&totalPrice=${totalPrice}`);
+    xhttp.send(`action="payment&busID=${busPaymentInfo.ID}&ticketNumber=${busPaymentInfo.ticketNumber}&totalPrice=${totalPrice}`);
 });
