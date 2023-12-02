@@ -338,6 +338,27 @@ body {
           }
         }
       }
+      .loading-block{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        .text{
+          color: #236EFF;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+        .loading-gif{
+          width: 2rem;
+          height: 2rem;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
 
     #btn-showMore {

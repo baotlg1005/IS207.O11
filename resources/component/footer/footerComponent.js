@@ -101,7 +101,7 @@ footer {
       <div class="footer__top-content">
           <div class="top-content__brand-container">
               <div class="brand-container__brand-logo">
-                  <img src="/resources/images/logo.png" alt="" sizes="" srcset="">
+                  <img src="../../resources/images/logo.png" alt="" sizes="" srcset="">
               </div>
               <div class="brand-container__brand-name">
                   <p class="text">travelowkey</p>
@@ -109,10 +109,10 @@ footer {
           </div>
           <div class="top-content__media-container">
               <a href="#">
-                  <img src="/resources/images/svg/facebook-icon.svg" alt="" class="media-icon">
+                  <img src="../../resources/images/svg/facebook-icon.svg" alt="" class="media-icon">
               </a>
               <a href="#">
-                  <img src="/resources/images/svg/youtube-icon.svg" alt="" class="media-icon">
+                  <img src="../../resources/images/svg/youtube-icon.svg" alt="" class="media-icon">
               </a>
           </div>
       </div>

@@ -147,11 +147,12 @@ function loadResult() {
             </div>
           </div>`
         }
+        btnShowMore.classList.remove("hide");
       }
       catch(err) {
         document.getElementById("result-container").innerHTML=
             `<div class="title">Không tìm thấy kết quả phù hợp</div>`
-        btnShowMore.style.display = 'none';
+        btnShowMore.classList.add("hide");
       }
     }
   };

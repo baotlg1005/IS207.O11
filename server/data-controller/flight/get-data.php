@@ -55,8 +55,11 @@ if ($action == "load") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $data = $result->fetch_all(MYSQLI_ASSOC);
+        // while ($row = $result->fetch_assoc()) {
+        //     $data = $result->fetch_all(MYSQLI_ASSOC);
+        //     echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        // }
+        while ($data = $result->fetch_all(MYSQLI_ASSOC)) {
             echo json_encode($data, JSON_UNESCAPED_UNICODE);
         }
     } 
