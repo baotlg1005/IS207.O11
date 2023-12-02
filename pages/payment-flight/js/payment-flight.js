@@ -82,9 +82,8 @@ window.onload = function () {
             }
         }
     };
-    xhttp.open("POST", "../../server/data-controller/payment-flight/get-data.php", true);
-    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send(`action=load&flightID=${flightPaymentInfo.flightID}`);
+    xhttp.open("GET", "../../server/data-controller/payment-flight/get-data.php?action=load&flightID="+flightPaymentInfo.flightID, true);
+    xhttp.send();
 }
 
 function changeDateFormat(date) {

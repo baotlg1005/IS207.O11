@@ -11,9 +11,11 @@ $ticketNum = $_POST["ticketNum"];
 
 
 if ($action == "payment") {
-    $invoiceID = uniqid("INVOICE");
-    $flightInvoiceID = uniqid("FINVOICE");
+    $invoiceID = uniqid("I");
+    $flightInvoiceID = uniqid("FI");
     createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum);
+
+    $conn->close();
 }
 function createInvoice($conn, $invoiceID, $totalPrice, $userID, $flightInvoiceID, $flightID, $ticketNum)
 {

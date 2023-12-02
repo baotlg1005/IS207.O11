@@ -19,8 +19,8 @@ print_r($transferBillInfo);
 
 
 if ($action == "payment") {
-    $invoiceID = uniqid("INVOICE");
-    $taxiInvoiceID = uniqid("TINVOICE");
+    $invoiceID = uniqid("I");
+    $taxiInvoiceID = uniqid("TI");
 
     $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$transferBillInfo->totalPrice');";
     $sql .= "INSERT INTO taxi_invoice(Id, Taxi_id, DepartureDay, TimeStart, ArrivalTime, TimeEnd, Invoice_id)

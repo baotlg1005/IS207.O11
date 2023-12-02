@@ -3,12 +3,11 @@ require_once('../connect.php');
 
 $action = $_GET["action"];
 
-$flightID = $_GET["flightID"];
+$ID = $_GET["ID"];
 
 if ($action == "load") {
-    $sql = "SELECT * FROM flight WHERE `ID` = '$flightID'";
+    $sql = "SELECT * FROM bus WHERE `ID` = '$ID'";
     $result = $conn->query($sql);
-
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
