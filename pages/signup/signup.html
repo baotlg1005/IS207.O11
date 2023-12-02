@@ -26,24 +26,21 @@
                     <div class="signup-label-text">Đăng Ký</div>
                 </div>
                 <div class="signup-content">
-                    <form>
+                    <form id="signup-form">
                         <div class="input-block">
                             <div class="title signup-input-title">
-                                <div class="text signup-input-text">Email/Số điện thoại di động</div>
+                                <div class="text signup-input-text">Email</div>
                             </div>
                             <div class="input signup-input">
-                                <input type="text" placeholder="Nhập số email hoặc số điện thoại">
+                                <input type="text" id="email" placeholder="Nhập email ">
                             </div>
                         </div>
                         <div class="input-block">
                             <div class="title signup-input-title">
-                                <div class="text signup-input-text">Mã OTP</div>
+                                <div class="text signup-input-text">Số điện thoại di động</div>
                             </div>
                             <div class="input signup-input">
-                                <input type="text" placeholder="Nhập mã OTP">
-                                <button type="button" class="btn-default btn-otp">
-                                    <div class="text">Gửi mã</div>
-                                </button>
+                                <input type="text" id="phone" placeholder="Nhập số điện thoại">
                             </div>
                         </div>
                         <div class="input-block">
@@ -51,7 +48,7 @@
                                 <div class="text signup-input-text">Mật khẩu</div>
                             </div>
                             <div class="input signup-input">
-                                <input type="password" placeholder="Nhập mật khẩu">
+                                <input type="password" id="password" placeholder="Nhập mật khẩu">
                                 <ion-icon name="eye-outline" class="icon signup-input-icon"></ion-icon>
                             </div>
                         </div>
@@ -60,7 +57,7 @@
                                 <div class="text signup-input-text">Xác nhận mật khẩu</div>
                             </div>
                             <div class="input signup-input">
-                                <input type="password" placeholder="Nhập lại mật khẩu">
+                                <input type="password" id="retype-password" placeholder="Nhập lại mật khẩu">
                                 <ion-icon name="eye-outline" class="icon signup-input-icon"></ion-icon>
                             </div>
                         </div>
@@ -77,8 +74,9 @@
         </div>
     </div>
 
+    <script src="./js/signup.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
-</html>
+</html> 
