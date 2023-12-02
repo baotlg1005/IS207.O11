@@ -15,9 +15,6 @@ $transferBillInfo->totalPrice = $_POST["totalPrice"];
 
 $userID = "1";
 
-print_r($transferBillInfo);
-
-
 if ($action == "payment") {
     $invoiceID = uniqid("I");
     $taxiInvoiceID = uniqid("TI");
