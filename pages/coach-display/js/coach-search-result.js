@@ -67,7 +67,7 @@ function createResultItem(data){
     //     }
     // }
     document.getElementById("list-item").innerHTML+=
-    `<div class="bus-book__BusItem">
+    `<div class="bus-book__BusItem" id=${data.Id}>
     <div class="bus-book__BusBrand">
       <div class="text">${data.Name}</div>
     </div>
@@ -96,7 +96,7 @@ function createResultItem(data){
         <b class="text">Chi tiết</b>
       </div>
       <div class="bus-book__Payment">
-        <a class="payment" href="../payment">Chọn</a>
+        <a class="payment" href="../payment-bus/index.html">Chọn</a>
       </div>
     </div>
   </div>`
@@ -154,3 +154,16 @@ window.onload = function (e) {
         console.log("Không tìm thấy thông tin tìm kiếm")
     }
 } 
+
+let busPaymentInfo = {
+  ID: "",
+  ticketNumber: 0,
+};
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('payment')) {
+      busPaymentInfo.ID = e.target.closest(".bus-book__BusItem").id;
+      busPaymentInfo.ticketNumber = CoachSearchInfo.passengerQuantity;
+      sessionStorage.setItem("busPaymentInfo", JSON.stringify(busPaymentInfo));
+  }
+})

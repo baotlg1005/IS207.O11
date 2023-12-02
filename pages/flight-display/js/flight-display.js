@@ -83,12 +83,18 @@ function changeDateFormat(date) {
   return `${day}, ${monthArray[month - 1]}, ${year}`;
 }
 
-window.onload = function (e) {
-  searchDepartureDate.innerText = changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
-  searchDepature.innerText = flightSearchInfo.oneFlightInfo.departure;
-  searchDestination.innerText = flightSearchInfo.oneFlightInfo.destination;
-  searchPassenger.innerText = `${numOfSeat} hành khách`;
-  searchSeatType.innerText = flightSearchInfo.seatType;
+window.onload = function () {
+  searchDestination.innerHTML = flightSearchInfo.oneFlightInfo.destination;
+  searchDepature.innerHTML = flightSearchInfo.oneFlightInfo.departure;
+  searchDepartureDate.innerHTML = changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
+  if (flightSearchInfo.seatType == 'economy') {
+    searchSeatType.innerHTML = 'Phổ thông';
+  }
+  else if (flightSearchInfo.seatType == 'business') {
+    searchSeatType.innerHTML = 'Thương gia';
+  }
+  searchPassenger.innerHTML = (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
+  
   loadResult();
 }
 
@@ -135,9 +141,9 @@ function loadResult() {
               </div>
             </div>
             <div class="row">
-              <div class="btn-default select-btn">
+              <a class="btn-default select-btn" href="../payment-flight/index.html">
                   <div class="text">Chọn</div>
-              </div>
+              </a>
             </div>
           </div>`
         }
@@ -155,6 +161,19 @@ function loadResult() {
 }
 
 function changeMoneyFormat(money) {
-  console.log(money);
   return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
+let flightPaymentInfo = {
+  flightID: "",
+  ticketNumber: 0,
+};
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('select-btn')) {
+    let id = e.target.closest(".result-item").id;
+    flightPaymentInfo.flightID = id.substring(12);
+    flightPaymentInfo.ticketNumber = flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby;
+    sessionStorage.setItem("flightPaymentInfo", JSON.stringify(flightPaymentInfo));
+  }
+});

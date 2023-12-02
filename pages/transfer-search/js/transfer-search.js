@@ -66,16 +66,14 @@ submitBtn.addEventListener('click', () => {
         alert('Invalid checkin date');
         return;
     }
-    startDate = `${startDate.getFullYear()}-${startDate.getMonth()+1}-${startDate.getDate()}`;
-    transferSearchInfo.startDate = startDate
+    transferSearchInfo.startDate = `${startDate.getFullYear()}-${startDate.getMonth()+1}-${startDate.getDate()}`;
     transferSearchInfo.startTime = startHourInput.value+":"+startMinuteInput.value
     endDate = new Date(endDateInput.value)
     if (isNaN(endDate)) {
         alert('Invalid checkout date');
         return;
     }
-    endDate = `${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`;
-    transferSearchInfo.endDate = endDate
+    transferSearchInfo.endDate = `${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`;
     transferSearchInfo.endTime = endHourInput.value +":"+endMinuteInput.value
     if (!transferSearchInfo.location) {
         alert('Location is required');
@@ -92,11 +90,11 @@ submitBtn.addEventListener('click', () => {
         alert('End time is required');
         return;
     }
-    if (transferSearchInfo.startDate > transferSearchInfo.endDate) {
+    if (startDate > endDate) {
         alert('Start date must be before end date');
         return;
     }
-    if (transferSearchInfo.startDate == transferSearchInfo.endDate && transferSearchInfo.startTime >= transferSearchInfo.endTime) {
+    if (startDate == endDate && transferSearchInfo.startTime >= transferSearchInfo.endTime) {
         alert('Start time must be before end time');
         return;
     }

@@ -108,20 +108,19 @@ submitBtn.addEventListener('click', () => {
         alert('Invalid checkin date');
         return;
     }
-    startDate = `${startDate.getFullYear()}-${startDate.getMonth()+1}-${startDate.getDate()}`;
-    HotelSearchInfo.checkinDate = startDate;
+    HotelSearchInfo.checkinDate = `${startDate.getFullYear()}-${startDate.getMonth()+1}-${startDate.getDate()}`;
     endDate = new Date(checkoutDateInput.value)
     if (isNaN(endDate)) {
         alert('Invalid checkout date');
         return;
     }
-    endDate = `${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`;
-    HotelSearchInfo.checkoutDate = endDate;
+    HotelSearchInfo.checkoutDate = `${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`;
     if (!HotelSearchInfo.location) {
         alert('Location is required');
         return;
     }
-    if (HotelSearchInfo.checkinDate > HotelSearchInfo.checkoutDate) {
+    console.log(HotelSearchInfo.checkinDate + ' ' + HotelSearchInfo.checkoutDate);
+    if (startDate > endDate) {
         alert('Checkin date must be before checkout date');
         return;
     }

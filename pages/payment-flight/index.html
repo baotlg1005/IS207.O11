@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelowkey</title>
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../resources/css/main-style.css">
+    <link rel="stylesheet" href="../../resources/css/input-block.css">
+    <link rel="stylesheet" href="../../resources/css/btn.css">
+
+    <link rel="stylesheet" href="../../resources/css/payment.css">
+
+    <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+    <header-component></header-component>
+    <div class="container payment-container">
+        <div class="container payment-window">
+            <div class="title border-bottom">
+                <h1 class="text">Chi tiết hóa đơn</h1>
+            </div>
+            <div class="info-container flex-column border-bottom" id="payment-window__flight-info">
+                <!-- <div class="container row-container flex-row justify-between">
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Điểm đi:</div>
+                        <div class="text" id="txt-from">TP HCM (SGN)</div>
+                    </div>
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Điểm đến:</div>
+                        <div class="text" id="txt-to">Hà Nội (HAN)</div>
+                    </div>
+                </div>
+                <div class="container row-container flex-row justify-between">
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Ngày khởi hành:</div>
+                        <div class="text" id="txt-departureDate">4 tháng 12, 2023</div>
+                    </div>
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Giờ khởi hành:</div>
+                        <div class="text" id="txt-departureTime">12:55</div>
+                    </div>
+                </div>
+                <div class="container row-container flex-row justify-between">
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Thời gian bay:</div>
+                        <div class="text" id="txt-travelTime">9h 5m</div>
+                    </div>
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Giờ hạ cánh:</div>
+                        <div class="text" id="txt-arrivalTime">22:00</div>
+                    </div>
+                </div>
+                <div class="container row-container flex-row justify-between">
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Tên hãng:</div>
+                        <div class="text" id="txt-brand">Vietnam Airlines</div>
+                    </div>
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Hạng ghế:</div>
+                        <div class="text" id="txt-seatType">Phổ thông</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="info-container flex-column" id="payment-window__price-info">
+                <!-- <div class="container row-container flex-row justify-between">
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Số vé:</div>
+                        <div class="text" id="txt-ticket">x 1</div>
+                    </div>
+                    <div class="content-container flex-row align-center">
+                        <div class="label fs-16" id="txt-price">11.100.000 VND</div>
+                    </div>
+                </div>
+                <div class="container row-container flex-row justify-between">
+                    <div class="content-container flex-row align-center">
+                        <div class="label">Tổng giá tiền</div>
+                    </div>
+                    <div class="content-container flex-row align-center">
+                        <div class="label" id="txt-totalPrice">11.100.000 VND</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="justify-end d-flex">
+                <div class="btn-default btn-payment">
+                    <div class="text">Thanh Toán</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer-component></footer-component>
+
+    <script type="module" src="./js/payment-flight.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
