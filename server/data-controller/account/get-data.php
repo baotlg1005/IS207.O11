@@ -5,7 +5,7 @@ $action = $_GET['action'];
 
 if($action == 'load-bill'){
     $userId = $_GET['userId'];
-    $sql = "SELECT Id FROM invoice WHERE `User_id` = '$userId';";
+    $sql = "SELECT * FROM invoice WHERE `User_id` = '$userId';";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -20,7 +20,7 @@ if($action == 'load-bill'){
 }
 
 if($action == 'get-bill-id'){
-    $invoiceID = $_GET["billId"];
+    $invoiceID = $_GET["id"];
 
     $conn->query("SET @out_invoiceID = ''");
     $conn->query("CALL GetInvoiceID('$invoiceID', @out_invoiceID)");

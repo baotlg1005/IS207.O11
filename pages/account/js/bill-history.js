@@ -26,32 +26,9 @@ function LoadBill() {
     if (this.readyState == 4 && this.status == 200) {
       try {
         let results = JSON.parse(this.responseText);
-        let prom = []
         for (let i = 0; i < results.length; i++) {
-            prom.push(GetBillId(results[i].Id));
+            CreateBillHTML(results[i]);
         }
-        Promise.all(prom).then((billIds) => {
-            for (let i = 0; i < results.length; i++) {
-                let type = billIds[i].slice(0, 2);
-                let billInfo;
-                switch (type) {
-                    case 'FI':
-                        console.log('flight');      
-                        let prom = GetFlightBillInfo(billIds[i]);
-                        prom.then((billInfo) => {
-                        });
-                        break;
-                    case 'TI':
-                        console.log('taxi');
-                        break;
-                    case 'BI':
-                        console.log('coach');
-                        break;
-                    default:
-                        continue;
-                }
-            }
-        });
       } catch (err) {
         billContainer.innerHTML = `<div class="no-result-text">Không có hoá đơn</div>`;
       }
@@ -66,7 +43,73 @@ function LoadBill() {
   xhttp.send();
 }
 
-function GetBillId(billId){
+async function CreateBillHTML(billInfo){
+    GetBillId(billInfo.Id)
+        .then((billId) => {
+            let type = billId.slice(0, 2);
+            let title;
+            let iconName;
+            let detailHref;
+            switch (type) {
+                case 'FI':
+                    title = 'Vé máy bay';
+                    iconName = 'airplane';
+                    detailHref = `../bill-detail-flight/index.html`;
+                    break;
+                case 'BI':
+                    title = 'Vé xe khách';
+                    iconName = 'bus';
+                    detailHref = `../bill-detail-bus/index.html`;
+                    break;
+                case 'TI':
+                    title = 'Xe dịch vụ';
+                    iconName = 'car';
+                    detailHref = `../bill-detail-transfer/index.html`;
+                    break;
+                default:
+                    return;
+            }
+
+            billContainer.innerHTML += `
+            <div class="bill-item">
+                <div class="left-label">
+                    <div class="bill-type">
+                        <ion-icon name="${iconName}"></ion-icon>
+                        <div class="text">
+                            ${title}
+                        </div>
+                    </div>
+                    <div class="bill-id">
+                        <div class="text">
+                            Mã giao dịch:
+                        </div>
+                        <div class="id-text">
+                            ${billId}
+                        </div>
+                    </div>
+                </div>
+                <div class="right-label">
+                    <div class="bill-price">
+                        <div class="text">
+                            ${NumberToVND(billInfo.Total)} VND
+                        </div>
+                    </div>
+                    <div class="bill-status">
+                        <div class="text">
+                            Đã thanh toán
+                        </div>
+                    </div>
+                    <a class="btn-default detail-btn"   
+                    onclick="sessionStorage.setItem('billId', '${billId}');">
+                        <div class="text">Chi tiết</div>
+                    </a>
+                </div>
+            </div>
+            `;
+        });
+}
+
+async function GetBillId(id){
     return new Promise((resolve, reject) => {
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -81,9 +124,14 @@ function GetBillId(billId){
         };
         xhttp.open(
           "GET",
-          "../../server/data-controller/account/get-data.php?action=get-bill-id&billId=" + billId,
+          "../../server/data-controller/account/get-data.php?action=get-bill-id&id=" +
+            id,
           true
         );
         xhttp.send();
       });
+}
+
+function NumberToVND(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
