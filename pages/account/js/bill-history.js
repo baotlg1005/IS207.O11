@@ -39,7 +39,6 @@ function LoadBill() {
                         console.log('flight');      
                         let prom = GetFlightBillInfo(billIds[i]);
                         prom.then((billInfo) => {
-                            billContainer.innerHTML += CreateFlightBill(billInfo);
                         });
                         break;
                     case 'TI':
