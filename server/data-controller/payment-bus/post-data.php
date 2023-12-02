@@ -2,7 +2,13 @@
 
 require_once('../connect.php');
 
-$action = $_POST["action"];
+$method = $_SERVER['REQUEST_METHOD'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $action = $_POST["action"];
+}
+else{
+    $action = $_GET["action"];
+}
 
 $totalPrice = $_POST["totalPrice"];
 $userID = "1";
