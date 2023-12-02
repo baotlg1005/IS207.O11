@@ -58,15 +58,15 @@ btnPayment.addEventListener("click", function () {
             let result = JSON.parse(this.responseText);
             if (result == "success") {
                 alert("Thanh toán thành công!");
-                // window.location.href = "../main/index.html";
+                window.location.href = "../main/index.html";
             }
             else {
                 alert("Thanh toán thất bại!");
-                // window.location.href = "../main/index.html";
+                window.location.href = "../main/index.html";
             }
         };
     };
     xhttp.open("POST", "../../server/data-controller/payment-bus/post-data.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(`action="payment&busID=${busPaymentInfo.ID}&ticketNumber=${busPaymentInfo.ticketNumber}&totalPrice=${totalPrice}`);
+    xhttp.send(`action=payment&busID=${busPaymentInfo.ID}&ticketNumber=${busPaymentInfo.ticketNumber}&totalPrice=${totalPrice}`);
 });
