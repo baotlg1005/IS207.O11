@@ -22,3 +22,23 @@ if($action == 'load-bill-detail-flight'){
 
     $conn->close();
 }
+
+if($action == 'load-bill-detail-bus'){
+    $invoiceID = $_GET['billId'];
+    $sql = "SELECT * FROM bus_invoice as t1 
+    INNER JOIN bus as t2 
+    ON t1.`Bus_id` = t2.`ID`
+    WHERE t1.`Id` = '$invoiceID';";
+    // echo $sql;
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($data = $result->fetch_all(MYSQLI_ASSOC)) {
+            echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        }
+    } else{
+        echo 'no-data';
+    }
+
+    $conn->close();
+}
