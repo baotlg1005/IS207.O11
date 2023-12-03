@@ -47,19 +47,7 @@ dropdownPanelItems.forEach(item => {
 })
 
 //haveReturn EVENT
-const haveReturnCheckbox = coachSearchForm.querySelector('#coach-search__have-return');
-haveReturnCheckbox.addEventListener('change', () => {
-    CoachSearchInfo.haveReturn = haveReturnCheckbox.checked;
-    const returnDateInput = coachSearchForm.querySelector('.return-date__input');
-    const returnDateInputContainer = coachSearchForm.querySelector('.return-date__input').parentElement;
-    if (CoachSearchInfo.haveReturn) {
-        returnDateInputContainer.classList.remove('disabled');
-        returnDateInput.disabled = false;
-    } else {
-        returnDateInputContainer.classList.add('disabled');
-        returnDateInput.disabled = true;
-    }
-})
+
 function GetTodayDate() {
     const today = new Date()
     const todayDate = today.getDate()
