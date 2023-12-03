@@ -58,11 +58,7 @@ btnPayment.addEventListener("click", function () {
             let result = JSON.parse(this.responseText);
             if (result == "success") {
                 alert("Thanh toán thành công!");
-<<<<<<< HEAD
                 window.location.href = "../account/index.html?nav=bill-pane";
-=======
-                window.location.href = "../main/index.html";
->>>>>>> payment
             }
             else {
                 alert("Thanh toán thất bại!");
