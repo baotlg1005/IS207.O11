@@ -94,27 +94,27 @@ window.onload = function () {
     searchSeatType.innerHTML = 'Thương gia';
   }
   searchPassenger.innerHTML = (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
-  
+
   loadResult();
 }
 
 function loadResult() {
-  searchDestination.innerHTML= flightSearchInfo.oneFlightInfo.destination;
-  searchDepature.innerHTML= flightSearchInfo.oneFlightInfo.departure;
-  searchDepartureDate.innerHTML= changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
+  searchDestination.innerHTML = flightSearchInfo.oneFlightInfo.destination;
+  searchDepature.innerHTML = flightSearchInfo.oneFlightInfo.departure;
+  searchDepartureDate.innerHTML = changeDateFormat(flightSearchInfo.oneFlightInfo.departureDate);
   if (flightSearchInfo.seatType == 'economy') {
-    searchSeatType.innerHTML= 'Phổ thông';
+    searchSeatType.innerHTML = 'Phổ thông';
   }
   else if (flightSearchInfo.seatType == 'business') {
-    searchSeatType.innerHTML= 'Thương gia';
+    searchSeatType.innerHTML = 'Thương gia';
   }
-  searchPassenger.innerHTML= (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
+  searchPassenger.innerHTML = (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
 
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      try{
-      let searchResults = JSON.parse(this.responseText);
+      try {
+        let searchResults = JSON.parse(this.responseText);
         document.getElementById("result-container").innerHTML = " ";
         for (let i = 0; i < searchResults.length; i++) {
           document.getElementById("result-container").innerHTML += `
@@ -141,17 +141,17 @@ function loadResult() {
               </div>
             </div>
             <div class="row">
-              <a class="btn-default select-btn" href="../payment-flight/index.html">
+              <div class="btn-default select-btn">
                   <div class="text">Chọn</div>
-              </a>
+              </div>
             </div>
           </div>`
         }
         btnShowMore.classList.remove("hide");
       }
-      catch(err) {
-        document.getElementById("result-container").innerHTML=
-            `<div class="title">Không tìm thấy kết quả phù hợp</div>`
+      catch (err) {
+        document.getElementById("result-container").innerHTML =
+          `<div class="title">Không tìm thấy kết quả phù hợp</div>`
         btnShowMore.classList.add("hide");
       }
     }
@@ -170,11 +170,34 @@ let flightPaymentInfo = {
   ticketNumber: 0,
 };
 
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('select-btn')) {
-    let id = e.target.closest(".result-item").id;
-    flightPaymentInfo.flightID = id.substring(12);
-    flightPaymentInfo.ticketNumber = flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby;
-    sessionStorage.setItem("flightPaymentInfo", JSON.stringify(flightPaymentInfo));
+    let userAuth = getCookie("userAuth");
+    if (userAuth) {
+      let id = e.target.closest(".result-item").id;
+      flightPaymentInfo.flightID = id.substring(12);
+      flightPaymentInfo.ticketNumber = flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby;
+      sessionStorage.setItem("flightPaymentInfo", JSON.stringify(flightPaymentInfo));
+      window.location.href = "../payment-flight";
+    }
+    else {
+      window.location.href = "../account";
+    }
   }
 });

@@ -5,6 +5,7 @@ body {
 .account-content-container {
   border-radius: 0.57143rem;
   margin-top: 3.57143rem;
+  margin-bottom: 3.57143rem;
   display: flex;
   flex-direction: row;
 }
