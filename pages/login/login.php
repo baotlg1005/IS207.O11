@@ -48,4 +48,3 @@ if ($userExists) {
 }
 $stmt->close();
 $conn->close();
-?>

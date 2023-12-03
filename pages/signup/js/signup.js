@@ -28,7 +28,7 @@ document.querySelector(".btn-signup").addEventListener("click", function(event) 
             console.log("Signup successful! Email:", email, "Phone:", phone, "Password:", password);
             alert("Đăng ký thành công");
             setCookie('userId', data.userId, 1);
-            window.location.href = '../account/edit-info'; //thay đổi đường dẫn nếu cần
+            CheckUserInfo(data.userId);
         } else {
             alert("Error: " + data.message);
         }
@@ -38,9 +38,58 @@ document.querySelector(".btn-signup").addEventListener("click", function(event) 
     });
 });
 
+function CheckUserInfo(userId) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        try {
+          let userInfo = JSON.parse(this.responseText)[0];
+            //check if any info in userInfo object is null
+            for (let key in userInfo) {
+                if (userInfo[key] == null) {
+                    //redirect to info page
+                    setCookie('userAuth', false, 1);
+                    return;
+                }
+            }
+            setCookie('userAuth', true, 1);
+            if(getCookie('userAuth') == 'true'){
+                window.location.href = "../main/"; //Chỉnh đường dẫn
+            }else{
+                window.location.href = "../account/"; //Chỉnh đường dẫn
+            }
+        } catch (err) {
+        }
+      }
+    };
+    xhttp.open(
+      "GET",
+      "../../server/data-controller/check-user-info.php?action=check-user-info&userId=" +
+        userId,
+      true
+    );
+    xhttp.send();
+}
+
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
   }

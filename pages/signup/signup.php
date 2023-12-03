@@ -48,7 +48,6 @@ if ($result->num_rows > 0) {
         echo json_encode(array('status' => 'error', 'message' => 'Error: ' . $passport_stmt->error));
     }
 }
-
+$passport_stmt->close();
 $stmt->close();
 $conn->close();
-?>
