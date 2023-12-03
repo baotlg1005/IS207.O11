@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,59 +33,52 @@
     
     <div class="container payment-container">
         <div class="container payment-window">
-            <div class="payment-window__title border-bottom">
+            <div class="title border-bottom">
                 <h1 class="text">Chi tiết hóa đơn</h1>
             </div>
-            <div class="payment-window__info-container flex-column border-bottom">
+            <div class="info-container flex-column border-bottom" id="payment-window__flight-info">
                 <div class="container row-container flex-row justify-between">
                     <div class="content-container flex-row align-center">
-                        <div class="label">Điểm đi:</div>
-                        <div class="text" id="txt-from">TP HCM (SGN)</div>
+                        <div class="label">Ngày nhận phòng:</div>
+                        <div class="text" id="txt-startDate"></div>
                     </div>
                     <div class="content-container flex-row align-center">
-                        <div class="label">Điểm đến:</div>
-                        <div class="text" id="txt-to">Hà Nội (HAN)</div>
+                        <div class="label">Ngày trả phòng:</div>
+                        <div class="text" id="txt-endDate"></div>
                     </div>
                 </div>
                 <div class="container row-container flex-row justify-between">
-                    <div class="content-container flex-row align-center">
-                        <div class="label">Ngày khởi hành:</div>
-                        <div class="text" id="txt-departureDate">4 tháng 12, 2023</div>
-                    </div>
-                    <div class="content-container flex-row align-center">
-                        <div class="label">Giờ khởi hành:</div>
-                        <div class="text" id="txt-departureTime">12:55</div>
+                    <div class="one-row-content-container content-container flex-row align-center">
+                        <div class="label">Tên khách sạn:</div>
+                        <div class="text" id="txt-name"></div>
                     </div>
                 </div>
                 <div class="container row-container flex-row justify-between">
-                    <div class="content-container flex-row align-center">
-                        <div class="label">Thời gian bay:</div>
-                        <div class="text" id="txt-flightTime">9h 5m</div>
-                    </div>
-                    <div class="content-container flex-row align-center">
-                        <div class="label">Giờ hạ cánh:</div>
-                        <div class="text" id="txt-departureTime">22:00</div>
+                    <div class="one-row-content-container content-container flex-row align-center">
+                        <div class="label">Địa chỉ:</div>
+                        <div class="text" id="txt-address"></div>
                     </div>
                 </div>
                 <div class="container row-container flex-row justify-between">
-                    <div class="content-container flex-row align-center">
-                        <div class="label">Tên hãng:</div>
-                        <div class="text" id="txt-brand">Vietnam Airlines</div>
+                    <div class="one-row-content-container content-container flex-row align-center">
+                        <div class="label">Loại phòng:</div>
+                        <div class="text" id="txt-roomName"></div>
                     </div>
-                    <div class="content-container flex-row align-center">
-                        <div class="label">Hạng ghế:</div>
-                        <div class="text" id="txt-seatType">Phổ thông</div>
+                </div>
+                <div class="container row-container flex-row justify-between">
+                    <div class="one-row-content-container content-container flex-row align-center">
+                        <div class="label">Số người ở:</div>
+                        <div class="text" id="txt-guestNum"></div>
                     </div>
                 </div>
             </div>
-            <div class="payment-window__info-container flex-column">
+            <div class="info-container flex-column" id="payment-window__price-info">
                 <div class="container row-container flex-row justify-between">
                     <div class="content-container flex-row align-center">
-                        <div class="label">Số vé:</div>
-                        <div class="text" id="txt-ticket">x 1</div>
+                        <div class="label">Đơn giá:</div>
                     </div>
                     <div class="content-container flex-row align-center">
-                        <div class="label fs-16" id="txt-price">11.100.000 VND</div>
+                        <div class="label fs-16" id="txt-price"></div>
                     </div>
                 </div>
                 <div class="container row-container flex-row justify-between">
@@ -93,7 +86,7 @@
                         <div class="label">Tổng giá tiền</div>
                     </div>
                     <div class="content-container flex-row align-center">
-                        <div class="label" id="txt-totalPrice">11.100.000 VND</div>
+                        <div class="label" id="txt-totalPrice"></div>
                     </div>
                 </div>
             </div>
@@ -104,11 +97,13 @@
             </div>
         </div>
     </div>
-
+    
     <footer-component></footer-component>
+
+    <script type="module" src="./js/payment-hotel.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
-</html> -->
+</html>

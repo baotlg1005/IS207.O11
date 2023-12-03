@@ -3,7 +3,7 @@ let transferSearchInfo;
 if (sessionStorage.getItem("transferSearchInfo")) {
     transferSearchInfo = JSON.parse(sessionStorage.getItem("transferSearchInfo"))
 
-    console.log(transferSearchInfo);
+    // console.log(transferSearchInfo);
 }
 
 let transferPaymentInfo;
@@ -14,7 +14,7 @@ if (sessionStorage.getItem("transferPaymentInfo")) {
     console.log(transferPaymentInfo);
 }
 
-window.onload = function () {
+window.addEventListener("load", () => {
     document.getElementById("txt-brand").innerHTML = transferPaymentInfo.name;
     document.getElementById("txt-location").innerHTML = transferSearchInfo.location;
     document.getElementById("txt-startDate").innerHTML = changeDateFormat(transferSearchInfo.startDate);
@@ -34,7 +34,7 @@ window.onload = function () {
                 transferSearchInfo.startDate, transferSearchInfo.endDate, transferSearchInfo.startTime, transferSearchInfo.endTime)
             * transferPaymentInfo.price) + ' VND';
 
-}
+})
 
 function changeDateFormat(date) {
     let dateArray = date.split('-');

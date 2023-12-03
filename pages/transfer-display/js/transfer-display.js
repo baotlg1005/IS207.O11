@@ -141,7 +141,7 @@ function createResultItem(data) {
                 <div class="price-text" id="${data.Price}">${changeMoneyFormat(data.Price)} VND</div>
                 <div class="text"> /ngày</div>
             </div>
-            <a id="change-search-info" class="btn-default select-btn" href="../payment-transfer/index.html">
+            <a id="change-search-info" class="btn-default select-btn" href="../payment-transfer">
                 <div class="text">Tiếp tục</div>
             </a>
         </div>

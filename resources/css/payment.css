@@ -43,6 +43,9 @@ body {
 .payment-container .payment-window .info-container .row-container .content-container #txt-totalPrice {
   color: #FF5E1F;
 }
+.payment-container .payment-window .info-container .row-container .one-row-content-container {
+  width: 100%;
+}
 .payment-container .payment-window .btn-payment {
   background: #FF5E1F;
   width: 25%;

@@ -17,7 +17,7 @@ if ($action!='getLocation')
 
 if ($action=='showResult') {
     $max = $searchedHotelInfo->adultQuantity + $searchedHotelInfo->childQuantity;
-    $sql = "SELECT room.name as 'roomname',hotel.Name as 'hotelname',hotel.Address as 'address',room.Price as 'price' 
+    $sql = "SELECT room.Id as 'roomid', room.name as 'roomname',hotel.Name as 'hotelname',hotel.Address as 'address',room.Price as 'price' 
     FROM `room`,`hotel` 
     WHERE room.Hotel_id=hotel.Id and hotel.Area='$searchedHotelInfo->location' and room.Max>=$max and room.State='Free'
     ORDER BY room.Price ASC LIMIT $pageLimit";
