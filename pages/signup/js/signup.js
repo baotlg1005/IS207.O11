@@ -28,7 +28,7 @@ document.querySelector(".btn-signup").addEventListener("click", function(event) 
             console.log("Signup successful! Email:", email, "Phone:", phone, "Password:", password);
             window.location.href = 'login.html'; //thay đổi đường dẫn nếu cần
         } else {
-            alert("Có lỗi xảy ra. Hãy thử lại sau.");
+            alert("Error: " + data.message);
         }
     })
     .catch((error) => {
