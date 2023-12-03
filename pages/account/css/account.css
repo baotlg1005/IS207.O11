@@ -240,4 +240,10 @@ body {
 }
 .account-content-container .account-content-window .account-content-pane .info-form .btn-container .text {
   font-weight: bold;
+}
+
+#warning-auth .text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
 }/*# sourceMappingURL=account.css.map */

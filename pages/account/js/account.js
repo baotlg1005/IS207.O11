@@ -107,6 +107,7 @@ function SaveAccountInfo() {
           LoadAccountInfo();
           viewInfo.classList.remove("hide");
           editInfo.classList.add("hide");
+          CheckUserInfo(getCookie("userId"));
         } else {
           alert("Cập nhật thất bại");
         }
@@ -137,4 +138,54 @@ function SetNewInfo(id, key) {
 function CancelEdit() {
   viewInfo.classList.remove("hide");
   editInfo.classList.add("hide");
+}
+
+function CheckUserInfo(userId) {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      try {
+        let userInfo = JSON.parse(this.responseText)[0];
+
+        setCookie("userAuth", true, 1);
+        for (let key in userInfo) {
+          if (userInfo[key] == null) {
+            //redirect to info page
+            setCookie("userAuth", false, 1);
+            break;
+          }
+        }
+      } catch (err) {}
+    }
+  };
+  xhttp.open(
+    "GET",
+    "../../server/data-controller/check-user-info.php?action=check-user-info&userId=" +
+      userId,
+    true
+  );
+  xhttp.send();
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
