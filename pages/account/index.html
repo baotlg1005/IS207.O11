@@ -20,6 +20,7 @@
     <script src="./js/account-navbar.js" defer></script>
     <script src="./js/bill-history.js" defer></script>
     <script src="./js/account.js" defer></script>
+    <script src="./js/account-auth.js" defer></script>
 </head>
 
 <body>
@@ -58,6 +59,9 @@
                     <div class="label-text">Thông tin cá nhân</div>
                 </div>
                 <form class="info-form hide" id="user-info-form">
+                    <div id="warning-auth">
+                        <div class="text">Nhập thông tin cá nhân cho tài khoản để có thể thanh toán</div>
+                    </div>
                     <div class="form-content">
                         <div class="info-col" id="user-info-col-1">
                             <div class="input-block">
@@ -117,6 +121,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="btn-container">
                         <button class="btn-default form-btn-save" id="user-btn-save" type="button">
                             <div class="text">Lưu</div>

@@ -256,6 +256,7 @@ body {
               }
             }
           }
+
         }
 
         .btn-container {
@@ -283,5 +284,14 @@ body {
         }
       }
     }
+  }
+}
+
+#warning-auth{
+
+  .text{
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
   }
 }
