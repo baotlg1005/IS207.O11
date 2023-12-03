@@ -24,7 +24,7 @@ footerTemplate.innerHTML = `
   }
   footer .footer__top-container .brand-container .text {
     color: #fff;
-    font-size: 3rem !important;
+    font-size: 2.66667rem !important;
     font-style: italic;
     font-weight: 700;
     line-height: normal;
