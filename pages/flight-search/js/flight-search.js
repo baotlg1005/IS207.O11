@@ -213,14 +213,10 @@ oneFlightSubmitBtn.addEventListener("click", () => {
     const departure = oneFlightSearchForm.querySelector("#flight-search__departure").value
     const destination = oneFlightSearchForm.querySelector("#flight-search__destination").value
     const departureDate = oneFlightSearchForm.querySelector("#flight-search__departure-date").value
-    const haveReturn = oneFlightSearchForm.querySelector("#flight-search__have-return").checked
-    const returnDate = oneFlightSearchForm.querySelector("#flight-search__return-date").value
 
     flightSearchInfo.oneFlightInfo.departure = departure
     flightSearchInfo.oneFlightInfo.destination = destination
     flightSearchInfo.oneFlightInfo.departureDate = departureDate
-    flightSearchInfo.oneFlightInfo.haveReturn = haveReturn
-    flightSearchInfo.oneFlightInfo.returnDate = returnDate
 
     if (!flightSearchInfo.oneFlightInfo.departure) {
         alert('Location is required');
