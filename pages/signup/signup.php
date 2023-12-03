@@ -47,7 +47,7 @@ if ($result->num_rows > 0) {
     } else {
         echo json_encode(array('status' => 'error', 'message' => 'Error: ' . $passport_stmt->error));
     }
+    $passport_stmt->close();
 }
-$passport_stmt->close();
 $stmt->close();
 $conn->close();
