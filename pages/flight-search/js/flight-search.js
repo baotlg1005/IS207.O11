@@ -214,8 +214,30 @@ CreateNewFlightInfo()
 // submit btn EVENT
 
 // one flight submit btn EVENT
-
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 oneFlightSubmitBtn.addEventListener("click", () => {
+
+    //check isSignedIn or not if not redirect to sign-in page, check by check is have userId in cookie
+    const userId = getCookie("userId");
+    if (!userId) {
+        window.location.href = "../login"
+        return;
+    }
+
     const departure = oneFlightSearchForm.querySelector("#flight-search__departure").value
     const destination = oneFlightSearchForm.querySelector("#flight-search__destination").value
     const departureDate = oneFlightSearchForm.querySelector("#flight-search__departure-date").value
@@ -230,6 +252,8 @@ oneFlightSubmitBtn.addEventListener("click", () => {
 
     console.log(flightSearchInfo);
     sessionStorage.setItem('flightSearchInfo', JSON.stringify(flightSearchInfo));
+
+    window.location.href = "../flight-display/"
 })
 // many flight submit btn EVENT
 
