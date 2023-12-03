@@ -12,7 +12,7 @@ const coachSearchConfig = featureCoachSearch.querySelector('.coach-search__confi
 const passengerQuantity = coachSearchConfig.querySelector('.config__passenger-quantity');
 const passengerQuantityInfo = passengerQuantity.querySelector('.info');
 const passengerQuantityDropdownPanel = passengerQuantity.querySelector('.dropdown-panel');
-const dropdownPanelItems = flightPassengerQuantityDropdownPanel.querySelectorAll('.dropdown-panel__item');
+const dropdownPanelItems = passengerQuantityDropdownPanel.querySelectorAll('.dropdown-panel__item');
 
 const coachSearchForm = featureCoachSearch.querySelector('#coach-search__search-form');
 const departureInput = coachSearchForm.querySelector('#coach-search__departure');
@@ -24,13 +24,13 @@ const searchBtn = coachSearchForm.querySelector('#search-form__submit-btn--coach
 // passengerQuantity EVENT
 
 passengerQuantity.addEventListener('click', () => {
-    flightPassengerQuantityDropdownPanel.classList.toggle('hide');
+    passengerQuantityDropdownPanel.classList.toggle('hide');
 })
 
 // click outside passengerQuantityDropdownPanel to close it
 document.addEventListener('click', (e) => {
     if (!passengerQuantity.contains(e.target)) {
-        flightPassengerQuantityDropdownPanel.classList.add('hide');
+        passengerQuantityDropdownPanel.classList.add('hide');
     }
 })
 
@@ -41,15 +41,15 @@ dropdownPanelItems.forEach(item => {
             item.classList.remove('selected');
         })
         item.classList.add('selected');
-        flightPassengerQuantityInfo.querySelector('.text').innerHTML = item.querySelector('.text').innerHTML;
+        passengerQuantityInfo.querySelector('.text').innerHTML = item.querySelector('.text').innerHTML;
         CoachSearchInfo.passengerQuantity = item.dataset.ticketType;
     })
 })
 
 //haveReturn EVENT
 const haveReturnCheckbox = coachSearchForm.querySelector('#coach-search__have-return');
-flightHaveReturnCheckbox.addEventListener('change', () => {
-    CoachSearchInfo.haveReturn = flightHaveReturnCheckbox.checked;
+haveReturnCheckbox.addEventListener('change', () => {
+    CoachSearchInfo.haveReturn = haveReturnCheckbox.checked;
     const returnDateInput = coachSearchForm.querySelector('.return-date__input');
     const returnDateInputContainer = coachSearchForm.querySelector('.return-date__input').parentElement;
     if (CoachSearchInfo.haveReturn) {
@@ -71,7 +71,7 @@ const coachTodayDate = GetTodayDate()
 let coachDate = new Date();
 let coachToday = coachDate.getFullYear() + '-' + (coachDate.getMonth() + 1) + '-' + coachDate.getDate();
 input_date = document.querySelector("#coach-search__departure-date");
-input_date.value = flightTodayDate
+input_date.value = coachTodayDate
 input_date.setAttribute("min", coachToday);
 
 window.addEventListener("load",function(event) {

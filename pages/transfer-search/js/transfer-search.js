@@ -94,7 +94,7 @@ submitBtn.addEventListener('click', () => {
         alert('Start date must be before end date');
         return;
     }
-    if (startDate == endDate && transferSearchInfo.startTime >= transferSearchInfo.endTime) {
+    if ((startDate.toString() == endDate.toString()) && (transferSearchInfo.startTime >= transferSearchInfo.endTime)) {
         alert('Start time must be before end time');
         return;
     }
