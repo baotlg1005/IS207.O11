@@ -71,6 +71,11 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+.account-content-container .account-content-window #bill-pane #bill-container #flight-bill, .account-content-container .account-content-window #bill-pane #bill-container #bus-bill, .account-content-container .account-content-window #bill-pane #bill-container #transfer-bill, .account-content-container .account-content-window #bill-pane #bill-container #hotel-bill {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .account-content-container .account-content-window #bill-pane #bill-container .bill-item {
   padding: 2rem;
   background-color: white;
