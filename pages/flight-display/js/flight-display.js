@@ -188,16 +188,20 @@ function getCookie(cname) {
 
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('select-btn')) {
-    let userAuth = getCookie("userAuth");
-    if (userAuth) {
+    const userId = getCookie("userId");
+    if (!userId) {
+        window.location.href = "../login"
+        return;
+    }
+    const userAuth = getCookie("userAuth");
+    if (userAuth == "false") {
+        window.location.href = "../account"
+        return;
+    }
       let id = e.target.closest(".result-item").id;
       flightPaymentInfo.flightID = id.substring(12);
       flightPaymentInfo.ticketNumber = flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby;
       sessionStorage.setItem("flightPaymentInfo", JSON.stringify(flightPaymentInfo));
       window.location.href = "../payment-flight";
-    }
-    else {
-      window.location.href = "../account";
-    }
   }
 });

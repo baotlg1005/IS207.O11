@@ -141,7 +141,7 @@ function createResultItem(data) {
                 <div class="price-text" id="${data.Price}">${changeMoneyFormat(data.Price)} VND</div>
                 <div class="text"> /ngày</div>
             </div>
-            <a id="change-search-info" class="btn-default select-btn" href="../payment-transfer">
+            <a id="change-search-info" class="btn-default select-btn">
                 <div class="text">Tiếp tục</div>
             </a>
         </div>
@@ -200,11 +200,38 @@ let transferPaymentInfo = {
     name: "",
 };
 
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('select-btn')) {
+        const userId = getCookie("userId");
+        if (!userId) {
+            window.location.href = "../login"
+            return;
+        }
+        const userAuth = getCookie("userAuth");
+        if (userAuth == "false") {
+            window.location.href = "../account"
+            return;
+        }
         transferPaymentInfo.transferID = e.target.closest(".result-item").id;
         transferPaymentInfo.price = e.target.closest(".result-item").querySelector("#price").querySelector(".price-text").id;
         transferPaymentInfo.name = e.target.closest(".result-item").querySelector(".title").innerText;
         sessionStorage.setItem("transferPaymentInfo", JSON.stringify(transferPaymentInfo));
+        window.location.href = "../payment-transfer"
     }
 });

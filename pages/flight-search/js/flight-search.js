@@ -204,11 +204,6 @@ function getCookie(cname) {
 oneFlightSubmitBtn.addEventListener("click", () => {
 
     //check isSignedIn or not if not redirect to sign-in page, check by check is have userId in cookie
-    const userId = getCookie("userId");
-    if (!userId) {
-        window.location.href = "../login"
-        return;
-    }
 
     const departure = oneFlightSearchForm.querySelector("#flight-search__departure").value
     const destination = oneFlightSearchForm.querySelector("#flight-search__destination").value

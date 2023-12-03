@@ -341,7 +341,7 @@ function createResultItem(data) {
         </div>
       </div>
       <div class="selected-btn-frame">
-        <a class="selected-btn" href="../payment-hotel" style="outline:none;"> Chọn phòng</a>
+        <div class="selected-btn" style="outline:none;"> Chọn phòng</div>
       </div>
     </div>
   </div>`
@@ -403,10 +403,35 @@ let hotelPaymentInfo = {
     price: 0,
 }
 
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('selected-btn')) {
+        const userId = getCookie("userId");
+        if (!userId) {
+            window.location.href = "../login"
+            return;
+        }
+        const userAuth = getCookie("userAuth");
+        if (userAuth == "false") {
+            window.location.href = "../account"
+            return;
+        }
 
-        //get id out of hotel-item-template-${data.roomid} 
         let id = e.target.closest(".hotel-item").id;
         hotelPaymentInfo.ID = id.substring(20);
         hotelPaymentInfo.guestNum = HotelSearchInfo.adultQuantity + HotelSearchInfo.childQuantity;
@@ -414,7 +439,7 @@ document.addEventListener('click', function (e) {
         hotelPaymentInfo.hotelAddress = e.target.closest(".hotel-item").querySelector("#position-hotel").innerText;
         hotelPaymentInfo.price = changeMoneyFormatBack(e.target.closest(".hotel-item").querySelector(".price-hotel-item").innerText);
         sessionStorage.setItem("hotelPaymentInfo", JSON.stringify(hotelPaymentInfo));
-        console.log(hotelPaymentInfo);
+        window.location.href = "../payment-hotel";
     }
 })
 
