@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
     echo json_encode(array('status' => 'error', 'message' => 'Email or phone already exists.'));
 } else {
     $unique_id = uniqid();
-    $sql = "INSERT INTO user (UniqueID, Email, Phone, Password) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO user (Id, Email, Phone, Password) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssss", $unique_id, $email, $phone, $password);
 
