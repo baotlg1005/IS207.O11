@@ -16,6 +16,7 @@ if ($action == "payment") {
     $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice');";
     $sql .= "INSERT INTO room_invoice(Id, Room_id, Check_in, Check_out, Invoice_id)
     VALUES('$roomInvoiceID', '$roomID', '$checkIn', '$checkOut', '$invoiceID');";
+    $sql .= "UPDATE room SET `State` = 'Rented' WHERE Id = '$roomID'";
     if ($conn->multi_query($sql) === TRUE) {
         $success = "success";
         echo json_encode($success, JSON_UNESCAPED_UNICODE);

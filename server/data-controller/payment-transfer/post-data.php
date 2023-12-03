@@ -22,6 +22,7 @@ if ($action == "payment") {
     $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$transferBillInfo->totalPrice');";
     $sql .= "INSERT INTO taxi_invoice(Id, Taxi_id, DepartureDay, TimeStart, ArrivalTime, TimeEnd, Invoice_id)
     VALUES('$taxiInvoiceID', '$transferBillInfo->ID', '$transferBillInfo->startDate', '$transferBillInfo->startTime', '$transferBillInfo->endDate', '$transferBillInfo->endTime', '$invoiceID');";
+    $sql .= "UPDATE taxi SET `State` = 'Rented' WHERE Id = '$transferBillInfo->ID'";
     if ($conn->multi_query($sql) === TRUE) {
         $success = "success";
         echo json_encode($success, JSON_UNESCAPED_UNICODE);
