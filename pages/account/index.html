@@ -19,6 +19,7 @@
 
     <script src="./js/account-navbar.js" defer></script>
     <script src="./js/bill-history.js" defer></script>
+    <script src="./js/account.js" defer></script>
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                 <div class="pane-label">
                     <div class="label-text">Thông tin cá nhân</div>
                 </div>
-                <form class="info-form" id="user-info-form">
+                <form class="info-form hide" id="user-info-form">
                     <div class="form-content">
                         <div class="info-col" id="user-info-col-1">
                             <div class="input-block">
@@ -70,8 +71,8 @@
                                     <div class="text">Giới tính:</div>
                                 </div>
                                 <select id="txt-user-gender" class="input form-input">
-                                    <option value="male">Nam</option>
-                                    <option value="female">Nữ</option>
+                                    <option value="Male">Nam</option>
+                                    <option value="Female">Nữ</option>
                                 </select>
                             </div>
                             <div class="input-block">
@@ -120,11 +121,76 @@
                         <button class="btn-default form-btn-save" id="user-btn-save" type="button">
                             <div class="text">Lưu</div>
                         </button>
-                        <button class="btn-default form-btn-reset" id="user-btn-clear" type="reset">
+                        <button class="btn-default form-btn-reset" id="user-btn-clear" type="button">
                             <div class="text">Hủy</div>
                         </button>
                     </div>
                 </form>
+                <div class="info-form" id="user-info-view">
+                    <div class="form-content">
+                        <div class="info-col" id="user-info-col-1">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Họ tên:</div>
+                                </div>
+                                <div class="text" id="user-name-text">ádfghj</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Giới tính:</div>
+                                </div>
+                                <div class="text" id="user-gender-text">Nữ</div>
+
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Ngày sinh:</div>
+                                </div>
+                                <div class="text" id="user-bdate-text">11/11/1111</div>
+                            </div>
+                        </div>
+                        <div class="info-col" id="user-info-col-2">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Email:</div>
+                                </div>
+                                <div class="text" id="user-email-text">email@gm.com</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Quốc tịch:</div>
+                                </div>
+                                <div class="text" id="user-nation-text">UIT</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">SĐT:</div>
+                                </div>
+                                <div class="text" id="user-phone-text">00000000000</div>
+                            </div>
+                        </div>
+                        <div class="info-col" id="user-info-col-3">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Quốc gia cấp hộ chiếu:</div>
+                                </div>
+                                <div class="text" id="user-ppnation-text">UIT</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Ngày hết hạn hộ chiếu:</div>
+                                </div>
+                                <div class="text" id="user-ppdate-text">UIT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-default form-btn-save" id="user-btn-edit" type="button">
+                            <div class="text">Chỉnh sửa</div>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="pane-label">
                     <div class="label-text">Bảo mật & Mật khẩu</div>
                 </div>
@@ -163,128 +229,13 @@
             </div>
             <div class="account-content-pane hide" id="bill-pane">
                 <div class="pane-label">
-                    <div class="label-text">Phiếu thanh toán chưa hiện hành</div>
+                    <div class="label-text">Lịch sử thanh toán</div>
                 </div>
                 <div id="bill-container">
-                    <div class="cart-item flight-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="airplane-outline"></ion-icon>
-                                <div class="item-title">
-                                    Vé máy bay
-                                </div>
-                            </div>
-                            <div class="item-text flight-paid-bill-name">VietJet Air</div>
-                            <div class="item-text flight-paid-bill-location">
-                                <div class="item-text flight-paid-bill-fromlocation">
-                                    TP HCM
-                                </div>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                                <div class="item-text flight-paid-bill-tolocation">
-                                    Hà Nội
-                                </div>
-                            </div>
-    
-                            <div class="item-text flight-paid-bill-date">CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text flight-paid-bill-airport">Sân bay quốc tế Tân Sơn Nhất, Nhà ga 1</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title flight-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default flight-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="cart-item hotel-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="business-outline"></ion-icon>
-                                <div class="item-title">
-                                    Phòng khách sạn
-                                </div>
-                            </div>
-                            <div class="item-text hotel-paid-bill-name">Davue Hotel Da Nang</div>
-                            <div class="item-text hotel-paid-bill-address">
-                                57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 550000
-                            </div>
-                            <div class="item-text hotel-paid-bill-checkin">Từ: CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text hotel-paid-bill-checkout">Đến: T2, 31 thng 11, 2025, 06:20</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title hotel-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default hotel-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="cart-item bus-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="bus-outline"></ion-icon>
-                                <div class="item-title">
-                                    Vé xe khách
-                                </div>
-                            </div>
-                            <div class="item-text bus-paid-bill-name">Phương Trang</div>
-                            <div class="item-text bus-paid-bill-location">
-                                <div class="item-text bus-paid-bill-fromlocation">
-                                    TP HCM
-                                </div>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                                <div class="item-text bus-paid-bill-tolocation">
-                                    Hà Nội
-                                </div>
-                            </div>
-    
-                            <div class="item-text bus-paid-bill-date">CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text bus-paid-bill-address">Bến xe Miền Tây</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title bus-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default bus-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="cart-item car-paid-bill">
-                        <div class="item-label">
-                            <div class="item-title-container"> <ion-icon name="car-outline"></ion-icon>
-                                <div class="item-title">
-                                    Xe dịch vụ
-                                </div>
-                            </div>
-                            <div class="item-text car-paid-bill-name">TOYOTA</div>
-                            <div class="item-text car-paid-bill-type">Có tài xế</div>
-                            <div class="item-text car-paid-bill-date">CN, 30 thng 11, 2025, 06:20</div>
-                            <div class="item-text car-paid-bill-location">Sân bay quốc tế Tân Sơn Nhất, Nhà ga 1</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="item-title-container" style="justify-content: right;">
-                                <div class="item-title car-paid-bill-price" style="color: #FF5E1F;">
-                                    5.000.000 VNĐ
-                                </div>
-                                <div class="item-text">Đã thanh toán</div>
-                            </div>
-                            <button class="btn-default car-paid-bill-pay-btn" type="button">
-                                <div class="text">Chi tiết</div>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
