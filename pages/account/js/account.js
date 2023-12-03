@@ -37,14 +37,14 @@ function CheckLogin() {
 }
 
 function LoadInfoView(info){
-  document.getElementById("user-name-text").innerHTML = info.Name;
-  document.getElementById("user-gender-text").innerHTML = info.Sex=="Male"?"Nam":"Nữ";
-  document.getElementById("user-bdate-text").innerHTML = ChangeDateType(info.Birthday);
-  document.getElementById("user-email-text").innerHTML = info.Email;
-  document.getElementById("user-nation-text").innerHTML = info.Nationality;
-  document.getElementById("user-phone-text").innerHTML = info.Phone;
-  document.getElementById("user-ppnation-text").innerHTML = info.Nation;
-  document.getElementById("user-ppdate-text").innerHTML = ChangeDateType(info.Expiration);
+  if(info.Name) document.getElementById("user-name-text").innerHTML = info.Name;
+  if(info.Sex) document.getElementById("user-gender-text").innerHTML = info.Sex=="Male"?"Nam":"Nữ";
+  if(info.Birthday) document.getElementById("user-bdate-text").innerHTML = ChangeDateType(info.Birthday);
+  if(info.Email) document.getElementById("user-email-text").innerHTML = info.Email;
+  if(info.Nationality) document.getElementById("user-nation-text").innerHTML = info.Nationality;
+  if(info.Phone) document.getElementById("user-phone-text").innerHTML = info.Phone;
+  if(info.Nation) document.getElementById("user-ppnation-text").innerHTML = info.Nation;
+  if(info.Expiration) document.getElementById("user-ppdate-text").innerHTML = ChangeDateType(info.Expiration);
 }
 function LoadInfoEdit(info){
   document.getElementById("user-txt-name").value = info.Name;

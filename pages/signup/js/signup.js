@@ -26,7 +26,9 @@ document.querySelector(".btn-signup").addEventListener("click", function(event) 
     .then(data => {
         if (data.status === 'success') {
             console.log("Signup successful! Email:", email, "Phone:", phone, "Password:", password);
-            window.location.href = 'login.html'; //thay đổi đường dẫn nếu cần
+            alert("Đăng ký thành công");
+            setCookie('userId', data.userId, 1);
+            window.location.href = '../account/edit-info'; //thay đổi đường dẫn nếu cần
         } else {
             alert("Error: " + data.message);
         }
@@ -35,3 +37,10 @@ document.querySelector(".btn-signup").addEventListener("click", function(event) 
         console.error('Error:', error);
     });
 });
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
