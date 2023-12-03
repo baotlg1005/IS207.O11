@@ -77,11 +77,11 @@ btnPayment.addEventListener("click", function () {
             let result = JSON.parse(this.responseText);
             if (result == "success") {
                 alert("Thanh toán thành công!");
-                // window.location.href = "../main/index.html";
+                window.location.href = "../account/index.html?nav=bill-pane";
             }
             else {
                 alert("Thanh toán thất bại!");
-                // window.location.href = "../main/index.html";
+                window.location.href = "../main/index.html";
             }
         }
     };

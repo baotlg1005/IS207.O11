@@ -74,6 +74,12 @@ async function CreateBillHTML(billInfo){
                     detailHref = `../bill-detail-transfer/index.html`;
                     container = transferBillContainer;
                     break;
+                case 'RI':
+                    title = 'Khách sạn';
+                    iconName = 'bed';
+                    detailHref = `../bill-detail-hotel/index.html`;
+                    container = hotelBillContainer;
+                    break;
                 default:
                     return;
             }
