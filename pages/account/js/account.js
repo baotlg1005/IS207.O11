@@ -2,6 +2,8 @@ window.addEventListener("load", LoadAccountInfo);
 window.addEventListener("load", CheckLogin);
 
 let accountInfo = {}
+let newAccountInfo = {}
+let changeInfoNames = []
 
 function LoadAccountInfo() {
   let userId = getCookie("userId");
@@ -77,6 +79,59 @@ function EditAccountInfo() {
 }
 
 function SaveAccountInfo() {
+  newAccountInfo = {};
+  changeInfoNames = [];
+  let isChange = false;
+
+  isChange = SetNewInfo("user-txt-name", "Name");
+  isChange |= SetNewInfo("txt-user-gender", "Sex");
+  isChange |= SetNewInfo("user-txt-bdate", "Birthday");
+  isChange |= SetNewInfo("user-txt-email", "Email");
+  isChange |= SetNewInfo("user-txt-nation", "Nationality");
+  isChange |= SetNewInfo("user-txt-phone", "Phone");
+  isChange |= SetNewInfo("user-txt-ppnation", "Nation");
+  isChange |= SetNewInfo("user-txt-ppdate", "Expiration");
+
+  if (!isChange) {
+    console.log("Không có gì thay đổi");
+    viewInfo.classList.remove("hide");
+    editInfo.classList.add("hide");
+    return;
+  }
+
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      try {
+        if (this.responseText == "success") {
+          LoadAccountInfo();
+          viewInfo.classList.remove("hide");
+          editInfo.classList.add("hide");
+        } else {
+          alert("Cập nhật thất bại");
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+  xhttp.open(
+    "POST",
+    "../../server/data-controller/account/update-data.php",
+    true
+  );
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("action=update-account-info&data=" + JSON.stringify(newAccountInfo) + "&changeInfoNames=" + JSON.stringify(changeInfoNames) + "&userId=" + getCookie("userId"));
+}
+
+function SetNewInfo(id, key) {
+  let value = document.getElementById(id).value;
+  if (value != accountInfo[key]) {
+    newAccountInfo[key] = value;
+    changeInfoNames.push(key);
+    return true;
+  }
+  return false;
 }
 
 function CancelEdit() {
