@@ -19,6 +19,7 @@
 
     <script src="./js/account-navbar.js" defer></script>
     <script src="./js/bill-history.js" defer></script>
+    <script src="./js/account.js" defer></script>
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                 <div class="pane-label">
                     <div class="label-text">Thông tin cá nhân</div>
                 </div>
-                <form class="info-form" id="user-info-form">
+                <form class="info-form hide" id="user-info-form">
                     <div class="form-content">
                         <div class="info-col" id="user-info-col-1">
                             <div class="input-block">
@@ -70,8 +71,8 @@
                                     <div class="text">Giới tính:</div>
                                 </div>
                                 <select id="txt-user-gender" class="input form-input">
-                                    <option value="male">Nam</option>
-                                    <option value="female">Nữ</option>
+                                    <option value="Male">Nam</option>
+                                    <option value="Female">Nữ</option>
                                 </select>
                             </div>
                             <div class="input-block">
@@ -120,11 +121,76 @@
                         <button class="btn-default form-btn-save" id="user-btn-save" type="button">
                             <div class="text">Lưu</div>
                         </button>
-                        <button class="btn-default form-btn-reset" id="user-btn-clear" type="reset">
+                        <button class="btn-default form-btn-reset" id="user-btn-clear" type="button">
                             <div class="text">Hủy</div>
                         </button>
                     </div>
                 </form>
+                <div class="info-form" id="user-info-view">
+                    <div class="form-content">
+                        <div class="info-col" id="user-info-col-1">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Họ tên:</div>
+                                </div>
+                                <div class="text" id="user-name-text">ádfghj</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Giới tính:</div>
+                                </div>
+                                <div class="text" id="user-gender-text">Nữ</div>
+
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Ngày sinh:</div>
+                                </div>
+                                <div class="text" id="user-bdate-text">11/11/1111</div>
+                            </div>
+                        </div>
+                        <div class="info-col" id="user-info-col-2">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Email:</div>
+                                </div>
+                                <div class="text" id="user-email-text">email@gm.com</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Quốc tịch:</div>
+                                </div>
+                                <div class="text" id="user-nation-text">UIT</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">SĐT:</div>
+                                </div>
+                                <div class="text" id="user-phone-text">00000000000</div>
+                            </div>
+                        </div>
+                        <div class="info-col" id="user-info-col-3">
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Quốc gia cấp hộ chiếu:</div>
+                                </div>
+                                <div class="text" id="user-ppnation-text">UIT</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="title">
+                                    <div class="text">Ngày hết hạn hộ chiếu:</div>
+                                </div>
+                                <div class="text" id="user-ppdate-text">UIT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-default form-btn-save" id="user-btn-edit" type="button">
+                            <div class="text">Chỉnh sửa</div>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="pane-label">
                     <div class="label-text">Bảo mật & Mật khẩu</div>
                 </div>

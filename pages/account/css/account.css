@@ -202,6 +202,7 @@ body {
 }
 .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .text {
   color: #000;
+  font-size: 1.33333rem;
 }
 .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .form-input {
   flex: 1;

@@ -15,12 +15,21 @@
     <link rel="stylesheet" href="../../resources/css/payment.css">
 
     <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
 
 </head>
 
 <body>
-    <header-component></header-component>
+    <div id="header-container">
+        <div id="header-default" class="hide">
+            <header-component></header-component>
+        </div>
+        <div id="header-logged-in" class="hide">
+            <header-logged-in-component></header-logged-in-component>
+        </div>
+    </div>
     <div class="container payment-container">
         <div class="container payment-window">
             <div class="title border-bottom">
@@ -86,6 +95,11 @@
                         <div class="label" id="txt-totalPrice">11.100.000 VND</div>
                     </div>
                 </div>
+            </div>
+            <div class="justify-end d-flex">
+                <a class="btn-default btn-payment" href="../account/index.html?nav=bill-pane" style="background-color: #236eff;">
+                    <div class="text">Quay lại</div>
+                </a>
             </div>
         </div>
     </div>

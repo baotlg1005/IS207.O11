@@ -99,7 +99,7 @@ async function CreateBillHTML(billInfo){
                             Đã thanh toán
                         </div>
                     </div>
-                    <a class="btn-default detail-btn"   
+                    <a class="btn-default detail-btn" href="${detailHref}"   
                     onclick="sessionStorage.setItem('billId', '${billId}');">
                         <div class="text">Chi tiết</div>
                     </a>
