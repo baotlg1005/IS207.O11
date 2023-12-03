@@ -25,9 +25,6 @@
     <link rel="stylesheet" href="./css/index.css">
 
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
 
 </head>
 
@@ -223,6 +220,7 @@
                                 type="text"
                                 autocomplete="off"
                                 list = "flightDepartureLocation"
+                                placeholder="Điểm đi"
                             >
                             <datalist id="flightDepartureLocation"></datalist>    
                         </div>
@@ -241,6 +239,7 @@
                                 type="text"
                                 autocomplete="off"
                                 list="flightArrivalLocation"
+                                placeholder="Điểm đến"
                             >
                             <datalist id="flightArrivalLocation"></datalist>
                         </div>
@@ -391,7 +390,7 @@
                             </div>
                         </div>
                         <div class="input">
-                            <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                            <ion-icon class="icon" name="bus" style="color: #236eff;"></ion-icon>
                             <input id="coach-search__departure" class="departure__input" type="text"
                                 placeholder="Điểm đi" autocomplete="off" list="departure-location">
                                 <datalist id="departure-location">
@@ -415,7 +414,7 @@
                             </div>
                         </div>
                         <div class="input">
-                            <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
+                            <ion-icon class="icon" name="bus" style="color: #236eff;"></ion-icon>
                             <input id="coach-search__destination" class="destination__input" type="text"
                                 placeholder="Điểm đến" autocomplete="off" list="arrival-location">
                                 <datalist id="arrival-location">
