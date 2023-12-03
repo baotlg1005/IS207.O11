@@ -1,6 +1,10 @@
 const userId = getCookie("userId");
 
 const billContainer = document.getElementById("bill-container");
+const flightBillContainer = document.getElementById("flight-bill");
+const busBillContainer = document.getElementById("bus-bill");
+const transferBillContainer = document.getElementById("transfer-bill");
+const hotelBillContainer = document.getElementById("hotel-bill");
 
 window.addEventListener("load", LoadBill);
 
@@ -50,27 +54,31 @@ async function CreateBillHTML(billInfo){
             let title;
             let iconName;
             let detailHref;
+            let container;
             switch (type) {
                 case 'FI':
                     title = 'Vé máy bay';
                     iconName = 'airplane';
                     detailHref = `../bill-detail-flight/index.html`;
+                    container = flightBillContainer;
                     break;
                 case 'BI':
                     title = 'Vé xe khách';
                     iconName = 'bus';
                     detailHref = `../bill-detail-bus/index.html`;
+                    container = busBillContainer;
                     break;
                 case 'TI':
                     title = 'Xe dịch vụ';
                     iconName = 'car';
                     detailHref = `../bill-detail-transfer/index.html`;
+                    container = transferBillContainer;
                     break;
                 default:
                     return;
             }
 
-            billContainer.innerHTML += `
+            container.innerHTML += `
             <div class="bill-item">
                 <div class="left-label">
                     <div class="bill-type">

@@ -82,6 +82,12 @@ body {
         flex-direction: column;
         gap: 2rem;
 
+        #flight-bill, #bus-bill, #transfer-bill, #hotel-bill{
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
         .bill-item {
           padding: 2rem;
           background-color: white;

@@ -5,7 +5,10 @@ $action = $_GET['action'];
 
 if($action == 'load-bill'){
     $userId = $_GET['userId'];
-    $sql = "SELECT * FROM invoice WHERE `User_id` = '$userId';";
+    $sql = "SELECT * FROM invoice 
+    WHERE `User_id` = '$userId'
+    ORDER BY `Id` DESC;
+    ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
