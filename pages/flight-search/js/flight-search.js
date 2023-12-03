@@ -250,6 +250,19 @@ oneFlightSubmitBtn.addEventListener("click", () => {
     flightSearchInfo.oneFlightInfo.haveReturn = haveReturn
     flightSearchInfo.oneFlightInfo.returnDate = returnDate
 
+    if (!flightSearchInfo.oneFlightInfo.departure) {
+        alert('Location is required');
+        return
+    }
+    if (!flightSearchInfo.oneFlightInfo.destination) {
+        alert('Location is required');
+        return
+    }
+    if (flightSearchInfo.oneFlightInfo.departure === flightSearchInfo.oneFlightInfo.destination) {
+        alert('Departure and destination must be different');
+        return
+    }
+
     console.log(flightSearchInfo);
     sessionStorage.setItem('flightSearchInfo', JSON.stringify(flightSearchInfo));
 
