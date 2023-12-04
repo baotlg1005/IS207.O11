@@ -42,7 +42,7 @@
 .bus-book .bus-book__search-bar .Destination_and_Date .search-bar__Destiantion .search-bar__Des1 .text {
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -61,7 +61,7 @@
 .bus-book .bus-book__search-bar .Destination_and_Date .search-bar__Destiantion .search-bar__Des2 .text {
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -106,7 +106,7 @@
   display: flex;
   width: 168px;
   height: 55px;
-  padding: 16px 20px;
+  padding: 1.3rem 20px;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
@@ -126,7 +126,7 @@
   height: auto;
   z-index: 1;
   flex-grow: 1;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: Bold;
   text-align: right;
   font-family: Inter;
@@ -149,7 +149,7 @@
   flex-direction: column;
   width: 368px;
   height: 74px;
-  padding: 16px 20px;
+  padding: 1.3rem 20px;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px 8px 0px 0px;
@@ -160,19 +160,19 @@
   flex-direction: row;
   width: 368px;
   height: 74px;
-  padding: 16px 20px;
+  padding: 1.3rem 20px;
   justify-content: space-between;
 }
 .bus-book .bus-book__Main .bus-book__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .text .text--label {
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: Bold;
 }
 .bus-book .bus-book__Main .bus-book__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .text .text--choice {
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 .bus-book .bus-book__Main .bus-book__Sorting .BusSort__SortingList .dropdown__Sorting--choice .BusSort__SortingChoice .icon {
@@ -182,7 +182,7 @@
 .bus-book .bus-book__Main .bus-book__Sorting .BusSort__SortingList .dropdown__Sorting--choice .dropdown-panel__item {
   color: rgb(0, 0, 0);
   height: auto;
-  font-size: 16px;
+  font-size: 1.3rem;
   text-align: center;
   font-family: Inter;
   font-weight: 700;
@@ -199,14 +199,14 @@
   color: #000;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .bus-book .bus-book__Main .bus-book__Sorting .BusSort__SortingList .SortingText .SortingText-ClearFilter {
   color: rgba(35, 110, 255, 0.8);
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .bus-book .bus-book__Main .bus-book__Sorting .BusAdvanceSorting__List {
@@ -214,7 +214,7 @@
   flex-direction: column;
   width: 368px;
   height: 74px;
-  padding: 16px 20px;
+  padding: 1.3rem 20px;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px 8px 0px 0px;
@@ -233,7 +233,7 @@
   flex: 1 0 0;
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 .bus-book .bus-book__Main .bus-book__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .BusAdvanceSorting__PickUp__Choice .icon {
@@ -244,7 +244,7 @@
 .bus-book .bus-book__Main .bus-book__Sorting .BusAdvanceSorting__List .BusAdvanceSorting__PickUp .dropdown-panel__item {
   color: rgb(0, 0, 0);
   height: auto;
-  font-size: 16px;
+  font-size: 1.3rem;
   text-align: center;
   font-family: Inter;
   font-weight: 700;
@@ -274,7 +274,7 @@
   color: #000;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -282,23 +282,23 @@
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price {
   display: flex;
-  padding: 10px;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Depature_Info {
   display: flex;
-  padding: 16px 20px;
+  padding: 1.3rem 2rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 1rem;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Depature_Info .bus-book__Start_Time {
-  height: 18px;
+  height: 1.5rem;
   align-self: stretch;
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -307,29 +307,29 @@
   align-self: stretch;
   color: #687176;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .icon {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Arrival_Info {
   display: flex;
-  padding: 16px 20px;
+  padding: 1.3rem 2rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 1rem;
   border-right: 1px solid #687176;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Arrival_Info .bus-book__Arrival_Time {
-  height: 18px;
+  height: 2rem;
   align-self: stretch;
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -338,39 +338,39 @@
   align-self: stretch;
   color: #687176;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Duration {
   display: flex;
-  padding: 10px;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Duration .time {
-  width: 200px;
+  width: auto;
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Price {
   display: flex;
-  padding: 16px 20px;
+  padding: 1.3rem 2rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Price .price {
   color: #FF5E1F;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -391,7 +391,7 @@
 }
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Detail_Payment .navigation-item {
   display: flex;
-  padding: 16px 20px;
+  padding: 1.3rem 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -400,7 +400,7 @@
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Detail_Payment .navigation-item .text {
   color: #236EFF;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -408,7 +408,7 @@
 .bus-book .bus-book__Main .bus-book__BusList .bus-book__Detail_Payment .bus-book__Payment {
   display: flex;
   width: 172px;
-  padding: 16px 20px;
+  padding: 1.3rem 20px;
   align-items: flex-start;
   gap: 10px;
   flex-shrink: 0;
@@ -420,7 +420,7 @@
   color: #FFF;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -520,4 +520,193 @@
 #sort-container.show-dropdown #sort-type-dropdown {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 900px) {
+  .bus-book__Main {
+    flex-direction: column;
+  }
+  .bus-book__Sorting {
+    width: 100%;
+  }
+  #sort-container {
+    width: 100%;
+  }
+  .bus-book__BusList {
+    width: 100%;
+  }
+  .bus-book__BusList {
+    flex: 2;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    min-height: 100vh;
+  }
+  .bus-book__BusList .bus-book__BusItem {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+  }
+  .bus-book__BusList .bus-book__BusItem .bus-book__BusBrand {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bus-book__BusList .bus-book__BusItem .bus-book__BusBrand .text {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: rgb(0, 0, 0);
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Depature_Info {
+    display: flex;
+    padding: 1.3rem 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Depature_Info .bus-book__Start_Time {
+    height: 18px;
+    align-self: stretch;
+    color: #000;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Depature_Info .bus-book__Start_Place {
+    color: #687176;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Arrival_Info {
+    display: flex;
+    padding: 1.3rem 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-right: 1px solid #687176;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Arrival_Info .bus-book__Arrival_Time {
+    height: 18px;
+    align-self: stretch;
+    color: #000;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Arrival_Info .bus-book__Arrival_Place {
+    align-self: stretch;
+    color: #687176;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Duration .time {
+    width: auto;
+    color: #000;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Price {
+    display: flex;
+    padding: 1.3rem 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Price .price {
+    color: #FF5E1F;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Place_Time_Price .bus-book__Price .units {
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Detail_Payment {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .bus-book__BusList .bus-book__Detail_Payment .navigation-item {
+    display: flex;
+    padding: 1.3rem 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+  }
+  .bus-book__BusList .bus-book__Detail_Payment .navigation-item .text {
+    color: #236EFF;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bus-book__BusList .bus-book__Detail_Payment .bus-book__Payment {
+    display: flex;
+    width: 172px;
+    padding: 1.3rem 20px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(35, 110, 255, 0.8);
+  }
+  .bus-book__BusList .bus-book__Detail_Payment .bus-book__Payment .payment {
+    flex: 1;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=index.css.map */

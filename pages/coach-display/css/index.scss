@@ -43,7 +43,7 @@
                     .text {
                         color: #000;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -65,7 +65,7 @@
                     .text {
                         color: #000;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -117,7 +117,7 @@
             display: flex;
             width: 168px;
             height: 55px;
-            padding: 16px 20px;
+            padding: 1.3rem 20px;
             justify-content: flex-end;
             align-items: center;
             gap: 10px;
@@ -138,7 +138,7 @@
                 height: auto;
                 z-index: 1;
                 flex-grow: 1;
-                font-size: 16px;
+                font-size: 1.3rem;
                 font-style: Bold;
                 text-align: right;
                 font-family: Inter;
@@ -164,7 +164,7 @@
                 flex-direction: column;
                 width: 368px;
                 height: 74px;
-                padding: 16px 20px;
+                padding: 1.3rem 20px;
                 justify-content: space-between;
                 align-items: center;
                 border-radius: 8px 8px 0px 0px;
@@ -176,21 +176,21 @@
                         flex-direction: row;
                         width: 368px;
                         height: 74px;
-                        padding: 16px 20px;
+                        padding: 1.3rem 20px;
                         justify-content: space-between;
                         
                         .text {
                             .text--label {
                                 color: #000;
                                 font-family: Inter;
-                                font-size: 16px;
+                                font-size: 1.3rem;
                                 font-weight: Bold;
                             }
     
                             .text--choice {
                                 color: #000;
                                 font-family: Inter;
-                                font-size: 16px;
+                                font-size: 1.3rem;
                                 font-weight: 500;
                             }
                         }
@@ -203,7 +203,7 @@
                     .dropdown-panel__item {
                         color: rgba(0, 0, 0, 1);
                         height: auto;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         text-align: center;
                         font-family: Inter;
                         font-weight: 700;
@@ -222,7 +222,7 @@
                         color: #000;
                         text-align: center;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-weight: 700;
                     }
     
@@ -230,7 +230,7 @@
                         color: rgba(35, 110, 255, 0.80);
                         text-align: center;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-weight: 700;
                     }
                 }
@@ -241,7 +241,7 @@
                 flex-direction: column;
                 width: 368px;
                 height: 74px;
-                padding: 16px 20px;
+                padding: 1.3rem 20px;
                 justify-content: space-between;
                 align-items: center;
                 border-radius: 8px 8px 0px 0px;
@@ -260,7 +260,7 @@
                             flex: 1 0 0;
                             color: #000;
                             font-family: Inter;
-                            font-size: 16px;
+                            font-size: 1.3rem;
                             font-weight: 500;
                         }
                         .icon {
@@ -272,7 +272,7 @@
                     .dropdown-panel__item {
                         color: rgba(0, 0, 0, 1);
                         height: auto;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         text-align: center;
                         font-family: Inter;
                         font-weight: 700;
@@ -329,7 +329,7 @@
                         color: #000;
                         text-align: center;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -340,22 +340,22 @@
         
             .bus-book__Place_Time_Price {
                 display: flex;
-                padding: 10px;
+                padding: 1rem;
                 justify-content: space-between;
                 align-items: center;
                 .bus-book__Depature_Info{
                     display: flex;
-                    padding: 16px 20px;
+                    padding: 1.3rem 2rem;
                     flex-direction: column;
                     align-items: flex-start;
-                    gap: 10px;  
+                    gap: 1rem;  
     
                     .bus-book__Start_Time {
-                        height: 18px;
+                        height: 1.5rem;
                         align-self: stretch;
                         color: #000;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -365,30 +365,30 @@
                         align-self: stretch;
                         color: #687176;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
                     }
                 }
                 .icon {
-                    width: 40px;
-                    height: 40px;
+                    width: 4rem;
+                    height: 4rem;
                 }
                 .bus-book__Arrival_Info {
                     display: flex;
-                    padding: 16px 20px;
+                    padding: 1.3rem 2rem;
                     flex-direction: column;
                     align-items: flex-start;
-                    gap: 10px;
+                    gap: 1rem;
                     border-right: 1px solid #687176;
     
                     .bus-book__Arrival_Time {
-                        height: 18px;
+                        height: 2rem;
                         align-self: stretch;
                         color: #000;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -398,7 +398,7 @@
                         align-self: stretch;
                         color: #687176;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
@@ -406,16 +406,16 @@
                 }
                 .bus-book__Duration {
                     display: flex;
-                    padding: 10px;
+                    padding: 1rem;
                     justify-content: center;
                     align-items: center;
-                    gap: 10px;
+                    gap: 1rem;
                     
                     .time {
-                        width: 200px;
+                        width: auto;
                         color: #000;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -423,16 +423,16 @@
                 }
                 .bus-book__Price {
                     display: flex;
-                    padding: 16px 20px;
+                    padding: 1.3rem 2rem;
                     justify-content: center;
                     align-items: center;
-                    gap: 10px;
+                    gap: 1rem;
 
                     .price {
                         color: #FF5E1F;
                         text-align: center;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -455,7 +455,7 @@
                 align-items: flex-start;
                 .navigation-item {
                     display: flex;
-                    padding: 16px 20px;
+                    padding: 1.3rem 20px;
                     justify-content: center;
                     align-items: center;
                     gap: 10px;
@@ -463,7 +463,7 @@
                     .text {
                         color: #236EFF;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -472,7 +472,7 @@
                 .bus-book__Payment {
                     display: flex;
                     width: 172px;
-                    padding: 16px 20px;
+                    padding: 1.3rem 20px;
                     align-items: flex-start;
                     gap: 10px;
                     flex-shrink: 0;
@@ -483,7 +483,7 @@
                         color: #FFF;
                         text-align: center;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
@@ -601,3 +601,202 @@
       flex-direction: column;
     }
   }
+
+@media only screen and (max-width: 900px) {
+    .bus-book__Main {
+        flex-direction: column;
+    }
+    .bus-book__Sorting{
+        width: 100%;
+    }
+    #sort-container {
+        width: 100%;
+    }
+    .bus-book__BusList{
+        width: 100%;
+    }
+    .bus-book__BusList {
+        flex: 2;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        min-height: 100vh;
+
+        .bus-book__BusItem {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            background: #FFF;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-bottom: 2rem;
+            .bus-book__BusBrand {
+                display: flex;
+                padding: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .text {
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    color:rgba(0, 0, 0, 1);
+                }
+            }
+        }
+    
+        .bus-book__Place_Time_Price {
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+            .bus-book__Depature_Info{
+                display: flex;
+                padding: 1.3rem 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;  
+
+                .bus-book__Start_Time {
+                    height: 18px;
+                    align-self: stretch;
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                .bus-book__Start_Place {
+                    color: #687176;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
+            .bus-book__Arrival_Info {
+                display: flex;
+                padding: 1.3rem 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                border-right: 1px solid #687176;
+
+                .bus-book__Arrival_Time {
+                    height: 18px;
+                    align-self: stretch;
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                .bus-book__Arrival_Place {
+                    align-self: stretch;
+                    color: #687176;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+            .bus-book__Duration {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .time {
+                    width: auto;
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+            .bus-book__Price {
+                display: flex;
+                padding: 1.3rem 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .price {
+                    color: #FF5E1F;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+                .units {
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    
+        .bus-book__Detail_Payment {
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: flex-start;
+            .navigation-item {
+                display: flex;
+                padding: 1.3rem 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 8px;
+                .text {
+                    color: #236EFF;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+            .bus-book__Payment {
+                display: flex;
+                width: 172px;
+                padding: 1.3rem 20px;
+                align-items: flex-start;
+                gap: 10px;
+                flex-shrink: 0;
+                border-radius: 8px;
+                background: rgba(35, 110, 255, 0.80);
+                .payment {
+                    flex: 1;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
