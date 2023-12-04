@@ -147,7 +147,6 @@ const itemHCM = document.getElementById('item-hcm');
 const itemVT = document.getElementById('item-vungtau');
 
 window.addEventListener('load', () => {
-    console.log(HotelSearchInfo);
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -172,3 +171,13 @@ recomBtn.forEach(btn => {
         document.documentElement.scrollTop = 0;
     });
 });
+
+let hotelLocation;
+
+window.addEventListener('load', () => {
+    if (sessionStorage.getItem("hotelLocation")) {
+        hotelLocation = JSON.parse(sessionStorage.getItem("hotelLocation"));
+        locationInput.value = hotelLocation.value;
+    }
+});
+

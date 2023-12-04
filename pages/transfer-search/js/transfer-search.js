@@ -101,3 +101,66 @@ submitBtn.addEventListener('click', () => {
     window.location.href = '../transfer-display/'
     sessionStorage.setItem('transferSearchInfo', JSON.stringify(transferSearchInfo))
 })
+
+const recomItem = document.querySelectorAll('.recom-item');
+
+recomItem.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        //remove hide class in recom-btn in this item
+        item.querySelector('.recom-btn').classList.remove('hide');
+        //add show class in recom-btn in this item
+        item.querySelector('.recom-btn').classList.add('show');
+    });
+    item.addEventListener('mouseleave', () => {
+        item.querySelector('.recom-btn').classList.remove('show');
+        item.querySelector('.recom-btn').classList.add('hide');
+    });
+});
+
+const itemTSN = document.getElementById('item-tsn');
+const itemNoibai = document.getElementById('item-noibai');
+const itemDN = document.getElementById('item-danang');
+const itemHCM = document.getElementById('item-hcm');
+const itemDalat = document.getElementById('item-dalat');
+const itemHN = document.getElementById('item-hanoi');
+const itemHaiphong = document.getElementById('item-haiphong');
+const itemCantho = document.getElementById('item-cantho');
+
+window.addEventListener('load', () => {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            let results = JSON.parse(this.responseText);
+                itemHN.querySelector('.content .text').innerText = "Có " + results.hn + " xe dịch vụ";
+                itemDalat.querySelector('.content .text').innerText = "Có " + results.dl + " xe dịch vụ";
+                itemHCM.querySelector('.content .text').innerText = "Có " + results.hcm + " xe dịch vụ";
+                itemDN.querySelector('.content .text').innerText = "Có " + results.dn + " xe dịch vụ";
+                itemTSN.querySelector('.content .text').innerText = "Có " + results.tsn + " xe dịch vụ";
+                itemNoibai.querySelector('.content .text').innerText = "Có " + results.nb + " xe dịch vụ";
+                itemHaiphong.querySelector('.content .text').innerText = "Có " + results.hp + " xe dịch vụ";
+                itemCantho.querySelector('.content .text').innerText = "Có " + results.ct + " xe dịch vụ";
+        }
+    }
+    xhttp.open("GET", "../../server/data-controller/transfer-search/get-data.php?action=load-recom", true);
+    xhttp.send();
+});
+
+const recomBtn = document.querySelectorAll('.recom-btn');
+
+recomBtn.forEach(btn => { 
+    btn.addEventListener('click', () => {
+        const location = btn.parentElement.dataset.location;
+        locationInput.value = location;
+        document.documentElement.scrollTop = 0;
+    });
+});
+
+let transferLocation;
+
+window.addEventListener('load', () => {
+    if (sessionStorage.getItem("transferLocation")) {
+        transferLocation = JSON.parse(sessionStorage.getItem("transferLocation"));
+        locationInput.value = transferLocation.value;
+    }
+});

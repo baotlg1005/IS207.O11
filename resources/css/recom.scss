@@ -1,4 +1,6 @@
 .recom-container {
+    margin-bottom: 25rem!important;
+
     .title {
         padding-bottom: 2rem;
 
@@ -9,7 +11,7 @@
     }
 
     .recom-item-list-container {
-        margin-bottom: 25rem;
+
 
         .recom-item-container {
             width: calc(100% / 4);
@@ -59,24 +61,84 @@
                 cursor: pointer;
             }
 
-            #item-danang {
+            #item-danang,
+            #item-danang-bus,
+            #item-danang-transfer,
+            #item-danang-hotel {
                 background-image: url('../images/hotel-recom-danang.jpeg');
-
             }
 
-            #item-hanoi {
+            #item-hanoi,
+            #item-hanoi-flight,
+            #item-hanoi-transfer,
+            #item-hanoi-hotel {
                 background-image: url('../images/hotel-recom-hanoi.jpeg');
-
             }
 
-            #item-hcm {
+            #item-hcm,
+            #item-hcm-flight,
+            #item-hcm-bus,
+            #item-hcm-transfer,
+            #item-hcm-hotel {
                 background-image: url('../images/hotel-recom-hcm.jpeg');
-
             }
 
-            #item-vungtau {
+            #item-vungtau,
+            #item-vungtau-bus,
+            #item-vungtau-hotel {
                 background-image: url('../images/hotel-recom-vungtau.jpeg');
+            }
 
+            #item-dalat,
+            #item-dalat-flight,
+            #item-dalat-transfer {
+                background-image: url('../images/recom-dalat.jpeg');
+            }
+
+            #item-phuquoc,
+            #item-phuquoc-flight {
+                background-image: url('../images/recom-phuquoc.jpeg');
+            }
+
+            #item-angiang,
+            #item-angiang-bus {
+                background-image: url('../images/recom-angiang.jpg');
+            }
+
+            #item-haiphong,
+            #item-haiphong-bus,
+            #item-haiphong-transfer {
+                background-image: url('../images/recom-haiphong.jpg');
+            }
+
+            #item-hatinh,
+            #item-hatinh-bus {
+                background-image: url('../images/recom-hatinh.jpg');
+            }
+
+            #item-khanhhoa,
+            #item-khanhhoa-bus {
+                background-image: url('../images/recom-khanhhoa.jpg');
+            }
+
+            #item-lamdong,
+            #item-lamdong-bus {
+                background-image: url('../images/recom-lamdong.jpg');
+            }
+
+            #item-tsn,
+            #item-tsn-transfer {
+                background-image: url('../images/recom-tsn.jpg');
+            }
+
+            #item-noibai,
+            #item-noibai-transfer {
+                background-image: url('../images/recom-noibai.jpg');
+            }
+
+            #item-cantho,
+            #item-cantho-transfer {
+                background-image: url('../images/recom-cantho.jpg');
             }
         }
 
