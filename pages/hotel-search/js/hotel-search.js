@@ -23,21 +23,21 @@ const submitBtn = hotelSearchForm.querySelector('#search-form__submit-btn--hotel
 window.onload = function (e) {
     console.log(HotelSearchInfo);
     let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
             let locations = JSON.parse(this.responseText);
             if (locations.length > 0) {
-                locations.forEach(item=>{
+                locations.forEach(item => {
                     document.getElementById("location").innerHTML += `<option>${item.Area}</option>`
                 })
-              }
             }
-          }
-        xhttp.open("POST", "../../server/data-controller/hotel/get-data.php", true);
-        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhttp.send(`action=getLocation`)
+        }
     }
+    xhttp.open("POST", "../../server/data-controller/hotel/get-data.php", true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhttp.send(`action=getLocation`)
+}
 function GetTodayDate() {
     const today = new Date()
     const todayDate = today.getDate()
@@ -99,19 +99,19 @@ guestAndRoomQuantityConfirmBtn.addEventListener('click', () => {
 //submit btn event
 submitBtn.addEventListener('click', () => {
     HotelSearchInfo.location = locationInput.value;
-    
+
     startDate = new Date(checkinDateInput.value)
     if (isNaN(startDate)) {
         alert('Invalid checkin date');
         return;
     }
-    HotelSearchInfo.checkinDate = `${startDate.getFullYear()}-${startDate.getMonth()+1}-${startDate.getDate()}`;
+    HotelSearchInfo.checkinDate = `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`;
     endDate = new Date(checkoutDateInput.value)
     if (isNaN(endDate)) {
         alert('Invalid checkout date');
         return;
     }
-    HotelSearchInfo.checkoutDate = `${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`;
+    HotelSearchInfo.checkoutDate = `${endDate.getFullYear()}-${endDate.getMonth() + 1}-${endDate.getDate()}`;
     if (!HotelSearchInfo.location) {
         alert('Location is required');
         return;
@@ -123,5 +123,52 @@ submitBtn.addEventListener('click', () => {
     }
     window.location.href = '../hotel-display/'
     sessionStorage.setItem('HotelSearchInfo', JSON.stringify(HotelSearchInfo))
-    
-}); 
+
+});
+
+const recomItem = document.querySelectorAll('.recom-item');
+
+recomItem.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        //remove hide class in recom-btn in this item
+        item.querySelector('.recom-btn').classList.remove('hide');
+        //add show class in recom-btn in this item
+        item.querySelector('.recom-btn').classList.add('show');
+    });
+    item.addEventListener('mouseleave', () => {
+        item.querySelector('.recom-btn').classList.remove('show');
+        item.querySelector('.recom-btn').classList.add('hide');
+    });
+});
+
+const itemHN = document.getElementById('item-hanoi');
+const itemDN = document.getElementById('item-danang');
+const itemHCM = document.getElementById('item-hcm');
+const itemVT = document.getElementById('item-vungtau');
+
+window.addEventListener('load', () => {
+    console.log(HotelSearchInfo);
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            let results = JSON.parse(this.responseText);
+                itemHN.querySelector('.content .text').innerText = "Có " + results.hn + " khách sạn";
+                itemDN.querySelector('.content .text').innerText = "Có " + results.dn + " khách sạn";
+                itemHCM.querySelector('.content .text').innerText = "Có " + results.hcm + " khách sạn";
+                itemVT.querySelector('.content .text').innerText = "Có " + results.vt + " khách sạn";
+        }
+    }
+    xhttp.open("GET", "../../server/data-controller/hotel-search/get-data.php?action=load-recom", true);
+    xhttp.send();
+});
+
+const recomBtn = document.querySelectorAll('.recom-btn');
+
+recomBtn.forEach(btn => { 
+    btn.addEventListener('click', () => {
+        const location = btn.parentElement.dataset.location;
+        locationInput.value = location;
+        document.documentElement.scrollTop = 0;
+    });
+});
