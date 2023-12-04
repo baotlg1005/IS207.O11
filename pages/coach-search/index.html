@@ -23,6 +23,9 @@
     <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
     <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+    <link rel="stylesheet" href="../../resources/component/carousel/carousel.css">
+    <script src="../../resources/component/carousel/carousel.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -34,22 +37,25 @@
             <header-logged-in-component></header-logged-in-component>
         </div>
     </div>
-    
-    <div class="container main-content">
-        <div class="container-fluid ad-slider-container">
-            <div class="slider__content">
-
+    <div class="container-fluid carousel-container">
+        <div class="carousel__content d-flex align-center justify-center">
+            <img class="content-item content-item-1" data-index="1" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-2" data-index="2" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-3" data-index="3" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-4" data-index="4" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-5" data-index="5" src="../../resources/images/bus-ad.png">
+        </div>
+        <div class="carousel__nav">
+            <div class="nav__btn" id="btn-left">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
             </div>
-            <div class="slider__nav">
-                <div class="nav__left">
-                    <ion-icon name="arrow-back-circle-outline"></ion-icon>
-                </div>
-                <div class="text">Xem thêm khuyến mãi</div>
-                <div class="nav__right">
-                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
-                </div>
+            <div class="text">Xem thêm khuyến mãi</div>
+            <div class="nav__btn" id="btn-right">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
             </div>
         </div>
+    </div>
+    <div class="container main-content">
         <div id="feature__coach-search" class="container-fluid feature__item">
             <div class="coach-search__config config">
                 <div class="btn-dropdown config__passenger-quantity">

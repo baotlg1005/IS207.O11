@@ -23,6 +23,9 @@
     <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
     <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+    <link rel="stylesheet" href="../../resources/component/carousel/carousel.css">
+    <script src="../../resources/component/carousel/carousel.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -34,21 +37,25 @@
             <header-logged-in-component></header-logged-in-component>
         </div>
     </div>
-    <div class="container main-content">
-        <div class="container-fluid ad-slider-container">
-            <div class="slider__content">
-
+    <div class="container-fluid carousel-container">
+        <div class="carousel__content d-flex align-center justify-center">
+            <img class="content-item content-item-1" data-index="1" src="../../resources/images/flight-ad-1.jpeg">
+            <img class="content-item content-item-2" data-index="2" src="../../resources/images/flight-ad-2.jpg">
+            <img class="content-item content-item-3" data-index="3" src="../../resources/images/flight-ad-3.jpeg">
+            <img class="content-item content-item-4" data-index="4" src="../../resources/images/flight-ad-4.png">
+            <img class="content-item content-item-5" data-index="5" src="../../resources/images/flight-ad-5.jpeg">
+        </div>
+        <div class="carousel__nav">
+            <div class="nav__btn" id="btn-left">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
             </div>
-            <div class="slider__nav">
-                <div class="nav__left">
-                    <ion-icon name="arrow-back-circle-outline"></ion-icon>
-                </div>
-                <div class="text">Xem thêm khuyến mãi</div>
-                <div class="nav__right">
-                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
-                </div>
+            <div class="text">Xem thêm khuyến mãi</div>
+            <div class="nav__btn" id="btn-right">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
             </div>
         </div>
+    </div>
+    <div class="container main-content">
         <div id="feature__flight-search" class="container-fluid feature__item">
             <div class="flight-search__config config">
                 <div class="config__ticket-info">
@@ -60,7 +67,8 @@
                             </div>
                             <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                         </div>
-                        <div class="dropdown-panel dropdown-panel--set-quantity passenger-quantity__dropdown-panel hide">
+                        <div
+                            class="dropdown-panel dropdown-panel--set-quantity passenger-quantity__dropdown-panel hide">
                             <div class="dropdown-panel__title">
                                 <div class="text">Số hành khách</div>
                             </div>
@@ -146,15 +154,9 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__departure" 
-                                class="departure__input" 
-                                type="text"
-                                autocomplete="off"
-                                list = "departureLocation"
-                                placeholder="Điểm đi"
-                            >
-                            <datalist id="departureLocation"></datalist>    
+                            <input id="flight-search__departure" class="departure__input" type="text" autocomplete="off"
+                                list="departureLocation" placeholder="Điểm đi">
+                            <datalist id="departureLocation"></datalist>
                         </div>
                     </div>
                     <div class="input-block left-connect">
@@ -165,14 +167,8 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__destination" 
-                                class="destination__input" 
-                                type="text"
-                                autocomplete="off"
-                                list="arrivalLocation"
-                                placeholder="Điểm đến"
-                            >
+                            <input id="flight-search__destination" class="destination__input" type="text"
+                                autocomplete="off" list="arrivalLocation" placeholder="Điểm đến">
                             <datalist id="arrivalLocation"></datalist>
                         </div>
                     </div>
@@ -182,16 +178,12 @@
                         <div class="title">
                             <div class="text">
                                 Ngày đi
-                            </div> 
+                            </div>
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                            <input 
-                                id="flight-search__departure-date" 
-                                class="departure-date__input" 
-                                type="date" 
-                                placeholder="Ngày đi"
-                            >
+                            <input id="flight-search__departure-date" class="departure-date__input" type="date"
+                                placeholder="Ngày đi">
                         </div>
                     </div>
                 </div>
@@ -200,7 +192,7 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </a>
                 </div>
-                
+
             </form>
             <form action="" id="flight-search__search-form--many" class="search-form search-form--many hide">
                 <div class="search-form-container">
@@ -214,12 +206,8 @@
                                 </div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                                    <input 
-                                        class="departure__input" 
-                                        type="text"
-                                        placeholder="Điểm đi" 
-                                        autocomplete="off"
-                                    >
+                                    <input class="departure__input" type="text" placeholder="Điểm đi"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="input-block left-connect">
@@ -230,12 +218,8 @@
                                 </div>
                                 <div class="input">
                                     <ion-icon class="icon" name="airplane" style="color: #236eff;"></ion-icon>
-                                    <input 
-                                        class="destination__input" 
-                                        type="text"
-                                        placeholder="Điểm đến" 
-                                        autocomplete="off"
-                                    >
+                                    <input class="destination__input" type="text" placeholder="Điểm đến"
+                                        autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -244,15 +228,11 @@
                                 <div class="title">
                                     <div class="text">
                                         Ngày đi
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="input">
                                     <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
-                                    <input 
-                                        class="departure-date__input" 
-                                        type="date" 
-                                        placeholder="Ngày đi"
-                                    >
+                                    <input class="departure-date__input" type="date" placeholder="Ngày đi">
                                 </div>
                             </div>
                         </div>
@@ -276,6 +256,85 @@
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="container partner-container d-flex flex-row mb-5 gap-4">
+            <div class="d-flex flex-column w-25">
+                <h1 class="p-3">Đối tác hàng không</h1>
+                <div class="text">Những đối tác hàng không toàn cầu sẽ chắp cánh đưa bạn đến mọi địa điểm trên thế giới.
+                </div>
+            </div>
+            <div class="d-flex flex-column w-75 gap-1">
+                <div class="d-flex flex-row justify-between">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/21/1582260108949-09348d284bb3fd1675614f43ab22a6d8.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/05/31/1653980299757-6784a77ebf1ee7eb39aded22846ad2ce.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2021/05/04/1620136036133-d74f19434de12f627b593e49a144ff6c.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568213286490-40a57162d59a3cdfd871be63262c1153.png?tr=q-75,w-82">
+                </div>
+                <div class="d-flex flex-row justify-between">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/21/1582260108949-09348d284bb3fd1675614f43ab22a6d8.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/05/31/1653980299757-6784a77ebf1ee7eb39aded22846ad2ce.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2021/05/04/1620136036133-d74f19434de12f627b593e49a144ff6c.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568213286490-40a57162d59a3cdfd871be63262c1153.png?tr=q-75,w-82">
+                </div>
+                <div class="d-flex flex-row justify-between">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/21/1582260108949-09348d284bb3fd1675614f43ab22a6d8.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/05/31/1653980299757-6784a77ebf1ee7eb39aded22846ad2ce.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2021/05/04/1620136036133-d74f19434de12f627b593e49a144ff6c.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568213286490-40a57162d59a3cdfd871be63262c1153.png?tr=q-75,w-82">
+                </div>
+                <div class="d-flex flex-row justify-between">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/21/1582260108949-09348d284bb3fd1675614f43ab22a6d8.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/05/31/1653980299757-6784a77ebf1ee7eb39aded22846ad2ce.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2021/05/04/1620136036133-d74f19434de12f627b593e49a144ff6c.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568213286490-40a57162d59a3cdfd871be63262c1153.png?tr=q-75,w-82">
+                </div>
+                <div class="d-flex flex-row justify-between">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/21/1582260108949-09348d284bb3fd1675614f43ab22a6d8.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/05/31/1653980299757-6784a77ebf1ee7eb39aded22846ad2ce.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568212919133-2482812716f8f0532738cb4518387a0d.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2021/05/04/1620136036133-d74f19434de12f627b593e49a144ff6c.png?tr=q-75,w-82">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/11/1568213286490-40a57162d59a3cdfd871be63262c1153.png?tr=q-75,w-82">
+                </div>
+            </div>
         </div>
     </div>
     <footer-component></footer-component>

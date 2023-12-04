@@ -1,7 +1,3 @@
-body {
-  background-color: #e5e5e5;
-}
-
 .payment-container {
   display: flex;
   flex-direction: column;
@@ -59,42 +55,4 @@ body {
 
 .border-bottom {
   border-bottom: 2px solid #AAB3B8;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.fs-16 {
-  font-size: 1.5rem !important;
-}
-
-.d-flex {
-  display: flex;
 }/*# sourceMappingURL=payment.css.map */

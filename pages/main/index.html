@@ -26,6 +26,9 @@
 
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
 
+    <link rel="stylesheet" href="../../resources/component/carousel/carousel.css">
+    <script src="../../resources/component/carousel/carousel.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
@@ -677,6 +680,24 @@
         </div>
     </div>
     <div class="container-fluid main-content">
+        <div class="container-fluid carousel-container" >
+            <div class="carousel__content d-flex align-center justify-center" id="main-carousel">
+                <img class="content-item content-item-1" data-index="1" src="../../resources/images/hotel-ad-1.jpeg">
+                <img class="content-item content-item-2" data-index="2" src="../../resources/images/flight-ad-1.jpeg">
+                <img class="content-item content-item-3" data-index="3" src="../../resources/images/transfer-ad.jpeg">
+                <img class="content-item content-item-4" data-index="4" src="../../resources/images/bus-ad.png">
+                <img class="content-item content-item-5" data-index="5" src="../../resources/images/hotel-ad-5.png">
+            </div>
+            <div class="carousel__nav">
+                <div class="nav__btn" id="btn-left">
+                    <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                </div>
+                <div class="text">Xem thêm khuyến mãi</div>
+                <div class="nav__btn" id="btn-right">
+                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
         <div class="container main-content__container location-ad-card-container">
             <div class="title-container location-ad-card-container__title-container">
                 <ion-icon name="airplane" style="color:#236eff;font-size:3rem"></ion-icon>
