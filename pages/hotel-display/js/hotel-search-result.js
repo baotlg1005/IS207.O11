@@ -434,11 +434,12 @@ document.addEventListener('click', function (e) {
 
         let id = e.target.closest(".hotel-item").id;
         hotelPaymentInfo.ID = id.substring(20);
-        hotelPaymentInfo.guestNum = HotelSearchInfo.adultQuantity + HotelSearchInfo.childQuantity;
+        hotelPaymentInfo.guestNum = parseInt(HotelSearchInfo.adultQuantity) + parseInt(HotelSearchInfo.childQuantity);
         hotelPaymentInfo.hotelName = e.target.closest(".hotel-item").querySelector("#hotel-name").innerText;
         hotelPaymentInfo.hotelAddress = e.target.closest(".hotel-item").querySelector("#position-hotel").innerText;
         hotelPaymentInfo.price = changeMoneyFormatBack(e.target.closest(".hotel-item").querySelector(".price-hotel-item").innerText);
         sessionStorage.setItem("hotelPaymentInfo", JSON.stringify(hotelPaymentInfo));
+        console.log(hotelPaymentInfo);
         window.location.href = "../payment-hotel";
     }
 })

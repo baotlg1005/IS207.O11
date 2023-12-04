@@ -4,7 +4,6 @@ let HotelSearchInfo = {
     checkoutDate: '',
     adultQuantity: 1,
     childQuantity: 0,
-    roomQuantity: 1
 }
 
 const featureHotelSearch = document.getElementById('feature__hotel-search');
@@ -91,12 +90,10 @@ guestAndRoomQuantityConfirmBtn.addEventListener('click', () => {
     guestAndRoomQuantityDropdownPanel.classList.add('hide');
     const adultQuantity = guestAndRoomQuantityItems[0].querySelector('.set-quantity__quantity').innerText;
     const childQuantity = guestAndRoomQuantityItems[1].querySelector('.set-quantity__quantity').innerText;
-    const roomQuantity = guestAndRoomQuantityItems[2].querySelector('.set-quantity__quantity').innerText;
-    guestAndRoomQuantityInfo.querySelector('.text').innerText = `${adultQuantity} Người lớn, ${childQuantity} trẻ em, ${roomQuantity} phòng`;
+    guestAndRoomQuantityInfo.querySelector('.text').innerText = `${adultQuantity} Người lớn, ${childQuantity} trẻ em`;
 
     HotelSearchInfo.adultQuantity = adultQuantity;
     HotelSearchInfo.childQuantity = childQuantity;
-    HotelSearchInfo.roomQuantity = roomQuantity;
 });
 
 //submit btn event
