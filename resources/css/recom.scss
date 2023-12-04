@@ -83,3 +83,13 @@
 
     }
 }
+
+
+@media only screen and (max-width: 900px) {
+    .recom-item-list-container {
+        flex-wrap: wrap;
+        .recom-item-container {
+            width: calc(100% / 2) !important;
+        }
+    }
+}

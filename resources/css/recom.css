@@ -59,4 +59,13 @@
 }
 .recom-container .recom-item-list-container .recom-item-container #item-vungtau {
   background-image: url("../images/hotel-recom-vungtau.jpeg");
+}
+
+@media only screen and (max-width: 900px) {
+  .recom-item-list-container {
+    flex-wrap: wrap;
+  }
+  .recom-item-list-container .recom-item-container {
+    width: 50% !important;
+  }
 }/*# sourceMappingURL=recom.css.map */

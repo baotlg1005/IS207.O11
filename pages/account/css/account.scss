@@ -297,3 +297,247 @@
     color: red;
   }
 }
+
+
+@media only screen and (max-width: 900px) {
+  .account-content-container {
+    flex-direction: column;
+    .account-navbar {
+      width: 100%;
+      height: auto !important;
+      .nav-tab-group {
+        flex-direction: row;
+        .nav-tab {
+          width: auto;
+        }
+      }
+    }
+  
+    .account-content-window {
+      width: 100%;
+      padding-left: 1rem;
+      box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 0.57143rem;
+  
+      #user-pane {
+        background-color: white;
+        border-radius: 0.57143rem;
+      }
+  
+      #bill-pane {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+  
+        .pane-label {
+          border-bottom: 0;
+        }
+        #bill-container {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+  
+          #flight-bill, #bus-bill, #transfer-bill, #hotel-bill{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+  
+          .bill-item {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          
+            .left-label{
+              display: flex;
+              flex-direction: column;
+              gap: .5rem;
+              .bill-type{
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  ion-icon{
+                      font-size: 3rem;
+                      color: #236eff;
+                  }
+                  .text{
+                      font-size: 1.8rem;
+                      font-weight: bold;
+                  }
+              }
+              .bill-info{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+                ion-icon{
+                  font-size: 1rem;
+                }
+                .from,.to{
+                  .text{
+                    font-size: 1.2rem;
+                  }
+                }
+                .name{
+                  .text{
+                    font-size: 1.2rem;
+                  }
+                }
+              }
+              .bill-id{
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                margin-top: auto;
+                .text,.id-text{
+                  font-size: 1.2rem;
+                }
+                .text{
+                  font-weight: bold;
+                }
+              }
+            }
+  
+            .right-label {
+              display: flex;
+              flex-direction: column;
+              gap: 0.2rem;
+              align-items: flex-end;
+  
+              .bill-price{
+                  .text{
+                      font-size: 2rem;
+                      font-weight: bold;
+                      color: #ff7a50;
+                  }
+              }
+              .bill-status{
+                  margin-bottom: 0.8rem;
+                  .text{
+                      font-size: 1.5rem;
+                  }
+              }
+              .detail-btn{
+                  display: flex;
+                  background-color: #236eff;
+                  .text{
+                      color: white;
+                  }
+              }
+            }
+            
+          }
+          .no-result-text {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+      }
+  
+      .account-content-pane {
+        padding: 2rem;
+  
+        .pane-label {
+          padding-bottom: 2rem;
+          border-bottom: 1px solid #c7c7c7;
+  
+          .label-text {
+            font-weight: bolder;
+            font-size: 18px;
+          }
+        }
+  
+        .info-form {
+          display: flex;
+          flex-direction: column;
+          padding-top: 2rem;
+          padding-bottom: 4rem;
+          gap: 2rem;
+  
+          #user-info-col-3 {
+            width: 100%;
+          }
+  
+          #password-info-col {
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+            .input-block{
+              width: 100%;
+            }
+          }
+  
+          .form-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+  
+            .info-col {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              gap: 1rem;
+  
+              .input-block {
+                flex-direction: row;
+                gap: 1rem;
+  
+                .title {
+                  flex: 1;
+                  white-space: nowrap;
+                }
+  
+                .text {
+                  color: #000;
+                  font-size: 1.33333rem;
+                }
+  
+                .form-input {
+                  flex: 1;
+                  width: 10rem !important;
+                  height: 2.14286rem !important;
+                  border-radius: 0.57143rem;
+                  border: 1.5px solid #aab3b8;
+                  background-color: #fff;
+                }
+  
+                select {
+                  padding-top: 0;
+                  padding-bottom: 0;
+                }
+              }
+            }
+  
+          }
+  
+          .btn-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 2rem;
+            padding-left: 1rem;
+  
+            .form-btn-save {
+              background-color: #236eff;
+              color: white;
+              width: 10rem;
+            }
+  
+            .form-btn-reset {
+              background-color: #f1f1f1;
+              color: #236eff;
+              width: 10rem;
+            }
+  
+            .text {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

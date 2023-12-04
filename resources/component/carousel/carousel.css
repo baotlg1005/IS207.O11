@@ -212,6 +212,8 @@ body {
 
 @media only screen and (max-width: 900px) {
   .content-item-1,
+  .content-item-2,
+  .content-item-4,
   .content-item-5 {
     display: none;
   }
