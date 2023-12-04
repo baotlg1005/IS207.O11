@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelowkey</title>
+    <link rel="icon" type="image/x-icon" href="../../resources/images/logo.ico">
 
     <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
 
@@ -447,7 +448,7 @@
             </form>
         </div>
         <div id="feature__transfer-search" class="container-fluid feature__item feature-container__item hide"
-            data-feature-type="transfer">
+        data-feature-type="transfer">
             <div class="transfer-search__config config">
                 <div id="config__have-driver-checkbox" class="unchecked">
                     <ion-icon class="unchecked" name="ellipse-outline"></ion-icon>
@@ -494,9 +495,9 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
-                            <div id="transfer-search__start-time" class="start-time__input">
+                            <div id="transfer-search__start-time" class="time__input">
                                 <div class ="hour">
-                                    <select id="select-hour-start" class="start-time__select">
+                                    <select id="select-hour-start" class="time__select">
                                         <script>
                                             const selectHourElementStart = document.getElementById('select-hour-start');
                                             for (let i = 0; i <= 23; i++) {
@@ -511,7 +512,7 @@
                                 </div>
                                 <div>:</div>
                                 <div class="minute">
-                                    <select id="select-minute-start" class="start-time__select">
+                                    <select id="select-minute-start" class="time__select">
                                         <option value="00">00</option>
                                         <option value="30">30</option>
                                     </select>
@@ -539,9 +540,9 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
-                            <div id="transfer-search__start-time" class="start-time__input">
+                            <div id="transfer-search__end-time" class="time__input">
                                 <div class ="hour">
-                                    <select id="select-hour-end" class="start-time__select">
+                                    <select id="select-hour-end" class="time__select">
                                         <script>
                                             const selectHourElementEnd = document.getElementById('select-hour-end');
                                             for (let i = 0; i <= 23; i++) {
@@ -556,9 +557,9 @@
                                 </div>
                                 <div>:</div>
                                 <div class="minute">
-                                    <select id="select-minute-end" class="start-time__select">
+                                    <select id="select-minute-end" class="time__select">
                                         <option value="00">00</option>
-                                        <option value="30">30</option>
+                                        <option value="30" selected>30</option>
                                     </select>
                                 </div>
                             </div>
@@ -577,7 +578,7 @@
                     <div class="info guest-and-room-quantity__info">
                         <ion-icon class="icon" name="people"></ion-icon>
                         <div class="text">
-                            1 Người lớn, 0 trẻ em, 1 phòng
+                            1 Người lớn, 0 trẻ em
                         </div>
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
@@ -607,18 +608,6 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">0</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
-                            </div>
-                        </div>
-                        <div class="dropdown-panel__item" data-passenger-type="room">
-                            <ion-icon class="item__icon" name="bed-outline"></ion-icon>
-                            <div class="item__title">
-                                <div class="text">Số phòng</div>
-                            </div>
-                            <div class="item__set-quantity">
-                                <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
-                                <div class="set-quantity__quantity">1</div>
                                 <ion-icon class="set-quantity__icon decrease"
                                     name="remove-circle-outline"></ion-icon>
                             </div>

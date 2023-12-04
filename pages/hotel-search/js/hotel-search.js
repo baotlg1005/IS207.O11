@@ -79,7 +79,7 @@ guestAndRoomQuantityItems.forEach(item => {
     });
 
     decreaseBtn.addEventListener('click', () => {
-        if (parseInt(quantity.innerText) > 1) {
+        if ((passengerType != 'adult' && parseInt(quantity.innerText) > 0) || (passengerType == 'adult' && parseInt(quantity.innerText) > 1)) {
             quantity.innerText = parseInt(quantity.innerText) - 1;
         }
     });

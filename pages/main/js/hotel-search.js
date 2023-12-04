@@ -70,6 +70,7 @@ document.addEventListener('click', (e) => {
 // set quantity
 guestAndRoomQuantityItems.forEach(item => {
     console.log(item)
+    const passengerType = item.dataset.passengerType
     const setQuantity = item.querySelector('.item__set-quantity');
     const quantity = setQuantity.querySelector('.set-quantity__quantity');
     const increaseBtn = setQuantity.querySelector('.set-quantity__icon.increase');
@@ -80,7 +81,7 @@ guestAndRoomQuantityItems.forEach(item => {
     });
 
     decreaseBtn.addEventListener('click', () => {
-        if (parseInt(quantity.innerText) > 0) {
+        if ((passengerType != 'adult' && parseInt(quantity.innerText) > 0) || (passengerType == 'adult' && parseInt(quantity.innerText) > 1)) {
             quantity.innerText = parseInt(quantity.innerText) - 1;
         }
     });
@@ -91,8 +92,7 @@ guestAndRoomQuantityConfirmBtn.addEventListener('click', () => {
     guestAndRoomQuantityDropdownPanel.classList.add('hide');
     const adultQuantity = guestAndRoomQuantityItems[0].querySelector('.set-quantity__quantity').innerText;
     const childQuantity = guestAndRoomQuantityItems[1].querySelector('.set-quantity__quantity').innerText;
-    const roomQuantity = guestAndRoomQuantityItems[2].querySelector('.set-quantity__quantity').innerText;
-    guestAndRoomQuantityInfo.querySelector('.text').innerText = `${adultQuantity} Người lớn, ${childQuantity} trẻ em, ${roomQuantity} phòng`;
+    guestAndRoomQuantityInfo.querySelector('.text').innerText = `${adultQuantity} Người lớn, ${childQuantity} trẻ em`;
 
     HotelSearchInfo.adultQuantity = adultQuantity;
     HotelSearchInfo.childQuantity = childQuantity;
