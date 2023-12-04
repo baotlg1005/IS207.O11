@@ -290,6 +290,7 @@
 }
 .main-content #main-carousel {
   border-radius: 5rem 5rem 0 0;
+  background-color: white !important;
 }
 .main-content .main-content__container {
   margin-bottom: 10rem;
