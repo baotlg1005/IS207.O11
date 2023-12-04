@@ -42,7 +42,7 @@
     }
     
     .input{
-        .start-time__input{
+        .time__input{
             display: flex;
             flex-direction: row;
             width: 100%;
@@ -61,7 +61,7 @@
                 line-height: normal;
                 text-align: center;
             }
-            .start-time__select{
+            .time__select{
                     width: 100%;
                     -webkit-appearance: none;
                     text-align: center;

@@ -105,9 +105,9 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
-                            <div id="transfer-search__start-time" class="start-time__input">
+                            <div id="transfer-search__start-time" class="time__input">
                                 <div class ="hour">
-                                    <select id="select-hour-start" class="start-time__select">
+                                    <select id="select-hour-start" class="time__select">
                                         <script>
                                             const selectHourElementStart = document.getElementById('select-hour-start');
                                             for (let i = 0; i <= 23; i++) {
@@ -122,7 +122,7 @@
                                 </div>
                                 <div>:</div>
                                 <div class="minute">
-                                    <select id="select-minute-start" class="start-time__select">
+                                    <select id="select-minute-start" class="time__select">
                                         <option value="00">00</option>
                                         <option value="30">30</option>
                                     </select>
@@ -150,9 +150,9 @@
                         </div>
                         <div class="input">
                             <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
-                            <div id="transfer-search__start-time" class="start-time__input">
+                            <div id="transfer-search__end-time" class="time__input">
                                 <div class ="hour">
-                                    <select id="select-hour-end" class="start-time__select">
+                                    <select id="select-hour-end" class="time__select">
                                         <script>
                                             const selectHourElementEnd = document.getElementById('select-hour-end');
                                             for (let i = 0; i <= 23; i++) {
@@ -167,9 +167,9 @@
                                 </div>
                                 <div>:</div>
                                 <div class="minute">
-                                    <select id="select-minute-end" class="start-time__select">
+                                    <select id="select-minute-end" class="time__select">
                                         <option value="00">00</option>
-                                        <option value="30">30</option>
+                                        <option value="30" selected>30</option>
                                     </select>
                                 </div>
                             </div>

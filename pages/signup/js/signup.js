@@ -45,14 +45,13 @@ function CheckUserInfo(userId) {
         try {
           let userInfo = JSON.parse(this.responseText)[0];
             //check if any info in userInfo object is null
+            setCookie('userAuth', true, 1);
             for (let key in userInfo) {
                 if (userInfo[key] == null) {
                     //redirect to info page
                     setCookie('userAuth', false, 1);
-                    return;
                 }
             }
-            setCookie('userAuth', true, 1);
             if(getCookie('userAuth') == 'true'){
                 window.location.href = "../main/"; //Chỉnh đường dẫn
             }else{
