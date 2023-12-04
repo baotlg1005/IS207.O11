@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2023 at 01:26 PM
+-- Generation Time: Dec 04, 2023 at 05:16 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -19575,8 +19575,8 @@ INSERT INTO `invoice` (`Id`, `User_id`, `Total`) VALUES
 
 CREATE TABLE `passport` (
   `Id` varchar(20) NOT NULL,
-  `Nation` varchar(50) NOT NULL,
-  `Expiration` date NOT NULL
+  `Nation` varchar(50) DEFAULT NULL,
+  `Expiration` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -19584,7 +19584,8 @@ CREATE TABLE `passport` (
 --
 
 INSERT INTO `passport` (`Id`, `Nation`, `Expiration`) VALUES
-('1', 'Vietnam', '2024-11-30');
+('1', 'Vietnam', '2024-11-30'),
+('PP656dfb28b089f', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -26389,12 +26390,12 @@ INSERT INTO `taxi_type` (`Id`, `Type`) VALUES
 
 CREATE TABLE `user` (
   `Id` varchar(20) NOT NULL,
-  `Name` varchar(50) NOT NULL,
-  `Sex` varchar(10) NOT NULL,
-  `Birthday` date NOT NULL,
+  `Name` varchar(50) DEFAULT NULL,
+  `Sex` varchar(10) DEFAULT NULL,
+  `Birthday` date DEFAULT NULL,
   `Phone` varchar(20) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Nationality` varchar(50) NOT NULL,
+  `Nationality` varchar(50) DEFAULT NULL,
   `Passport_id` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -26404,7 +26405,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Id`, `Name`, `Sex`, `Birthday`, `Phone`, `Email`, `Nationality`, `Passport_id`, `Password`) VALUES
-('1', 'Nguyễn Văn An', 'Male', '2013-11-01', '0123454321', 'nguyenvanan@gmail.com.vn', 'Vietnam', '1', '123456');
+('1', 'Nguyễn Văn An', 'Male', '2013-11-01', '0123454321', 'nguyenvanan@gmail.com.vn', 'Vietnam', '1', '123456'),
+('U656dfb28b0899', NULL, NULL, NULL, '0909000111', 'nguyenvanb@gmail.com', NULL, 'PP656dfb28b089f', '123456');
 
 --
 -- Indexes for dumped tables
