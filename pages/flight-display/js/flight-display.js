@@ -1,4 +1,4 @@
-let sortType;
+let sortType = "Giá thấp nhất";
 let pageLimit = 11;
 
 const sortContainer = document.getElementById("sort-container");
@@ -94,7 +94,7 @@ window.onload = function () {
     searchSeatType.innerHTML = 'Thương gia';
   }
   searchPassenger.innerHTML = (flightSearchInfo.passengerQuantity.adult + flightSearchInfo.passengerQuantity.child + flightSearchInfo.passengerQuantity.baby) + " hành khách";
-
+  sortType = "Giá thấp nhất";
   loadResult();
 }
 
