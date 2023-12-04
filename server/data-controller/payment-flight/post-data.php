@@ -5,17 +5,16 @@ require_once('../connect.php');
 $action = $_POST["action"];
 
 $totalPrice = $_POST["totalPrice"];
-$userID = "1";
+$userId = $_POST["userId"];
 $flightID = $_POST["flightID"];
 $ticketNum = $_POST["ticketNum"];
-
 
 if ($action == "payment") {
     $invoiceID = uniqid("I");
     $flightInvoiceID = uniqid("FI");
     $seatNum = getSeatNum($conn, $flightID) - $ticketNum;
 
-    $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userID', '$totalPrice');";
+    $sql = "INSERT INTO invoice(Id,User_id,Total) VALUES('$invoiceID', '$userId', '$totalPrice');";
     $sql .= "INSERT INTO flight_invoice(Id, Flight_id, Invoice_id, Num_Ticket)
     VALUES('$flightInvoiceID', '$flightID', '$invoiceID', '$ticketNum');";
     $sql .= "UPDATE flight SET NumSeat = '$seatNum' WHERE Id = '$flightID'";

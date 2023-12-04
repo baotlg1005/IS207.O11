@@ -5,7 +5,7 @@ require_once('../connect.php');
 $action = $_POST["action"];
 
 $totalPrice = $_POST["totalPrice"];
-$userID = "1";
+$userId = $_POST["userId"];
 $busID = $_POST["busID"];
 $ticketNumber = $_POST["ticketNumber"];
 
@@ -14,7 +14,7 @@ if ($action == "payment") {
     $busInvoiceID = uniqid("BI");
     $seatNum = getSeatNum($conn, $busID) - $ticketNumber;
     
-    $sql = "INSERT INTO invoice(Id, User_id, Total) VALUES('$invoiceID', '$userID', '$totalPrice');";
+    $sql = "INSERT INTO invoice(Id, User_id, Total) VALUES('$invoiceID', '$userId', '$totalPrice');";
     $sql .= "INSERT INTO bus_invoice(Id, Bus_id, Num_ticket, Invoice_id)
     VALUES('$busInvoiceID', '$busID', '$ticketNumber', '$invoiceID');";
     $sql .= "UPDATE bus SET NumSeat = '$seatNum' WHERE Id = '$busID'";

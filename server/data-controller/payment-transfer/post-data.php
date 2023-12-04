@@ -13,7 +13,7 @@ $transferBillInfo->endDate = $_POST["endDate"];
 $transferBillInfo->endTime = $_POST["endTime"];
 $transferBillInfo->totalPrice = $_POST["totalPrice"];
 
-$userID = "1";
+$userID = $_POST["userID"];
 
 if ($action == "payment") {
     $invoiceID = uniqid("I");

@@ -25,7 +25,6 @@ let flightSearchInfo = {
 const featureFlightSearch = document.querySelector("#feature__flight-search")
 const flightSearchConfig = featureFlightSearch.querySelector(".flight-search__config")
 const flightTypeConfig = flightSearchConfig.querySelector(".config__flight-type")
-const flightTypeBtns = flightTypeConfig.querySelectorAll(".btn-toggle")
 const ticketInfoConfig = flightSearchConfig.querySelector(".config__ticket-info")
 
 const flightPassengerQuantityBtn = ticketInfoConfig.querySelector(".ticket-info__passenger-quantity")
@@ -51,20 +50,6 @@ const manyFlightSubmitBtn = manyFlightSearchForm.querySelector("#search-form__su
 let manyFlightInfo = []
 
 // Flight type toggle EVENT
-flightTypeBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        flightTypeBtns.forEach(btn => btn.classList.remove("active"))
-        btn.classList.add("active")
-        flightSearchInfo.flightType = btn.dataset.flightType
-        if (btn.dataset.flightType === "one") {
-            document.querySelector("#flight-search__search-form--one").classList.remove("hide")
-            document.querySelector("#flight-search__search-form--many").classList.add("hide")
-        } else {
-            document.querySelector("#flight-search__search-form--one").classList.add("hide")
-            document.querySelector("#flight-search__search-form--many").classList.remove("hide")
-        }
-    })
-})
 
 //passenger quantity EVENT
 flightPassengerQuantityBtn.addEventListener("click", () => {
@@ -143,19 +128,6 @@ seatTypeItems.forEach(item => {
 })
 
 //haveReturn EVENT
-const flightHaveReturnCheckbox = oneFlightSearchForm.querySelector('#flight-search__have-return');
-flightHaveReturnCheckbox.addEventListener('change', () => {
-    flightSearchInfo.haveReturn = flightHaveReturnCheckbox.checked;
-    const returnDateInput = oneFlightSearchForm.querySelector('.return-date__input');
-    const returnDateInputContainer = oneFlightSearchForm.querySelector('.return-date__input').parentElement;
-    if (flightSearchInfo.haveReturn) {
-        returnDateInputContainer.classList.remove('disabled');
-        returnDateInput.disabled = false;
-    } else {
-        returnDateInputContainer.classList.add('disabled');
-        returnDateInput.disabled = true;
-    }
-})
 
 //many flight search form EVENT
 
@@ -219,14 +191,12 @@ oneFlightSubmitBtn.addEventListener("click", () => {
     const departure = oneFlightSearchForm.querySelector("#flight-search__departure").value
     const destination = oneFlightSearchForm.querySelector("#flight-search__destination").value
     const departureDate = oneFlightSearchForm.querySelector("#flight-search__departure-date").value
-    const haveReturn = oneFlightSearchForm.querySelector("#flight-search__have-return").checked
-    const returnDate = oneFlightSearchForm.querySelector("#flight-search__return-date").value
+
 
     flightSearchInfo.oneFlightInfo.departure = departure
     flightSearchInfo.oneFlightInfo.destination = destination
     flightSearchInfo.oneFlightInfo.departureDate = departureDate
-    flightSearchInfo.oneFlightInfo.haveReturn = haveReturn
-    flightSearchInfo.oneFlightInfo.returnDate = returnDate
+
 
     console.log(flightSearchInfo);
     sessionStorage.setItem('flightSearchInfo', JSON.stringify(flightSearchInfo));

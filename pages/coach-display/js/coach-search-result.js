@@ -39,34 +39,34 @@ sortTypeItem.forEach((item) => {
 });
 
 function changeMoneyFormat(money) {
-    console.log(money);
-    return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
-  function changeDateFormat(date) {
-    //change date format from 'yyyy-mm-dd' to 'dd, thng mm, yyyy'
-    let dateArray = date.split('-');
-    let day = dateArray[2];
-    let month = dateArray[1];
-    let year = dateArray[0];
-    let monthArray = ['tháng 1', 'tháng 2', 'tháng 3', 'tháng 4',
-      'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8',
-      'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
-    return `${day}, ${monthArray[month - 1]}, ${year}`;
-  }
+  console.log(money);
+  return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+function changeDateFormat(date) {
+  //change date format from 'yyyy-mm-dd' to 'dd, thng mm, yyyy'
+  let dateArray = date.split('-');
+  let day = dateArray[2];
+  let month = dateArray[1];
+  let year = dateArray[0];
+  let monthArray = ['tháng 1', 'tháng 2', 'tháng 3', 'tháng 4',
+    'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8',
+    'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
+  return `${day}, ${monthArray[month - 1]}, ${year}`;
+}
 btnShowMore.addEventListener("click", (e) => {
-    pageLimit += 10;
-    getData();
+  pageLimit += 10;
+  getData();
 })
-function createResultItem(data){
+function createResultItem(data) {
 
-    // let link = 'https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140';
-    // for (let item of imgs){
-    //     if (data.Name.indexOf(item.img_name) > -1){
-    //         link = item.img_src
-    //         break
-    //     }
-    // }
-    document.getElementById("list-item").innerHTML+=
+  // let link = 'https://ik.imagekit.io/tvlk/image/imageResource/2021/11/18/1637208308735-14c75db4b125d8cc4a19d7b6f6906e96.jpeg?tr=q-75,w-140';
+  // for (let item of imgs){
+  //     if (data.Name.indexOf(item.img_name) > -1){
+  //         link = item.img_src
+  //         break
+  //     }
+  // }
+  document.getElementById("list-item").innerHTML +=
     `<div class="bus-book__BusItem" id=${data.Id}>
     <div class="bus-book__BusBrand">
       <div class="text">${data.Name}</div>
@@ -95,53 +95,53 @@ function createResultItem(data){
       <div class="navigation-item">
         <b class="text">Chi tiết</b>
       </div>
-      <div class="bus-book__Payment">
-        <a class="payment" href="../payment-bus/index.html">Chọn</a>
+      <div class=" bus-book__Payment">
+        <div class="payment" >Chọn</div>
       </div>
     </div>
   </div>`
 }
 
 
- 
+
 let CoachSearchInfo;
-function getData(){
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        try{
+function getData() {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      try {
         console.log(this.responseText);
         let searchResults = JSON.parse(this.responseText);
         // if (searchResults.length > 0) {
-            document.getElementById("list-item").innerHTML = " ";
-            searchResults.forEach(item=>{
-                createResultItem(item)
-            })
-        }
-        catch(e){
-            console.log("Không tìm thấy kết quả phù hợp")
-            document.getElementById("result-container").innerHTML=
-            `<div class="title">Không tìm thấy kết quả phù hợp</div>`
-            btnShowMore.style.display = 'none';
-        }
-        }
+        document.getElementById("list-item").innerHTML = " ";
+        searchResults.forEach(item => {
+          createResultItem(item)
+        })
       }
-    xhttp.open("POST", "../../server/data-controller/coach/get-data.php", true);
-    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send(`action=${action}&pageLimit=${pageLimit}&departure=${CoachSearchInfo.departure}&destination=${CoachSearchInfo.destination}&departureDate=${CoachSearchInfo.departureDate}&passengerQuantity=${CoachSearchInfo.passengerQuantity}`)
+      catch (e) {
+        console.log("Không tìm thấy kết quả phù hợp")
+        document.getElementById("result-container").innerHTML =
+          `<div class="title">Không tìm thấy kết quả phù hợp</div>`
+        btnShowMore.style.display = 'none';
+      }
+    }
+  }
+  xhttp.open("POST", "../../server/data-controller/coach/get-data.php", true);
+  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhttp.send(`action=${action}&pageLimit=${pageLimit}&departure=${CoachSearchInfo.departure}&destination=${CoachSearchInfo.destination}&departureDate=${CoachSearchInfo.departureDate}&passengerQuantity=${CoachSearchInfo.passengerQuantity}`)
 }
 
 window.onload = function (e) {
-    //check if session storage flightSearchInfo is exist
-    if (sessionStorage.getItem("CoachSearchInfo")) {
-        CoachSearchInfo = JSON.parse(sessionStorage.getItem("CoachSearchInfo"))
-        console.log(CoachSearchInfo)
-        console.log(action)
-        getData()
-        searchBarDeparture.innerText = CoachSearchInfo.departure;
-        searchBarArrival.innerText = CoachSearchInfo.destination;
-        searchBarDate.innerText = changeDateFormat(CoachSearchInfo.departureDate);
-        searchBarPassenger.innerText = CoachSearchInfo.passengerQuantity+' vé';                                                                                                   
+  //check if session storage flightSearchInfo is exist
+  if (sessionStorage.getItem("CoachSearchInfo")) {
+    CoachSearchInfo = JSON.parse(sessionStorage.getItem("CoachSearchInfo"))
+    console.log(CoachSearchInfo)
+    console.log(action)
+    getData()
+    searchBarDeparture.innerText = CoachSearchInfo.departure;
+    searchBarArrival.innerText = CoachSearchInfo.destination;
+    searchBarDate.innerText = changeDateFormat(CoachSearchInfo.departureDate);
+    searchBarPassenger.innerText = CoachSearchInfo.passengerQuantity + ' vé';
     //   searchInfoDescription.innerText = transferSearchInfo.location+' • '+transferSearchInfo.startDate+' '+transferSearchInfo.startTime+' • '+transferSearchInfo.endDate+' '+transferSearchInfo.endTime
     //     if (transferSearchInfo.haveDriver){
     //         searchInfoTitle.innerHTML = `Có tài xế`
@@ -149,21 +149,48 @@ window.onload = function (e) {
     //     else{
     //         searchInfoTitle.innerHTML = `Tự lái`
     //     }
-    }
-    else{
-        console.log("Không tìm thấy thông tin tìm kiếm")
-    }
-} 
+  }
+  else {
+    console.log("Không tìm thấy thông tin tìm kiếm")
+  }
+}
 
 let busPaymentInfo = {
   ID: "",
   ticketNumber: 0,
 };
 
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('payment')) {
-      busPaymentInfo.ID = e.target.closest(".bus-book__BusItem").id;
-      busPaymentInfo.ticketNumber = CoachSearchInfo.passengerQuantity;
-      sessionStorage.setItem("busPaymentInfo", JSON.stringify(busPaymentInfo));
+    const userId = getCookie("userId");
+    if (!userId) {
+      window.location.href = "../login"
+      return;
+    }
+    const userAuth = getCookie("userAuth");
+    if (userAuth == "false") {
+        window.location.href = "../account"
+        return;
+    }
+    busPaymentInfo.ID = e.target.closest(".bus-book__BusItem").id;
+    busPaymentInfo.ticketNumber = CoachSearchInfo.passengerQuantity;
+    sessionStorage.setItem("busPaymentInfo", JSON.stringify(busPaymentInfo));
+    window.location.href = "../payment-bus"
   }
 })
