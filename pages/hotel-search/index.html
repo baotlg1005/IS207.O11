@@ -19,14 +19,14 @@
 
     <link rel="stylesheet" href="./css/hotel-seach.css">
     <link rel="stylesheet" href="./css/feature__hotel-search.css">
-
+    <link rel="stylesheet" href="../../resources/css/recom.css">
 
 
     <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
     <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
     <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
     <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
-    
+
     <link rel="stylesheet" href="../../resources/component/carousel/carousel.css">
     <script src="../../resources/component/carousel/carousel.js" type="text/javascript" defer></script>
 </head>
@@ -42,11 +42,11 @@
     </div>
     <div class="container-fluid carousel-container">
         <div class="carousel__content d-flex align-center justify-center">
-            <img class="content-item content-item-1" data-index="1" src="../../resources/images/hotel-ad-1.jpeg">
-            <img class="content-item content-item-2" data-index="2" src="../../resources/images/hotel-ad-2.jpeg">
-            <img class="content-item content-item-3" data-index="3" src="../../resources/images/hotel-ad-3.jpg">
-            <img class="content-item content-item-4" data-index="4" src="../../resources/images/hotel-ad-4.jpg">
-            <img class="content-item content-item-5" data-index="5" src="../../resources/images/hotel-ad-5.png">
+            <img class="content-item content-item-1" data-index="1" src="../../resources/images/hotel-ad-1.jpeg" loading="lazy" alt="img">
+            <img class="content-item content-item-2" data-index="2" src="../../resources/images/hotel-ad-2.jpeg" loading="lazy" alt="img">
+            <img class="content-item content-item-3" data-index="3" src="../../resources/images/hotel-ad-3.jpg" loading="lazy" alt="img">
+            <img class="content-item content-item-4" data-index="4" src="../../resources/images/hotel-ad-4.jpg" loading="lazy" alt="img">
+            <img class="content-item content-item-5" data-index="5" src="../../resources/images/hotel-ad-5.png"loading="lazy" alt="img">
         </div>
         <div class="carousel__nav">
             <div class="nav__btn" id="btn-left">
@@ -69,7 +69,8 @@
                         </div>
                         <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
                     </div>
-                    <div class="dropdown-panel dropdown-panel--set-quantity guest-and-room-quantity__dropdown-panel hide">
+                    <div
+                        class="dropdown-panel dropdown-panel--set-quantity guest-and-room-quantity__dropdown-panel hide">
                         <div class="dropdown-panel__title">
                             <div class="text">Số hành khách</div>
                         </div>
@@ -82,8 +83,7 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">1</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
+                                <ion-icon class="set-quantity__icon decrease" name="remove-circle-outline"></ion-icon>
                             </div>
                         </div>
                         <div class="dropdown-panel__item" data-passenger-type="child">
@@ -95,8 +95,7 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">0</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
+                                <ion-icon class="set-quantity__icon decrease" name="remove-circle-outline"></ion-icon>
                             </div>
                         </div>
                         <div class="dropdown-panel__item" data-passenger-type="room">
@@ -107,8 +106,7 @@
                             <div class="item__set-quantity">
                                 <ion-icon class="set-quantity__icon increase" name="add-circle-outline"></ion-icon>
                                 <div class="set-quantity__quantity">1</div>
-                                <ion-icon class="set-quantity__icon decrease"
-                                    name="remove-circle-outline"></ion-icon>
+                                <ion-icon class="set-quantity__icon decrease" name="remove-circle-outline"></ion-icon>
                             </div>
                         </div>
                         <div class="dropdown-panel__confirm-btn">
@@ -129,8 +127,8 @@
                             <ion-icon class="icon" name="location" style="color: #236eff;"></ion-icon>
                             <input id="hotel-search__location" class="location__input" type="text"
                                 placeholder="Địa điểm" autocomplete="off" list="location">
-                                <datalist id="location">
-                                </datalist>
+                            <datalist id="location">
+                            </datalist>
                         </div>
                     </div>
                 </div>
@@ -165,6 +163,57 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+    <div class="container d-flex flex-column recom-container">
+        <div class="title d-flex justify-center">
+            <div class="text">Điểm đến hot nhất do Travelowkey đề xuất</div>
+        </div>
+        <div class="recom-item-list-container d-flex flex-row">
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1"  id="item-hanoi" data-location="Hà Nội">
+                    <div class="content">
+                        <div class="label">Hà Nội</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm khách sạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1"  id="item-hcm" data-location="Thành Phố Hồ Chí Minh">
+                    <div class="content">
+                        <div class="label">Hồ Chí Minh</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm khách sạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-danang" data-location="Đà Nẵng">
+                    <div class="content">
+                        <div class="label">Đà Nẵng</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm khách sạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-vungtau" data-location="Bà Rịa - Vũng Tàu">
+                    <div class="content">
+                        <div class="label">Vũng tàu</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm khách sạn</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer-component></footer-component>

@@ -298,3 +298,50 @@ window.onload = function (e) {
         xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhttp2.send(`action=getArrivalLocation`)
     }
+
+    const recomItem = document.querySelectorAll('.recom-item');
+
+recomItem.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        //remove hide class in recom-btn in this item
+        item.querySelector('.recom-btn').classList.remove('hide');
+        //add show class in recom-btn in this item
+        item.querySelector('.recom-btn').classList.add('show');
+    });
+    item.addEventListener('mouseleave', () => {
+        item.querySelector('.recom-btn').classList.remove('show');
+        item.querySelector('.recom-btn').classList.add('hide');
+    });
+});
+
+const itemHN = document.getElementById('item-hanoi');
+const itemDN = document.getElementById('item-danang');
+const itemHCM = document.getElementById('item-hcm');
+const itemVT = document.getElementById('item-vungtau');
+
+// window.addEventListener('load', () => {
+//     console.log(HotelSearchInfo);
+//     let xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             console.log(this.responseText);
+//             let results = JSON.parse(this.responseText);
+//                 itemHN.querySelector('.content .text').innerText = "Có " + results.hn + " khách sạn";
+//                 itemDN.querySelector('.content .text').innerText = "Có " + results.dn + " khách sạn";
+//                 itemHCM.querySelector('.content .text').innerText = "Có " + results.hcm + " khách sạn";
+//                 itemVT.querySelector('.content .text').innerText = "Có " + results.vt + " khách sạn";
+//         }
+//     }
+//     xhttp.open("GET", "../../server/data-controller/hotel-search/get-data.php?action=load-recom", true);
+//     xhttp.send();
+// });
+
+// const recomBtn = document.querySelectorAll('.recom-btn');
+
+// recomBtn.forEach(btn => { 
+//     btn.addEventListener('click', () => {
+//         const location = btn.parentElement.dataset.location;
+//         locationInput.value = location;
+//         document.documentElement.scrollTop = 0;
+//     });
+// });
