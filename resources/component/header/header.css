@@ -171,4 +171,13 @@ body {
 }
 .header-container .header__navbar .navbar__item:active {
   background-color: #e4e6e6;
+}
+
+@media only screen and (max-width: 900px) {
+  .header-container .header__top-content .top-content__brand-container .brand-container__brand-name {
+    display: none;
+  }
+  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
+    display: none;
+  }
 }/*# sourceMappingURL=header.css.map */

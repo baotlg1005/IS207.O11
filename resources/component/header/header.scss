@@ -201,3 +201,23 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .header-container {
+    .header__top-content {
+      .top-content__brand-container {
+        .brand-container__brand-name {
+          display: none;
+        }
+      
+      }
+      .top-content__account-btn-group {
+
+        .account-btn-group__sign-up-btn {
+          display: none;
+        }
+
+      }
+    }
+  }
+}

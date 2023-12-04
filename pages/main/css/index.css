@@ -453,15 +453,6 @@
   bottom: 50%;
 }
 
-footer {
-  display: flex;
-  padding: 1rem 0rem;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background: #4a4a4b;
-}
-
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -520,4 +511,44 @@ footer {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@media only screen and (max-width: 900px) {
+  .header-container .header__top-content .top-content__brand-container .brand-container__brand-name {
+    display: none;
+  }
+  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
+    display: none;
+  }
+  .header-container .header__navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .header-container .header__navbar a {
+    text-decoration: none;
+  }
+  .header-container .header__navbar a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+  .header-container .header__navbar .navbar__item {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 1.33333rem 1.66667rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-container {
+    display: none;
+  }
+  .slogan-container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .location-ad-card-container .location-ad-card-container__item-container .item-container__item {
+    flex-basis: 40%;
+  }
 }/*# sourceMappingURL=index.css.map */

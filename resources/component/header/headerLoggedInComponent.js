@@ -157,7 +157,17 @@ headerLoggedInTemplate.innerHTML = `
   .header-space {
     height: 9rem;
     background-color: aqua;
-  }/*# sourceMappingURL=header.css.map */
+  }
+  
+
+  @media only screen and (max-width: 900px) {
+    .header-container .header__top-content .top-content__brand-container .brand-container__brand-name {
+      display: none;
+    }
+    .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
+      display: none;
+    }
+  }
     </style>
     <div id="header" class="container-fluid header-container">
     <div class="container header__top-content">
