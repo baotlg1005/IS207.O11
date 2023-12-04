@@ -72,15 +72,6 @@
 .recom-container .recom-item-list-container .recom-item-container #item-vungtau-hotel {
   background-image: url("../images/hotel-recom-vungtau.jpeg");
 }
-
-@media only screen and (max-width: 900px) {
-  .recom-item-list-container {
-    flex-wrap: wrap;
-  }
-  .recom-item-list-container .recom-item-container {
-    width: 50% !important;
-  }
-}
 .recom-container .recom-item-list-container .recom-item-container #item-dalat,
 .recom-container .recom-item-list-container .recom-item-container #item-dalat-flight,
 .recom-container .recom-item-list-container .recom-item-container #item-dalat-transfer {
@@ -124,9 +115,11 @@
   background-image: url("../images/recom-cantho.jpg");
 }
 
-.main-recom-container {
-  margin-bottom: 10rem !important;
-}
-.main-recom-container .title {
-  justify-content: left !important;
+@media only screen and (max-width: 900px) {
+  .recom-item-list-container {
+    flex-wrap: wrap;
+  }
+  .recom-item-list-container .recom-item-container {
+    width: 50% !important;
+  }
 }/*# sourceMappingURL=recom.css.map */
