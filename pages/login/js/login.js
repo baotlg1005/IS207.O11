@@ -81,3 +81,16 @@ function getCookie(cname) {
   }
   return "";
 }
+
+const loginIcon = document.querySelector(".login-input-icon");
+const passwordInput = document.getElementById("txt-password");
+
+loginIcon.addEventListener("click", () => { 
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    loginIcon.name = "eye-off-outline";
+  } else {
+    passwordInput.type = "password";
+    loginIcon.name = "eye-outline";
+  }
+});

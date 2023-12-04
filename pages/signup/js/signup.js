@@ -92,3 +92,32 @@ function getCookie(cname) {
     }
     return "";
   }
+
+const signupIcon = document.querySelectorAll(".signup-input-icon");
+const passwordInput = document.getElementById("password");
+const passwordConfirmInput  = document.getElementById("retype-password");
+const passwordIcon = document.getElementById("password-icon");
+const retypeIcon = document.getElementById("retype-icon");
+
+signupIcon.forEach((icon) => { 
+    icon.addEventListener("click", function(e) {
+        if (e.target.id == "password-icon") {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordIcon.name = "eye-off-outline";
+            } else {
+                passwordInput.type = "password";
+                passwordIcon.name = "eye-outline";
+            }
+        }
+        else if (e.target.id == "retype-icon") {
+            if (passwordConfirmInput.type === "password") {
+                passwordConfirmInput.type = "text";
+                retypeIcon.name = "eye-off-outline";
+            } else {
+                passwordConfirmInput.type = "password";
+                retypeIcon.name = "eye-outline";
+            }
+        }
+    });
+});
