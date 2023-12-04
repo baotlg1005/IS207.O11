@@ -71,3 +71,17 @@
 .border-bottom {
   border-bottom: 2px solid #AAB3B8;
 }
+
+@media only screen and (max-width: 900px) {
+  .btn-payment {
+    background: #FF5E1F;
+    width: 35% !important;
+    height: 10%;
+
+    .text {
+      font-size: 1.71429rem;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
