@@ -64,6 +64,7 @@ headerTemplate.innerHTML = `
     gap: 0.5rem;
     padding-top: 0.5rem;
     transition: 0.3s;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
   }
   .header-container .header__top-content {
     display: flex;
