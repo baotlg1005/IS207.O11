@@ -201,7 +201,7 @@
                                 echo "</tr>";
                             }
                         ?>
-                        <tr>
+                        <!-- <tr>
                             <td>CB01</td>
                             <td>Vietnam Airlines</td>
                             <td>Thương gia</td>
@@ -246,7 +246,7 @@
                                     </button>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>

@@ -151,7 +151,43 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                    <?php
+                            require_once("../connect.php");
+                            require_once("./process__get.php");
+                            foreach ($user as $row){
+                                $user_Id = $row['Id'];
+                                $user_Name = $row['Name'];
+                                $user_Sex = $row['Sex'];
+                                $user_Birthday = $row['Birthday'];
+                                $user_Phone = $row['Phone'];
+                                $user_Email = $row['Email'];
+                                $user_Nationality = $row['Nationality'];
+                                $user_Nation = $row['Nation'];
+                                $user_Expiration = $row['Expiration'];
+                                echo "<tr>";
+                                echo "<td>$user_Id</td>";
+                                echo "<td>$user_Name</td>";
+                                echo "<td>$user_Sex</td>";
+                                echo "<td>$user_Birthday</td>";
+                                echo "<td>$user_Email</td>";
+                                echo "<td>$user_Nationality</td>";
+                                echo "<td>$user_Phone</td>";
+                                echo "<td>$user_Nation</td>";
+                                echo "<td>$user_Expiration</td>";
+    echo "<td>";
+                                echo "<div class=\"table-btn-group\">";
+                                    // echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $flight_id ."\">";
+                                    //     echo "<div class=\"text\">Sửa</div>";
+                                    // echo "</button>";
+                                    echo "<a href='./process__delete.php?id=".$user_Id."' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"". $user_Id ."\">";
+                                        echo "<div class=\"text\">Xóa</div>";
+                                    echo "</a>";
+                                echo "</div>";
+                            echo "</td>";
+echo "</tr>";
+                            }
+                        ?>
+                        <!-- <tr>
                             <td>ND01</td>
                             <td>Người Dùng 1</td>
                             <td>Nam</td>
@@ -213,7 +249,7 @@
                                     </button>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
