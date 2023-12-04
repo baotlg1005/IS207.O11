@@ -87,7 +87,7 @@ passengerQuantityItems.forEach(item => {
         }
     })
     decreaseBtn.addEventListener("click", () => {
-        if (flightSearchInfo.passengerQuantity[passengerType] > 0) {
+        if (flightSearchInfo.passengerQuantity[passengerType] > 1) {
             flightSearchInfo.passengerQuantity[passengerType]--
             quantity.innerText = flightSearchInfo.passengerQuantity[passengerType]
         }

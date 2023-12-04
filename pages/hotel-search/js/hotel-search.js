@@ -80,7 +80,7 @@ guestAndRoomQuantityItems.forEach(item => {
     });
 
     decreaseBtn.addEventListener('click', () => {
-        if (parseInt(quantity.innerText) > 0) {
+        if (parseInt(quantity.innerText) > 1) {
             quantity.innerText = parseInt(quantity.innerText) - 1;
         }
     });
