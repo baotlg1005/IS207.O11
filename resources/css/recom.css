@@ -1,12 +1,12 @@
+.recom-container {
+  margin-bottom: 25rem !important;
+}
 .recom-container .title {
   padding-bottom: 2rem;
 }
 .recom-container .title .text {
   font-size: 2.666666667rem;
   font-weight: 900;
-}
-.recom-container .recom-item-list-container {
-  margin-bottom: 25rem;
 }
 .recom-container .recom-item-list-container .recom-item-container {
   width: 25%;
@@ -48,15 +48,76 @@
   box-shadow: inset 0 0 0 1000px rgba(43, 43, 43, 0.8);
   cursor: pointer;
 }
-.recom-container .recom-item-list-container .recom-item-container #item-danang {
+.recom-container .recom-item-list-container .recom-item-container #item-danang,
+.recom-container .recom-item-list-container .recom-item-container #item-danang-bus,
+.recom-container .recom-item-list-container .recom-item-container #item-danang-transfer,
+.recom-container .recom-item-list-container .recom-item-container #item-danang-hotel {
   background-image: url("../images/hotel-recom-danang.jpeg");
 }
-.recom-container .recom-item-list-container .recom-item-container #item-hanoi {
+.recom-container .recom-item-list-container .recom-item-container #item-hanoi,
+.recom-container .recom-item-list-container .recom-item-container #item-hanoi-flight,
+.recom-container .recom-item-list-container .recom-item-container #item-hanoi-transfer,
+.recom-container .recom-item-list-container .recom-item-container #item-hanoi-hotel {
   background-image: url("../images/hotel-recom-hanoi.jpeg");
 }
-.recom-container .recom-item-list-container .recom-item-container #item-hcm {
+.recom-container .recom-item-list-container .recom-item-container #item-hcm,
+.recom-container .recom-item-list-container .recom-item-container #item-hcm-flight,
+.recom-container .recom-item-list-container .recom-item-container #item-hcm-bus,
+.recom-container .recom-item-list-container .recom-item-container #item-hcm-transfer,
+.recom-container .recom-item-list-container .recom-item-container #item-hcm-hotel {
   background-image: url("../images/hotel-recom-hcm.jpeg");
 }
-.recom-container .recom-item-list-container .recom-item-container #item-vungtau {
+.recom-container .recom-item-list-container .recom-item-container #item-vungtau,
+.recom-container .recom-item-list-container .recom-item-container #item-vungtau-bus,
+.recom-container .recom-item-list-container .recom-item-container #item-vungtau-hotel {
   background-image: url("../images/hotel-recom-vungtau.jpeg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-dalat,
+.recom-container .recom-item-list-container .recom-item-container #item-dalat-flight,
+.recom-container .recom-item-list-container .recom-item-container #item-dalat-transfer {
+  background-image: url("../images/recom-dalat.jpeg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-phuquoc,
+.recom-container .recom-item-list-container .recom-item-container #item-phuquoc-flight {
+  background-image: url("../images/recom-phuquoc.jpeg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-angiang,
+.recom-container .recom-item-list-container .recom-item-container #item-angiang-bus {
+  background-image: url("../images/recom-angiang.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-haiphong,
+.recom-container .recom-item-list-container .recom-item-container #item-haiphong-bus,
+.recom-container .recom-item-list-container .recom-item-container #item-haiphong-transfer {
+  background-image: url("../images/recom-haiphong.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-hatinh,
+.recom-container .recom-item-list-container .recom-item-container #item-hatinh-bus {
+  background-image: url("../images/recom-hatinh.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-khanhhoa,
+.recom-container .recom-item-list-container .recom-item-container #item-khanhhoa-bus {
+  background-image: url("../images/recom-khanhhoa.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-lamdong,
+.recom-container .recom-item-list-container .recom-item-container #item-lamdong-bus {
+  background-image: url("../images/recom-lamdong.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-tsn,
+.recom-container .recom-item-list-container .recom-item-container #item-tsn-transfer {
+  background-image: url("../images/recom-tsn.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-noibai,
+.recom-container .recom-item-list-container .recom-item-container #item-noibai-transfer {
+  background-image: url("../images/recom-noibai.jpg");
+}
+.recom-container .recom-item-list-container .recom-item-container #item-cantho,
+.recom-container .recom-item-list-container .recom-item-container #item-cantho-transfer {
+  background-image: url("../images/recom-cantho.jpg");
+}
+
+.main-recom-container {
+  margin-bottom: 10rem !important;
+}
+.main-recom-container .title {
+  justify-content: left !important;
 }/*# sourceMappingURL=recom.css.map */
