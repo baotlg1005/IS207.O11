@@ -410,7 +410,6 @@
   display: flex;
   width: 172px;
   padding: 1.3rem 20px;
-  align-items: flex-start;
   gap: 10px;
   flex-shrink: 0;
   border-radius: 8px;
@@ -693,7 +692,6 @@
     display: flex;
     width: 172px;
     padding: 1.3rem 20px;
-    align-items: flex-start;
     gap: 10px;
     flex-shrink: 0;
     border-radius: 8px;

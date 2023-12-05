@@ -95,7 +95,7 @@ function createResultItem(data) {
       <div class="navigation-item">
         <b class="text">Chi tiết</b>
       </div>
-      <div class=" bus-book__Payment">
+      <div class="btn-default bus-book__Payment">
         <div class="payment" >Chọn</div>
       </div>
     </div>
