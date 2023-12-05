@@ -151,27 +151,49 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>ND01</td>
-                            <td>Người Dùng 1</td>
-                            <td>Nam</td>
-                            <td>Thứ 5, 10 thg 11 2023</td>
-                            <td>nd01@example.com</td>
-                            <td>Vietnam</td>
-                            <td>123456789</td>
-                            <td>Vietnam</td>
-                            <td>Thứ 7, 1 thg 5 2027</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                    <?php
+                            require_once("../connect.php");
+                            require_once("./process__get.php");
+                            foreach ($flight as $row){
+                                $flight_id = $row["ID"];
+                                $flight_company_name = $row["Name"];
+                                $flight_seat_class = $row["SeatClass"];
+                                $flight_price = $row["Price"];
+                                $flight_from = $row["From"];
+                                $flight_to = $row["To"];
+                                $flight_stop_or_direct = $row["Stop/Direct"];
+                                $flight_date = $row["Date"];    
+                                $flight_departure_time = $row["DepartureTime"];
+                                $flight_arrival_time = $row["ArrivalTime"];
+                                $flight_travel_time = $row["TravelTime"];
+
+                                
+
+                                echo "<tr class=\"flight-info-row\">";
+                                    echo "<td class=\"flight-info__id\">" . $flight_id . "</td>";
+                                    echo "<td  class=\"flight-info__company_name\">" . $flight_company_name . "</td>";
+                                    echo "<td  class=\"flight-info__seat_class\">" . $flight_seat_class . "</td>";
+                                    echo "<td  class=\"flight-info__price\">" . $flight_price . "</td>";
+                                    echo "<td  class=\"flight-info__from\">" . $flight_from . "</td>";
+                                    echo "<td  class=\"flight-info__to\">" . $flight_to . "</td>";
+                                    echo "<td  class=\"flight-info__stop_or_direct\">" . $flight_stop_or_direct . "</td>";
+                                    echo "<td  class=\"flight-info__date\">" . $flight_date . "</td>";
+                                    echo "<td  class=\"flight-info__departure_time\">" . $flight_departure_time . "</td>";
+                                    echo "<td  class=\"flight-info__arrival_time\">" . $flight_arrival_time . "</td>";
+                                    echo "<td  class=\"flight-info__travel_time\">" . $flight_travel_time . "</td>";
+                                    echo "<td>";
+                                        echo "<div class=\"table-btn-group\">";
+                                            echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $flight_id ."\">";
+                                                echo "<div class=\"text\">Sửa</div>";
+                                            echo "</button>";
+                                            echo "<a href='./process__delete.php?id=".$flight_id."' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"". $flight_id ."\">";
+                                                echo "<div class=\"text\">Xóa</div>";
+                                            echo "</a>";
+                                        echo "</div>";
+                                    echo "</td>";
+                                echo "</tr>";
+                            }
+                        ?>
                         <tr>
                             <td>ND02</td>
                             <td>Người Dùng 2</td>

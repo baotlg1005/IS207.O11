@@ -197,52 +197,6 @@
                                 echo "</tr>";
                             }
                         ?>
-                        <tr>
-                            <td>CB01</td>
-                            <td>Vietnam Airlines</td>
-                            <td>Thương gia</td>
-                            <td>10000000</td>
-                            <td>Hanoi</td>
-                            <td>Ho Chi Minh City</td>
-                            <td>Da Nang</td>
-                            <td>Thứ 5, 9 thg 11 2023</td>
-                            <td>08:00 AM</td>
-                            <td>10:30 AM</td>
-                            <td>2h 30m</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>CB02</td>
-                            <td>Emirates</td>
-                            <td>Phổ thông</td>
-                            <td>2500000</td>
-                            <td>Dubai</td>
-                            <td>New York</td>
-                            <td>None</td>
-                            <td>Thứ 5, 9 thg 11 2023</td>
-                            <td>02:00 PM</td>
-                            <td>08:00 PM</td>
-                            <td>6h 0m</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
