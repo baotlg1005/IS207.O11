@@ -44,7 +44,8 @@
         </div>
         <div class="admin-content-window">
             <div class="admin-content-pane" id="user-pane">
-                <form class="info-form" id="user-info-form">
+                <form method="POST" action="./process__submit.php" class="info-form" id="user-info-form">
+                    <input type="hidden" name="action" id="user-txt-action" value="create">
                     <div class="info-window">
                         <div class="pane-text-container">
                             <div class="pane-text">Thông tin cá nhân</div>
@@ -55,7 +56,7 @@
                                     <div class="title">
                                         <div class="text">Mã người dùng:</div>
                                     </div>
-                                    <select id="user-txt-id" class="input user-form-input">
+                                    <select id="user-txt-id" class="input user-form-input" name="ID">
                                         <option value="newid">Tạo mã mới</option>
                                         <option class="old-id hide" value=""></option>
                                     </select>
@@ -64,13 +65,13 @@
                                     <div class="title">
                                         <div class="text">Họ tên:</div>
                                     </div>
-                                    <input class="input user-form-input" type="text" id="user-txt-name">
+                                    <input class="input user-form-input" type="text" id="user-txt-name" name="Name">
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Giới tính:</div>
                                     </div>
-                                    <select id="user-txt-gender" class="input user-form-input">
+                                    <select id="user-txt-gender" class="input user-form-input" name="Sex">
                                         <option value="male" selected>Nam</option>
                                         <option value="female">Nữ</option>
                                     </select>
@@ -79,7 +80,8 @@
                                     <div class="title">
                                         <div class="text">Ngày sinh:</div>
                                     </div>
-                                    <input class="input user-form-input" type="date" id="user-txt-bdate">
+                                    <input class="input user-form-input" type="date" id="user-txt-bdate"
+                                        name="Birthday">
                                 </div>
                             </div>
                             <div class="info-col" id="user-info-col-2">
@@ -87,19 +89,19 @@
                                     <div class="title">
                                         <div class="text">Email:</div>
                                     </div>
-                                    <input class="input user-form-input" type="text" id="user-txt-email">
+                                    <input class="input user-form-input" type="text" id="user-txt-email" name="Email">
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Quốc tịch:</div>
                                     </div>
-                                    <input class="input user-form-input" type="text" id="user-txt-nation">
+                                    <input class="input user-form-input" type="text" id="user-txt-nation" name="Nation">
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">SĐT:</div>
                                     </div>
-                                    <input class="input user-form-input" type="text" id="user-txt-phone">
+                                    <input class="input user-form-input" type="text" id="user-txt-phone" name="Phone">
                                 </div>
                             </div>
                         </div>
@@ -113,20 +115,31 @@
                             <div class="info-col" id="user-info-col-3">
                                 <div class="input-block">
                                     <div class="title">
+                                        <div class="text">Mã hộ chiếu:</div>
+                                    </div>
+                                    <select id="user-txt-ppid" class="input user-form-input" name="Passport_id">
+                                        <option value="newid">Tạo mã mới</option>
+                                        <option class="old-id hide" value=""></option>
+                                    </select>
+                                </div>
+                                <div class="input-block">
+                                    <div class="title">
                                         <div class="text">Quốc gia cấp hộ chiếu:</div>
                                     </div>
-                                    <input class="input user-form-input" type="text" id="user-txt-ppnation">
+                                    <input class="input user-form-input" type="text" id="user-txt-ppnation"
+                                        name="Passport_Nation">
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Ngày hết hạn hộ chiếu:</div>
                                     </div>
-                                    <input class="input user-form-input" type="date" id="user-txt-ppdate">
+                                    <input class="input user-form-input" type="date" id="user-txt-ppdate"
+                                        name="Passport_ExpireDate">
                                 </div>
                             </div>
                         </div>
                         <div class="btn-container">
-                            <button class="btn-default user-btn" id="user-btn-save" type="button">
+                            <button class="btn-default user-btn" id="user-btn-save" type="submit">
                                 <div class="text">Lưu thông tin</div>
                             </button>
                             <button class="btn-default user-btn" id="user-btn-clear" type="reset">
@@ -145,50 +158,53 @@
                             <th>Email</th>
                             <th>Quốc tịch</th>
                             <th>SĐT</th>
+                            <th>Mã hộ chiếu</th>
                             <th>Quốc gia cấp hộ chiếu</th>
                             <th>Ngày hết hạn hộ chiếu</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
-                            require_once("../connect.php");
-                            require_once("./process__get.php");
-                            foreach ($user as $row){
-                                $user_id = $row["Id"];
-                                $user_name = $row["Name"];
-                                $user_sex = $row["Sex"];
-                                $user_birthday = $row["Birthday"];
-                                $user_phone = $row["Phone"];
-                                $user_email = $row["Email"];
-                                $user_nation = $row["Nationality"];
-                                $user_passport_nation = $row["Nation"];
-                                $user_passport_date = $row["Expiration"];
+                        <?php
+                        require_once("../connect.php");
+                        require_once("./process__get.php");
+                        foreach ($user as $row) {
+                            $user_id = $row["Id"];
+                            $user_name = $row["Name"];
+                            $user_sex = $row["Sex"];
+                            $user_birthday = $row["Birthday"];
+                            $user_phone = $row["Phone"];
+                            $user_email = $row["Email"];
+                            $user_nation = $row["Nationality"];
+                            $user_passport_nation = $row["Nation"];
+                            $user_passport_date = $row["Expiration"];
+                            $user_passport_id = $row["Passport_id"];
 
-                                
 
-                                echo "<tr class=\"info-info-row\">";
-                                    echo "<td class=\"user-info__id\">" . $user_id . "</td>";
-                                    echo "<td  class=\"user-info__name\">" . $user_name . "</td>";
-                                    echo "<td  class=\"user-info__sex\">". $user_sex . "</td>";
-                                    echo "<td  class=\"user-info__birthday\">" . $user_birthday . "</td>";
-                                    echo "<td  class=\"user-info__email\">" . $user_email . "</td>";
-                                    echo "<td  class=\"user-info__nation\">" . $user_nation . "</td>";
-                                    echo "<td  class=\"user-info__phone\">" . $user_phone . "</td>";
-                                    echo "<td  class=\"user-info__passport_nation\">" . $user_passport_nation . "</td>";
-                                    echo "<td  class=\"user-info__passport_date\">" . $user_passport_date . "</td>";
-                                    echo "<td>";
-                                        echo "<div class=\"table-btn-group\">";
-                                            echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $user_id ."\">";
-                                                echo "<div class=\"text\">Sửa</div>";
-                                            echo "</button>";
-                                            echo "<a href='./process__delete.php?id=".$user_id."' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"". $user_id ."\">";
-                                                echo "<div class=\"text\">Xóa</div>";
-                                            echo "</a>";
-                                        echo "</div>";
-                                    echo "</td>";
-                                echo "</tr>";
-                            }
+
+                            echo "<tr class=\"info-info-row\">";
+                            echo "<td class=\"user-info__id\">" . $user_id . "</td>";
+                            echo "<td  class=\"user-info__name\">" . $user_name . "</td>";
+                            echo "<td  class=\"user-info__sex\">" . $user_sex . "</td>";
+                            echo "<td  class=\"user-info__birthday\">" . $user_birthday . "</td>";
+                            echo "<td  class=\"user-info__email\">" . $user_email . "</td>";
+                            echo "<td  class=\"user-info__nation\">" . $user_nation . "</td>";
+                            echo "<td  class=\"user-info__phone\">" . $user_phone . "</td>";
+                            echo "<td  class=\"user-info__passport_id\">" . $user_passport_id . "</td>";
+                            echo "<td  class=\"user-info__passport_nation\">" . $user_passport_nation . "</td>";
+                            echo "<td  class=\"user-info__passport_date\">" . $user_passport_date . "</td>";
+                            echo "<td>";
+                            echo "<div class=\"table-btn-group\">";
+                            // echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $user_id ."\">";
+                            //     echo "<div class=\"text\">Sửa</div>";
+                            // echo "</button>";
+                            echo "<a href='./process__delete.php?id=" . $user_id . "' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"" . $user_id . "\">";
+                            echo "<div class=\"text\">Xóa</div>";
+                            echo "</a>";
+                            echo "</div>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
                         ?>
                     </tbody>
                 </table>
@@ -198,7 +214,7 @@
     </div>
     </div>
 
-    <script src="../../resources/js/admin-user.js"></script>
+    <script src="../../resources/js/admin-user.js" defer></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

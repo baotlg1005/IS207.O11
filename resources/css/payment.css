@@ -1,0 +1,71 @@
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.payment-container .payment-window {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.57143rem;
+}
+.payment-container .payment-window .title {
+  padding: 1.5rem;
+}
+.payment-container .payment-window .title .text {
+  color: #236EFF;
+}
+.payment-container .payment-window .info-container {
+  gap: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 1.5rem;
+}
+.payment-container .payment-window .info-container .row-container .content-container {
+  width: 50%;
+  gap: 1rem;
+}
+.payment-container .payment-window .info-container .row-container .content-container .label {
+  font-weight: 700;
+  font-size: 1.71429rem;
+}
+.payment-container .payment-window .info-container .row-container .content-container .text {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.payment-container .payment-window .info-container .row-container .content-container #txt-totalPrice {
+  color: #FF5E1F;
+}
+.payment-container .payment-window .info-container .row-container .one-row-content-container {
+  width: 100%;
+}
+.payment-container .payment-window .btn-payment {
+  background: #FF5E1F;
+  width: 25%;
+  height: 10%;
+}
+.payment-container .payment-window .btn-payment .text {
+  font-size: 1.71429rem;
+  color: white;
+  font-weight: bold;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #AAB3B8;
+}
+
+@media only screen and (max-width: 900px) {
+  .btn-payment {
+    background: #FF5E1F;
+    width: 35% !important;
+    height: 10%;
+  }
+  .btn-payment .text {
+    font-size: 1.71429rem;
+    color: white;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=payment.css.map */

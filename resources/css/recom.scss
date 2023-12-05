@@ -1,0 +1,162 @@
+.recom-container {
+    margin-bottom: 25rem!important;
+
+    .title {
+        padding-bottom: 2rem;
+
+        .text {
+            font-size: 2.666666667rem;
+            font-weight: 900;
+        }
+    }
+
+    .recom-item-list-container {
+
+
+        .recom-item-container {
+            width: calc(100% / 4);
+
+            .recom-item {
+                box-shadow: inset 0 0 0 1000px rgba(80, 80, 80, 0.5);
+                height: 17.14285714rem;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+
+                .content {
+                    .label {
+                        font-size: 1.904761905rem !important;
+                        font-weight: 900;
+                        color: white;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .text {
+                        font-size: 1.523809524rem !important;
+                        font-weight: 500;
+                        color: white;
+                    }
+                }
+
+                .recom-btn {
+                    align-self: center;
+                    margin-top: auto;
+                    margin-bottom: 2rem;
+                    width: 75%;
+
+                    .text {
+                        font-size: 1.523809524rem !important;
+                        font-weight: 500;
+                        color: white;
+                    }
+                }
+            }
+
+            .recom-item:hover {
+                box-shadow: inset 0 0 0 1000px rgba(43, 43, 43, 0.8);
+                cursor: pointer;
+            }
+
+            #item-danang,
+            #item-danang-bus,
+            #item-danang-transfer,
+            #item-danang-hotel {
+                background-image: url('../images/hotel-recom-danang.jpeg');
+            }
+
+            #item-hanoi,
+            #item-hanoi-flight,
+            #item-hanoi-transfer,
+            #item-hanoi-hotel {
+                background-image: url('../images/hotel-recom-hanoi.jpeg');
+            }
+
+            #item-hcm,
+            #item-hcm-flight,
+            #item-hcm-bus,
+            #item-hcm-transfer,
+            #item-hcm-hotel {
+                background-image: url('../images/hotel-recom-hcm.jpeg');
+            }
+
+            #item-vungtau,
+            #item-vungtau-bus,
+            #item-vungtau-hotel {
+                background-image: url('../images/hotel-recom-vungtau.jpeg');
+            }
+
+            #item-dalat,
+            #item-dalat-flight,
+            #item-dalat-transfer {
+                background-image: url('../images/recom-dalat.jpeg');
+            }
+
+            #item-phuquoc,
+            #item-phuquoc-flight {
+                background-image: url('../images/recom-phuquoc.jpeg');
+            }
+
+            #item-angiang,
+            #item-angiang-bus {
+                background-image: url('../images/recom-angiang.jpg');
+            }
+
+            #item-haiphong,
+            #item-haiphong-bus,
+            #item-haiphong-transfer {
+                background-image: url('../images/recom-haiphong.jpg');
+            }
+
+            #item-hatinh,
+            #item-hatinh-bus {
+                background-image: url('../images/recom-hatinh.jpg');
+            }
+
+            #item-khanhhoa,
+            #item-khanhhoa-bus {
+                background-image: url('../images/recom-khanhhoa.jpg');
+            }
+
+            #item-lamdong,
+            #item-lamdong-bus {
+                background-image: url('../images/recom-lamdong.jpg');
+            }
+
+            #item-tsn,
+            #item-tsn-transfer {
+                background-image: url('../images/recom-tsn.jpg');
+            }
+
+            #item-noibai,
+            #item-noibai-transfer {
+                background-image: url('../images/recom-noibai.jpg');
+            }
+
+            #item-cantho,
+            #item-cantho-transfer {
+                background-image: url('../images/recom-cantho.jpg');
+            }
+        }
+
+
+    }
+}
+.main-recom-container {
+    margin-bottom: 10rem!important;
+    .title {
+        justify-content: left!important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .recom-item-list-container {
+        flex-wrap: wrap;
+        .recom-item-container {
+            width: calc(100% / 2) !important;
+        }
+    }
+}

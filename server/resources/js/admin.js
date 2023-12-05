@@ -1,9 +1,9 @@
-new DataTable('#user-table');
-new DataTable('#flight-table');
-new DataTable('#car-table');
-new DataTable('#bus-table');
-new DataTable('#hotel-table');
-new DataTable('#flightbill-table');
-new DataTable('#carbill-table');
-new DataTable('#busbill-table');
-new DataTable('#hotelbill-table');
+const userDataTable = new DataTable('#user-table');
+const flightDataTable = new DataTable('#flight-table');
+const carDataTable = new DataTable('#car-table');
+const busDataTable = new DataTable('#bus-table');
+const hotelDataTable = new DataTable('#hotel-table');
+const flightBillDataTable = new DataTable('#flightbill-table');
+const busBillDataTable = new DataTable('#busbill-table');
+const carBillDataTable = new DataTable('#carbill-table'); 
+const hotelBillDataTable = new DataTable('#hotelbill-table');

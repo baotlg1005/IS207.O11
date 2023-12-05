@@ -56,11 +56,19 @@ print_r($ArrivalTime);
 echo "<br>";
 print_r("Travel Time: ");
 print_r($TravelTime);
+echo "<br>";
 
 require_once("../connect.php");
 
+//check if $action = 'newid' then change action to 'create'
+if ($ID == "newid") {
+    $action = "create";
+    print_r("change action: ");
+    print_r($action);
+}
+
 if ($action == "create") {
-    $ID = uniqid();
+    $ID = uniqid("F");
     //insert data to flight table
     $sql = "INSERT INTO `flight`(`ID`, `From`, `To`, `Date`, `DepartureTime`, `ArrivalTime`, `TravelTime`, `Stop/Direct`, `Name`, `SeatClass`, `Price`) VALUES ('". $ID ."','". $From ."','". $To ."','". $Date ."','". $DepartureTime ."','". $ArrivalTime ."','". $TravelTime ."','". $Stop_Direct ."','". $Name ."','". $SeatClass ."','". $Price ."')";
     if ($conn->query($sql) === TRUE) {

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelowkey</title>
+    <link rel="icon" type="image/x-icon" href="../../resources/images/logo.ico">
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../resources/css/main-style.css">
+    <link rel="stylesheet" href="../../resources/css/btn.css">
+    <link rel="stylesheet" href="../../resources/css/input-block.css">
+    <link rel="stylesheet" href="./css/signup.css">
+
+    <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+    <header-component></header-component>
+
+    <div class="container signup-form">
+        <div class="signup-form-content">
+            <div class="signup-window">
+                <div class="signup-label-container">
+                    <div class="signup-label-text">Đăng Ký</div>
+                </div>
+                <div class="signup-content">
+                    <form id="signup-form">
+                        <div class="input-block">
+                            <div class="title signup-input-title">
+                                <div class="text signup-input-text">Email</div>
+                            </div>
+                            <div class="input signup-input">
+                                <input type="text" id="email" placeholder="Nhập email ">
+                            </div>
+                        </div>
+                        <div class="input-block">
+                            <div class="title signup-input-title">
+                                <div class="text signup-input-text">Số điện thoại di động</div>
+                            </div>
+                            <div class="input signup-input">
+                                <input type="text" id="phone" placeholder="Nhập số điện thoại">
+                            </div>
+                        </div>
+                        <div class="input-block">
+                            <div class="title signup-input-title">
+                                <div class="text signup-input-text">Mật khẩu</div>
+                            </div>
+                            <div class="input signup-input">
+                                <input type="password" id="password" placeholder="Nhập mật khẩu">
+                                <ion-icon name="eye-outline" class="icon signup-input-icon" id="password-icon"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="input-block">
+                            <div class="title signup-input-title">
+                                <div class="text signup-input-text">Xác nhận mật khẩu</div>
+                            </div>
+                            <div class="input signup-input">
+                                <input type="password" id="retype-password" placeholder="Nhập lại mật khẩu">
+                                <ion-icon name="eye-outline" class="icon signup-input-icon" id="retype-icon"></ion-icon>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-default btn-signup">
+                            <div class="text">Đăng ký</div>
+                        </button>
+                        <div class="signup-terms">
+                            <p class="signup-terms-text">By registering, you agree to our <a href="../terms-and-condition/">Terms & Conditions</a> and that you
+                                have read our <a href="../piracy-notice/">Privacy Policy</a>.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+
+    <script src="./js/signup.js"></script>
+
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html> 

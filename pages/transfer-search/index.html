@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelowkey</title>
+    <link rel="icon" type="image/x-icon" href="../../resources/images/logo.ico">
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="../../resources/css/main-style.css">
+
+    <link rel="stylesheet" href="../../resources/css/btn.css">
+    <link rel="stylesheet" href="../../resources/css/dropdown.css">
+    <link rel="stylesheet" href="../../resources/css/input-block.css">
+    <link rel="stylesheet" href="../../resources/css/feature__item.css">
+    <link rel="stylesheet" href="../../resources/css/ad-slider.css">
+    <link rel="stylesheet" href="../../resources/css/recom.css">
+
+    <link rel="stylesheet" href="./css/transfer-seach.css">
+    <link rel="stylesheet" href="./css/feature__transfer-search.css">
+
+
+    <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+    <link rel="stylesheet" href="../../resources/component/carousel/carousel.css">
+    <script src="../../resources/component/carousel/carousel.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div id="header-container">
+        <div id="header-default" class="hide">
+            <header-component></header-component>
+        </div>
+        <div id="header-logged-in" class="hide">
+            <header-logged-in-component></header-logged-in-component>
+        </div>
+    </div>
+    <div class="container-fluid carousel-container">
+        <div class="carousel__content d-flex align-center justify-center">
+            <img class="content-item content-item-1" data-index="1" src="../../resources/images/transfer-ad.jpeg" loading="lazy" alt="img">
+            <img class="content-item content-item-2" data-index="2" src="../../resources/images/transfer-ad.jpeg" loading="lazy" alt="img">
+            <img class="content-item content-item-3" data-index="3" src="../../resources/images/transfer-ad.jpeg" loading="lazy" alt="img">
+            <img class="content-item content-item-4" data-index="4" src="../../resources/images/transfer-ad.jpeg" loading="lazy" alt="img">
+            <img class="content-item content-item-5" data-index="5" src="../../resources/images/transfer-ad.jpeg" loading="lazy" alt="img">
+        </div>
+        <div class="carousel__nav">
+            <div class="nav__btn" id="btn-left">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            </div>
+            <div class="text">Xem thêm khuyến mãi</div>
+            <div class="nav__btn" id="btn-right">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="container main-content">
+        <div id="feature__transfer-search" class="container-fluid feature__item">
+            <div class="transfer-search__config config">
+                <div id="config__have-driver-checkbox" class="unchecked">
+                    <ion-icon class="unchecked" name="ellipse-outline"></ion-icon>
+                    <ion-icon class="checked" name="ellipse"></ion-icon>
+                    <div class="text">
+                        Có tài xế
+                    </div>
+                </div>
+            </div>
+            <form action="" id="transfer-search__search-form" class="search-form">
+                <div class="search-form__input-container">
+                    <!-- Địa điểm thuê xe của bạn / Ngày bắt đầu / Giờ bắt đầu / Ngày kết thúc / Giờ kết thúc -->
+                    <div class="input-block right-connect">
+                        <div class="title">
+                            <div class="text">
+                                Địa điểm thuê xe của bạn
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="location" style="color: #236eff;"></ion-icon>
+                            <input id="transfer-search__location" class="location__input" type="text"
+                                placeholder="Địa điểm" autocomplete="off" list="location">
+                                <datalist id="location">
+                                </datalist>
+                        </div>
+                    </div>
+                    <div class="input-block all-connect">
+                        <div class="title">
+                            <div class="text">
+                                Ngày bắt đầu
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                            <input id="transfer-search__start-date" class="date__input" type="date"
+                                placeholder="Ngày bắt đầu" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="input-block all-connect">
+                        <div class="title">
+                            <div class="text">
+                                Giờ bắt đầu
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
+                            <div id="transfer-search__start-time" class="time__input">
+                                <div class ="hour">
+                                    <select id="select-hour-start" class="time__select">
+                                        <script>
+                                            const selectHourElementStart = document.getElementById('select-hour-start');
+                                            for (let i = 0; i <= 23; i++) {
+                                            const hour = i < 10 ? '0' + i : i;
+                                            const optionElement = document.createElement('option');
+                                            optionElement.value = hour;
+                                            optionElement.textContent = hour;
+                                            selectHourElementStart.appendChild(optionElement);
+                                            }
+                                        </script>
+                                    </select>
+                                </div>
+                                <div>:</div>
+                                <div class="minute">
+                                    <select id="select-minute-start" class="time__select">
+                                        <option value="00">00</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-block all-connect">
+                        <div class="title">
+                            <div class="text">
+                                Ngày kết thúc
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                            <input id="transfer-search__end-date" class="date__input" type="date"
+                                placeholder="Ngày kết thúc" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="input-block all-connect">
+                        <div class="title">
+                            <div class="text">
+                                Giờ kết thúc
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="time" style="color: #236eff;"></ion-icon>
+                            <div id="transfer-search__end-time" class="time__input">
+                                <div class ="hour">
+                                    <select id="select-hour-end" class="time__select">
+                                        <script>
+                                            const selectHourElementEnd = document.getElementById('select-hour-end');
+                                            for (let i = 0; i <= 23; i++) {
+                                            const hour = i < 10 ? '0' + i : i;
+                                            const optionElement = document.createElement('option');
+                                            optionElement.value = hour;
+                                            optionElement.textContent = hour;
+                                            selectHourElementEnd.appendChild(optionElement);
+                                            }
+                                        </script>
+                                    </select>
+                                </div>
+                                <div>:</div>
+                                <div class="minute">
+                                    <select id="select-minute-end" class="time__select">
+                                        <option value="00">00</option>
+                                        <option value="30" selected>30</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="search-form__submit-btn--transfer" class="btn-submit left-connect">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container d-flex flex-column recom-container">
+        <div class="title d-flex justify-center">
+            <div class="text">Địa điểm có xe luôn hoạt động do Travelowkey đề xuất</div>
+        </div>
+        <div class="recom-item-list-container d-flex flex-row">
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-tsn" data-location="Tân Sơn Nhất International Airport (SGN) ">
+                    <div class="content">
+                        <div class="label">Tân Sơn Nhất Airport</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-noibai" data-location="Nội Bài International Airport (HAN) ">
+                    <div class="content">
+                        <div class="label">Nội Bài Airport</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-dalat" data-location="Đà Lạt">
+                    <div class="content">
+                        <div class="label">Đà Lạt</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-danang" data-location="Đà Nẵng">
+                    <div class="content">
+                        <div class="label">Đà Nẵng</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recom-item-list-container d-flex flex-row">
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-hcm" data-location="TP Hồ Chí Minh">
+                    <div class="content">
+                        <div class="label">TP Hồ Chí Minh</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-hanoi" data-location="Hà Nội">
+                    <div class="content">
+                        <div class="label">Hà Nội </div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-haiphong" data-location="Hải Phòng">
+                    <div class="content">
+                        <div class="label">Hải Phòng </div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-cantho" data-location="Cần Thơ">
+                    <div class="content">
+                        <div class="label">Cần Thơ </div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm xe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer-component></footer-component>
+
+    <script src="./js/transfer-search.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

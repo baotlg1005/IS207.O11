@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelowkey</title>
+    <link rel="icon" type="image/x-icon" href="../../resources/images/logo.ico">
+
+    <link href=' http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../resources/css/main-style.css">
+
+    <link rel="stylesheet" href="../../resources/css/btn.css">
+    <link rel="stylesheet" href="../../resources/css/dropdown.css">
+    <link rel="stylesheet" href="../../resources/css/input-block.css">
+    <link rel="stylesheet" href="../../resources/css/feature__item.css">
+    <link rel="stylesheet" href="../../resources/css/ad-slider.css">
+    <link rel="stylesheet" href="../../resources/css/recom.css">
+
+    <link rel="stylesheet" href="./css/coach-seach.css">
+    <link rel="stylesheet" href="./css/feature__coach-search.css">
+
+    <script src="../../resources/component/header/headerComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/headerLoggedInComponent.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/header/header-logged-in.js" type="text/javascript" defer></script>
+    <script src="../../resources/component/footer/footerComponent.js" type="text/javascript" defer></script>
+
+    <link rel="stylesheet" href="../../resources/component/carousel/carousel.css">
+    <script src="../../resources/component/carousel/carousel.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div id="header-container">
+        <div id="header-default" class="hide">
+            <header-component></header-component>
+        </div>
+        <div id="header-logged-in" class="hide">
+            <header-logged-in-component></header-logged-in-component>
+        </div>
+    </div>
+    <div class="container-fluid carousel-container">
+        <div class="carousel__content d-flex align-center justify-center">
+            <img class="content-item content-item-1" data-index="1" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-2" data-index="2" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-3" data-index="3" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-4" data-index="4" src="../../resources/images/bus-ad.png">
+            <img class="content-item content-item-5" data-index="5" src="../../resources/images/bus-ad.png">
+        </div>
+        <div class="carousel__nav">
+            <div class="nav__btn" id="btn-left">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            </div>
+            <div class="text">Xem thêm khuyến mãi</div>
+            <div class="nav__btn" id="btn-right">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="container main-content">
+        <div id="feature__coach-search" class="container-fluid feature__item">
+            <div class="coach-search__config config">
+                <div class="btn-dropdown config__passenger-quantity">
+                    <div class="info">
+                        <ion-icon class="icon" name="people"></ion-icon>
+                        <div class="text">
+                            1 hành khách
+                        </div>
+                        <ion-icon class="drop-down-icon" name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <div class="dropdown-panel hide">
+                        <div class="dropdown-panel__item selected" data-ticket-type="1">
+                            <ion-icon name="ellipse" class="selected"></ion-icon>
+                            <ion-icon name="ellipse-outline" class="unselected"></ion-icon>
+                            <div class="text">
+                                1 hành khách
+                            </div>
+                        </div>
+                        <div class="dropdown-panel__item" data-ticket-type="2">
+                            <ion-icon name="ellipse" class="selected"></ion-icon>
+                            <ion-icon name="ellipse-outline" class="unselected"></ion-icon>
+                            <div class="text">
+                                2 hành khách
+                            </div>
+                        </div>
+                        <div class="dropdown-panel__item" data-ticket-type="3">
+                            <ion-icon name="ellipse" class="selected"></ion-icon>
+                            <ion-icon name="ellipse-outline" class="unselected"></ion-icon>
+                            <div class="text">
+                                3 hành khách
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="" id="coach-search__search-form" class="search-form">
+                <div class="search-form__input-container">
+                    <div class="input-block right-connect">
+                        <div class="title">
+                            <div class="text">
+                                Từ
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="bus" style="color: #236eff;"></ion-icon>
+                            <input id="coach-search__departure" class="departure__input" type="text"
+                                placeholder="Điểm đi" autocomplete="off" list="departure-location">
+                            <datalist id="departure-location">
+                            </datalist>
+                        </div>
+                        <div class="recommend-panel">
+                            <div class="panel__item hide" data-type="Template">
+                                <div class="item__title">
+                                    Hà Nội
+                                </div>
+                                <div class="item__description">
+                                    Sân bay gì đó
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-block left-connect">
+                        <div class="title">
+                            <div class="text">
+                                Đến
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="bus" style="color: #236eff;"></ion-icon>
+                            <input id="coach-search__destination" class="destination__input" type="text"
+                                placeholder="Điểm đến" autocomplete="off" list="arrival-location">
+                            <datalist id="arrival-location">
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-form__input-container">
+                    <div class="input-block">
+                        <div class="title">
+                            <div class="text">
+                                Ngày đi
+                            </div>
+                        </div>
+                        <div class="input">
+                            <ion-icon class="icon" name="calendar" style="color: #236eff;"></ion-icon>
+                            <input id="coach-search__departure-date" class="departure-date__input" type="date"
+                                placeholder="Ngày đi">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-form__btn-container">
+                    <div id="search-form__submit-btn--coach" class="btn-submit">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container d-flex flex-column recom-container">
+        <div class="title d-flex justify-center">
+            <div class="text">Điểm đến hot nhất do Travelowkey đề xuất</div>
+        </div>
+        <div class="recom-item-list-container d-flex flex-row">
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-haiphong" data-location="Hải Phòng">
+                    <div class="content">
+                        <div class="label">Hải Phòng</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-hcm" data-location="TP Hồ Chí Minh">
+                    <div class="content">
+                        <div class="label">Hồ Chí Minh</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-hatinh" data-location="Hà Tĩnh">
+                    <div class="content">
+                        <div class="label">Hà Tĩnh</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-lamdong" data-location="Lâm Đồng">
+                    <div class="content">
+                        <div class="label">Lâm Đồng</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recom-item-list-container d-flex flex-row">
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-khanhhoa" data-location="Khánh Hòa">
+                    <div class="content">
+                        <div class="label">Khánh Hòa</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-danang" data-location="Đà Nẵng">
+                    <div class="content">
+                        <div class="label">Đà Nẵng</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-vungtau" data-location="Bà Rịa - Vũng Tàu">
+                    <div class="content">
+                        <div class="label">Vũng Tàu</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recom-item-container p-1">
+                <div class="recom-item p-1" id="item-angiang" data-location="An Giang">
+                    <div class="content">
+                        <div class="label">An Giang</div>
+                        <div class="text">Có 100 khách sạn</div>
+                    </div>
+                    <div class="recom-btn btn-default hide">
+                        <div class="text">Tìm chuyến xe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer-component></footer-component>
+
+    <script src="../../resources/js/input-block.js"></script>
+    <script src="./js/coach-search.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

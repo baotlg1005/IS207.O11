@@ -11,6 +11,7 @@ html {
 
 body {
   position: relative;
+  background-color: #ffffff;
 }
 
 .container-fluid {
@@ -39,4 +40,105 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.fs-16 {
+  font-size: 1.5rem !important;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.gap-5 {
+  gap: 5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 100% !important;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=main-style.css.map */

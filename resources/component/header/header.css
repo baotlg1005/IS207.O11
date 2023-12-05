@@ -65,6 +65,7 @@ body {
   gap: 0.5rem;
   padding-top: 0.5rem;
   transition: 0.3s;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
 }
 .header-container .header__top-content {
   display: flex;
@@ -115,11 +116,12 @@ body {
   gap: 1rem;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .text {
-  color: #000;
+  color: rgba(35, 110, 255, 0.8);
+  font-weight: 700;
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__login-btn .login-btn__icon {
   font-size: 2rem;
-  color: #000;
+  color: rgba(35, 110, 255, 0.8);
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
   border-radius: 0.66667rem;
@@ -127,6 +129,13 @@ body {
 }
 .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn .text {
   color: #fff;
+  font-weight: 700;
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .account-btn__icon {
+  font-size: 2rem;
+  color: rgba(35, 110, 255, 0.8);
+}
+.header-container .header__top-content .top-content__account-btn-group .account-btn-group__account-btn .text {
   font-weight: 700;
 }
 .header-container .header__navbar {
@@ -162,4 +171,13 @@ body {
 }
 .header-container .header__navbar .navbar__item:active {
   background-color: #e4e6e6;
+}
+
+@media only screen and (max-width: 900px) {
+  .header-container .header__top-content .top-content__brand-container .brand-container__brand-name {
+    display: none;
+  }
+  .header-container .header__top-content .top-content__account-btn-group .account-btn-group__sign-up-btn {
+    display: none;
+  }
 }/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,459 @@
+.account-content-container {
+  border-radius: 0.57143rem;
+  margin-top: 3.57143rem;
+  margin-bottom: 3.57143rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.account-content-container .account-navbar {
+  background-color: white;
+  border-radius: 0.57143rem;
+  width: 25%;
+  height: 15rem !important;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.account-content-container .account-navbar .nav-label {
+  border-bottom: 1px solid #c7c7c7;
+  padding: 2rem;
+}
+.account-content-container .account-navbar .nav-label .label-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+.account-content-container .account-navbar .nav-tab-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.account-content-container .account-navbar .nav-tab-group .nav-tab {
+  width: 100%;
+  justify-content: left;
+  border-radius: 0;
+  border: 0;
+  padding: 2rem;
+}
+.account-content-container .account-navbar .nav-tab-group .nav-tab .text {
+  font-size: 16px;
+  color: #354148;
+  font-weight: 500;
+}
+.account-content-container .account-navbar .nav-tab-group .nav-tab ion-icon {
+  font-size: 28px;
+  color: #236eff;
+  font-weight: 700;
+}
+.account-content-container .account-navbar .nav-tab-group .nav-tab:hover {
+  background-color: rgb(240, 245, 255);
+}
+.account-content-container .account-content-window {
+  width: 75%;
+  padding-left: 1rem;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 0.57143rem;
+}
+.account-content-container .account-content-window #user-pane {
+  background-color: white;
+  border-radius: 0.57143rem;
+}
+.account-content-container .account-content-window #bill-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.account-content-container .account-content-window #bill-pane .pane-label {
+  border-bottom: 0;
+}
+.account-content-container .account-content-window #bill-pane #bill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container #flight-bill, .account-content-container .account-content-window #bill-pane #bill-container #bus-bill, .account-content-container .account-content-window #bill-pane #bill-container #transfer-bill, .account-content-container .account-content-window #bill-pane #bill-container #hotel-bill {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-type {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-type ion-icon {
+  font-size: 3rem;
+  color: #236eff;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-type .text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info ion-icon {
+  font-size: 1rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info .from .text, .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info .to .text {
+  font-size: 1.2rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info .name .text {
+  font-size: 1.2rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id .text, .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id .id-text {
+  font-size: 1.2rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id .text {
+  font-weight: bold;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: flex-end;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .bill-price .text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7a50;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .bill-status {
+  margin-bottom: 0.8rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .bill-status .text {
+  font-size: 1.5rem;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .detail-btn {
+  display: flex;
+  background-color: #236eff;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .detail-btn .text {
+  color: white;
+}
+.account-content-container .account-content-window #bill-pane #bill-container .no-result-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.account-content-container .account-content-window .account-content-pane {
+  padding: 2rem;
+}
+.account-content-container .account-content-window .account-content-pane .pane-label {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c7c7c7;
+}
+.account-content-container .account-content-window .account-content-pane .pane-label .label-text {
+  font-weight: bolder;
+  font-size: 18px;
+}
+.account-content-container .account-content-window .account-content-pane .info-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  gap: 2rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form #user-info-col-3 {
+  width: 30rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form #password-info-col {
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 0;
+}
+.account-content-container .account-content-window .account-content-pane .info-form #password-info-col .form-input {
+  width: 100% !important;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content {
+  display: flex;
+  flex-direction: row;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  gap: 1rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block {
+  flex-direction: row;
+  gap: 1rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .title {
+  flex: 1;
+  white-space: nowrap;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .text {
+  color: #000;
+  font-size: 1.33333rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .form-input {
+  flex: 1;
+  width: 10rem !important;
+  height: 2.14286rem !important;
+  border-radius: 0.57143rem;
+  border: 1.5px solid #aab3b8;
+  background-color: #fff;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block select {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .btn-container .form-btn-save {
+  background-color: #236eff;
+  color: white;
+  width: 10rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .btn-container .form-btn-reset {
+  background-color: #f1f1f1;
+  color: #236eff;
+  width: 10rem;
+}
+.account-content-container .account-content-window .account-content-pane .info-form .btn-container .text {
+  font-weight: bold;
+}
+
+#warning-auth .text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+}
+
+@media only screen and (max-width: 900px) {
+  .account-content-container {
+    flex-direction: column;
+  }
+  .account-content-container .account-navbar {
+    width: 100%;
+    height: auto !important;
+  }
+  .account-content-container .account-navbar .nav-tab-group {
+    flex-direction: row;
+  }
+  .account-content-container .account-navbar .nav-tab-group .nav-tab {
+    width: auto;
+  }
+  .account-content-container .account-content-window {
+    width: 100%;
+    padding-left: 1rem;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 0.57143rem;
+  }
+  .account-content-container .account-content-window #user-pane {
+    background-color: white;
+    border-radius: 0.57143rem;
+  }
+  .account-content-container .account-content-window #bill-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .account-content-container .account-content-window #bill-pane .pane-label {
+    border-bottom: 0;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container #flight-bill, .account-content-container .account-content-window #bill-pane #bill-container #bus-bill, .account-content-container .account-content-window #bill-pane #bill-container #transfer-bill, .account-content-container .account-content-window #bill-pane #bill-container #hotel-bill {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-type {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-type ion-icon {
+    font-size: 3rem;
+    color: #236eff;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-type .text {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info ion-icon {
+    font-size: 1rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info .from .text, .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info .to .text {
+    font-size: 1.2rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-info .name .text {
+    font-size: 1.2rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id .text, .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id .id-text {
+    font-size: 1.2rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .left-label .bill-id .text {
+    font-weight: bold;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-end;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .bill-price .text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7a50;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .bill-status {
+    margin-bottom: 0.8rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .bill-status .text {
+    font-size: 1.5rem;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .detail-btn {
+    display: flex;
+    background-color: #236eff;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .bill-item .right-label .detail-btn .text {
+    color: white;
+  }
+  .account-content-container .account-content-window #bill-pane #bill-container .no-result-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .account-content-container .account-content-window .account-content-pane {
+    padding: 2rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .pane-label {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #c7c7c7;
+  }
+  .account-content-container .account-content-window .account-content-pane .pane-label .label-text {
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    gap: 2rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form #user-info-col-3 {
+    width: 100%;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form #password-info-col {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form #password-info-col .input-block {
+    width: 100%;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .title {
+    flex: 1;
+    white-space: nowrap;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .text {
+    color: #000;
+    font-size: 1.33333rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block .form-input {
+    flex: 1;
+    width: 10rem !important;
+    height: 2.14286rem !important;
+    border-radius: 0.57143rem;
+    border: 1.5px solid #aab3b8;
+    background-color: #fff;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .form-content .info-col .input-block select {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    padding-left: 1rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .btn-container .form-btn-save {
+    background-color: #236eff;
+    color: white;
+    width: 10rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .btn-container .form-btn-reset {
+    background-color: #f1f1f1;
+    color: #236eff;
+    width: 10rem;
+  }
+  .account-content-container .account-content-window .account-content-pane .info-form .btn-container .text {
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=account.css.map */
