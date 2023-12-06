@@ -132,46 +132,39 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>B01</td>
-                            <td>4</td>
-                            <td>TOYOTA</td>
-                            <td>Hanoi</td>
-                            <td>Ho Chi Minh City</td>
-                            <td>08:00 AM</td>
-                            <td>10:30 AM</td>
-                            <td>3000000</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>B02</td>
-                            <td>12</td>
-                            <td>HONDA</td>
-                            <td>Dubai</td>
-                            <td>New York</td>
-                            <td>02:00 PM</td>
-                            <td>08:00 PM</td>
-                            <td>2500000</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                    <?php
+                        require_once("../connect.php");
+                        require_once("./process__get.php");
+                        foreach ($car as $row) {
+                            $car_id = $row["TaxiId"];
+                            $car_type = $row["Type"];
+                            $car_brand = $row["Name"];
+                            $car_seatNum = $row["NumofSeat"];
+                            $car_luggage = $row["Luggage"];
+                            $car_price = $row["Price"];
+                            $car_state = $row["State"];
+
+                            echo "<tr class=\"info-info-row\">";
+                            echo "<td class=\"car-info__id\">" . $car_id . "</td>";
+                            echo "<td  class=\"car-info__type\">" . $car_type . "</td>";
+                            echo "<td  class=\"car-info__brand\">" . $car_brand . "</td>";
+                            echo "<td  class=\"car-info__seatNum\">" . $car_seatNum . "</td>";
+                            echo "<td  class=\"car-info__luggage\">" . $car_luggage . "</td>";
+                            echo "<td  class=\"car-info__price\">" . $car_price . "</td>";
+                            echo "<td  class=\"car-info__state\">" . $car_state . "</td>";
+                            echo "<td>";
+                            echo "<div class=\"table-btn-group\">";
+                            // echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $user_id ."\">";
+                            //     echo "<div class=\"text\">Sửa</div>";
+                            // echo "</button>";
+                            echo "<a href='./process__delete.php?id=" . $car_id . "' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"" . $car_id . "\">";
+                            echo "<div class=\"text\">Xóa</div>";
+                            echo "</a>";
+                            echo "</div>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>

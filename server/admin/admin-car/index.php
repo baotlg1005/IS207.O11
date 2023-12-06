@@ -44,7 +44,8 @@
         </div>
         <div class="admin-content-window">
             <div class="admin-content-pane" id="car-pane">
-                <form class="info-form" id="car-info-form">
+                <form method="POST" action="./process__submit.php" class="info-form" id="car-info-form">
+                    <input type="hidden" name="action" id="car-txt-action" value="create">
                     <div class="info-window">
                         <div class="pane-text-container">
                             <div class="pane-text">Thông tin xe dịch vụ</div>
@@ -55,7 +56,7 @@
                                     <div class="title">
                                         <div class="text">Mã xe:</div>
                                     </div>
-                                    <select id="car-txt-id" class="input car-form-input">
+                                    <select id="car-txt-id" class="input car-form-input" name="ID">
                                         <option value="newid">Tạo mã mới</option>
                                         <option class="old-id hide" value=""></option>
                                     </select>
@@ -64,16 +65,16 @@
                                     <div class="title">
                                         <div class="text">Loại dịch vụ:</div>
                                     </div>
-                                    <select id="car-txt-type" class="input car-form-input">
-                                        <option value="nd01">Có tài xế</option>
-                                        <option value="nd02">Không có tài xế</option>
+                                    <select id="car-txt-type" class="input car-form-input" name="Type">
+                                        <option value="0">Có tài xế</option>
+                                        <option value="1">Tự lái</option>
                                     </select>
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Tên hãng:</div>
                                     </div>
-                                    <input class="input car-form-input" type="text" id="car-txt-name">
+                                    <input class="input car-form-input" type="text" id="car-txt-name" name="Brand">
                                 </div>
 
                             </div>
@@ -82,27 +83,35 @@
                                     <div class="title">
                                         <div class="text">Số ghế:</div>
                                     </div>
-                                    <input class="input car-form-input" type="text" id="car-txt-seat">
+                                    <input class="input car-form-input" type="text" id="car-txt-seat" name="SeatNum">
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Số hành lý:</div>
                                     </div>
-                                    <input class="input car-form-input" type="text" id="car-txt-luggage">
+                                    <input class="input car-form-input" type="text" id="car-txt-luggage" name="Luggage">
                                 </div>
                                 <div class="input-block">
                                     <div class="title">
                                         <div class="text">Giá tiền:</div>
                                     </div>
-                                    <input class="input car-form-price" type="text" id="car-txt-price">
+                                    <input class="input car-form-price" type="text" id="car-txt-price" name="Price">
                                 </div>
-
+                                <div class="input-block">
+                                    <div class="title">
+                                        <div class="text">Trạng thái:</div>
+                                    </div>
+                                    <select id="car-txt-state" class="input car-form-input" name="State">
+                                        <option value="Free">Free</option>
+                                        <option value="Rented">Rented</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
                     </div>
                     <div class="btn-container">
-                        <button class="btn-default car-btn" id="car-btn-save" type="button">
+                        <button class="btn-default car-btn" id="car-btn-save" type="submit">
                             <div class="text">Lưu thông tin</div>
                         </button>
                         <button class="btn-default car-btn" id="car-btn-clear" type="reset">
@@ -119,46 +128,44 @@
                             <th>Số ghế</th>
                             <th>Số hành lý</th>
                             <th>Giá tiền (VNĐ)</th>
+                            <th>Trạng thái</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>X01</td>
-                            <td>Có tài xế</td>
-                            <td>TOYOTA</td>
-                            <td>4</td>
-                            <td>2</td>
-                            <td>3000000</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>X02</td>
-                            <td>Không có tài xế</td>
-                            <td>TOYOTA</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>2500000</td>
-                            <td>
-                                <div class="table-btn-group">
-                                    <button class="table-btn btn-default table-btn-modify" type="button">
-                                        <div class="text">Sửa</div>
-                                    </button>
-                                    <button class="table-btn btn-default table-btn-delete" type="button">
-                                        <div class="text">Xóa</div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                        <?php
+                        require_once("../connect.php");
+                        require_once("./process__get.php");
+                        foreach ($car as $row) {
+                            $car_id = $row["TaxiId"];
+                            $car_type = $row["Type"];
+                            $car_brand = $row["Name"];
+                            $car_seatNum = $row["NumofSeat"];
+                            $car_luggage = $row["Luggage"];
+                            $car_price = $row["Price"];
+                            $car_state = $row["State"];
+
+                            echo "<tr class=\"info-info-row\">";
+                            echo "<td class=\"car-info__id\">" . $car_id . "</td>";
+                            echo "<td  class=\"car-info__type\">" . $car_type . "</td>";
+                            echo "<td  class=\"car-info__brand\">" . $car_brand . "</td>";
+                            echo "<td  class=\"car-info__seatNum\">" . $car_seatNum . "</td>";
+                            echo "<td  class=\"car-info__luggage\">" . $car_luggage . "</td>";
+                            echo "<td  class=\"car-info__price\">" . $car_price . "</td>";
+                            echo "<td  class=\"car-info__state\">" . $car_state . "</td>";
+                            echo "<td>";
+                            echo "<div class=\"table-btn-group\">";
+                            // echo "<button class=\"table-btn btn-default table-btn-modify\" type=\"button\" data-id=\"". $user_id ."\">";
+                            //     echo "<div class=\"text\">Sửa</div>";
+                            // echo "</button>";
+                            echo "<a href='./process__delete.php?id=" . $car_id . "' onclick=\"return confirm('Are you sure you want to delete this item?');\" class=\"table-btn btn-default table-btn-delete\" type=\"button\" data-id=\"" . $car_id . "\">";
+                            echo "<div class=\"text\">Xóa</div>";
+                            echo "</a>";
+                            echo "</div>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
